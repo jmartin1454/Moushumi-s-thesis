@@ -1,17 +1,66 @@
-\chapter{Experimental setup}
-\small
+\chapter{Overview of Rb magnetometer and apparatus}
 
-In this section, a general introduction into the experimental
-background of atomic magnetometry will be given. Starting with an
-explanation of the basic setup and its components, the dichroic atomic
-vapor laser lock (DAVLL), which is used for laser wavelength locking
-to the Cs absorption line will be discussed. Followed by an
-elucidation of the data acquisition (DAQ), this section will be
-completed with the comparison of different possible operation modes of
-an atomic magnetometer and an introduction into the concepts of
-magnetometer uncertainties and the noise level of a measurement
+\begin{itemize}
+\item Purpose: Describe your experiment, focusing on the overall
+  function, and providing some description of the individual
+  components and their function.
+\item Outline:
+  \begin{itemize}
+  \item Overview of experimental apparatus.  I think this is done by
+    describing Figs.~\ref{fig:zerofield} and \ref{fig:pumpprobe}.
+  \item Group Fig.~\ref{fig:pumpprobe} into major components and
+    describe each one.  For example:
+    \begin{itemize}
+      \item ECDL and DAVLL
+      \item Pump beam and AOM
+      \item Probe beam and balanced polarimeter
+      \item Cell
+      \item Magnetic field system
+        \begin{itemize}
+        \item Shield arrangement
+        \item Degaussing system
+        \item Internal coil\underline{s}
+        \end{itemize}
+      \item DAQ
+    \end{itemize}
+  \item General operation is discussed in the next chapter.
+  \end{itemize}
+\end{itemize}
 
-\section{Beam path}
+The purpose of this Chapter is to describe the experimental apparatus
+used at UW.  I start with an explanation of the overall experiment.  I
+then discuss each of the major components of the apparatus in more
+detail.
+
+
+% basic setup and its components,
+%the dichroic atomic vapor laser lock (DAVLL), which is used for laser
+%wavelength locking to the Cs absorption line will be
+%discussed. Followed by an elucidation of the data acquisition (DAQ),
+
+In Chapter~\ref{ch:characterization}, I will cover the initial
+characterization of a few different modes of operation of the
+magnetometer.  (As discussed in Chapter~\ref{ch:magnetometer}, there
+are several different ways in which the magnetometer can be operated
+dependent with different advantages and disadvantages to each.)
+
+In Chapter~\ref{ch:results}, I discussed the advances made in the
+understanding of the magnetometer performance, mostly in relation to
+the development of the Free-Induction-Decay mode of operation.
+
+%this section will be completed with the comparison of different
+%possible operation modes of an atomic magnetometer and an introduction
+%into the concepts of magnetometer uncertainties and the noise level of
+%a measurement
+
+\section{Overview}
+
+\begin{figure}%[h]
+\centering
+\includegraphics[width=\textwidth]{figures/experimental_setup_zero_field}
+\caption{Schematic diagram of experimental setup for zero field NMOR
+  measurement.\label{fig:zerofield}.}
+\end{figure}
 
 Fig.~\ref{fig:zerofield} depicts the zero-field apparatus.
 
@@ -40,20 +89,14 @@ analyzed individually by our photodiode. Our photodiode contains two
 individual diodes and an internal differential amplifier which outputs
 the difference in diodes P1 - P2. A lock-in amplifier was used to
 detect the polarimetric signal and stored on a computer.
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{figures/experimental_setup_zero_field}
-\caption{Schematic diagram of experimental setup for zero field NMOR
-  measurement.\label{fig:zerofield}.}
-\end{figure}
-\begin{figure}[h]
+\begin{figure}%[h]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/experimental_setup}
 \caption{Schematic diagram of the experimental setup for measuring
   rotation of the polarization plane with amplitude modulated (AM)
   light. AOM stands for acousto optic modulator, $\lambda/2$ - half
   wave plate, N.D.F- neutral density filter, PBS- polarizing beam
-  splitter.}
+  splitter.\label{fig:pumpprobe}}
 \end{figure}
 \section{External Cavity Diode Laser(ECDL)}
 \bigskip
@@ -103,13 +146,12 @@ amplitude of the light.
 
 
 
-This method works for both phase and
-amplitude modulation of light.  In order to measure the magnetic
-fields in the far of the zero-field regime, an amplitude modulated
-pump beam needs to apply to the magnetometer.  This amplitude
-modulation is done by a square wave modulation with a duty cycle of
-1-10\%.  This additional modulation is accomplished with an acousto
-optic modulator (AOM).
+This method works for both phase and amplitude modulation of light.
+In order to measure the magnetic fields in the far of the zero-field
+regime, an amplitude modulated pump beam needs to apply to the
+magnetometer.  This amplitude modulation is done by a square wave
+modulation with a duty cycle of 1-10\%.  This additional modulation is
+accomplished with an acousto optic modulator (AOM).
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{figures/AOM}
