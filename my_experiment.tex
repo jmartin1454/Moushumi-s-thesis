@@ -57,23 +57,109 @@ the development of the Free-Induction-Decay mode of operation.
 
 \begin{figure}%[h]
 \centering
-\includegraphics[width=\textwidth]{figures/experimental_setup_zero_field}
+\includegraphics[width=0.8\textwidth]{figures/experimental_setup_zero_field}
 \caption{Schematic diagram of experimental setup for zero field NMOR
-  measurement.\label{fig:zerofield}.}
+  measurement (discussed in the text).\label{fig:zerofield}.}
 \end{figure}
 
-Fig.~\ref{fig:zerofield} depicts the zero-field apparatus.
+Fig.~\ref{fig:zerofield} schematically depicts a top view of the Rb
+magnetometer, as it may be used for measurements of the magnetic field
+within a few hundred pT of zero.  This mode was used, for example, in
+Ref.~\cite{bib:nmor} to measure the axial magnetic shielding factor of
+the passive magnetic shielding system.  In this thesis, this operation
+mode was not normally used because we desired to develop the system
+for larger magnetic fields.  But it is nonetheless instructive to
+demonstrate the starting point of my thesis research.
 
-Fig.~3.2 depicts the layout of the system used in the Physics
-Department of The University of Winnipeg for studying the non-linear
-magneto-optical effects with the amplitude modulated light. In this
-work, a paraffin-coated vapor cell (about 5 cm long) containing
-natural rubidium with stable isotopes $Rb^{87}$ and $Rb^{85}$, is used
-as the magneto-optical sample. To get maximum sensitivity and to
-reduce ambient fields the cell is placed within a magnetic shield made
-of four-layer of $\mu$ metal. This magnetic shield is capable to
-provide passive attenuation of dc magnetic fields by a factor of
-$10^6$. A semiconductor diode laser is the light source. The laser
+\begin{itemize}
+\item Laser
+\item beamsplitter
+\item NDF
+\item Polarizer
+\item $\lambda/2$ plate
+\item Rb cell
+\item polarizing beam splitter
+\item balanced PD 
+\end{itemize}
+
+\begin{itemize}
+\item An external cavity diode laser produces light near the Rb D1
+  transition.  The laser is tuned near the $^{85}$Rb F=?? absorption
+  minimum.
+\item A microscope slide is used as a beamsplitter in order to divert
+  a reduced power into the experiment.
+\item The power is further reduced using neutral density filters
+  (indicated by N.D.F. in Fig.~\ref{fig:zerofield}).
+\item A linear polarizing sheet is oriented at a 45$^\circ$ angle
+  relative to the vertical direction.  Since the laser beam is
+  polarized, this further reduces the power by a factor of two.  The
+  laser power after this point is normally in the range of
+ 2-20~$\mu$W.
+\item Small adjustments to the incident plane of polarization may be
+  made by a $\lambda/2$ plate.
+\item The beam then passes through a paraffin-coated cell containing
+  Rb vapour.  The cell is within a magnetic shielding and field
+  generation system that produces a uniform field along the beam axis.
+  The plane of polarization of the laser light will rotate slightly as
+  it passes through the cell because of non-linear magneto-optical
+  effects.
+\item A balanced polarimeter is used to analyze the optical rotation
+  of the laser light resulting from the interaction of the laser light
+  with the atoms in the cell.  The polarimeter consists of a
+  polarizing beam splitter (a Wollaston prism) which splits the beam
+  into its vertical and horizontal polarization components.  Each
+  component is sensed by a balanced photodiode which outputs the
+  difference in light intensities.
+\item If the polarizer is set at a 45$^\circ$ angle and aligned with
+  the axis of the $\lambda/2$-plate, and in the absence of any optical
+  rotation, the balanced photodiode would output zero volts.  If the
+  plane of polarization is rotated by passage through the cell, it
+  will be sensed by the differential photodiode signal.  This is
+  discussed further in Section~\ref{sec:balancedPD}.
+\end{itemize}
+
+An external cavity diode laser produces light near the Rb D1
+transition.  The laser is tuned near the $^{85}$Rb F=?? absorption
+minimum.  A microscope slide is used as a beamsplitter in order to
+divert a reduced power into the experiment.  The power is further
+reduced using neutral density filters (indicated by N.D.F. in
+Fig.~\ref{fig:zerofield}).  A linear polarizing sheet is oriented at a
+45$^\circ$ angle relative to the vertical direction.  Since the laser
+beam is polarized, this further reduces the power by a factor of two.
+The laser power after this point is normally in the range of
+2-20~$\mu$W.  Small adjustments to the incident plane of polarization
+may be made by a $\lambda/2$ plate.  The beam then passes through a
+paraffin-coated cell containing Rb vapour.  The cell is within a
+magnetic shielding and field generation system that produces a uniform
+field along the beam axis.  The plane of polarization of the laser
+light will rotate slightly as it passes through the cell because of
+non-linear magneto-optical effects.  A balanced polarimeter is used to
+analyze the optical rotation of the laser light resulting from the
+interaction of the laser light with the atoms in the cell.  The
+polarimeter consists of a polarizing beam splitter (a Wollaston prism)
+which splits the beam into its vertical and horizontal polarization
+components.  Each component is sensed by a balanced photodiode which
+outputs the difference in light intensities.  If the polarizer is set
+at a 45$^\circ$ angle and aligned with the axis of the
+$\lambda/2$-plate, and in the absence of any optical rotation, the
+balanced photodiode would output zero volts.  If the plane of
+polarization is rotated by passage through the cell, it will be sensed
+by the differential photodiode signal.  This is discussed further in
+Section~\ref{sec:balancedPD}.
+
+
+Fig.~\ref{fig:pumpprobe} depicts the layout of the system used in the
+Physics Department of The University of Winnipeg for studying the
+non-linear magneto-optical effects with the amplitude modulated
+light. In this work, a paraffin-coated vapor cell (about 5 cm long)
+containing natural rubidium with stable isotopes $Rb^{87}$ and
+$Rb^{85}$, is used as the magneto-optical sample. To get maximum
+sensitivity and to reduce ambient fields the cell is placed within a
+magnetic shield made of four-layer of $\mu$ metal. This magnetic
+shield is capable to provide passive attenuation of dc magnetic fields
+by a factor of $10^6$.
+
+A semiconductor diode laser is the light source. The laser
 wavelength ($\lambda=795$ nm) is precisely controlled by an external
 locking system and its radiation is amplitude modulated by an
 acousto-optical modulator.  The light beam is splited into pump and
