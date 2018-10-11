@@ -1,35 +1,47 @@
 \chapter{Introduction\label{ch:intro}}
 \small
- \section{Neutron electric dipole moment and CP violation } 
- Neutron has an intrinsic electric dipole moment (EDM). The neutron EDM is a measure for the distribution of positive and negative charges inside the neutron. Intrinsic EDM of neutron interacting with external magnetic and electric fields can be described by the following Hamiltonian:
+The first two sections of this chapter will provide some information on why neutron EDM is interesting to measure
+and how finding a nonzero nEDM would answer questions regarding the matter-antimatter
+or Baryon asymmetry of the universe. Afterwards the measuremet principle of nEDM experiment and the origin of false EDM will be explained .In the last section, the importance of magnetometry on nEDM experiment will be discussed. 
+\section{Standard model and CP violation}
+ Charge conjugation (C), Parity
+(P) and Time-reversal (T) are three significant symmetries in physics. C-symmetry  describes the symmetry of physical laws under a charge  conjugation
+transformation. Parity transformation, is simply the inversion of spatial coordinates
+and Time-reversal transformation is changing the direction of time.
+CP violations in the standard model are arising from two separate sources.  The first source is found in the strong interaction, described by the $theta-$ term which is the lowest order operator of the quantum chromodynamics (QCD) Lagrangian.  This CP violating term in the QCD Lagrangian violates both parity and time symmetry and induces a neutron EDM of $|d_n|$ $\sim$ $\theta$ $*~ 3 * 10^{−16}$ e·cm \cite{PhysRevLett.97.131801} with θ an angular parameter of order one.  However, The current best experimental upper limit on the neutron EDM is $|d_n| < 3*10^{−26}$ e.cm with $\theta <10^{-10}$~\cite{PhysRevD.92.092003}.  So the value of $\theta$ was expected to be of order one but according to current limit it is ten orders of magnitude less than that.  The reason for the smallness of $\theta$ is currently unknown. The second source of CP violation in the SM  arises from a complex phase in the Cabibbo-Kobayashi-Maskawa (CKM) matrix\cite{PhysRevLett.10.531}.  CP violation within the CKM matrix places the neutron EDM in the range of $|d_n| = 10^{-31} - 10^{-32}$ e.cm, well below the current best experimental limit stated above. This is known as the weak CP-problem since it arises through W boson exchange
+\cite{PhysRevLett.82.904}. CPT is one of the fundamental symmetry of physical laws under the simultaneous operations of charge conjugation (C), parity transformation (P), and time reversal (T). Violation of CP symmetry should be accompanied by violation of T symmetry because of the conservation of CPT symmetry. However, the violation of CPT symmetry has not been experimentally determined yet. The time-reversal-symmetry-violating electric dipole
+moment of the neutron (nEDM) is considered to be one of
+the most promising probe for physics beyond
+the Standard Model.
+\section{Baryon asymmetry}
+According to the Big Bang theory, matter and antimatter have been created in equal amounts in the early
+universe. But the present universe is overwhelmingly made up of matter rather than anti-matter. The ratio of baryonic matter to photons can be expressed as
+\begin{equation}
+  \frac{ n_B }{n_\gamma}~ = ~10^{-10}    
+\end{equation}
+where $n_B$ is the difference between  baryons and anti-baryons number and $n_\gamma$ is the number of photons in the Cosmic Backgorund. The amount of baryon asymmetry generated in the standard model is much smaller than current observations. However,  the Standard Model has no explanation for this predominance of matter over antimatter in the universe  that resulted in baryogenesis.\\
+Andrei Sakharov conditions to explain  baryon asymmetry\cite{budker2013optical}\cite{PhysRevLett.10.531} 
+\begin{itemize}
+    \item Baryon number violation.
+    \item Violation of C-symmetry and therefore CP.
+    \item Interactions away from thermal equilibrium
+\end{itemize}
+However, these conditions contain sources of C and CP violation which haven't been observed so far. Since a non-zero EDM violates CP Sakrov's conditions  would be fulfilled by the existence of a neutron EDM (nEDM).
+
+
+ \section{Neutron electric dipole moment and CP violation }  
+ Neutron has an intrinsic electric dipole moment (EDM).  ~The neutron EDM is a measure for the distribution of positive and negative charges inside the neutron\cite{wiki:yyy}. Intrinsic EDM of neutron interacting with external magnetic and electric fields can be described by the following Hamiltonian:
 \begin{equation}\label{my_first_eqn}  
   H=-\mu_n.B-d_n.E
 \end{equation}
 where $\mu_n$ is the magnetic moment of the neutron interacting with the magnetic field B,and $d_n$ is the electric dipole moment of the neutron interacting with the electric field E.
-\begin{table}[h]
-\centering
-\begin{tabular}{|l| l| l |l |}
-\hline
+Since the neutron spin is an axial vector and the electric dipole moment vector is a scalar
+vector, both vectors behave differently under P- or T-transformations.  The orientation of the electric dipole moment changes under P operation  but leaves the magnetic moment unchanged. On the other hand, T-operation affects the spin vector but leaves the electric dipole moment unchanged.
+ Because of the conservation of CPT symmetry, a non-zero electric dipole moment of the neutron would be a violation of parity (P) and time-reversal (T) symmetry.
 
-\textbf{} & \textbf{C} & \textbf{P}  & \textbf{T}\\
-\hline
-$\mu_n$ & - & + & - \\
-\hline
-$d_n$  & -  & + & -  \\
-\hline
-$B$    & -  & + & -  \\
-\hline
-$E$    & -  &  - & +  \\
-\hline
-\end{tabular}
-\caption{Symmetry properties of different components of the EDM Hamiltonian}
-\end{table}
-Table 1.1 describes the behavior of different component of Hamiltonian under discrete symmetries. According to this, the first term( $\mu_n.B$) is CP-even and T-even and the second term ($d_n.E$) is CP-odd and T-odd. Because of the conservation of CPT symmetry, A non-zero electric dipole moment of the neutron would be a violation of parity (P) and time-reversal (T) symmetry.
-
-\section{nEDM measurement principle (Ramsey's method of separated oscillatory fields)}
-\bigskip
-In the nEDM experiment, spin-polarized ultracold neutrons, oriented along a uniform field $B_0$ stored into a neutron storage chamber. After applying the magnetic field $B_0$ along the z-axis of the storage cell, the ultra-cold neutrons start to precess about magnetic field $B_0$ at their Larmor frequency.  Then a radio frequency pulse at the Larmor frequency of the neutron is applied to flip the spin by $90 \degree$. The applied electric field is in a collinear orientation to B.
-For parallel orientation of E and B, the rotational frequency becomes
+\section{nEDM measurement principle}
+The Ramsey's method of separated oscillatory fields is the well-known measurement technique
+to extract the neutron EDM. In the nEDM experiment, spin-polarized ultracold neutrons, oriented along a uniform field $B_0$ stored into a neutron storage chamber. After applying the magnetic field $B_0$ along the z-axis of the storage cell, the ultra-cold neutrons start to precess about magnetic field $B_0$ at their Larmor frequency.  Then a radio frequency pulse at the Larmor frequency of the neutron is applied to flip the spin by $90 \degree$. The applied electric field is in a collinear orientation to B.  For parallel orientation of E and B, the rotational frequency becomes
 \begin{equation}\label{my_first_eqn}  
     h{\omega_0}^ {\uparrow\uparrow}=2\mu_n {B}^{\uparrow\uparrow}+ 2 d_nE
 \end{equation}
@@ -39,8 +51,24 @@ and for the antiparallel orientation of E and B, the rotational frequency is giv
     h{\omega_0}^ {\uparrow\downarrow}=2\mu_n {B}^{\uparrow\downarrow}- 2 d_nE
 \end{equation}
 
-where $\mu_n$ denotes the neutron magnetic moment, and $d_n$ denotes the hypothetical electric dipole moment
-When the value of nEDM is zero, the neutron spin orientation will be anti-parallel to the initial spin orientation but the spin orientation will no longer antiparallel for non-zero nEDM. A fully magnetized Fe-foil is used to detect the neutron spin while transmitting the neutron from neutron chamber which is used to get information about spin orientation. The probability of neutron transmission is proportional to the neutron spin projection on the preferred direction of the Fe-foil. A neutron counter is used to detect the transmitted UCNs. A spin flipper is used to flip the remaining UCNs in the storage chamber in the preferred direction and then they are passed through the neutron counter. An incident for the nEDM is determined from the ratio of the counting rates.
-\section{Comagnetometer}
+where $\mu_n$ denotes the neutron magnetic moment, and $d_n$ denotes the hypothetical electric dipole moment. When the value of nEDM is zero, the neutron spin orientation will be anti-parallel to the initial spin orientation but the spin orientation will no longer antiparallel for non-zero nEDM. A fully magnetized Fe-foil is used to detect the neutron spin while transmitting the neutron from neutron chamber which is used to get information about spin orientation. The probability of neutron transmission is proportional to the neutron spin projection on the preferred direction of the Fe-foil. A neutron counter is used to detect the transmitted UCNs. A spin flipper is used to flip the remaining UCNs in the storage chamber in the preferred direction and then they are passed through the neutron counter. An incident for the nEDM is determined from the ratio of the counting rates.
+
 \section{Origin of False EDM}
-\section{Internal Magnetometry Impact on nEDM}
+The dominant sources of systematic error for all previous or proposed EDM experiments come from magnetic field instability (uncorrelated with the electric field E), and magnetic field inhomogeneity through the geometric phase effect.  The effect is easiest to understand by considering transverse fields originating from the gradient of the uniform $B_0$  field in the axial direction (z direction).  Now in the presence of electric field E, the experienced additional magnetic field by an UCN particle moving at a speed v on it’s own rest frame can be written as,
+\begin{equation}
+  B_v = \frac{v*E}{c^2}
+  \label{equation:phase effect}
+\end{equation}
+ Since the particle moves in the EDM cell, these radial fields also rotate. The rotation frequency of radial field is the same frequency as particles move in the EDM cell.  Therefore, the transverse rotating field induce a phase shift on the resonant frequency from the central value.  This phase shift is known as Ramsey-Bloch-Siegert shift which is proportional to the electric-field strength and therefore mimics an EDM signal. 
+ To analyze this effect, the field rotations may be represented in terms of a perturbation on the precession phase. The phase is shifted in 2nd order, resulting in a geometric phase effect.  False EDM effects arise from the interplay between the radial component of the applied $B_0$  field and $B_v$ in the 2nd order perturbation.
+
+\section{ Magnetometry Impact on nEDM}
+Ensuring magnetic field stability and homogeneity is one of the key factors to measure nEDM precisely. For that purpose, our collaboration is planning to use dual species comagnetometer inside the UCN cell and an array of highly sensitive all optical atomic magnetometer surrounding the cell. Cesium/Rubidium is used in a set of external magnetometers surrounding the storage chamber.
+\subsection{Comagnetometer}
+To date,~$^{199}Hg$ is the only atomic element that has been used as a co-magnetometer for a neutron EDM experiment\cite{PhysRevLett.97.131801}\cite{PhysRevLett.102.101601}.  polarized mercury atoms precess in the same volume as the neutrons, hence probing approximately the same space- and time-averaged magnetic field.  Comgnetometry is an ideal tool to correct for field drifts.  So 1-10 pT drifts in $B_0$  may be corrected using the comagnetometer technique, setting a goal magnetic stability for the B0  field generation system in a typical nEDM experiment\cite{PhysRevLett.97.131801}\cite{afach:in2p3-01062292}. In nEDM experiment, optical pumping is used to polarize the vapor of mercury atoms. Since the comagnetometer operation is synchronous with the nEDM measurement, injecting polarized mercury atoms and  neutron filling into the precession chamber occurs simultaneously. After the application of a $\pi/2$ pulse, the atoms start to precess freely around $B_0$. When a circularly polarized probe beam interact with precessing atoms the modulation of light intensity occurs and after further analysis of  this effect we get information about Larmor frequency of the atoms. A false nEDM signal may arise due to a combination of a magnetic field gradient @Bz=@z and motion in the electric field when species (neutrons and $^{199}Hg$ atoms) are confined in the measurement cells. In order to avoid the false nEDM problem, our proposed comagnetometer will be based on $^{199}Hg$ and $^{129}Xe$. Xe comagnetometer requires mTorr pressure of pure,
+highly polarized Xe in the nEDM cell.
+\subsection{Internal magnetometer}
+
+In order to avoid any systematic effects, it becomes necessary to carefully investigate the magnetic field in the UCN storage chamber.  Toward this end, all optical atomic magnetometers will be used in the nEDM experiment at TRIUMF.  These magnetometers, like the mercury co-magnetometer, are scalar so they only measure the magnitude of the magnetic field.  The atomic  magnetometers will be placed in an array surrounding the precession chamber. This arrangement can be used to resolve the multipolarity of field perturbances. The most important advantage of using such all-optical atomic magnetometers is that only a polarized laser beam is used to interact with the magnetometer instead of using electrical cables which reduces the risk of additional sources of magnetic fields to the UCN storage chamber. Furthermore, Cs based magnetometers are low  maintenance and they don't have to be cooled with liquid He down to 4 K such as SQUIDs.  The sensitivity of Cs magnetometers can even surpass the sensitivity of SQUIDs. \\
+In this Master's thesis, an introduction into the concept of full optical magnetometry will be presented. This will be continued with a status update, the presentation of measurements with our highly sensitive Rb magnetometer at The University of Winnipeg. 
+
