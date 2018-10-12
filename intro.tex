@@ -144,8 +144,8 @@ where the arrows are meant to indicate the parallel orientation of the $B$ and $
 \begin{equation}\label{my_first_eqn}  
     h\nu^{\uparrow\downarrow}=2\mu_nB-2d_nE.
 \end{equation}
-By taking the difference of the two measurements, the nEDM $d_n$ may
-be deduced.
+By taking the difference of the two frequency measurements, the nEDM
+$d_n$ may be deduced.
 %When the value of nEDM is zero, the
 %neutron spin orientation will be anti-parallel to the initial spin
 %orientation but the spin orientation will no longer antiparallel for
@@ -159,52 +159,150 @@ be deduced.
 %then they are passed through the neutron counter.  An incident for the
 %nEDM is determined from the ratio of the counting rates.
 A serious concern is that if the magnetic field drifts during the
-measurement, the formulae above will be invalid.
-%
-
-\section{Origin of False EDM}
-
-The dominant sources of systematic error for all previous or proposed
-EDM experiments come from magnetic field instability (uncorrelated
-with the electric field E), and magnetic field inhomogeneity through
-the geometric phase effect~\cite{PhysRevA.70.032102}.  The effect is
-easiest to understand by considering transverse fields originating
-from the gradient of the uniform $B_0$ field in the axial direction
-($\partial B_{0z}/{\partial z}$).  Now in the presence of electric
-field E, the experienced additional magnetic field by an UCN particle
-moving at a speed v on it’s own rest frame can be written as,
-\begin{equation}
-  B_v=\frac{v\times E}{c^2}
-  \label{equation:phase effect}
-\end{equation}
-Since the particle moves in the EDM cell, these radial fields also
-rotate. The rotation frequency of radial field is the same frequency
-as particles move in the EDM cell.  Therefore, the transverse rotating
-field induce a phase shift on the resonant frequency from the central
-value.  This phase shift is known as Ramsey-Bloch-Siegert shift which
-is proportional to the electric-field strength and therefore mimics an
-EDM signal.  To analyze this effect, the field rotations may be
-represented in terms of a perturbation on the precession phase. The
-phase is shifted in 2nd order, resulting in a geometric phase effect.
-False EDM effects arise from the interplay between the radial
-component of the applied $B_0$ field and $B_v$ in the 2nd order
-perturbation.
+frequency measurement, the difference of the two measurements will
+suffer from a systematic error.  Even in the best magnetic
+environment, field drifts of 1-10~pT over the $\sim$100~s (per UCN
+fill) measurement period are likely.  In order to make a correction
+that is more precise than neutron counting statistics, precision
+magnetometers must be used to measure the magnetic field, correcting
+these drifts at the level of 10-20~fT level over the same
+period~\cite{bib:mike-langs-msc-thesis}.
 
 \section{ Magnetometry Impact on nEDM}
-The precise measurement and control of magnetic fields and magnetic field fuctuations is important for experiments searching for a permanent electric dipole moment (EDM) of the neutron, hence it is one of the main factors limiting the accuracy.  For that purpose, our collaboration
-is planning to use dual species comagnetometer inside the UCN cell and
-an array of highly sensitive all optical atomic magnetometer
-surrounding the cell. Cesium/Rubidium is used in a set of external
-magnetometers surrounding the storage chamber.
+
+%The precise measurement and control of magnetic fields and magnetic
+%field fuctuations is important for experiments searching for a
+%permanent electric dipole moment (EDM) of the neutron, hence it is one
+%of the main factors limiting the accuracy.
+
+Our collaboration is developing comagnetometers based on $^{199}$Hg
+and $^{129}$Xe.  My work is on the development of alkali atom (Rb or
+Cs) magnetometers that will be placed around the nEDM measurement
+cell.  In this section I discuss the important properties of the
+magnetometry strategy for the nEDM experiment which motivate my work
+on the alkali atom magnetometers.
 
 \subsection{Comagnetometer}
-To date,~$^{199}Hg$ is the only atomic element that has been used as a co-magnetometer for a neutron EDM experiment\cite{PhysRevLett.97.131801}\cite{PhysRevLett.102.101601}.  polarized mercury atoms precess in the same volume as the neutrons, hence probing approximately the same space and time-averaged magnetic field.  Comgnetometry is an ideal tool to correct for field drifts.  So 1-10 pT drifts in $B_0$  may be corrected using the comagnetometer technique, setting a goal magnetic stability for the $B_0$  field generation system in a typical nEDM experiment\cite{PhysRevLett.97.131801}\cite{afach:in2p3-01062292}. In nEDM experiment, optical pumping is used to polarize the vapor of mercury atoms. Since the comagnetometer operation is synchronous with the nEDM measurement, injecting polarized mercury atoms and  neutron filling into the precession chamber occurs simultaneously. After the application of a $\pi/2$ pulse, the atoms start to precess freely around $B_0$. When a circularly polarized probe beam interact with precessing atoms the modulation of light intensity occurs and after further analysis of  this effect we get information about Larmor frequency of the atoms. A false nEDM signal may arise due to a combination of a magnetic field gradient $\partial B_{z}/{\partial  z}$ and motion in the electric field when species (neutrons and $^{199}Hg$ atoms) are confined in the measurement cells. In order to avoid the false nEDM problem, our proposed comagnetometer will be based on $^{199}Hg$ and $^{129}Xe$. Xe comagnetometer requires mTorr pressure of pure,
-highly polarized Xe in the nEDM cell.
 
-\subsection{Internal magnetometer}
+To correct for magnetic field drifts, the previous best experiment
+(done at ILL) developed a $^{199}$Hg
+comagnetometer~\cite{their-nim-article-by-green-et-al,PhysRevLett.97.131801,PhysRevLett.102.101601}.
+The ILL EDM spectrometer was moved to PSI and several improvements to
+the comagnetometer system were made~\cite{a-paper-from-2018}.
 
-In order to avoid any systematic effects, it becomes necessary to carefully investigate the magnetic field in the UCN storage chamber.  Toward this end, all optical atomic magnetometers will be used in the nEDM experiment at TRIUMF.  These magnetometers, like the mercury co-magnetometer, are scalar so they only measure the magnitude of the magnetic field.  The atomic  magnetometers will be placed in an array surrounding the precession chamber. This arrangement can be used to resolve the multipolarity of field perturbances. Superconducting Quantum Interference Device (SQUID) is one type of highly sensitive commercially available  magnetometer. These magnetometers rely on the superconducting property of trapped magnetic flux. Because of this, they must be operated at cryogenic temperatures. SQUID magnetometers are sensitive to the 0.01 nG level \cite{doi:10.1063/1.3491215}, but keeping a device at extremely low temperatures would be impractical for the nEDM experiment. Spin Exchange Relaxation-Free (SERF) magnetometers boast greater sensitivity than SQUID magnetometers with SERF magnetic sensitivity reaching the 10 fG level\cite{doi:10.1063/1.3491215}. Their limited dynamic range is problematic for non-zero measurements. The most similar in sensitivity to NMOR magnetometers are radio frequency (RF) atomic magnetometers, or MX magnetometers~\cite{Groeger2006}. The basic principle and sensitivity of these magnetometer is same as all-optical atomic magnetometer. A drawback is that the alignment of the atoms crucial to atomic magnetometry are achieved using radio frequency magnetic fields, which again perturb the magnetic
-environment, however only at high frequency.  All-optical atomic magnetometers provide a viable solution in combining the perks of each of the previous devices. The most important advantage of using such all-optical atomic magnetometers is that only a polarized laser beam is used to interact with the magnetometer instead of using electrical cables which reduces the risk of additional sources of magnetic fields to the UCN storage chamber. Furthermore, Cs based magnetometers are low  maintenance and they don't have to be cooled with liquid He down to 4 K such as SQUID magnetometer.  The sensitivity of Cs magnetometers can even surpass the sensitivity of SQUID.
+In the comagnetometer, optical pumping is used to polarize a vapor of
+mercury atoms which are then leaked into the nEDM measurement cell
+with the neutrons.  After the application of a $\pi/2$ pulse, the
+atoms start to precess freely around $B$.  The polarized mercury atoms
+precess in the same volume as the neutrons, hence probing the same
+space and time-averaged magnetic field.  Circularly polarized probe
+light interacts with precessing atoms and the modulation of light
+transmission occurs at the Larmor frequency of the atoms.  The
+statistical precision can correct 1-10 pT drifts in $B$ to the
+required level of
+precision~\cite{a-paper-from-2018,afach:in2p3-01062292}.
+
+
+\subsection{Systematic errors and False EDM's}
+
+While the comagnetometer is excellent at normalizing slow magnetic
+field drifts, it was discovered relatively recently that it introduces
+a potentially devastating systematic error which arises in part due to
+magnetic inhomogeneities~\cite{PhysRevA.70.032102}.  When the species
+(neutrons and $^{199}Hg$ atoms) are confined in the measurement cell
+in the presence of a magnetic inhomogeneity, there is an
+electric-field dependent shift on frequency shift that can occur.
+Since it is dependent on $E$, this gives rise to a false EDM signal.
+
+The effect is easiest to understand by considering transverse fields
+originating from the gradient of a non-uniform $B$ field in the axial
+direction ($\partial B_z/\partial z$).  Because
+$\vec{\nabla}\cdot\vec{B}=0$, this gives rise to a nonzero radial
+component to the field $B_r$.  In the presence of $E$, the species
+experience an additional magnetic field their rest frame
+\begin{equation}
+  \vec{B}_v=\frac{\vec{v}\times\vec{E}}{c^2}
+  \label{equation:phase effect}
+\end{equation}
+where $\vec{v}$ is the velocity vector.  If we consider a particular
+neutron or atom that bounces around the cell in the horizontal plane,
+$\vec{B}_v$ will also be oriented in the horizontal direction.  In the
+rest frame of the particle, this will give rise to a circulating
+magnetic field.  The rotation frequency of radial field is the same
+frequency as particles move in the EDM cell.  The rotating field,
+although generally far off-resonance with the NMR frequency of the
+particle, nonetheless induces a tiny shift on the measured resonant
+frequency.  The shift induced by the far non-resonant field is known
+as a Ramsey-Bloch-Siegert shift~\cite{bib:ramsey,bib:bloch-siegert},
+and its strength goes as the square of the rotating field to leading
+order.  The cross-term in the square leads to the problematic
+frequency shift that reverses sign with $E$, hence giving a false EDM.
+
+Both the $^{199}$Hg atoms and the neutrons experience this effect.  In
+the case of the UCN, they are moving so slowly that the process is
+adiabatic, and is therefore related to geometric phases in the same
+way as Berry's phase.
+
+But the false EDM is generally larger for the $^{199}$Hg atoms because
+of their larger (thermal) velocity.  The method developed at ILL to
+correct for this problem uses the height difference between the UCN
+and comagnetometer atoms to measure the vertical gradient by the
+difference their frequencies compared to the ratio of gyromagnetic
+ratios (which has been measured very precisely)~\cite{bib:baker}.
+
+Our collaboration is pursuing multiple alternate ways of coping with
+the false EDM.  One of these is the dual comagnetometer concept based
+on $^{199}$Hg and $^{129}$Xe.  By taking a particular combination of
+the $^{199}$Hg and $^{129}$Xe precession frequencies, the false EDM
+can be cancelled out.  Another method we are pursuing is to use two
+separate EDM measurement cells that are stacked vertically.  By
+comparing precession frequencies in the top and bottom cells, the
+vertical gradient can also be accessed.
+
+Finally, we plan to measure gradients by placing a number of precision
+alkali magnetometers around the nEDM cell.  It is this application
+that relates most to this thesis.  This method of gradient
+determination has been shown by the PSI group to correctly sense the
+false EDM of Hg~\cite{bib:afach2015}.
+
+\subsection{Internal alkali atom magnetometers}
+
+In order to avoid any systematic effects, it becomes necessary to
+carefully investigate the magnetic field in the UCN storage chamber.
+Toward this end, all optical atomic magnetometers will be used in the
+nEDM experiment at TRIUMF.  These magnetometers, like the mercury
+co-magnetometer, are scalar so they only measure the magnitude of the
+magnetic field.  The atomic magnetometers will be placed in an array
+surrounding the precession chamber. This arrangement can be used to
+resolve the multipolarity of field perturbances. Superconducting
+Quantum Interference Device (SQUID) is one type of highly sensitive
+commercially available magnetometer. These magnetometers rely on the
+superconducting property of trapped magnetic flux. Because of this,
+they must be operated at cryogenic temperatures. SQUID magnetometers
+are sensitive to the 0.01 nG level \cite{doi:10.1063/1.3491215}, but
+keeping a device at extremely low temperatures would be impractical
+for the nEDM experiment. Spin Exchange Relaxation-Free (SERF)
+magnetometers boast greater sensitivity than SQUID magnetometers with
+SERF magnetic sensitivity reaching the 10 fG
+level\cite{doi:10.1063/1.3491215}. Their limited dynamic range is
+problematic for non-zero measurements. The most similar in sensitivity
+to NMOR magnetometers are radio frequency (RF) atomic magnetometers,
+or MX magnetometers~\cite{Groeger2006}. The basic principle and
+sensitivity of these magnetometer is same as all-optical atomic
+magnetometer. A drawback is that the alignment of the atoms crucial to
+atomic magnetometry are achieved using radio frequency magnetic
+fields, which again perturb the magnetic environment, however only at
+high frequency.  All-optical atomic magnetometers provide a viable
+solution in combining the perks of each of the previous devices. The
+most important advantage of using such all-optical atomic
+magnetometers is that only a polarized laser beam is used to interact
+with the magnetometer instead of using electrical cables which reduces
+the risk of additional sources of magnetic fields to the UCN storage
+chamber. Furthermore, Cs based magnetometers are low maintenance and
+they don't have to be cooled with liquid He down to 4 K such as SQUID
+magnetometer.  The sensitivity of Cs magnetometers can even surpass
+the sensitivity of SQUID.
+
 
 In this Master's thesis, an introduction into the concept of full
 optical magnetometry will be presented. This will be continued with a
