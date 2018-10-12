@@ -208,15 +208,16 @@ precision~\cite{a-paper-from-2018,afach:in2p3-01062292}.
 While the comagnetometer is excellent at normalizing slow magnetic
 field drifts, it was discovered relatively recently that it introduces
 a potentially devastating systematic error which arises in part due to
-magnetic inhomogeneities~\cite{PhysRevA.70.032102}.  When the species
-(neutrons and $^{199}Hg$ atoms) are confined in the measurement cell
-in the presence of a magnetic inhomogeneity, there is an
-electric-field dependent shift on frequency shift that can occur.
-Since it is dependent on $E$, this gives rise to a false EDM signal.
+magnetic inhomogeneities~\cite{PhysRevA.70.032102}.  When precessing
+particles (neutrons or $^{199}Hg$ atoms) are confined in the
+measurement cell in the presence of a magnetic inhomogeneity, there is
+an electric-field dependent shift on their measured resonant
+frequency.  Since it is dependent on $E$, this gives rise to a false
+EDM signal.
 
 The effect is easiest to understand by considering transverse fields
-originating from the gradient of a non-uniform $B$ field in the axial
-direction ($\partial B_z/\partial z$).  Because
+originating from the gradient of a slightly non-uniform $\vec{B}$
+field in the axial direction ($\partial B_z/\partial z$).  Because
 $\vec{\nabla}\cdot\vec{B}=0$, this gives rise to a nonzero radial
 component to the field $B_r$.  In the presence of $E$, the species
 experience an additional magnetic field their rest frame
@@ -225,18 +226,19 @@ experience an additional magnetic field their rest frame
   \label{equation:phase effect}
 \end{equation}
 where $\vec{v}$ is the velocity vector.  If we consider a particular
-neutron or atom that bounces around the cell in the horizontal plane,
-$\vec{B}_v$ will also be oriented in the horizontal direction.  In the
-rest frame of the particle, this will give rise to a circulating
-magnetic field.  The rotation frequency of radial field is the same
-frequency as particles move in the EDM cell.  The rotating field,
-although generally far off-resonance with the NMR frequency of the
-particle, nonetheless induces a tiny shift on the measured resonant
-frequency.  The shift induced by the far non-resonant field is known
-as a Ramsey-Bloch-Siegert shift~\cite{bib:ramsey,bib:bloch-siegert},
-and its strength goes as the square of the rotating field to leading
-order.  The cross-term in the square leads to the problematic
-frequency shift that reverses sign with $E$, hence giving a false EDM.
+neutron or atom that bounces around the edge of the cell, circulating
+in the horizontal plane, $\vec{B}_v$ will also be oriented in the
+horizontal direction.  In the rest frame of the particle, this will
+give rise to a circulating magnetic field.  The rotation frequency of
+radial field is the same frequency as particles move in the EDM cell.
+The rotating field, although generally far off-resonance with the NMR
+frequency of the particle, nonetheless induces a tiny shift on the
+measured resonant frequency.  The shift induced by the far
+non-resonant field is known as a Ramsey-Bloch-Siegert
+shift~\cite{bib:ramsey,bib:bloch-siegert}, and its strength goes as
+the square of the rotating field to leading order.  The cross-term in
+the square leads to the problematic frequency shift that reverses sign
+with $E$, hence giving a false EDM.
 
 Both the $^{199}$Hg atoms and the neutrons experience this effect.  In
 the case of the UCN, they are moving so slowly that the process is
