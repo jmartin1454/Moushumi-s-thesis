@@ -269,45 +269,94 @@ false EDM of Hg~\cite{bib:afach2015}.
 
 \subsection{Internal alkali atom magnetometers}
 
-In order to avoid any systematic effects, it becomes necessary to
-carefully investigate the magnetic field in the UCN storage chamber.
-Toward this end, all optical atomic magnetometers will be used in the
-nEDM experiment at TRIUMF.  These magnetometers, like the mercury
-co-magnetometer, are scalar so they only measure the magnitude of the
-magnetic field.  The atomic magnetometers will be placed in an array
-surrounding the precession chamber. This arrangement can be used to
-resolve the multipolarity of field perturbances. Superconducting
-Quantum Interference Device (SQUID) is one type of highly sensitive
-commercially available magnetometer. These magnetometers rely on the
-superconducting property of trapped magnetic flux. Because of this,
-they must be operated at cryogenic temperatures. SQUID magnetometers
-are sensitive to the 0.01 nG level \cite{doi:10.1063/1.3491215}, but
-keeping a device at extremely low temperatures would be impractical
-for the nEDM experiment. Spin Exchange Relaxation-Free (SERF)
-magnetometers boast greater sensitivity than SQUID magnetometers with
-SERF magnetic sensitivity reaching the 10 fG
-level\cite{doi:10.1063/1.3491215}. Their limited dynamic range is
-problematic for non-zero measurements. The most similar in sensitivity
-to NMOR magnetometers are radio frequency (RF) atomic magnetometers,
-or MX magnetometers~\cite{Groeger2006}. The basic principle and
-sensitivity of these magnetometer is same as all-optical atomic
-magnetometer. A drawback is that the alignment of the atoms crucial to
-atomic magnetometry are achieved using radio frequency magnetic
-fields, which again perturb the magnetic environment, however only at
-high frequency.  All-optical atomic magnetometers provide a viable
-solution in combining the perks of each of the previous devices. The
-most important advantage of using such all-optical atomic
-magnetometers is that only a polarized laser beam is used to interact
-with the magnetometer instead of using electrical cables which reduces
-the risk of additional sources of magnetic fields to the UCN storage
-chamber. Furthermore, Cs based magnetometers are low maintenance and
-they don't have to be cooled with liquid He down to 4 K such as SQUID
-magnetometer.  The sensitivity of Cs magnetometers can even surpass
-the sensitivity of SQUID.
+Based on the considerations above, the alkali atom magnetometers
+surrounding the nEDM measurement cells have two principal goals:
+\begin{enumerate}
+\item Determine the magnetic field to a statistical uncertainty
+  competitive with the Hg comagnometer over the timescale of the
+  frequency cycle measurement.  I.e.~measure to the statistical
+  precision of 10-20~fT in 100~s.  The field measurement should also
+  be systematically robust, i.e. there should be no drift of the
+  magnetometer reading uncorrelated with changes in $B$.
+\item Determine the homogeneity of the magnetic field, with a
+  particular focus on the largest gradient term in the false EDM,
+  which arises due to $\partial B_z/\partial z$.  The typical scale of
+  the gradient is expected to by 0.1-1~nT/m in the experiment.  Drifts
+  in the gradient should also be considered.
+\end{enumerate}
+This thesis relates primarily to the first goal of developing a
+magnetometer system and characterizing carefully its precision and
+reducing the potential for any possible systematic errors or drifts.
+This is based on a prototype system previously reported in
+Ref.~\cite{bib:our-nmor-paper}, but with several improvements.  The
+technology relies on nonlinear magneto-optical rotation (NMOR) of the
+plane of polarization of incident light in an atomic vapour, and it
+will be discussed in more detail in the next chapter.
+
+%In order to avoid any systematic effects, it becomes necessary to
+%carefully investigate the magnetic field in the UCN storage chamber.
+%Toward this end, all optical atomic magnetometers will be used in the
+%nEDM experiment at TRIUMF.  These magnetometers, like the mercury
+%co-magnetometer, are scalar so they only measure the magnitude of the
+%magnetic field.  The atomic magnetometers will be placed in an array
+%surrounding the precession chamber. This arrangement can be used to
+%resolve the multipolarity of field perturbances.
 
 
-In this Master's thesis, an introduction into the concept of full
-optical magnetometry will be presented. This will be continued with a
-status update, the presentation of measurements with our highly
-sensitive Rb magnetometer at The University of Winnipeg.
+
+% Superconducting
+%Quantum Interference Device (SQUID) is one type of highly sensitive
+%commercially available magnetometer. These magnetometers rely on the
+%superconducting property of trapped magnetic flux. Because of this,
+%they must be operated at cryogenic temperatures. SQUID magnetometers
+%are sensitive to the 0.01 nG level \cite{doi:10.1063/1.3491215}, but
+%keeping a device at extremely low temperatures would be impractical
+%for the nEDM experiment. Spin Exchange Relaxation-Free (SERF)
+%magnetometers boast greater sensitivity than SQUID magnetometers with
+%SERF magnetic sensitivity reaching the 10 fG
+%level\cite{doi:10.1063/1.3491215}. Their limited dynamic range is
+%problematic for non-zero measurements.
+
+The technology is very similar to devices developed for the planned
+Munich-ILL nEDM experiment~\cite{bib:michi-thesis}.  It is somewhat
+technically different from the PSI nEDM experiment, which uses radio
+frequency (RF) atomic magnetometers, or MX
+magnetometers~\cite{Groeger2006}.
+
+An advantage of our strategy is that our NMOR magnetometers require
+only light and atoms to operate.  In this sense our technique is
+``all-optical'' i.e.~requiring no RF.  A concern with our technology
+choice is whether it can reach the required statistical precision and
+a principal result of this thesis is that it can.  Aside from this, we
+also pursued a strategy being developed by the PSI and Munich group
+which uses free-induction decay, where all pumping (either light or
+RF) is switched off during the precision frequency measurement phase.
+
+%The basic principle and sensitivity
+%of these magnetometer is same as all-optical atomic magnetometer. A
+%drawback is that the alignment of the atoms crucial to atomic
+%magnetometry are achieved using radio frequency magnetic fields, which
+%again perturb the magnetic environment, however only at high
+%frequency.  All-optical atomic magnetometers provide a viable solution
+%in combining the perks of each of the previous devices. The most
+%important advantage of using such all-optical atomic magnetometers is
+%that only a polarized laser beam is used to interact with the
+%magnetometer instead of using electrical cables which reduces the risk
+%of additional sources of magnetic fields to the UCN storage chamber.
+
+
+%Furthermore, Cs based magnetometers are low maintenance and
+%they don't have to be cooled with liquid He down to 4 K such as SQUID
+%magnetometer.  The sensitivity of Cs magnetometers can even surpass
+%the sensitivity of SQUID.
+
+
+%In this Master's thesis, an introduction into the concept of full
+%optical magnetometry will be presented. This will be continued with a
+%status update, the presentation of measurements with our highly
+%sensitive Rb magnetometer at The University of Winnipeg.
+
+The principal contribution of this thesis work is therefore studies of
+the precision and long-term stability of all-optical NMOR-based
+magnetometers, operated using a free-induction-decay technique.
 
