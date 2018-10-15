@@ -30,8 +30,50 @@ Alkali-metal atoms have single electron in their outer shell. For this reason th
   Budker, Orlando, Yaschuk Am J Phys)
   \begin{itemize}
   \item Hypothetical transition and linear magneto-optical rotation
+  
+ In the presence of an axial magnetic field, when a linearly polarized light passes through an atomic medium the plane of polarization rotates. This kind of effect is known as the Faraday effect. Afterwards an resonant enhancement of the Faraday rotation has discovered by D. Macaluso and O.M Corbino in 1898 which is known as nonlinear magneto-optical rotation (NMOR) or nonlinear Faraday rotation \cite{budker2013optical}. Consider an example system of $ F=~1$ to $F'=~0$ transition (Fig~\ref{fig:Zeemansplitting}).  Linearly polarized light can decompose into two counter-rotating circularly polarized components $\sigma^\pm$. The transferable angular momentum is +1 for left circular polarization, -1 for right circular polarization. In
+the absence of a magnetic field, the $M=\pm 1$ sublevels are
+degenerate and the optical resonance frequencies for  the two circular
+polarizations coincide. 
+ In the presence of magnetic field the Zeeman sublevels $M=\pm 1$ shift in energy  by an amount $g\mu B/\hbar$ where g is the Lande factor and $\mu$~is the Bohr magneton. This Zeeman splitting therefore leads to a difference between the  resonance frequencies for for $\sigma^+$ and
+$\sigma^-$ light. The left circularly polarized light experiences refractive index +n and the refractive index for right circularly polarized light is -n. In this case, optical rotation arises due to the difference in the refractive index 
+\begin{equation}
+\label{eq:emc}
+\phi = \pi(n_+-n_{-})\frac{l}{\lambda} \\
+\end{equation}
+where l is the length of the medium traversed and $\lambda$ is the wavelength of light. The difference between $n_+$ and $n_-$ is shown in  Fig.\ref{fig:Faraday} . On resonance, the rotation is related to the Zeeman shift in the $M=\pm 1$ sub levels. For light with spectral
+width of the absorption line much smaller than the transition width, and for zero
+frequency detuning from the resonance, the optical rotation can be estimated as
+\begin{equation}
+\phi \approx \frac{(2g\mu B)/ \hbar\tau)}{(1+((2g\mu B)/(\hbar\tau))^2 )}\frac{l}{l_0}
+\end{equation}
+where $2g\mu/\hbar$ is correlated to Zeeman splitting, $\tau$ is the doppler width of the
+absorption line (of order GHz), and $l_0$ is the absorption length in the medium. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\linewidth]{figures/optical_rotation}
+\caption{Illustrative example of F = 1 to $F' = 0$ atomic transition with Zeeman
+splitting in the presence of a magnetic field. Image\cite{Budker2002JU2}\label{fig:Zeemansplitting}}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\linewidth]{figures/farday.jpg}
+\caption{The dependence of the refractive index on light frequency detuning
+D in the absence (n) and in the presence ($n_\pm$) of a magnetic field. Shown is
+the case of $2g\mu B=\hbar\tau$ and a Lorentzian model for line broadening. The
+lower curve shows the difference in refractive index for the two circular
+polarization components. This is the characteristic spectral profile of Macaluso–Corbino opticalrotation. Image\cite{bib:NMOR1998}\label{fig:Faraday}}
+\end{figure}
   \item Nonlinear effects in atomic gases: hole-burning and coherent
     population trapping
+    
+    
+Hole burning is the  nonlinear
+effect leading to enhanced Faraday rotation. Spectral holes, or Bennett-structures, are dips in the velocity distribution of a group of atoms produced by pump laser beam. The Faraday rotation produced by atoms with such velocity distribution can be thought of as rotation produced by the Doppler distributed atoms without the hole minus the rotation that would have been produced by the pumped out atoms.
+
+Optical pumping is a process by which light modifies the quantum state of the medium it is transmitting through. Coherent population trapping can be described as the pumping of the atomic system in a particular state, the coherent superposition of the atomic states, which is a nonabsorbing state. The exciting radiation creates an atomic coherence, such that the atom's evolution is prepared exactly out of phase with the incoming radiation and no absorption takes place. In the presence of a magnetic field, the atomic alignment
+axis created by the coherent population trapping precesses
+around the direction of the field with the Larmor frequency.
   \item Nonlinear magneto-optical rotation; also show result from
     Budker PRL 1998.
   \end{itemize}
@@ -45,7 +87,7 @@ Alkali-metal atoms have single electron in their outer shell. For this reason th
       The FM NMOR technique is useful for increasing the dynamic range of NMOR-based magnetometers.  It is possible to achieve the  sensitivity of the device in the range of  $10^{−11} $ G/pHz (comparable or superior, e.g., to the most sensitive superconducting quantum interference (SQUID) sensors)\cite{bib:FMNMOR}.
       \item AM NMOR
        
-       Studies have been reported on  all-optical magnetometric technique based on nonlinear magneto-optical rotation with amplitude-modulated light \cite{bib:AMNMOR,bib:amNMOR}. The method enables sensitive magnetic-field measurements in a broad dynamic range. The sensitivity of  $4.3\times10^{-9}$ G/$\sqrt{\text{Hz}}$ at 10 mG and the magnetic field tracking in a range of 40 mG has been achieved.
+       Studies have been reported by  Pustelny et al. \cite{bib:AMNMOR,bib:amNMOR} on all-optical magnetometric technique based on nonlinear magneto-optical rotation with amplitude-modulated light. The method enables sensitive magnetic-field measurements in a broad dynamic range. The sensitivity of  $4.3\times10^{-9}$ G/$\sqrt{\text{Hz}}$ at 10 mG and the magnetic field tracking in a range of 40 mG has been achieved.
       
       \item Michi's thesis
      
@@ -64,7 +106,7 @@ polarized light is used. The ratio of the resonance amplitudes at $\Omega_L$ and
 evaluate the magnitude of the B-field at the measuring point.
     \item Vector magnetometer
     
-    An all-optical magnetometer also capable of measuring the direction of a magnetic field along with field magnitude \cite{bib:vectormagnetometer}.  This study has been conducted using nonlinear magneto-optical rotation in cesium vapor.  Vector capability is added by effective modulation of the field along orthogonal axes and subsequent demodulation of the magnetic-resonance frequency.  The sensor exhibits a demonstrated rms noise floor of ∼$65  fT/ \sqrt {Hz}$ in measurement of the field magnitude and $ 0.5  mrad/\sqrt {Hz}$ in the field direction.  Applications for this all-optical vector magnetometer would include magnetically sensitive fundamental physics experiments, such as the search for a permanent electric dipole moment of the neutron.
+    An all-optical magnetometer is also capable of measuring the direction of a magnetic field along with field magnitude \cite{bib:vectormagnetometer}.  This study has been conducted using nonlinear magneto-optical rotation in cesium vapor.  Vector capability is added by effective modulation of the field along orthogonal axes and subsequent demodulation of the magnetic-resonance frequency.  The sensor exhibits a demonstrated rms noise floor of ∼$65  fT/ \sqrt {Hz}$ in measurement of the field magnitude and $ 0.5  mrad/\sqrt {Hz}$ in the field direction.  Applications for this all-optical vector magnetometer would include magnetically sensitive fundamental physics experiments, such as the search for a permanent electric dipole moment of the neutron.
   \end{itemize}
 \item Reminder of what we do, leading into next chapter
 \end{itemize}
@@ -80,41 +122,6 @@ state is separated from the ~$5^2S_{1/2}$~ state by an energy corresponding to 7
 
 
 
-\section{Optical pumping(need to edit)}
-
-Optical pumping is a process in which light is used to modify the quantum state of the medium. This process can generate polarized ground states in atomic media. It is a nonlinear process since the light alters the optical properties of the medium as it goes through.  According to quantum selection rules, certain atomic states are not allowed to interact with certain polarizations of light. Since transitions from or to such state are forbidden these states are called Dark state. On the other hand, states that can interact with the light will become less and less populated. This will result in different occupations of the fascinating sublevels in the atom. Consider an example system of F=~1 to F =~0 transition (Fig~\ref{fig:Zeemansplitting}).  Linearly polarized light can decompose into two counter-rotating circularly polarized components with the respective magnetic quantum number m= $\pm$ 1 related to F.  The transferable angular momentum is +1 for left circular polarization, -1 for right circular polarization and 0 for any linear polarization. After absorbing these photons, atoms can make a transition to excited states while the probability of belonging to a particular hyperfine sublevel of the excited state depends on quantum mechanical calculations.  By emitting a photon, the atom returns to the ground state. This process is known as fluorescence. Both processes occur simultaneously which causes the rearrangement of population among different hyperfine/ Zeeman ground state sublevels. For right circularly polarized light, a transition from the M = $\frac{-1}{ 2}$ (F) to the M = $\frac{1}{2} F' $ state can be excited if the laser light is tuned to the transition frequency and of enough light power to perturb the equilibrium ground state population of the electrons. Rabi frequency (R) describes the strength of the light-atom interaction. It gives the strength of the coupling between the incident light and the transition associated with it.
-The Zeeman sublevels M~=~1 shift in energy in the presence of magnetic field by an amount $g\mu B/\hbar$ where g is the Lande factor and $\mu$~is the Bohr magneton. This Zeeman splitting therefore leads to resonance frequencies for light also shift in energy. The left circularly polarized light experiences refractive index +n and the refractive index for right circularly polarized light is -n. In this case, optical rotation arises due to the difference in the refractive index 
-\begin{equation}
-\label{eq:emc}
-\phi = \pi(n_+-n_{-})\frac{l}{\lambda} \\
-\end{equation}
-where l is the length of the medium traversed and $\lambda$ is the wavelength of light. On resonance, the rotation is related to the Zeeman shift in the M~=~1 sub levels.
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.75\linewidth]{figures/optical_rotation}
-\caption{Illustrative example of F = 1 to $F' = 0$ atomic transition with Zeeman
-splitting in the presence of a magnetic field. Image\cite{Budker2002JU2}\label{fig:Zeemansplitting}}
-\end{figure}
-
-\subsection{Magneto Optical Rotation}
-\bigskip
-In the presence of an axial magnetic field, when a linearly polarized light passes through an atomic medium the plane of polarization rotates. This kind of effect is known as the Faraday effect. When Larmor frequencies are smaller than the resonance linewidth, the produced optical rotation is directly proportional to the applied magnetic field which is the main feature of Linear Faraday rotation. We can relate this Faraday effect to the Zeeman shifts in the atomic energy level in the medium. The resonant enhancement of the Faraday rotation has discovered by D. Macaluso and O.M Corbino in 1898 which is known as nonlinear magneto-optical rotation (NMOR) or nonlinear Faraday rotation \cite{budker2013optical}. In the case of linear effect, optical rotation arises due to the absorption of certain contributions of the probe light. On the other hand, the generated disequilibrium in an atom via optical pumping gives rise to nonlinear effect which then alters the birefringent properties of a probe beam. 
-As discussed above, the medium is optically pumped into an aligned state, which will
-absorb y-polarized light, and not z-polarized light. This is linear dichroism, the differential absorption of orthogonal linear polarizations. On its own this would not affect our probe beam, as it is also polarized in the z-direction. The external B field now modifies the medium. The axis of alignment precesses in a
-magnetic field, rotating the axis of dichroism. Finally, the probe beam interacts with the  rotated axis of dichroism, resulting in a rotation of polarization.
-The optical rotation can be estimated as
-\begin{equation}
-\phi \approx \frac{(2g\mu B)/ \hbar\tau)}{(1+((2g\mu B)/(\hbar\tau))^2 )}\frac{l}{l_0}
-\end{equation}
-where $2g\mu/\hbar$ is correlated to Zeeman splitting, $\tau$ is the doppler width of the
-absorption line (of order GHz), and $l_0$ is the absorption length in the medium. 
-\begin{figure}
-\centering
-\includegraphics[width=0.85\linewidth]{figures/faraday_rotation}
-\caption{Optical rotation in the linear and non-linear case. Image \cite{auzinsh2010optically}\label{fig:optical rotation}}
-\end{figure}
-The aligned atoms relax after an average time $1/\tau$. In this time, how far around they precess depends on the magnetic field. As the field increases, the precession proceeds further and further, increasing the rotation. As the field becomes high enough to precess the alignment around a full revolution before it decays, the effect starts to average itself out over the ensemble of atoms, and the rotation decreases again. Figure \ref{fig:optical rotation} shows the optical rotation for linear and non-linear Faraday effect. The symmetry of the shape comes from the fact that the precession goes the opposite way for a magnetic field of the opposite sign.
-These two effects, the linear effect resulting from circular birefringence, and the nonlinear effect resulting from linear dichroism, represent the two basic mechanisms by which the polarization of the probe beam is rotated. In the zero field case these effects happen simultaneously and continuously, resulting in a steady signal being measured.
 
 
 \section{Rb magnetometry based on NMOR}
