@@ -1,15 +1,196 @@
-\chapter{Rb magnetometer characterization at UW\label{ch:characterization}}
+\chapter{Magnetometer Operation\label{ch:characterization}}
 
-\section{Operation modes}
+In this Chapter I describe the different ways in which the
+magnetometer was operated.  Some of these modes of operation were
+applied to furhter experiments, which are reported in
+Chapter~\ref{ch:results}.  Some of the modes were simply used to
+perform a basic characterization of the magnetometer and to compare
+with the results of other groups which were discussed in the
+Literature Review in Chapter~\ref{ch:magnetometry}.
 
- In order to determine the sensitivity, a magnetometer can be operated in different modes. Most of them found its application during the time this Master's thesis was prepared. Although main focus of this work was to study magnetometer performance in Free Induction Decay (FID) mode.
- \subsection{Forced Oscillation Mode(need to edit)}
+The main purpose of this Chapter is to give an overview of the many
+parameters which can affect the performance of the magnetometer.
+Chapter~\ref{ch:results} goes into further detail on studies of
+specific performance metrics under modification of additional
+parameters.
 
- In this force oscillation measurement scheme we modulate the drive frequency of amplitude modulated light and  observe the magnetometer response using a lock-in amplifier. A resonance scan using lock-in amplifier can be done by demodulating the signal at the drive frequency which are act as reference frequency. For this force oscillation scan a frequency range and frequency increments are entered into the DAQ software. Via a
-GPIB connection, a function generator is set to the appropriate frequencies, driving
-the pump modulation of the magnetometer. The frequencies are taken by the lock-in
-amplifier as a reference signal as well as the differential output of the polarimeter board
-which is demodulated at the reference frequency. The resulting X and Y outputs are sent to the DAQ program, running on a computer via GPIB. 
+The main operation modes of the magnetometer reported in this Chapter
+are:
+\begin{itemize}
+\item Near-zero-field operation.  In this mode, the magnetic field
+  must be swept in order to calibrate the magnetometer.  The dynamic
+  range of the magnetometer in this case is $|B_z|\lesssim 0.2$~nT.
+\item Amplitude modulated NMOR, which itself was used in two distinct modes:
+\begin{itemize}
+\item Continuously pumped (a.k.a.~forced oscillation) mode.  In this
+  mode, the amplitude of the pump beam was modulated continuously and
+  the optical rotation signal was demodulated resonantly at the same
+  frequency.
+\item Free-induction decay (FID) mode.  In this mode, the amplitude of
+  the pump beam is modulated for a time and then switched off.  The
+  oscillation frequency of the optical rotation signal is then
+  measured non-resonantly.
+\end{itemize}
+In these modes, the magnetometer was generally operated at 0.2~$\mu$T
+or 1.0~$\mu$T, which is of considerably more relevance to the nEDM
+experiment.
+\end{itemize}
+In Chapter~\ref{ch:results}, most of the measurements will relate to
+our studies using FID mode.  The exception is that some degaussing
+studies will be done near zero field and hence will use that mode.
+
+
+\section{NMOR near zero field and degaussing studies}
+
+During this measurement the pump beam was switched off and the probe
+beam is used as its own pump (see
+Section~\ref{sec:something-in-chapter-3}).
+
+I used the magnetometer in this mode to study the function of the
+degaussing system described in
+Section~\ref{sec:Degaussing}.
+
+The experiment was carried out as follows:
+\begin{enumerate}
+\item The laser beam was tuned for maximum optical rotation and
+  stabilized using the DAVLL system.  The beam power was $\sim
+  20~\mu$W.
+\item Optical rotation of the probe beam was monitored throughout the
+  experiment via an oscilloscope monitoring the differential
+  photodiode signal.
+\item The innermost magnetic shield was degaussed with various
+  parameters for the sequence.  The operation of the degaussing
+  circuit was described in Section~\ref{sec:Degaussing}.  After
+  completing the degaussing sequence a switch is opened to
+  electrically isolate the degaussing coil.
+\item The magnetic field along the $z$-direction (defined in
+  Section~\ref{sec:Internal coil}) is swept in order to calibrate the
+  differential photodiode signal as a function of applied $B_z$.  In
+  this way the initial magnetic field after degaussing may be deduced.
+\end{enumerate}
+%In this case,  at first degaussing the shields that surround the vapour cell is done in order to cancel background B-field.A function generator is used to drive the degaussing coil. After completing a degaussing sequence switch is opened to electrically disconnect the degaussing coil from experimental setup. Then B-field ramp is started and NMOR signal is observed through a oscilloscope which  connected to balance photodiode output. The magnetic field sweeping is done in a triangle wave. In 
+Fig.~\ref{fig:TUNE} displays the sequence of measurement events in
+time, along with the differential photodiode signal (in Volts), which
+is proportional to optical rotation.  Also shown is a voltage applied
+to the $z$-coil with a 10~k$\Omega$ resistor in series which dominates
+the resistance of the circuit.  Recall that the coil constant of the
+$z$-coil is $\sim 48$~nT/mA (see Section~\ref{sec:Internal coil}).
+The sweep range of this trace is therefore
+% (0.8~V)/(10000~Ohm)/*48~nT/mA = 3.84 nT ???  It would be good to
+% write the correct calibration constant in the part of the thesis
+% where this coil is describe (probably somewhere in Chapter 3).
+1.9~nT peak to peak.
+
+In the first section of the oscilloscope trace, the impact of the
+degaussing procedure inducing noise in the optical rotation signal can
+be seen.  The next section involves the ramping down of a variable
+resistor, followed by opening the switch to isolate the degaussing
+coil.  Then the magnetic field $B_z$ is swept and the characteristic
+dispersive Lorentzian shape of NMOR is observed.
+
+\begin{figure}%[h]
+\centering\includegraphics[width=0.7\linewidth]{figures/scope_trace_of_field_sweeping}
+\caption{Oscilloscope trace of measurement OR near zero field. The
+  purple curve shows the voltage across the 10~k$\Omega$ resistor in
+  series with the $z$-coil, from which the magnetic field ramp of
+  1.9~nT peak to peak can be deduced.  The blue trace indicates the
+  differential photodiode signal which is proportional to the optical
+  rotation.  The left side of the traces show the impact of the
+  degaussing procedure, while the right side shows the calibration
+  procedure.\label{fig:TUNE} }
+\end{figure}
+
+
+In this measurement NMOR signal is used to determine effectiveness of
+degaussing procedure. After the degaussing procedure the observed OR
+signal is non-zero while the applied field $B_z$ was zero which
+indicates the existence of a remnant field.  The effect of degaussing
+parameters sensed by the magnetometer is discussed further in
+Section~\ref{sec:degaussing}.
+
+
+% We need to have this table somewhere, but I think it needs to be in
+% the section where you talk about degaussing.
+
+%\begin{table}%[h]
+%\centering
+%\begin{tabular}{|l|l|}
+%\hline
+%\textbf{SETTING}    & \textbf{VALUE} \\
+%\hline
+%Function generator &   \\
+%\hline
+%Frequency &  10 Hz   \\
+%Sample rate    &  10000 sample/sec  \\
+%Amplitude   &   10 V \\
+%Offset  &       0 V  \\
+%\hline
+%\end{tabular}
+%\caption{Setting for degaussing \label{table:degaussing setting}}
+%\end{table}
+
+Fig.~\ref{fig:near zero field} shows an example of the calibration of
+the differential photodiode signal to the field applied by the
+$z$-coil, for data where the degaussing part of the sequence have been
+removed.  The field is calibrated to the voltage signal as described
+above.  In Fig.~\ref{fig:near zero field}, the data have been fitted
+to a dispersive Lorentzian shape given by the function
+\begin{equation}
+\mathrm{Signal~(V)}=\frac{A(B-B_0)}{somefunctionthatMoushumifillsin}
+\end{equation}
+where $A$, $B_0$, $a$, and $o$ are fit parameters.  A key measure of
+magnetometer performance is the valley-to-peak distance, which in this
+case is about $\Delta B=\frac{2}{a}=0.49$~nT.  The other key measure
+in this case is the deduced field at zero crossing given by the fit
+parameter $B_0=0.019$~nT.  Thus, after degaussing, a remanent field of
+19~pT is found.  This is only the on-axis field.  It is possible that
+transverse fields can be larger, and these tend to make the width
+$\Delta B$ of the zero-field curve larger.
+
+\begin{figure}[h]
+\centering\includegraphics[width=0.7\linewidth]{figures/near_zero_field}
+\caption{Optical rotation as a function of magnetic field applied
+  along the direction of the laser beam. The signal looks like a pure
+  dispersive Lorentzian curve. The measured resonance width is 0.49~nT
+  and the measured remanent field is 0.019~nT.\label{fig:near zero
+    field}}
+\end{figure}
+
+In order to determine the sensitivity, a magnetometer can be operated
+in different modes. Most of them found its application during the time
+this Master's thesis was prepared. Although main focus of this work
+was to study magnetometer performance in Free Induction Decay (FID)
+mode.
+
+\section{Amplitude Modulated NMOR:  Forced Oscillation Mode}
+
+In this forced oscillation measurement scheme we modulate the
+amplitude of the pump beam and demodulate the differential photodiode
+signal in a lock-in amplifier.  The modulation/demodulation frequency
+is near twice the Larmor frequency of the atoms in the magnetic field.
+
+\begin{figure}[h]
+\centering\includegraphics[width=0.7\linewidth]{figures/AM_NMOR}
+\caption{AMOR resonance signal with a 5 cm cell containing natural Rb.
+  Data was acquired by using a balanced photodiode which demodulated
+  through lock-in amplifier at 9.335 KHz.The observed resonance width
+  is about 2.5 nT.\label{fig:AMOR}}
+\end{figure} 
+
+Fig.~\ref{fig:AMOR} shows a measurement of the in-phase and quadrature
+signals measured while the frequency is swept very slowly.
+
+
+A resonance scan using lock-in amplifier can be done by demodulating
+the signal at the drive frequency which are act as reference
+frequency. For this force oscillation scan a frequency range and
+frequency increments are entered into the DAQ software. Via a GPIB
+connection, a function generator is set to the appropriate
+frequencies, driving the pump modulation of the magnetometer. The
+frequencies are taken by the lock-in amplifier as a reference signal
+as well as the differential output of the polarimeter board which is
+demodulated at the reference frequency. The resulting X and Y outputs
+are sent to the DAQ program, running on a computer via GPIB.
 \begin{figure}[h]
 \centering\includegraphics[width=0.4\linewidth]{figures/FM_NMOR}
 \caption{Optical rotation vs. forced oscillation frequency}

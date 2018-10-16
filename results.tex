@@ -1,101 +1,40 @@
-\chapter{Results\label{ch:results}}
+\chapter{Experiments using the magnetometer\label{ch:results}}
 
+\section{Different operational modes of the magnetometer}
 
-
-\section{Application of different operational modes of the magnetometer}
-
-\subsection{NMOR near zero field and degaussing studies}
-
-During this measurement the pump beam was switched off and the probe
-beam is used as its own pump (see
-Section~\ref{sec:something-in-chapter-3}).
-
-I used the magnetometer in this mode to study the function of the
-degaussing system described in
-Section~\ref{sec:Degaussing}.
-
-The experiment was carried out as follows:
-\begin{enumerate}
-\item The laser beam was tuned for maximum optical rotation and
-  stabilized using the DAVLL system.  The beam power was $\sim
-  20~\mu$W.
-\item Optical rotation of the probe beam was monitored throughout the
-  experiment via an oscilloscope monitoring the differential
-  photodiode signal.
-\item The innermost magnetic shield was degaussed with various
-  parameters for the sequence.  The operation of the degaussing
-  circuit was described in Section~\ref{sec:Degaussing}.  After
-  completing the degaussing sequence a switch is opened to
-  electrically isolate the degaussing coil.
-\item The magnetic field along the $z$-direction (defined in
-  Section~\ref{sec:Internal coil}) is swept in order to calibrate the
-  differential photodiode signal as a function of applied $B_z$.  In
-  this way the initial magnetic field after degaussing may be deduced.
-\end{enumerate}
-%In this case,  at first degaussing the shields that surround the vapour cell is done in order to cancel background B-field.A function generator is used to drive the degaussing coil. After completing a degaussing sequence switch is opened to electrically disconnect the degaussing coil from experimental setup. Then B-field ramp is started and NMOR signal is observed through a oscilloscope which  connected to balance photodiode output. The magnetic field sweeping is done in a triangle wave. In 
-Fig.~\ref{fig:TUNE} displays the sequence of measurement events in
-time, along with the differential photodiode signal (in Volts), which
-is proportional to optical rotation.  Also shown is a voltage applied
-to the $z$-coil with a 10~k$\Omega$ resistor in series which dominates
-the resistance of the circuit.  Recall that the coil constant of the
-$z$-coil is $\sim 48$~nT/mA (see Section~\ref{sec:Internal coil}).
-The sweep range of this trace is therefore
-% (0.8~V)/(10000~Ohm)/*48~nT/mA = 3.84 nT ???  It would be good to
-% write the correct calibration constant in the part of the thesis
-% where this coil is describe (probably somewhere in Chapter 3).
-1.9~nT peak to peak.
-
-In the first section of the oscilloscope trace, the impact of the
-degaussing procedure inducing noise in the optical rotation signal can
-be seen.  The next section involves the ramping down of a variable
-resistor, followed by opening the switch to isolate the degaussing
-coil.  Then the magnetic field~($B_z$) is swept and the characteristic
-dispersive Lorentzian shape of NMOR is observed.
-
-\begin{figure}%[h]
-\centering\includegraphics[width=0.7\linewidth]{figures/scope_trace_of_field_sweeping}
-\caption{Oscilloscope trace of measurement OR near zero field. The
-  purple curve shows the voltage across the 10~k$\Omega$ resistor in
-  series with the $z$-coil, from which the magnetic field ramp of
-  1.9~nT peak to peak can be deduced.  The blue trace indicates the
-  differential photodiode signal which is proportional to the optical
-  rotation.  The left side of the traces show the impact of the
-  degaussing procedure, while the right side shows the calibration
-  procedure.\label{fig:TUNE} }
-\end{figure}
-
-
-In this measurement NMOR signal is used to determine effectiveness of degaussing procedure. After the degaussing procedure the observed field inside the shield is non-zero while the applied field $B_z$ was zero which might indicate the existence of some remnant field. Durig this measurement the magnetic field ($B_z$) was ramped about 2.5 nT peak to peak which corresponds to resonance width 0.4 nT. The effect of degaussing parameter on resonance width will describe on section \ref{sec:degaussing}.
-\begin{table}[h]
-\centering
-\begin{tabular}{|l |l|}
-\hline
-
-\textbf{ SETTING}    & \textbf{VALUE} \\
-\hline
-Function generator &   \\
-\hline
-Frequency & ~ 10 Hz   \\
-
-Sample rate    &  10000 sample/sec  \\
-
-Amplitude   &  ~ 10 V \\
-Offset  &      ~ 0 V  \\
-\hline
-\end{tabular}
-\caption{Setting for degaussing \label{table:degaussing setting}}
-\end{table}
-
-In Fig \ref{fig:near zero field}    NMOR data were acquired by sweeping the magnetic field in a triangle wave; the peaks in the curve show a slight dependence on the direction of the sweep, due to the time response of the atoms. The resonance width is about 0.49 nT.
-
- \begin{figure}[h]
-\centering\includegraphics[width=0.7\linewidth]{figures/near_zero_field}
-\caption{Optical rotation as a function of magnetic field applied along the direction of the laser beam. The signal looks like a pure dispersive lorenzian curve. The measured resonance width is 0.49 nT.\label{fig:near zero field}}
-\end{figure}
 \subsection{Amplitude modulated magneto optical rotation (AM NMOR)}
-     To extent the magnetometer sensitivity to magnetic fields where Larmor precession is much faster than the ground state relaxation rate, it is necessary to synchronize the optical pumping rate with Larmor precession which can be achieved by modulating the light \cite{doi:10.1063/1.3225917}. In the case of AM NMOR, high-field resonance occur in addition to the regular zero-field resonance. The optical properties of the medium are being modulated at twice the Larmor frequency. In the case of strong external magnetic field, the dynamic Stark effect limits the sensitivity of NMOR based atomic magnetometry by reducing the accuracy of the field measurement. The advantage of using AM NMOR method is that it can reduce the Stark effect because light frequency is not affected by amplitude modulation\cite{gawlikoptical}. In AM NMOR, It is easily possible to control the number and amplitudes of the high field resonances by using the square wave modulation of light intensity.\\
-In AM NMOR, we need to pump the atoms repeatedly, and a lock-in amplifier is used to observe the optical rotation at the same frequency. When this modulation frequency is the same as the harmonic frequency of the atoms we observe NMOR signal. During this study the reference frequency of lock-in amplifier is set to the modulation frequency. The x and y output signal of lock-in amplifier are shown in Fig~\ref{fig:AMOR}. The
-black curve corresponds to the in-phase component(x), the red curve to the out of phase component(y). The dispersion structure(y component) is the resonance that can be observed in a regular rotation experiment with no modulation.  The modulation frequency of the pump beam was set to its resonance while the X and Y outputs recorded. In this case the observed resonance width is about 2.5 nT which has shown in Fig~\ref{fig:AMOR}.
+
+% Belongs in Magnetometer Literature Review Chapter 2?
+
+%To extent the magnetometer sensitivity to magnetic fields where Larmor
+%precession is much faster than the ground state relaxation rate, it is
+%necessary to synchronize the optical pumping rate with Larmor
+%precession which can be achieved by modulating the light
+%\cite{doi:10.1063/1.3225917}. In the case of AM NMOR, high-field
+%resonance occur in addition to the regular zero-field resonance. The
+%optical properties of the medium are being modulated at twice the
+%Larmor frequency. In the case of strong external magnetic field, the
+%dynamic Stark effect limits the sensitivity of NMOR based atomic
+%magnetometry by reducing the accuracy of the field measurement. The
+%advantage of using AM NMOR method is that it can reduce the Stark
+%effect because light frequency is not affected by amplitude
+%modulation\cite{gawlikoptical}. In AM NMOR, It is easily possible to
+%control the number and amplitudes of the high field resonances by
+%using the square wave modulation of light intensity.
+
+In AM NMOR, we need to pump the atoms repeatedly, and a lock-in
+amplifier is used to observe the optical rotation at the same
+frequency. When this modulation frequency is the same as the harmonic
+frequency of the atoms we observe NMOR signal. During this study the
+reference frequency of lock-in amplifier is set to the modulation
+frequency. The x and y output signal of lock-in amplifier are shown in
+Fig~\ref{fig:AMOR}. The black curve corresponds to the in-phase
+component(x), the red curve to the out of phase component(y). The
+dispersion structure(y component) is the resonance that can be
+observed in a regular rotation experiment with no modulation.  The
+modulation frequency of the pump beam was set to its resonance while
+the X and Y outputs recorded. In this case the observed resonance
+width is about 2.5 nT which has shown in Fig~\ref{fig:AMOR}.
 \begin{table}[h]
 \centering
 \begin{tabular}{|l |l|}
