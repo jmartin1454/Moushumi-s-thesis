@@ -114,7 +114,7 @@ Time constant     &  $300\mu s$ \\
 Sensitivity      &  500mV  \\
 \hline
 \end{tabular}
-\caption{Setting for FID at $1\mu T$ field}
+\caption{Setting for FID at $1\mu T$ field\label{table:FID setting}}
 \end{table}
 \begin{figure}[h]
 \centering\includegraphics[width=0.55\linewidth]{figures/Capture2}
@@ -122,19 +122,19 @@ Sensitivity      &  500mV  \\
 \end{figure}
 The signal recorded  from X channel will be a sinusoid with an exponentially damping, according to   
   \begin{equation}
-                                         y(t) = y_0 + A   e^{(t-t_0)/\tau}\sin(\omega t + \phi_0)
+ y(t) = y_0 + A   e^{(t-t_0)/\tau}\sin(\omega t + \phi_0)\label{eq:decaying sinwave}
 \end{equation}  
 
 And the signal recorded  from Y channel will be a decaying cosine wave, according to
                                        
   \begin{equation}
-                                         y(t) = y_0 + A   e^{(t-t_0)/\tau}\cos(\omega t + \phi_0)
+ y(t) = y_0 + A   e^{(t-t_0)/\tau}\cos(\omega t + \phi_0)\label{eq:decaying coswave}
 \end{equation}
 where $y_0$ describes a possible offset, A is the maximum amplitude of the sinusoidal oscillation,
-t the present time, $t_0$ the starting point of the measurement, $\omega$ the oscillation frequency and $\phi_0$  some possible phase shift. The data fitting procedure were done in two ways in order to study a variety of systematic effects that were encountered. One method is to take a least square fit of x and y data separately to a decaying sin and cosine wave respectively. Another way of data fitting is to fit X and Y data simultaneously. A least square-fit of the recorded data set to equation (4.6) or (4.7) gives an estimate on frequency and  therefore the magnetic field.
+t the present time, $t_0$ the starting point of the measurement, $\omega$ the oscillation frequency and $\phi_0$  some possible phase shift. The data fitting procedure were done in two ways in order to study a variety of systematic effects that were encountered. One method is to take a least square fit of x and y data separately to a decaying sin and cosine wave respectively. Another way of data fitting is to fit X and Y data simultaneously. A least square-fit of the recorded data set to equation \ref{eq:decaying sinwave} or \ref{eq:decaying coswave} gives an estimate on frequency and  therefore the magnetic field.
 \begin{figure}[h]
 \centering\includegraphics[width=0.55\linewidth]{figures/fid_simultaneous}
-\caption{ Simultaneous fit of X and Y signal(green and red dots are represents x and y data respectively whereas green and red curve represents fit curves }
+\caption{ Simultaneous fit of X and Y signal(green and red dots are represents x and y data respectively whereas green and red curve represents fit curves\label{Fig:FID fit}}
 \end{figure}
   
 
@@ -151,9 +151,10 @@ Offset $\phi_0$: The mean of FID signal is calculated. This mean value is used a
 \end{itemize}
 The data fitting procedure provides us the actual value for those parameters. The oscillation frequency, one of the extracted fit parameters, is then is used to estimate the magnetic field according to the following equation
 \begin{equation}
-B= \frac{\nu_{fit}~ +~\nu_0}{2\gamma}
+ B= \frac{\nu_{fit}~ +~\nu_0}{2\gamma}\label{eq:field}
 \end{equation}
-where $\nu_{fit}$ denotes the oscilation  frequency, $\nu_{0}$ is lock-in frequency and $\gamma$ is the gyromagnetic ratio of Rb vapor. Figure 4.4 shows an example least square fit of FID signal where both x and y output of lock-in has displayed.\\
+ where $\nu_{fit}$ denotes the oscilation  frequency, $\nu_{0}$ is lock-in frequency and $\gamma$ is the gyromagnetic ratio of Rb vapor. Fig \ref{Fig:FID fit} shows an example least square fit of FID signal where both x and y output of lock-in has displayed.
+ 
 Advantages: FID mode is free of  pump light induced frequency shifts or instabilities because the optical pumping is done for a very short time period and the frequency measurement takes place quickly. This frequency is later translate into magnetic field.\\ 
 
 Disadvantages: As a finite duty cycle is used (pump modulation only happens during a short period of time and the main idea is to watch the coherence decay, a decreasing of the maximum achievable sensitivity with this method.
@@ -178,9 +179,9 @@ Since our Rb magnetometer is a scalar magnetometer, it is not possible to measur
         \centering
         \includegraphics[width=\textwidth]{figures/transverse_field_2}
         \caption{}
-        \label{fig:five over x}
+        \label{fig:transverse2}
     \end{subfigure}
     \caption{(a) Optical rotation as a function of time at $\Omega_L$ in the yz plane at tilt angle $15\degree$ with light propagation direction. (b) Optical rotation as a function of time at $2\Omega_L$ for same tilt angle}
-    \label{fig:three graphs}
+    \label{fig:Tilted field}
 \end{figure}
 

@@ -12,7 +12,7 @@ Section~\ref{sec:something-in-chapter-3}).
 
 I used the magnetometer in this mode to study the function of the
 degaussing system described in
-Section~\ref{sec:something-in-chapter-3-about-degaussing}.
+Section~\ref{sec:Degaussing}.
 
 The experiment was carried out as follows:
 \begin{enumerate}
@@ -24,11 +24,11 @@ The experiment was carried out as follows:
   photodiode signal.
 \item The innermost magnetic shield was degaussed with various
   parameters for the sequence.  The operation of the degaussing
-  circuit was described in Section~\ref{sec:somewhere}.  After
+  circuit was described in Section~\ref{sec:Degaussing}.  After
   completing the degaussing sequence a switch is opened to
   electrically isolate the degaussing coil.
 \item The magnetic field along the $z$-direction (defined in
-  Section~\ref{sec:somewhere-else}) is swept in order to calibrate the
+  Section~\ref{sec:Internal coil}) is swept in order to calibrate the
   differential photodiode signal as a function of applied $B_z$.  In
   this way the initial magnetic field after degaussing may be deduced.
 \end{enumerate}
@@ -36,12 +36,12 @@ The experiment was carried out as follows:
 Fig.~\ref{fig:TUNE} displays the sequence of measurement events in
 time, along with the differential photodiode signal (in Volts), which
 is proportional to optical rotation.  Also shown is a voltage applied
-to the $z$-coil with a 100~$\Omega$ resistor in series which dominates
+to the $z$-coil with a 10000~$\Omega$ resistor in series which dominates
 the resistance of the circuit.  Recall that the coil constant of the
-$z$-coil is $\sim 48$~nT/A (see Section~\ref{sec:zcoil}).  The
+$z$-coil is $\sim 48$~nT/mA (see Section~\ref{sec:Internal coil}).  The
 sweeping range of this trace is therefore about
-% (800~mV)/(100~Ohm)/(1000 mA/A)*48~nT/A = 0.384 nT ???
-2.5 nT peak to peak.
+% (0.8~V)/(10000~Ohm)/*48~nT/mA = 3.84 nT ???
+1.92 nT peak to peak.
 
 In the first section of the oscilloscope trace, the impact of the
 degaussing procedure on the optical rotation signal can be seen.  The
@@ -54,14 +54,14 @@ Lorentzian shape of NMOR is observed.
 \centering\includegraphics[width=0.7\linewidth]{figures/scope_trace_of_field_sweeping}
 \caption{Oscilloscope trace of measurement OR near zero field. The
   purple curve shows a voltage... that the magnetic field was ramped
-  about 2.5 nT peak to peak with a triangular wave while the blue
+  about 1.92 nT peak to peak with a triangular wave while the blue
   colored dispersive Lorentzian shape curve indicates another
   voltage... induced optical rotation due to field
   sweeping.\label{fig:TUNE} }
 \end{figure}
 
 
-In this measurement NMOR signal is used to determine effectiveness of degaussing procedure. After the degaussing procedure the observed field inside the shield is non-zero while the applied field $B_z$ was zero which might indicate the existence of some remnant field. Durig this measurement the magnetic field ($B_z$) was ramped about 2.5 nT peak to peak which corresponds to resonance width 0.4 nT. The effect of degaussing parameter on resonance width will describe on section (5.6).
+In this measurement NMOR signal is used to determine effectiveness of degaussing procedure. After the degaussing procedure the observed field inside the shield is non-zero while the applied field $B_z$ was zero which might indicate the existence of some remnant field. Durig this measurement the magnetic field ($B_z$) was ramped about 2.5 nT peak to peak which corresponds to resonance width 0.4 nT. The effect of degaussing parameter on resonance width will describe on section \ref{sec:degaussing}.
 \begin{table}[h]
 \centering
 \begin{tabular}{|l |l|}
@@ -79,7 +79,7 @@ Amplitude   &  ~ 10 V \\
 Offset  &      ~ 0 V  \\
 \hline
 \end{tabular}
-\caption{Setting for degaussing }
+\caption{Setting for degaussing \label{table:degaussing setting}}
 \end{table}
 
 \newpage
@@ -167,7 +167,7 @@ obtained with a probe light power of 22 $\mu W$, pump power of 40 $\mu$W. The pu
 \end{figure}
   \section{long term FID measurement}  
 The forced oscillation scans and the single FID shot gives information about the present magnetic field. In order to get information about the change in magnetic field over time, long term data was taken in the FID mode. During this long term process the laser frequency was locked into D1 transition line of Rb-85 using DigiLock 110 laser locking module. A stable power supply was used to run the coil system inside the shield. In order to observe the FID signal, a Tektronix DPO 2014 oscilloscope was connected to X and Y output of output of lock-in amplifier. A python script is used to setup function generator and to trigger DAQ for long term FID measurement. This same python script is also used to grab data continuously from oscilloscope screen to computer. For further data analysis  another python script is used. On the basis of the X
-and Y channel recordings, a least-square fit was done for each X and Y pair. The measured oscillation frequency of decaying signal was then convert to magnetic field using equation (4.7). The recorded B-field data vs. time was further used to calculate Allan deviations, getting  information on the deviations from the mean magnetic field vs. integration time (bin size). Measuring magnetic field over long period of time gives us information about the magnetometer performance. Toward this end,we study long term field measurement. Fig~\ref{fig:long term field} ~represents the magnetic field recorder over 4 hours on three different day. Each data points in this graph correspond to single FID scan. The observed field drift is almost same (15 pT) for three days. This measurement was conducted at 0.2 $\mu$T magnetic field.
+and Y channel recordings, a least-square fit was done for each X and Y pair. The measured oscillation frequency of decaying signal was then convert to magnetic field using equation \ref{eq:field}. The recorded B-field data vs. time was further used to calculate Allan deviations, getting  information on the deviations from the mean magnetic field vs. integration time (bin size). Measuring magnetic field over long period of time gives us information about the magnetometer performance. Toward this end,we study long term field measurement. Fig~\ref{fig:long term field} ~represents the magnetic field recorder over 4 hours on three different day. Each data points in this graph correspond to single FID scan. The observed field drift is almost same (15 pT) for three days. This measurement was conducted at 0.2 $\mu$T magnetic field.
 \begin{figure}[h]
 \centering\includegraphics[width=0.85\linewidth]{figures/field_3_day}
 \caption{Magnetic field recorded over 4 hours on three different day. The observed field drift is almost same(15 pT) for three days.\label{fig:long term field}}
@@ -175,7 +175,7 @@ and Y channel recordings, a least-square fit was done for each X and Y pair. The
    \begin{itemize}
    \item summary of statistical error, systematic error, stability via allan deviations.
    \end{itemize}
-   \newpage
+  
    \section{Optimization of cycle time} 
    \begin{figure}
     \centering
@@ -194,14 +194,13 @@ and Y channel recordings, a least-square fit was done for each X and Y pair. The
         \label{fig:pump long}
     \end{subfigure}
     \caption{(a) FID signal for pump time~ 0.49 s and probe time~ 0.4 s. (b) FID signal for pump time  0.1 s and probe time ~0.2 s. Both measurement were conducted at $0.2~\mu$T magnetic field.}
-    \label{fig:three graphs}
+    \label{fig:pump time}
 \end{figure} 
    \begin{figure}[h]
 \centering\includegraphics[width=0.75\linewidth]{figures/pump_time}
-\caption{Measured B-field vs. time   for different pump time. The longest pump time is 0.49 s while the shortest pump time is 0.1 s. No obvious dependency of pump time on  measured magnetic field has been observed during this study}
+\caption{Measured B-field vs. time   for different pump time. The longest pump time is 0.49 s while the shortest pump time is 0.1 s. No obvious dependency of pump time on  measured magnetic field has been observed during this study.\label{fig:different pump time}}
 \end{figure}
-In FID NMOR optical pumping is done for polarizing Rb atoms and afterward the spontaneous decay of excited atom is observed. So a complete cycle of FID measurement consist of pump and probe time.Pump time represents the time atoms take to generate a polarized ground state. In this study we were trying to study how long the optical pumping of Rb atom should have continued in order to generate an alignment and optical pumping for long time does make any difference in measuring magnetic field precisely or not. FID signal with 0.49 sec pump time and 0.4 sec probe time has shown in Fig \ref{fig:pump short}. On the other hand, Fig \ref{fig:pump long} shows  the FID signal for 0.1 s pump time and 0.2 sec probe time. In Figure 5.8 the measured magnetic field in about 300 sec has shown for different pump time. The longer pump time is 0.49 sec and the shorter one is 0.1 sec. It is obvious from the plot that pump time doesn't effect in field precision. However for our Rb magnetometry setup it is not possible to make the pump time shorter than 0.1 sec because this 0.1 sec is the minimum time atoms need to get aligned for making a coherence state after interacting with laser beam. Since the amplitude of FID NMOR signal reach it's maximum while atoms are in coherence state. Thus It is easy to understand coherence state is ready or not by observing the signal amplitude. In Fig~\ref{fig:pump short} the optical pumping is done for 0.49 s while signal amplitude reach its maximum over 0.1 s and after that signal amplitude remains unchanged till 0.49 s. In this case there is no point to pump more than 0.1 s. Same situation happens about probe time. If signal amplitude decays so quickly there is no point to set longer probe time. By optimizing pump and probe time we can speed up data acquisition system. After optimization for a single FID scan it only takes 0.35 s  without losing any information. By using this faster data acquisition system it is possible to record multiple FID run with in a short period of time which is helpful to gather more information about magnetic field environment.
-\newpage
+In FID NMOR optical pumping is done for polarizing Rb atoms and afterward the spontaneous decay of excited atom is observed. So a complete cycle of FID measurement consist of pump and probe time.Pump time represents the time atoms take to generate a polarized ground state. In this study we were trying to study how long the optical pumping of Rb atom should have continued in order to generate an alignment and optical pumping for long time does make any difference in measuring magnetic field precisely or not. FID signal with 0.49 sec pump time and 0.4 sec probe time has shown in Fig \ref{fig:pump short}. On the other hand, Fig \ref{fig:pump long} shows  the FID signal for 0.1 s pump time and 0.2 sec probe time. In Fig \ref{fig:different pump time} the histogram of measured magnetic field over 300 sec has shown for different pump time. The longer pump time is 0.49 sec and the shorter one is 0.1 sec. It is obvious from the plot that pump time doesn't effect in field precision. However for our Rb magnetometry setup it is not possible to make the pump time shorter than 0.1 sec because this 0.1 sec is the minimum time atoms need to get aligned for making a coherence state after interacting with laser beam. Since the amplitude of FID NMOR signal reach it's maximum while atoms are in coherence state. Thus It is easy to understand coherence state is ready or not by observing the signal amplitude. In Fig~\ref{fig:pump short} the optical pumping is done for 0.49 s while signal amplitude reach its maximum over 0.1 s and after that signal amplitude remains unchanged till 0.49 s. In this case there is no point to pump more than 0.1 s. Same situation happens about probe time. If signal amplitude decays so quickly there is no point to set longer probe time. By optimizing pump and probe time we can speed up data acquisition system. After optimization for a single FID scan it only takes 0.35 s  without losing any information. By using this faster data acquisition system it is possible to record multiple FID run with in a short period of time which is helpful to gather more information about magnetic field environment.
    \section{current with existing power supply}
    \begin{itemize}
    \item Analysis of current stability.\\
@@ -218,13 +217,13 @@ In FID NMOR optical pumping is done for polarizing Rb atoms and afterward the sp
    \begin{figure}[h]
 \centering\includegraphics[width=0.7\linewidth]{figures/field_change_with_current}
   
-\caption{The change in magnetic field  by changing coil current has been studied over 1400 sec. The blue line on different regions of the graph displays the measured magnetic field corresponding to the change in coil current. \label{fig:different sample rate}}
+\caption{The change in magnetic field  by changing coil current has been studied over 1400 sec. The blue line on different regions of the graph displays the measured magnetic field corresponding to the change in coil current. \label{fig:field change}}
 \end{figure}
    \end{itemize}
-   \section{degaussing studies}  
+   \section{degaussing studies\label{sec:degaussing}}  
    \begin{itemize}
    \item different degaussing schemes(changing sample rate)\\
-Degaussing process is done in order to avoid the environmental perturbation and reduce any remnant field inside the four layer $\mu$ metal magnetic shield \cite{doi:10.1063/1.2713433}. For our degaussing system we are using an envelope function which has $1\times 10^6$ points.Degaussing is complete after $5\times 10^6$ points.Sample rate affects how quickly we move through this waveform. A detailed analysis of NMOR signal by changing the degaussing parameter could give us some information about the goodness of degaussing procedure. Toward this end, a study has been carried out to determine  the dependency of the resonance width on the sample rate. In this case, data was acquired by sweeping the magnetic field near zero field. Before each measurement degaussing the innermost layer of shield has done. During this measurement only one degaussing parameter,sample rate, was varied in order to study the effect of degaussing parameter on magnetic field measurement.  Optical rotation as a function of magnetic field for different sample rate has shown in Fig~\ref{fig:different sample rate}. The resonance width $\Delta B$, the difference between two peak of the dispersive curve, changed for different sampling rate. It can be seen from Fig~\ref{fig:different sample rate} that, the resonance width is about 0.49 nT for sample rate 10000 sample/sec and the resonance width is 0.38 nT for sample rate 80000 sample/sec. Fig~\ref{fi} shows the resonance width as a function of sample rate. It is obvious from the graph that the resonance width becomes narrower for larger sample rate.    
+Degaussing process is done in order to avoid the environmental perturbation and reduce any remnant field inside the four layer $\mu$ metal magnetic shield \cite{doi:10.1063/1.2713433}. For our degaussing system we are using an envelope function which has $1\times 10^6$ points.Degaussing is complete after $5\times 10^6$ points.Sample rate affects how quickly we move through this waveform. A detailed analysis of NMOR signal by changing the degaussing parameter could give us some information about the goodness of degaussing procedure. Toward this end, a study has been carried out to determine  the dependency of the resonance width on the sample rate. In this case, data was acquired by sweeping the magnetic field near zero field. Before each measurement degaussing the innermost layer of shield has done. During this measurement only one degaussing parameter,sample rate, was varied in order to study the effect of degaussing parameter on magnetic field measurement.  Optical rotation as a function of magnetic field for different sample rate has shown in Fig~\ref{fig:different sample rate}. The resonance width $\Delta B$, the difference between two peak of the dispersive curve, changed for different sampling rate. It can be seen from Fig~\ref{fig:different sample rate} that, the resonance width is about 0.49 nT for sample rate 10000 sample/sec and the resonance width is 0.38 nT for sample rate 80000 sample/sec. Fig~\ref{fig:different sample rate} shows the resonance width as a function of sample rate. It is obvious from the graph that the resonance width becomes narrower for larger sample rate.    
    
    \begin{figure}[h]
 \centering\includegraphics[width=0.65\linewidth]{figures/sample_rate}
@@ -236,7 +235,7 @@ Degaussing process is done in order to avoid the environmental perturbation and 
 \end{figure}
 
    \item Ramp field up/down \\
-  During this study the magnetometer has been operated in FID mode at 0.2 $\mu$T field. The recorded magnetic field over 2200 sec has been showed in Figure 5.13(a). No degaussing has been done during this measurement. It can be seen from the figure the magnetic field increase linearly for first 300 sec then showed a decrease in field. The field was pretty stable between 600 s and 1800 s and after that the field showed a rapid increase. The overall field change is about 15 pT during the measurement. Data was acquired by ramping $B_z$  from  0.2 $\mu$T to 10 $\mu$T then again set it to 0.2 $\mu$T and collect FID signal. By doing this field ramping we intentionally perturb the magnetic field environment inside the shield. After this field ramping the long term field measurement has been conducted for another 2200 sec. In this case, the field showed a downward drift of about 35 pT. Thus field ramping has been changed the magnetic field environment inside the magnetic shielding.
+  During this study the magnetometer has been operated in FID mode at 0.2 $\mu$T field. The recorded magnetic field over 2200 sec has been showed in Fig \ref{fig:ramp up}. No degaussing has been done during this measurement. It can be seen from the figure the magnetic field increase linearly for first 300 sec then showed a decrease in field. The field was pretty stable between 600 s and 1800 s and after that the field showed a rapid increase. The overall field change is about 15 pT during the measurement. Data was acquired by ramping $B_z$  from  0.2 $\mu$T to 10 $\mu$T then again set it to 0.2 $\mu$T and collect FID signal. By doing this field ramping we intentionally perturb the magnetic field environment inside the shield. After this field ramping the long term field measurement has been conducted for another 2200 sec. In this case, the field showed a downward drift of about 35 pT. Thus field ramping has been changed the magnetic field environment inside the magnetic shielding.
    \begin{figure}
     \centering
  
@@ -244,21 +243,21 @@ Degaussing process is done in order to avoid the environmental perturbation and 
         \centering
         \includegraphics[width=\textwidth]{figures/ramp_1}
         \caption{}
-        \label{fig:three sin x}
+        \label{fig:ramp up}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.42\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/ramp_2}
         \caption{}
-        \label{fig:five over x}
+        \label{fig:ramp down}
     \end{subfigure}
     \caption{ FID signal at $B_z=0.2 \mu$T magnetic field.(a) no degaussing (b) ) Ramp $B_z$  from  0.2 $\mu$T to 10 $\mu$T then again set it to 0.2 $\mu$T and collect FID signal.}
-    \label{fig:three graphs}
+    \label{fig:ramp updown}
 \end{figure}
    
    \item degaussing second innermost shield effect in field drift.\\
-   After doing transverse field study (applying current to X and Y coil along with Bz coil) magnetic field environment was pretty unstable. Figure 5.14(a) shows about 50 pT drift in magnetic field in 4000 sec. In order to cancel background field inside shield degaussing innermost layer of $\mu$ metal is done but it doesn't help to solve field drift problem. Then degaussing the 2nd innermost layer of shield is done which solve the field drift problem. Since the end cap of the innermost shield layer is not in use some background field leaked into 2nd layer which was causing the drift in field. So by degaussing the 2nd layer of shield canceled background field and field becomes so stable (Figure 5.14 (b)).
+   After doing transverse field study (applying current to X and Y coil along with Bz coil) magnetic field environment was pretty unstable. Fig \ref{fig:without DG} shows about 50 pT drift in magnetic field in 4000 sec. In order to cancel background field inside shield degaussing innermost layer of $\mu$ metal is done but it doesn't help to solve field drift problem. Then degaussing the 2nd innermost layer of shield is done which solve the field drift problem. Since the end cap of the innermost shield layer is not in use some background field leaked into 2nd layer which was causing the drift in field. So by degaussing the 2nd layer of shield canceled background field and field becomes so stable (Fig \ref{fig:with DG}).
    
   \begin{figure}
     \centering
@@ -267,24 +266,24 @@ Degaussing process is done in order to avoid the environmental perturbation and 
         \centering
         \includegraphics[width=\textwidth]{figures/before_degaussing}
         \caption{}
-        \label{fig:three sin x}
+        \label{fig:without DG}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/after_degaussing}
         \caption{}
-        \label{fig:five over x}
+        \label{fig:with DG}
     \end{subfigure}
     \caption{ Magnetic field recorded over 3 hours. (a) The stability of magnetic field without performing any degaussing. A downward field drift of about 45 pT  has observed in this case (b) magnetic field stability after degaussing the 2nd innermost layer of magnetic shielding. Only a couple pT field drift has observed in this case.}
-    \label{fig:three graphs}
+    \label{fig:effect of DG}
 \end{figure}
    \end{itemize}
    \newpage
    \section{Laser tuning} 
    \begin{itemize}
    \item effect of careful tuning\\
-	The main purpose of this study is to understand the importance of laser tuning on coherence life time of excited atoms. During the study optical pumping is done to polarize the rubidium atom and hence produce coherence state. When the laser light  is  exactly tuned to resonance with the atomic transition, the lifetime of coherence state becomes longer and the amplitude of resonance signal reaches its maximum. On the other hand coherence state decay  quickly when laser frequency detunes from atomic transition. In this case, the signal amplitude reduces due to frequency detuning. Figure 5.15 shows the effect of laser tuning on coherence lifetime. For proper laser tuning the observed coherence time is 68 ms (a) whereas for bad tuning coherence time reduces to 59 ms (b). On a fundamental level, the magnetometer actually measures the energy splitting between the Zeeman sublevels of the atomic ground state due to the magnetic field. The linewidth of such a spectroscopic measurement is given by the coherence lifetime $T_2$ of the atomic spins:
+	The main purpose of this study is to understand the importance of laser tuning on coherence life time of excited atoms. During the study optical pumping is done to polarize the rubidium atom and hence produce coherence state. When the laser light  is  exactly tuned to resonance with the atomic transition, the lifetime of coherence state becomes longer and the amplitude of resonance signal reaches its maximum. On the other hand coherence state decay  quickly when laser frequency detunes from atomic transition. In this case, the signal amplitude reduces due to frequency detuning. Fig~ \ref{fig:effect of tuning} shows the effect of laser tuning on coherence lifetime. For proper laser tuning the observed coherence time is 68 ms (Fig \ref{fig:good tuning}) whereas for bad tuning coherence time reduces to 59 ms (Fig \ref{fig:bad tuning}). On a fundamental level, the magnetometer actually measures the energy splitting between the Zeeman sublevels of the atomic ground state due to the magnetic field. The linewidth of such a spectroscopic measurement is given by the coherence lifetime $T_2$ of the atomic spins:
 \begin{equation}
  ΔB = \Delta\omega/\gamma  = 1/γ T_2
 \end{equation}
@@ -308,16 +307,16 @@ Since  longer coherence time and larger signal amplitude indicate better frequen
         \label{fig:bad tuning}
     \end{subfigure}
     \caption{(a) Recorded FID signal while laser is perfectly tuned to atomic transition frequency. (b) FID resonance signal when laser is slightly detuned from transition frequency.}
-    \label{fig:effect of tuning on field}
+    \label{fig:effect of tuning}
 \end{figure}
    \item problem with drift of tune\\
-   For studying long term stability data was taken for about 12 hours.Laser was locked to D1 transition line of Rb using Digilock laser locking software. Figure 5.15 shows 120 pT observed drift in magnetic field over 12 hours. Although DAVLL was in use laser frequency was not locked for 12 hours. As a result laser tuning moved due to mode hoping which causes the drift. The current laser locking system only works perfectly for maximum 4 hours. The possible reason for this mode hoping is the Polarizing beam splitting cube of our DAVLL system \cite{principles}. The disadvantage of using this type of PBS is that they show flaky optical behavior over longer times.
+   For studying long term stability data was taken for about 12 hours.Laser was locked to D1 transition line of Rb using Digilock laser locking software. Fig \ref{fig:effect of tuning} shows 120 pT observed drift in magnetic field over 12 hours. Although DAVLL was in use laser frequency was not locked for 12 hours. As a result laser tuning moved due to mode hoping which causes the drift. The current laser locking system only works perfectly for maximum 4 hours. The possible reason for this mode hoping is the Polarizing beam splitting cube of our DAVLL system \cite{principles}. The disadvantage of using this type of PBS is that they show flaky optical behavior over longer times.
    \begin{figure}[h]
 \centering\includegraphics[width=0.5\linewidth]{figures/field_drift}
 \caption{Magnetic field recorded over 12 hours.In this measurement the observed field drift is about 120 pT.\label{digilock field drift}}
 \end{figure}
 \item manual tuning\\
-   During this study frequency of laser light is tuned to atomic transition maximize optical rotation.The laser tuning was adjusted manually time to time for maintaining same signal amplitude during measurement .The main objective of this study is to check the observed drift in field measurement is the real field drift or the magnetometer drift due to the mode hoping. Instability of laser locking system due to the poor performance of PBS which is used in DAVLL system is the probable reason behind this mode-hoping. According to figure 5.17~ (b) we can say that during this measurement the amplitude of FID NMOR was pretty stable except small fluctuations over 20000 sec . The observed small fluctuation is due to the manual adjustment while keeping the laser frequency tuned to atomic transition over long period of time. Obtaining stable signal amplitude is a indication that laser is not drifting to much. Although laser frequency was not drifting a lot during  the measurement, still there is a  drift in magnetic field (Figure 5.17 (a)). The overall drift is about 20 pT over 20000 sec. So it can be conclude that the drift in laser frequency is not the main reason behind this induced field drift. 
+   During this study frequency of laser light is tuned to atomic transition maximize optical rotation.The laser tuning was adjusted manually time to time for maintaining same signal amplitude during measurement. The main objective of this study is to check the observed drift in field measurement is the real field drift or the magnetometer drift due to the mode hoping. Instability of laser locking system due to the poor performance of PBS which is used in DAVLL system is the probable reason behind this mode-hoping. According to Fig \ref{fig:amplitude manual tuning} we can say that during this measurement the amplitude of FID NMOR was pretty stable except small fluctuations over 20000 sec . The observed small fluctuation is due to the manual adjustment while keeping the laser frequency tuned to atomic transition over long period of time. Obtaining stable signal amplitude is a indication that laser is not drifting to much. Although laser frequency was not drifting a lot during  the measurement, still there is a  drift in magnetic field (Fig \ref{fig:field manual tuning}). The overall drift is about 20 pT over 20000 sec. So it can be conclude that the drift in laser frequency is not the main reason behind this induced field drift. 
    
     
    \end{itemize}
@@ -341,7 +340,7 @@ Since  longer coherence time and larger signal amplitude indicate better frequen
     \label{fig:manual tuning}
 \end{figure}
    \section{Optimization of pump and probe beam power} 
- A study has been performed to determine how optimization of the pump and probe beam power effect on precise field measurement.  During this study, the magnetometer has operated in FID mode.  A  linearly polarized probe beam has been used to analyze the spin response. In figure 5.18 the measured magnetic field has been displayed for two different  Probe beam power. Figure 5.18 (a) present the measured field over 100 sec with 15 $\mu$ W probe power while figure 5.18(b) display the measured field over 100 sec for probe power 30 $\mu$W. In both cases, the pump beam power has been kept unchanged ($5\%$ duty cycle). Each blue points in this graph represent a single FID scan. As can be seen from figure 5.18 the magnetic field is more scattered for high beam power. Precession width is about $15$ pT for probe beam power 30 $\mu$W while for low beam power(15 $\mu$W) the precession width is about $7$ pT. It can be concluded lower probe beam power is better for precession  magnetometry because the narrower the precession width more sensitive the magnetometer is . Although low probe beam power is better for precise field measurement, it's hard to work with because of the dimness of light.\\
+ A study has been performed to determine how optimization of the pump and probe beam power effect on precise field measurement.  During this study, the magnetometer has operated in FID mode.  A  linearly polarized probe beam has been used to analyze the spin response. In Fig \ref{fig:different probe power} the measured magnetic field has been displayed for two different  Probe beam power. Fig \ref{fig:power less} present the measured field over 100 sec with 15 $\mu$W probe power while fig \ref{fig:power double} display the measured field over 100 sec for probe power 30 $\mu$W. In both cases, the pump beam power has been kept unchanged ($5\%$ duty cycle). Each blue points in this graph represent a single FID scan. As can be seen from Fig \ref{fig:different probe power} the magnetic field is more scattered for high beam power. Precession width is about $15$ pT for probe beam power 30 $\mu$W while for low beam power(15 $\mu$W) the precession width is about $7$ pT. It can be concluded lower probe beam power is better for precession  magnetometry because the narrower the precession width more sensitive the magnetometer. Although low probe beam power is better for precise field measurement, it's hard to work with because of the dimness of light.
   \begin{figure}
     \centering
  
@@ -361,47 +360,44 @@ Since  longer coherence time and larger signal amplitude indicate better frequen
     \caption{ Magnetic field as a function of time for different power of probe beam.(a) measured magnetic field with probe beam power 15 $\mu$w. Precession width is about $7$ pT (b) measured magnetic field with precession width $15$ pT for probe beam power 30 $\mu$w.}
     \label{fig:different probe power}
 \end{figure}
-Another study has been conducted to understand the influence of pump beam power on precession magnetometry. During this study, the probe beam power has kept unchanged while pump power has changed. In this measurement data has been acquired by running the magnetometer in FID mode. In FID mode amplitude modulation of pump beam has been done by using a AOM.  So the pump beam power can be change by changing the duty cycle of square wave modulation. When duty cycle is set to $5\%$ the pump beam power is 40 $\mu$W and for $16 \%$ duty cycle power is 128 $\mu$W. The histogram of measured magnetic field for different pump beam power has been showed in figure 5.19. The precession width (sigma) become larger for higher duty cycle while it becomes narrower for small duty cycle. In the case of 5$\%$  duty cycle precession width is about 2.3 pT  5.19 (a) and for 16 $\%$ duty cycle the spread is about 4.6 pT. It is clear from the plot that, at higher duty cycle data points are not statistically distributed.  When a pump beam with a higher duty cycle is used  in precession magnetometry, the NMOR  signal amplitude increase accordingly. But it has been observed that error in frequency measurement also increases with higher signal amplitude which was not expected. A strong correlation between magnetic field and phase of the NMOR signal also has been observed for higher pump power. So it can be concluded that using higher duty cycle could induce more systematic errors in field measurement which led to the next study.
+Another study has been conducted to understand the influence of pump beam power on precession magnetometry. During this study, the probe beam power has kept unchanged while pump power has changed. In this measurement data has been acquired by running the magnetometer in FID mode. In FID mode amplitude modulation of pump beam has been done by using a AOM.  So the pump beam power can be change by changing the duty cycle of square wave modulation. When duty cycle is set to $5\%$ the pump beam power is 40 $\mu$W and for $16 \%$ duty cycle power is 128 $\mu$W. The histogram of measured magnetic field for different pump beam power has been showed in fig \ref{fig:different pump power}. The precession width (sigma) become larger for higher duty cycle while it becomes narrower for small duty cycle. In the case of 5$\%$  duty cycle precession width is about $2.3$ pT  (5.19 (a)) and for 16 $\%$ duty cycle the spread is about 4.6 pT. It is clear from the plot that, at higher duty cycle data points are not statistically distributed.  When a pump beam with a higher duty cycle is used  in precession magnetometry, the NMOR  signal amplitude increase accordingly. But it has been observed that error in frequency measurement also increases with higher signal amplitude which was not expected. A strong correlation between magnetic field and phase of the NMOR signal also has been observed for higher pump power. So it can be concluded that using higher duty cycle could induce more systematic errors in field measurement which led to the next study.
  \begin{figure}
     \centering  \includegraphics[width=\textwidth]{figures/pump_beam}
-    \caption{ Magnetic field vs. time for different pump beam power.(a) measured magnetic field with duty cycle $5 \%$. Precession width is about $2.3$ pT (b) measured magnetic field with Precession width $4.6$ pT for  16 $\%$ duty cycle.}
+    \caption{ Magnetic field vs. time for different pump beam power. (a) measured magnetic field with duty cycle $5 \%$. Precession width is about $2.3$ pT (b) measured magnetic field with Precession width $4.6$ pT for  16 $\%$ duty cycle.}
     \label{fig:different pump power}
 \end{figure}
    \section{Systematic error check in frequency measurement in FID mode} 
    \subsection{How far the reference frequency of lock-in amplifier should set to measure field correctly}
   
-  In FID NMOR the atomic sample is polarized once by optical pumping and then observed the spontaneous decay of excited atom while the pump beam is off.In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2\mu$ T field. The FID signal for different reference frequency of Lock-in amplifier has shown in Figure 5.20. In the case of Figure 5.20 (a) the reference frequency of Lock-in was set to 1943.9 Hz(90 Hz far from resonance frequency). On the other hand for Figure 5.20 (c) the reference frequency of Lock-in was set to 2015 Hz(20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. In Figure 5.21 the measured magnetic field over 35 sec for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
+  In FID NMOR the atomic sample is polarized once by optical pumping and then observed the spontaneous decay of excited atom while the pump beam is off. In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2 \mu$T field. The FID signal for different reference frequency of Lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of Lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of Lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 sec for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
  \begin{figure}
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/reference_frequency1}
         \caption{}
-        \label{fig:three sin x}
+        \label{fig:far from resonance}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/reference_frequency3}
         \caption{}
-        \label{fig:five over x}
+        \label{fig: middle range}
     \end{subfigure}
     \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/reference_frequency2}
         \caption{}
-        \label{fig:five over x}
+        \label{fig:close to resonance}
     \end{subfigure}
-    \caption{FID signal for different reference frequency of Lock-in amplifier while the resonance frequency was 2035 kHz.(a) reference frequency was set to 100 Hz far from resonance (b) difference between resonance and reference frequency is 40 Hz,(c) reference frequency was set to 2015 Hz while resonance frequency 2035 Hz. }
+    \caption{FID signal for different reference frequency of Lock-in amplifier while the resonance frequency was 2035 kHz.(a) reference frequency was set to 100 Hz far from resonance (b) difference between resonance and reference frequency is 40 Hz, (c) reference frequency was set to 2015 Hz while resonance frequency 2035 Hz. \label{fig:different reference signal}}
 \end{figure}
 \begin{figure}[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/reference_frequency}
-\caption{Measured magnetic field for different lock-in reference frequency.The red curve represents measured magnetic field when reference frequency was set to 2015 Hz which is 20 Hz far from resonance frequency. The blue curve shows magnetic field for lock-in reference frequency 1943.9 Hz.}
+\caption{Measured magnetic field for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz which is 20 Hz far from resonance frequency. The blue curve shows magnetic field for lock-in reference frequency 1943.9 Hz.\label{fig:field for different lockin ref freq}}
 \end{figure}
-\begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/reference_frequency}
-\caption{Measured magnetic field for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz which is 20 Hz far from resonance frequency. The blue curve shows magnetic field for lock-in reference frequency 1943.9 Hz.}
-\end{figure}
+
 \begin{figure}[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/phase}
 \caption{Measured magnetic field for different lock-in reference frequency.The red curve represents measured magnetic field when reference frequency was set to 2015 Hz and field for lock-in reference frequency 1943.9 Hz.}
@@ -409,7 +405,7 @@ Another study has been conducted to understand the influence of pump beam power 
 \newpage
    \begin{itemize}
    \item effect of lock-in time constant\\
-  A SRS-830 lock-in amplifier is used to grab FID NMOR signal which was connected to the output of balanced photodiode. Table 4.1 represents all settings for FID NMOR. In this study the systematic effect of changing locking amplifier time constant on magnetic field measurement has been discussed. Figure 5.22  shows the histogram of measured magnetic field for two different time constant of lock-in amplifier while all other settings is same. In the case of Figure 5.22 (a) the lock-in time constant is 1 ms and figure 5.22 (b) shows the histogram of magnetic field for time constant 300 $\mu$s. Here sigma is representing the precession width of field. It can be seen from the figure that the calculated sigma is larger for time constant 1 ms compared to 300 $\mu$s. This measurements was conducted at 0.2 $\mu$T field. The resonance frequency and lock-in reference frequency are 2035 Hz and 1943 Hz respectively.
+  A SRS-830 lock-in amplifier is used to grab FID NMOR signal which was connected to the output of balanced photodiode. Table \ref{table:FID setting} represents all settings for FID NMOR. In this study the systematic effect of changing locking amplifier time constant on magnetic field measurement has been discussed. Fig \ref{fig:different time constant}  shows the histogram of measured magnetic field for two different time constant of lock-in amplifier while all other settings is same. In the case of Fig \ref{fig:time constant long} the lock-in time constant is 1 ms and Fig \ref{fig:time constant short} shows the histogram of magnetic field for time constant 300 $\mu$s. Here sigma is representing the precession width of field. It can be seen from the figure that the calculated sigma is larger for time constant 1 ms compared to 300 $\mu$s. This measurements was conducted at 0.2 $\mu$T field. The resonance frequency and lock-in reference frequency are 2035 Hz and 1943 Hz respectively.
    \begin{figure}
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
@@ -425,7 +421,7 @@ Another study has been conducted to understand the influence of pump beam power 
         \caption{}
         \label{fig:time constant short}
     \end{subfigure}
-    \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier. (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. }
+    \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier. (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. \label{fig:different time constant} }
 \end{figure}
     \item timing drift in Tektronix oscilloscope clock
    \end{itemize}
@@ -495,9 +491,8 @@ In FID mode, the resonance signal looks like a decaying sine wave. By fitting th
 \caption{Allan deviation vs. averaging time(s)}
 \end{figure}
 \newpage
-   \section{Study magnetometer performance with transverse field}  
-   
-\begin{figure}[h]
+ \section{Study magnetometer performance with transverse field}  
+\begin{figure}
 \centering\includegraphics[width=0.5\linewidth]{figures/tilted_field_amp_vs_angle}
 \caption{The amplitude of the FID NMOR signals recorded at $2\Omega_L$ vs. the tilt angle of the magnetic field in xz-plane}
 \end{figure}

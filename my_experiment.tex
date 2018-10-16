@@ -40,7 +40,7 @@ detail.
 
 In Chapter~\ref{ch:characterization}, I will cover the initial
 characterization of a few different modes of operation of the
-magnetometer.  (As discussed in Chapter~\ref{ch:magnetometer}, there
+magnetometer.  (As discussed in Chapter~\ref{ch:magnetometry}, there
 are several different ways in which the magnetometer can be operated
 dependent with different advantages and disadvantages to each.)
 
@@ -58,36 +58,17 @@ the development of the Free-Induction-Decay mode of operation.
 \begin{figure}%[h]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/experimental_setup_zero_field}
-\caption{Schematic diagram of experimental setup for zero field NMOR
-  measurement (discussed in the text).\label{fig:zerofield}.}
+\caption{Schematic diagram of experimental setup for zero field NMOR measurement (discussed in the text).\label{fig:zerofield}.}
 \end{figure}
-
-Fig.~\ref{fig:zerofield} schematically depicts a top view of the Rb
-magnetometer, as it may be used for measurements of the magnetic field
-within a few hundred pT of zero.  This mode was used, for example, in
-Ref.~\cite{bib:nmor} to measure the axial magnetic shielding factor of
+Fig.\ref{fig:zerofield} schematically depicts a top view of the Rb magnetometer, as it may be used for measurements of the magnetic field within a few hundred pT of zero.  This mode was used, for example, in Ref.~\cite{bib:nmor} to measure the axial magnetic shielding factor of
 the passive magnetic shielding system.  In this thesis, this operation
 mode was not normally used because we desired to develop the system
 for larger magnetic fields.  But it is nonetheless instructive to
-demonstrate the starting point of my thesis research.\\
+demonstrate the starting point of my thesis research.
 
-
-
-
-  An external cavity diode laser produces light near the Rb D1
-transition.  The laser is tuned near the $^{85}$Rb F=?? absorption
-minimum.  A microscope slide is used as a beamsplitter in order to
-divert a reduced power into the experiment.  The power is further
-reduced using neutral density filters (indicated by N.D.F. in
-Fig.~\ref{fig:zerofield}).  A linear polarizing sheet is oriented at a
-45$^\circ$ angle relative to the vertical direction.  Since the laser
-beam is polarized, this further reduces the power by a factor of two.
-The laser power after this point is normally in the range of
-2-20~$\mu$W.  Small adjustments to the incident plane of polarization
-may be made by a $\lambda/2$ plate.  The beam then passes through a
-paraffin-coated cell containing Rb vapour.  The cell is within a
-magnetic shielding and field generation system that produces a uniform
-field along the beam axis.  The plane of polarization of the laser
+  An external cavity diode laser produces light near the Rb D1 transition.  The laser is tuned near the $^{85}$Rb F=?? absorption minimum.  A microscope slide is used as a beamsplitter in order to divert a reduced power into the experiment.  The power is further reduced using neutral density filters (indicated by N.D.F. in Fig.~\ref{fig:zerofield}).  A linear polarizing sheet is oriented at a 45$^\circ$ angle relative to the vertical direction.  Since the laser
+beam is polarized, this further reduces the power by a factor of two. The laser power after this point is normally in the range of 2-20~$\mu$W.  Small adjustments to the incident plane of polarization may be made by a $\lambda/2$ plate.  The beam then passes through a paraffin-coated cell containing Rb vapour.  The cell is within a
+magnetic shielding and field generation system that produces a uniform field along the beam axis.  The plane of polarization of the laser
 light will rotate slightly as it passes through the cell because of
 non-linear magneto-optical effects.  A balanced polarimeter is used to
 analyze the optical rotation of the laser light resulting from the
@@ -100,11 +81,7 @@ at a 45$^\circ$ angle and aligned with the axis of the
 $\lambda/2$-plate, and in the absence of any optical rotation, the
 balanced photodiode would output zero volts.  If the plane of
 polarization is rotated by passage through the cell, it will be sensed
-by the differential photodiode signal.  This is discussed further in
-Section~\ref{sec:balancedPD}.
-
-
-Fig.~\ref{fig:pumpprobe}  shows the schematic layout of the apparatus used for studying the
+by the differential photodiode signal.  This is discussed further in Section~\ref{sec:Signal Processing}. Fig.~\ref{fig:pumpprobe}  shows the schematic layout of the apparatus used for studying the
 non-linear magneto-optical effects with the amplitude modulated
 light. In this work, a paraffin-coated vapor cell (about 5 cm long)
 containing natural rubidium with stable isotopes $^{87}$Rb~ and~
@@ -122,9 +99,7 @@ inside the shield. Then the nonlinear Faraday rotation signals are
 analyzed by a balanced polarimeter.  A Wollaston prism is used to
 split the beam into its perpendicular polarization axes which are then
 analyzed individually by our photodiode. Our photodiode contains two
-individual diodes and an internal differential amplifier which outputs
-the difference in diodes P1 - P2. A lock-in amplifier was used to
-detect the polarimetric signal and stored on a computer.
+individual diodes and an internal differential amplifier which outputs the difference in diodes P1 - P2. A lock-in amplifier was used to detect the polarimetric signal and stored on a computer.
 \begin{figure}%[h]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/experimental_setup}
@@ -150,6 +125,12 @@ In order to control the laser frequency to a fraction of the Doppler-broadened l
 In order to polarize atoms by optical pumping, it's important to tune the laser properly to expected transition line.
 Setting the laser temperature correctly is one of the important parts to achieve good tuning . First we need to turn on the temperature control panel and then it’s easy to adjust laser temperature manually by tuning the knob of temperature control panel. For our tune the laser temperature is set to 20.1 $\degree$c. For good tuning it is also important to know the laser current which corresponds to the emission of laser light with a wavelength matching the absorption line of the Rb atom. This is usually done by a DAVLL scan so it's necessary to make sure the DAVLL optical setup is done correctly. An oscilloscope is used to observe the output of the differential amplifier. Trigger the scope on the trigger output on the sweep control panel.
 Laser current can be controlled by adjusting the current control knob until the spectral structure of $^{85}Rb$ appears. we need to keep adjusting the current control knob until a maximum symmetry between the upsweep and downsweep portions is achieved. After that by adjusting the knob of sweep control panel we can zoom in the structure and set the trigger to steep of the absorption minima. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/laser_control_}
+\caption{Diode laser controller unit consist of analog current control module, scan control module,low-noise temperature control module, feedback controlyzer and Diode Laser Controller display .\label{fig:laser controller}}
+\end{figure}
+
 Digilock 110 feedback controlyzer is used for laser locking. The DigiLock 110 is an up-to-date digital hardware allows to implement the scan generator, PID controllers and optional frequency modulation techniques all into one plug in module. It offers graphical user interface running on a PC makes the procedure of laser locking enormously easy. Different important features are also available in this module for analyzing and optimizing the control system.
  
 The output of the laser feedback controlyzer panel is connected to the computer where Digilock software was already installed. The output signal of the differential photodiode is fed into the controlyser panel main input. After connecting the DigiLock 110 we can turn on scan and navigate to the autolock screen at the bottom. Then the the portion of the spectrum that we tuned earlier will appear. Then we need to select the crosshairs tool which allow us to drag the crosshairs on the part of the spectrum that we want to tune to. Finally for successful laser locking we need to click and select "PID lock to slope".
@@ -188,17 +169,13 @@ The AOM is used to modulate the amplitude of the pump beam. The pump beam is lin
 \end{equation}                                 
 and only one diffraction order produce. This observed diffraction pattern generally consists of two diffraction maxima; these are the zeroth and the first orders. In this case the possible maximum intensity of the first order diffracted light is 100\%. Due to this relatively high efficiency, this first order can be used for amplitude modulation. For our atomic magnetometry setup we operated the AOM in the Bragg regime.
 \end{itemize}
- For this experimental setup, an Isomet 1205C-1 AO Modulator  is used with an RF center frequency of 80 MHz. The AOM uses crystal Lead Molybdate (PbMo$0_4$) for the optical interaction medium and Lithium Niobate as the piezoelectric transducer. This AOM has a bandwidth of 80 MHz.  The amplitude modulating pulses are driven with an Isomet 532C-2 AO driver with video input range 0.0 V to 1.0 V. An Agilent 33522A function generator is used to regulate the  AOM driver. This amplitude modulation is done by a square wave modulation with a duty cycle of 1-10\%. For this specific model of AOM driver the RF rise/fall time is smaller than 6 nsec. Since the active aperture of the modulator is tiny (1mm) its very hard to focus the laser beam into it. In order to reach maximum deflected light intensity we need to adjust Bragg angle. In this setup, the achieved maximum intensity of the first order deflected light is 86$\%$. For  1~$\mu$T field the AOM operation frequency is 9335 Hz and the AOM driving frequency is 2034 Hz when the magnetometer operate at $0.2~ \mu$T .\\
+ For this experimental setup, an Isomet 1205C-1 AO Modulator  is used with an RF center frequency of 80 MHz. The AOM uses crystal Lead Molybdate (PbMo$0_4$) for the optical interaction medium and Lithium Niobate as the piezoelectric transducer. This AOM has a bandwidth of 80 MHz.  The amplitude modulating pulses are driven with an Isomet 532C-2 AO driver with video input range 0.0 V to 1.0 V. An Agilent 33522A function generator is used to regulate the  AOM driver. This amplitude modulation is done by a square wave modulation with a duty cycle of 1-10\%. For this specific model of AOM driver the RF rise/fall time is smaller than 6 nsec. Since the active aperture of the modulator is tiny (1mm) its very hard to focus the laser beam into it. In order to reach maximum deflected light intensity we need to adjust Bragg angle. In this setup, the achieved maximum intensity of the first order deflected light is 86$\%$. For  1~$\mu$T field the AOM operation frequency is 9335 Hz and the AOM driving frequency is 2034 Hz when the magnetometer operate at $0.2~ \mu$T .
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{figures/AOM}
 \caption{Acousto-optic modulator}
 \end{figure}
 
- 
-
-
- 
 \section{Magnetic Shielding}
 In precision magnetometry, magnetic shielding is required to achieve well characterized, stable magnetic field conditions independent of the earth’s magnetic fields and environmental perturbations. Shielding ratio T is a parameter to evaluate the efficiency of a shield which can be expressed as
 \begin{equation}
@@ -210,11 +187,10 @@ The optimization of the air gaps between the shells is important to minimize the
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.0\linewidth]{figures/magnetic_shielding}
- \caption{Four layer $\mu$ -metal magnetic shielding.The diameter of
-each endcap is larger by 0.1 cm to fit over its corresponding cylinder. The hole diameter and stovepipe length for each endcap are the same. High
-density polyethylene spacers and nylon thread rods/nuts are used to hold the shields and end caps together.}
+ \caption{Four layer $\mu$ -metal magnetic shielding.The diameter of each endcap is larger by 0.1 cm to fit over its corresponding cylinder. The hole diameter and stovepipe length for each endcap are the same. High density polyethylene spacers and nylon thread rods/nuts are used to hold the shields and end caps together.}
 \end{figure}
-\section{Degaussing system(need to edit)}
+
+\section{Degaussing system\label{sec:Degaussing}}
 Our four layer $\mu$ metal magnetic shield is designed to minimize the magnetic field at the cell, but
 magnetic hysteresis limits the magnetic field in any region to be exactly zero. Degaussing (demagnetizing) process is used to reduce the background magnetic field inside the shield. Although Rb cell is securely placed inside the four layer mu-metal shielding it is necessary to demagnetize the shield before every measurement session  to eliminate accidentally created local magnetizations.
 Demagnetizing is achieved by winding a special coil around inner most layer of shielding  in toroidal configuration
@@ -226,20 +202,18 @@ and supplying the coil with oscillating current. An Agilent 3522A function gener
 \caption{Schematic diagram of degaussing System}
 \end{figure}
 
-\section{Internal coil}
- For the Rb atomic magnetometer an internal coil is used to provide the magnetic field. This coil produces uniform field in the ROI of magnetic shielding, directed along the axis of the cylindrical volume. The coil was wound on a 7.62 cm diameter, 20.32 cm long ABS plastic pipe. Seven turns of 26 AWG magnet wire were wound at 2.54 cm spacing, with 1.27 cm spacing from the magnetic faces of the endcaps of the innermost magnetic shield. The spacings were chosen so that, in the infinite permeability limit, and in the limit where the axial aperture holes in the endcaps are small, the boundary conditions would produce image currents forming an infinitely long solenoid . This is similar to the design strategy used in Ref. [16]. Two saddle coils were wound on the same cylinder in order to control transverse fields internally; these were normally disconnected during precision measurements. The internal coil system was calibrated using a three-axis fluxgate magnetometer at fields of ∼100 nT. This fluxgate was too large to fit through the end caps of the shield, so calibration
-had to be performed without end caps. The calibration of the z-coil was verified using the NMOR magnetometer with an AM pump beam, and the known gyromagnetic ratios of Rb-85 and Rb-87. Homogeneity of the residual field and magnetic field generated by the coil system was measured by scanning a fluxgate magnetometer along the axis of the system with and without the coil energized. At a field of 1 $\mu$T, the axial field generated by the coil was uniform within the ROI to the $1\%$  level.
+\section{Internal coil\label{sec:Internal coil}}
+ For the Rb atomic magnetometer an internal coil referred as Z coil is used to provide the magnetic field. This coil produces uniform field in the ROI  of magnetic shielding, directed along the axis of light propagation direction (z-direction). The z-coil was wound on a 7.62 cm diameter, 20.32 cm long ABS plastic pipe. Seven turns of 26 AWG magnet wire were wound at 2.54 cm spacing, with 1.27 cm spacing from the magnetic faces of the endcaps of the innermost magnetic shield. The spacings were chosen so that, in the infinite permeability limit, and in the limit where the axial aperture holes in the endcaps are small, the boundary conditions would produce image currents forming an infinitely long solenoid. Two saddle coils were wound on the same cylinder in order to control transverse fields( along x and y) internally; these were normally disconnected during precision measurements. The internal coil system was calibrated using a three-axis fluxgate magnetometer at fields of ∼100 nT. This fluxgate was too large to fit through the end caps of the shield, so calibration
+had to be performed without end caps. The calibration constant for z coil is 48nT/mA and the calibration constant for x and y coil is 25nT/mA. The calibration of the z-coil was verified using the NMOR magnetometer with an AM pump beam, and the known gyromagnetic ratios of Rb-85 and Rb-87. Homogeneity of the residual field and magnetic field generated by the coil system was measured by scanning a fluxgate magnetometer along the axis of the system with and without the coil energized. At a field of 1 $\mu$T, the axial field generated by the coil was uniform within the ROI to the $1\%$  level.
+
 \section{Rb Cell}
-When glass cell is used to store alkali atoms, the atomic mean free paths increase and alkali spins depolarize immediately after making non-elastic collision with the glass walls.
-Prolonging the atomic alignment is crucial to achieving ultra-narrow NMOR
-resonance widths. So it is necessary to prevent these non-elastic collisions for achieving the longer lifetimes of atomic ground state coherences \cite{PhysRevA.72.023401}\cite{Balabas:10}  \cite{doi:10.1063/1.3236649}. Two methods are currently in use to extent the atomic coherence lifetime. One of them is to add buffer gas to the cell containing alkali sample and the other method is to coat the inner walls of the cell with anti-relaxation materials. The advantage of using buffer gas is that it reduces the resonance width by extending the lifetime of coherence state. A paraffin-coated vapor cell containing  natural rubidium with stable isotopes $^{85}$Rb and $^{87}$Rb is used for this work. The reason behind using paraffin as a anti-relaxation coating is that it allow polarized atoms to bounce off the walls of a paraffin-coated cell $\sim 1000$ times before depolarizing\cite{PhysRev.147.41}\cite{PhysRevA.72.023401}. Coated cells have the advantages of providing larger optical rotation
+When glass cell is used to store alkali atoms, the atomic mean free paths increase and alkali spins depolarize immediately after making non-elastic collision with the glass walls. Prolonging the atomic alignment is crucial to achieving ultra-narrow NMOR resonance widths. So it is necessary to prevent these non-elastic collisions for achieving the longer lifetimes of atomic ground state coherences \cite{PhysRevA.72.023401}\cite{Balabas:10}  \cite{doi:10.1063/1.3236649}. Two methods are currently in use to extent the atomic coherence lifetime. One of them is to add buffer gas to the cell containing alkali sample and the other method is to coat the inner walls of the cell with anti-relaxation materials. The advantage of using buffer gas is that it reduces the resonance width by extending the lifetime of coherence state. A paraffin-coated vapor cell containing  natural rubidium with stable isotopes $^{85}$Rb and $^{87}$Rb is used for this work. The reason behind using paraffin as a anti-relaxation coating is that it allow polarized atoms to bounce off the walls of a paraffin-coated cell $\sim 1000$ times before depolarizing\cite{PhysRev.147.41}\cite{PhysRevA.72.023401}. Coated cells have the advantages of providing larger optical rotation
 signals, reducing the effect of magnetic field gradients on the spin polarization lifetime,
 and lowering the power requirements of the lasers used for pumping and probing. The vapor cell is cylindrical, 5 cm long and 5 cm in diameter with optical
 flats on the ends. The cell was provided by D. Budker, having been prepared in
 a fashion similar to the cells described in Ref.\cite{PhysRevA.72.023401}. The cell was characterized
 using a method similar to Ref. \cite{PhysRevA.72.023401}, by measuring the relaxation of longitudinal
-polarization using optical rotation as a probe. The long time component of the
-relaxation was thereby found to decay with a time scale of 60 ms.  Longer relaxation time indicates good quality of cell. The temperature of the vapour cell was controlled by the ambient temperature of the surrounding room (∼ 21 $\degree$). Transmitted light was analyzed for optical rotation by a balanced polarimeter system containing a Wollaston prism and a Newport model 2307 balanced photo receiver. The power delivered to the vapour cell was typically 15 $\mu$W, measured periodically using a Newport model 818-SL power meter inserted into the
+polarization using optical rotation as a probe. The long time component of the relaxation was thereby found to decay with a time scale of 60 ms.  Longer relaxation time indicates good quality of cell. The temperature of the vapour cell was controlled by the ambient temperature of the surrounding room (∼ 21 $\degree$). Transmitted light was analyzed for optical rotation by a balanced polarimeter system containing a Wollaston prism and a Newport model 2307 balanced photo receiver. The power delivered to the vapour cell was typically 15 $\mu$W, measured periodically using a Newport model 818-SL power meter inserted into the
 beamline. 
 \begin{figure}[h]
 \centering
@@ -251,7 +225,7 @@ SR830 DSP Lock in Amplifier is a elementary part in the DAQ system of Rb magneto
 the lock-in reference signal with a phase shift of $90\degree$. Then a lowpass filter is used to filter both signals. The first one is referred to as X output and the 2nd output signal is referred to as Y output. X output is knows as in phase component and the Y output is called out of phase component.
 
 
-\section{Signal Processing(need to edit)}
+\section{Signal Processing\label{sec:Signal Processing}}
 Sensitive magnetometry requires detection of extremely small optical rotation angles. There are numerous methods for detecting the optical rotation of the probe beam.  we instead use the balanced polarimetry technique.  After the cell the probe beam passes through a polarizing beamsplitter set at 45\degree~to the initial polarization direction resulting in two separate beams with individual intensities given by 
 \begin{equation}
 I_1 = I_0\sin^2(\theta-\frac{\pi}{4})
