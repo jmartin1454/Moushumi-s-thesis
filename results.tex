@@ -36,28 +36,32 @@ The experiment was carried out as follows:
 Fig.~\ref{fig:TUNE} displays the sequence of measurement events in
 time, along with the differential photodiode signal (in Volts), which
 is proportional to optical rotation.  Also shown is a voltage applied
-to the $z$-coil with a 10000~$\Omega$ resistor in series which dominates
+to the $z$-coil with a 10~k$\Omega$ resistor in series which dominates
 the resistance of the circuit.  Recall that the coil constant of the
-$z$-coil is $\sim 48$~nT/mA (see Section~\ref{sec:Internal coil}).  The
-sweeping range of this trace is therefore about
-% (0.8~V)/(10000~Ohm)/*48~nT/mA = 3.84 nT ???
-1.92 nT peak to peak.
+$z$-coil is $\sim 48$~nT/mA (see Section~\ref{sec:Internal coil}).
+The sweep range of this trace is therefore
+% (0.8~V)/(10000~Ohm)/*48~nT/mA = 3.84 nT ???  It would be good to
+% write the correct calibration constant in the part of the thesis
+% where this coil is describe (probably somewhere in Chapter 3).
+1.9~nT peak to peak.
 
 In the first section of the oscilloscope trace, the impact of the
-degaussing procedure on the optical rotation signal can be seen.  The
-next section involves the ramping down of a variable resistor,
-followed by opening the switch to isolate the degaussing coil.  Then
-the magnetic field~($B_z$) is swept and the characteristic dispersive
-Lorentzian shape of NMOR is observed.
+degaussing procedure inducing noise in the optical rotation signal can
+be seen.  The next section involves the ramping down of a variable
+resistor, followed by opening the switch to isolate the degaussing
+coil.  Then the magnetic field~($B_z$) is swept and the characteristic
+dispersive Lorentzian shape of NMOR is observed.
 
 \begin{figure}%[h]
 \centering\includegraphics[width=0.7\linewidth]{figures/scope_trace_of_field_sweeping}
 \caption{Oscilloscope trace of measurement OR near zero field. The
-  purple curve shows a voltage... that the magnetic field was ramped
-  about 1.92 nT peak to peak with a triangular wave while the blue
-  colored dispersive Lorentzian shape curve indicates another
-  voltage... induced optical rotation due to field
-  sweeping.\label{fig:TUNE} }
+  purple curve shows the voltage across the 10~k$\Omega$ resistor in
+  series with the $z$-coil, from which the magnetic field ramp of
+  1.9~nT peak to peak can be deduced.  The blue trace indicates the
+  differential photodiode signal which is proportional to the optical
+  rotation.  The left side of the traces show the impact of the
+  degaussing procedure, while the right side shows the calibration
+  procedure.\label{fig:TUNE} }
 \end{figure}
 
 
@@ -82,7 +86,6 @@ Offset  &      ~ 0 V  \\
 \caption{Setting for degaussing \label{table:degaussing setting}}
 \end{table}
 
-\newpage
 In Fig \ref{fig:near zero field}    NMOR data were acquired by sweeping the magnetic field in a triangle wave; the peaks in the curve show a slight dependence on the direction of the sweep, due to the time response of the atoms. The resonance width is about 0.49 nT.
 
  \begin{figure}[h]
