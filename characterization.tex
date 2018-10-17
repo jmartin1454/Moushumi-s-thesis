@@ -164,54 +164,242 @@ mode.
 
 \section{Amplitude Modulated NMOR:  Forced Oscillation Mode}
 
-In this forced oscillation measurement scheme we modulate the
-amplitude of the pump beam and demodulate the differential photodiode
-signal in a lock-in amplifier.  The modulation/demodulation frequency
-is near twice the Larmor frequency of the atoms in the magnetic field.
+In this forced-oscillation measurement scheme the pump beam amplitude
+is modulated and the differential photodiode signal is demodulated at
+the same frequency $\Omega_m$ using a lock-in amplifier.  The
+modulation/demodulation frequency is near twice the Larmor frequency
+of the atoms in the magnetic field.
+
+In the first instance, we tried keeping the frequency constant and
+sweeping the magnetic field.  We can then determine the resonant field
+by fitting the resonance lineshape.  The disadvantage of this method
+is that the field must be changed in order to measure it.  {\bf An
+  example of this might be shown in Fig.~\ref{fig:AMORmaybeidontknow},
+  or it might not be.  Really, it is impossible to tell.}
 
 \begin{figure}[h]
 \centering\includegraphics[width=0.7\linewidth]{figures/AM_NMOR}
-\caption{AMOR resonance signal with a 5 cm cell containing natural Rb.
-  Data was acquired by using a balanced photodiode which demodulated
-  through lock-in amplifier at 9.335 KHz.The observed resonance width
-  is about 2.5 nT.\label{fig:AMOR}}
+\caption{\bf The rest of this figure caption might be totally
+  false... AMOR resonance signal with a 5 cm cell containing natural
+  Rb.  Data was acquired by using a balanced photodiode which
+  demodulated through lock-in amplifier as the frequency is swept
+  slowly near 9.37~kHz.  The parameters of the sweep are shown in
+  Table~\ref{tab:freqsweep} and are discussed further in the text. The
+  observed resonance width, when translated from frequency into field,
+  is 2.5~nT.\label{fig:AMORmaybeidontknow}}
 \end{figure} 
 
-Fig.~\ref{fig:AMOR} shows a measurement of the in-phase and quadrature
-signals measured while the frequency is swept very slowly.
+A better way to measure the field without having to change it is to
+sweep the modulation/demodulation frequency instead.  The resonant
+frequency then gives a determination of the field (when
+$\Omega_m=2\Omega_L$)
 
+\begin{figure}[h]
+\centering\includegraphics[width=0.7\linewidth]{figures/AM_NMOR}
+\caption{\bf I do not know what this figure is, and so here is what
+  I'm guessing that it might be: AMOR resonance signal with a 5 cm
+  cell containing natural Rb.  Data was acquired by using a balanced
+  photodiode which demodulated through lock-in amplifier as the
+  frequency is swept slowly near 9.37~kHz.  The parameters of the
+  sweep are shown in Table~\ref{tab:freqsweep} and are discussed
+  further in the text. The observed resonance width, when translated
+  from frequency into field, is 2.5~nT.\label{fig:AMOR}}
+\end{figure} 
 
-A resonance scan using lock-in amplifier can be done by demodulating
-the signal at the drive frequency which are act as reference
-frequency. For this force oscillation scan a frequency range and
-frequency increments are entered into the DAQ software. Via a GPIB
-connection, a function generator is set to the appropriate
+Fig.~\ref{fig:AMOR} {\bf potentially, maybe, and if it doesn't we
+  should find the figure that does show this, since you included the
+  table below which relates to the data that may or may not be
+  presented in the figure but should be} shows a measurement of the
+in-phase and quadrature signals measured while the frequency is swept
+very slowly.  The parameters of this mode of operation, particularly
+of the slow frequency modulation, are shown in
+Table~\ref{tab:freqsweep}.
+
+\begin{table}%[h]
+\centering
+\begin{tabular}{|l |l|}
+\hline
+
+\textbf{ SETTING}    & \textbf{VALUE} \\
+\hline
+Function generator &   \\
+\hline
+Frequency & 9.37kHz   \\
+
+Waveform    &  Square  \\
+
+Amplitude   &  $1V_{pp}$  \\
+Offset  &       500 mV  \\
+Duty cycle       &    $1\%$ \\
+Frequency Deviation     &   40 Hz  \\
+FM Frequency     &   100 mHz  \\
+modulation waveform      &    Triangle \\
+Amplitude modulation & On \\
+\hline
+Lock-in amplifier &     \\
+\hline
+Lock in frequency     & 9.37 KHz \\
+Time constant     &  $300\mu s$ \\
+Sensitivity      &  100mV  \\
+\hline
+\end{tabular}
+\caption{Setting for AM NMOR at $1\mu$T field {\bf which may or may
+    not correspond to any other data showed in any other figure of
+    these thesis.  All other parameters of the measurement are
+    apparently unknown.}.\label{tab:freqsweep}}
+\end{table}
+
+Fig.~\ref{fig:AMOR} shows the characteristic dispersive and absorptive
+shapes in the in-phase and quadrature signals, respectively.  This is
+in good agreement with expectation.  The quality of the magnetometer
+is again characterized by the peak-to-valley distance in frequency,
+which, when translated to field corresponds to a width of 2.5~nT.
+
+A drawback of this mode of operation is that the drive frequency is
+constantly changing, so that each data point for optical rotation
+represents a range of drive frequencies that were sampled within the
+lock-in time constant.  A more robust method involves selecting
+particular frequencies in series and then fitting to determine the
+resonant frequency, as done in Ref.~\cite{bib:michithesis}.  I tried
+this method also, which I call a forced-oscillation scan.
+
+For this forced-oscillation scan a frequency range and frequency
+increments are entered into a custom python code. Via a USB
+connection, the function generator is set to the appropriate
 frequencies, driving the pump modulation of the magnetometer. The
 frequencies are taken by the lock-in amplifier as a reference signal
 as well as the differential output of the polarimeter board which is
-demodulated at the reference frequency. The resulting X and Y outputs
-are sent to the DAQ program, running on a computer via GPIB.
+demodulated at the reference frequency. The resulting in-phase (X) and
+quadrature (Y) outputs are collected by the python code via GPIB.  A
+settling time of at least 5 lock-in time constants ensures that no
+memory of the previous frequency is retained by the lock-in amplifier.
 \begin{figure}[h]
 \centering\includegraphics[width=0.4\linewidth]{figures/FM_NMOR}
-\caption{Optical rotation vs. forced oscillation frequency}
+\caption{Optical rotation vs. forced oscillation frequency...{\bf with
+    a set of otherwise unknown parameters being used.  Also this
+    figure is never referred to in the text, apparently.}}
 \end{figure}
- The quadrature components arise because exactly on resonance, the aligned atoms produce maximum optical rotation when the alignment axis is at an angle of $ \pi/4$   to the direction of the light polarization.  
-The probe beam then analyzed by photodiode whose output was connected to a digital-signal-processing lock-in amplifier. The lock-in is connected to a computer via GPIB. The DAQ computer saves the lock-in data in  a Python program where the data can be analyzed. The idea of the fitting algorithm is to generate a concatenated function, having the absorptive part as the first part and the dispersive as the second (directly connected to each other). The corresponding frequency values are simply the frequency scan range for the absorptive part while the frequency increments are added to the maximum frequency point of the absorptive in order to obtain the frequency parts for the dispersive curve. This results in
-the overall data for the frequency, which is inserted into the fitting function.\\
+
+% Refer to appropriate Section of Chapter 2, if you want to make this
+% statement.
+
+%The quadrature components arise because exactly on resonance, the
+%aligned atoms produce maximum optical rotation when the alignment
+%axis is at an angle of $ \pi/4$ to the direction of the light
+%polarization.
+
+%Study NMOR signal by sweeping resonance frequency with amplitude
+%modulated light.
+
+%The magnetometer can be run as a forced oscillator, where a frequency
+%generator is used to sweep the frequency of the laser amplitude
+%modulator through the NMOR resonance. In this case the applied
+%magnetic field~($B_z$) remains fixed during a measurement cycle
+%(pumping and probing).
+%The experimental setup for this measurement
+%scheme remains almost same as for AM NMOR.
+
+{\bf Fig.~\ref{fig:FMOR} shows something, but I do not know what.
+  Below is my best guess as to what is displayed in
+  Fig.~\ref{fig:FMOR}.}
+
+\begin{figure}[h]
+\centering\includegraphics[width=0.5\linewidth]{figures/FM_modulation}
+\caption{Demodulated components of the optical rotation, as a function
+  of the forced-oscillation frequency.  NMOR resonance recorded with
+  the 5 cm natural Rubidium cell, square-wave $100\%$ modulation of 1
+  duty cycle. The $X$ component {\bf does not quite} reaches its
+  maximum and the y component {\bf does not quite} have its zero
+  crossing at $\Omega_m=2\Omega_L$ {\bf because of $\phi$}.  In this
+  case the measured resonance width is 1.67~nT {\bf when translated
+    from a frequency into a magnetic field???  It says a frequency, in
+    the figure?  Lines drawn on the figure apparently do not line up
+    with anything, and are meant to distract the
+    reader?  I recommend to fix this figure.}.\label{fig:FMOR}}
+\end{figure} 
+
+The applied magnetic field was about 1~$\mu$T directed along light
+propagation direction.  {\bf I think that this sentence is true.}
+
+The measurement was taken by driving an Agilent 33522A function
+generator to different modulation frequencies in order to find the
+resonance frequency of the given Rb oscillator. The modulation
+waveform is a square wave with a duty cycle of 1\%. Since our pump
+beam is linearly polarized, a modulation at 2$\Omega_{L}$ is necessary
+because of the two fold symmetry of alignment state. The typical range
+of drive frequency is 9.31 KHz to 9.409 kHz for 1~$\mu$T field. An
+unmodulated linearly polarized probe beam is used to analyze the spin
+response. While the magnetometer response was recorded with a lock-in
+amplifier, which is connected to balanced photodiode output,
+demodulating the signal at the drive frequency of the atomic
+oscillator.
+
+{\bf The new things that I think I learned from this paragraph:}
+\begin{itemize}
+\item The duty cycle of the pump beam was 1\%.
+\item The range of drive frequencies used in Fig.~\ref{fig:FMOR} was
+  9.31 kHz to 9.409 kHz.
+\end{itemize}
+
+
+The center of the resonance is used to determine the Larmor frequency
+and hence the magnetic field.  Fig.~\ref{fig:FMOR} shows the resonance
+scan where data was taken by setting a function generator to different
+drive frequencies for the given atomic oscillator. During the scan
+drive frequencies was working as reference frequencies of the lock-in
+amplifier. The red and blue data points indicate x and y output
+respectively. When the modulation frequency is twice the Larmor
+frequency the x component reaches its maximum and the y component has
+its zero crossing. In this force oscillation scan the measured
+resonance width is 1.67 nT.
+
+{\bf The new things that I think I learned from this paragraph:}
+\begin{itemize}
+\item The red and blue data points indicate x and y output
+respectively.
+\item Something in the width corresponds to 1.67 nT, but it is very
+  unclear how.
+\end{itemize}
+
+The probe beam then analyzed by photodiode whose output was connected
+to a digital-signal-processing lock-in amplifier. The lock-in is
+connected to a computer via GPIB. The DAQ computer saves the lock-in
+data in a Python program where the data can be analyzed. The idea of
+the fitting algorithm is to generate a concatenated function, having
+the absorptive part as the first part and the dispersive as the second
+(directly connected to each other). The corresponding frequency values
+are simply the frequency scan range for the absorptive part while the
+frequency increments are added to the maximum frequency point of the
+absorptive in order to obtain the frequency parts for the dispersive
+curve. This results in the overall data for the frequency, which is
+inserted into the fitting function.
+
+{\bf The new things that I think I learned from this paragraph.}
+\begin{itemize}
+\item There is a fit being done.
+\end{itemize}
+
+
 The function of absorptive part can be expressed as:
 \begin{equation}
 \phi_y= \frac{A_0 (X-X_0 )\omega_0}{2(X-X_0 )^2+(\omega_0^2)/4}\cos\theta-\frac{\omega_0^2A_0}{(X-X_0 )^2+(\omega_0^2/4)}\sin\theta
 \end{equation}
-while the dispersive part of complex lorentzian is given by 
+while the dispersive part of complex lorentzian is given by
 \begin{equation}
 \phi_x= \frac{A_0 (X-X_0 )\omega_0}{2(X-X_0 )^2+(\omega_0^2)/4}\sin\theta+\frac{\omega_0^2A_0}{(X-X_0 )^2+(\omega_0^2/4)}\cos\theta
 \end{equation}
-In this conjunction, $A_0$ represents the maximum of the purely absorptive curve, $\omega_0$ the width
-of resonance (FWHM) and $x_0$ the center resonance frequency. Furthermore, x represents
-the frequency values.
-The overall fitting function in order to really fit a complex lorentzian is given by (the
-phases in R(x) and D(x) are not considered in the following equations, since they are varied
-(sin/cos)).\\
+In this conjunction, $A_0$ represents the maximum of the purely
+absorptive curve, $\omega_0$ the width of resonance (FWHM) and $x_0$
+the center resonance frequency. Furthermore, x represents the
+frequency values.  The overall fitting function in order to really fit
+a complex lorentzian is given by (the phases in R(x) and D(x) are not
+considered in the following equations, since they are varied
+(sin/cos)).
+
+{\bf What I think I am supposed to get from this discussion:}
+\begin{itemize}
+\item The fit functions being used.
+\end{itemize}
 
 
 \begin{equation}
@@ -249,11 +437,36 @@ R value is taken and the phase guess $\phi _0$  is calculated by $\phi _0 = arct
 Advantages: In the force oscillation scan technique entire resonance curve is scanned which allow us to see if there is a pure resonance or the real resonance curve get destroyed by any other external influences. By mapping out the entire resonance curve, we can easily debug the problem because in this process we can repeatedly adjust the power of the pump and probe beam immediately after each scan. Since the output signal of the balanced photodiode is demodulated stepwise by the lock-in amplifier at the modulation frequency at each increment, small amounts of noise induce in this process which is the most advantageous point of this field measurement technique. \\
 Disadvantages: The force oscillation scan is a quite slow process which is the main drawback of this measurement scheme.
 For a scan range of some hundred Hz usually takes a few minutes with  waiting time of couple second. As a result the force oscillation scans are not directly sensitive to magnetic field drifts, occurring at time intervals which are shorter than the actual scan. Field drifts would cause a degradation of the precision of a swept oscillation scan.
-\subsection{Self oscillation mode}
-In self-oscillation mode\cite{PhysRevA.62.043403}, the output signal of photodiode is  fed back to AOM for  amplitude modulation. In this case the  output signal of polarimeter is modified to act as a square wave which drives the AOM directly. After setting the phase and gain of the feedback system properly, the system start to oscillates spontaneously  at the Larmor frequency. In order to measure the oscillation frequency a frequency counter can be used in this mode. An online tracking of the oscillating signal is also possible.
- A customized circuit board, consisting of an analog voltage amplifier, a Schmitt trigger, and two metastable circuits, is used to process optical rotation.\\
-Advantages: Being a quite fast process and having a high bandwidth are the main features of this self-oscillation scan. In order to get rapid update of the magnetic field the magnetometer can be operated in this mode.\\
- Disadvantages: Since feedback loop self-oscillate in the case of constructive interference, it will work only for the signal having a phase shift of integer multiple of $ 2\pi$. This additional phase shift might be resulting into slightly off-centered resonance. As a result, self-oscillation mode is more susceptible to systematic errors in field measurement.
+
+%\subsection{Self oscillation mode}
+
+% This should be in Chapter 2.
+
+%In self-oscillation mode\cite{PhysRevA.62.043403}, the output signal
+%of photodiode is fed back to AOM for amplitude modulation. In this
+%case the output signal of polarimeter is modified to act as a square
+%wave which drives the AOM directly. After setting the phase and gain
+%of the feedback system properly, the system start to oscillates
+%spontaneously at the Larmor frequency. In order to measure the
+%oscillation frequency a frequency counter can be used in this mode. An
+%online tracking of the oscillating signal is also possible.
+
+%A customized circuit board, consisting of an analog voltage amplifier,
+%a Schmitt trigger, and two metastable circuits, is used to process
+%optical rotation.  {\bf No, it isn't.}
+
+%Advantages: Being a quite fast process and having a high bandwidth are
+%the main features of this self-oscillation scan. In order to get rapid
+%update of the magnetic field the magnetometer can be operated in this
+%mode.
+
+%Disadvantages: Since feedback loop self-oscillate in the case of
+%constructive interference, it will work only for the signal having a
+%phase shift of integer multiple of $2\pi$. This additional phase shift
+%might be resulting into slightly off-centered resonance. As a result,
+%self-oscillation mode is more susceptible to systematic errors in
+%field measurement.
+
 
 
 \subsection{Free Indution Deecay(FID) }
