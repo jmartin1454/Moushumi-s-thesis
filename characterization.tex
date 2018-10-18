@@ -136,9 +136,9 @@ removed.  The field is calibrated to the voltage signal as described
 above.  In Fig.~\ref{fig:near zero field}, the data have been fitted
 to a dispersive Lorentzian shape given by the function
 \begin{equation}
-\mathrm{Signal~(V)}=\frac{A(B-B_0)}{somefunctionthatMoushumifillsin}
+\mathrm{Signal~(V)}=\frac{a(B-B_0)}{1+a(B-B_0)^2}\cdot l+C
 \end{equation}
-where $A$, $B_0$, $a$, and $o$ are fit parameters.  A key measure of
+where $a$, $B_0$, $C$, and $l$ are fit parameters.  A key measure of
 magnetometer performance is the valley-to-peak distance, which in this
 case is about $\Delta B=\frac{2}{a}=0.49$~nT.  The other key measure
 in this case is the deduced field at zero crossing given by the fit
@@ -260,7 +260,7 @@ constantly changing, so that each data point for optical rotation
 represents a range of drive frequencies that were sampled within the
 lock-in time constant.  A more robust method involves selecting
 particular frequencies in series and then fitting to determine the
-resonant frequency, as done in Ref.~\cite{bib:michithesis}.  I tried
+resonant frequency, as done in Ref.~\cite{mythesis}.  I tried
 this method also, which I call a forced-oscillation scan.
 
 For this forced-oscillation scan a frequency range and frequency
@@ -273,13 +273,7 @@ demodulated at the reference frequency. The resulting in-phase (X) and
 quadrature (Y) outputs are collected by the python code via GPIB.  A
 settling time of at least 5 lock-in time constants ensures that no
 memory of the previous frequency is retained by the lock-in amplifier.
-\begin{figure}[h]
-\centering\includegraphics[width=0.4\linewidth]{figures/FM_NMOR}
-\caption{Optical rotation vs. forced oscillation frequency...{\bf with
-    a set of otherwise unknown parameters being used.  Also this
-    figure is never referred to in the text, apparently.}}
-\end{figure}
-
+\
 % Refer to appropriate Section of Chapter 2, if you want to make this
 % statement.
 
@@ -359,6 +353,8 @@ resonance width is 1.67 nT.
 respectively.
 \item Something in the width corresponds to 1.67 nT, but it is very
   unclear how.
+  
+  \bf The width ($\Delta f$) is 15.66 Hz which then translated into magnetic field using the relation $\Delta B= \Delta f/2 \gamma$ where $\gamma$ is the gyromagnetic ratio of Rb.
 \end{itemize}
 
 The probe beam then analyzed by photodiode whose output was connected
@@ -557,7 +553,7 @@ Disadvantages: As a finite duty cycle is used (pump modulation only happens duri
 
 \subsection{FID in tilted magnetic field}
 For the nEDM experiment it is very important to do tilted field measurement in order to have better understanding of  geometric phase effects which are the leading sources for systematic uncertainties during nEDM measurement . 
-Since our Rb magnetometer is a scalar magnetometer, it is not possible to measure vector field components directly.In general, when the magnetic field is along the light propagation direction, the main resonance occurs at $\Omega_m = 2\Omega_L$. This resonance appear because of the symmetry of the optically pumped state. It is found that when magnetic field direction is tilted in the plane perpendicular to the light polarization axis, resonance is observed at  $\Omega_m = 2\Omega_L$~with its amplitude depending on the tilt angle. In this case, the amplitude of resonance signal decreases with increasing tilt angle . However, If we tilt the magnetic field direction towards the light polarization axis a new resonance appears at $\Omega_L$ along with the main resonance at $2\Omega_L$ if linearly polarized light is used. In this case the resonance signal contain two frequency component Fig \ref{fig:transverse} . The amplitude of the new resonance signal at $\Omega_L$  increases as the angle between B and the light propagation direction increases while main resonance amplitude at $2\Omega_L$  decrease with increasing tilt angle. However,when the tilt angle is larger than some certain angle the resonance amplitude measured at $\Omega_L$ also start to decrease and reaches zero when the magnetic field is directed along the y axis.   It could be possible to evaluate the magnitude of the magnetic field from the ratio of the resonance amplitudes at $\Omega_L$ and $2\Omega_L$. The same study with frequency modulated light has been reported by Pustelny et al.\cite{PhysRevA.74.063420}. In this study the NMOR Signal was observed by connecting the balanced photodiode to the oscilloscope directly. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
+Since our Rb magnetometer is a scalar magnetometer, it is not possible to measure vector field components directly.In general,  The same study with frequency modulated light has been reported by Pustelny et al.\cite{PhysRevA.74.063420}. In this study the NMOR Signal was observed by connecting the balanced photodiode to the oscilloscope directly. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
 
 \begin{figure}
     \centering

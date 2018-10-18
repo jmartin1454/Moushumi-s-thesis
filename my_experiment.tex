@@ -81,25 +81,25 @@ at a 45$^\circ$ angle and aligned with the axis of the
 $\lambda/2$-plate, and in the absence of any optical rotation, the
 balanced photodiode would output zero volts.  If the plane of
 polarization is rotated by passage through the cell, it will be sensed
-by the differential photodiode signal.  This is discussed further in Section~\ref{sec:Signal Processing}. Fig.~\ref{fig:pumpprobe}  shows the schematic layout of the apparatus used for studying the
+ by the differential photodiode signal.  This is discussed further in Section~\ref{sec:Signal Processing}.
+ 
+ Fig.~\ref{fig:pumpprobe}  shows the schematic layout of the apparatus used for studying the
 non-linear magneto-optical effects with the amplitude modulated
 light. In this work, a paraffin-coated vapor cell (about 5 cm long)
 containing natural rubidium with stable isotopes $^{87}$Rb~ and~
 $^{85}$Rb, is used as the magneto-optical sample. To get maximum
 sensitivity and to reduce ambient fields the cell is placed within a
 magnetic shield made of four-layer of $\mu$ metal. A semiconductor diode laser is the light source. The laser
-wavelength ($\lambda=795$ nm) is precisely controlled by an external
-locking system.  The light beam is splited into pump and
+wavelength ($\lambda=795$ nm) is precisely controlled by an external locking system.  The light beam is splited into pump and
 probe beam using a beamsplliter. The typical light power of the pump
 beam is 40 $\mu$W and the typical light power of the probe beam is 20
-$\mu$w. Acousto Optic Modulator (AOM)is used to modulate the pump beam. Upon passing through the AOM and
-linear polarizer linearly polarized light beam interact with Rb
-atoms. The probe beam then passes through our vapour cell which sits
-inside the shield. Then the nonlinear Faraday rotation signals are
-analyzed by a balanced polarimeter.  A Wollaston prism is used to
+$\mu$W. Acousto Optic Modulator (AOM) is used to modulate the pump beam. The details of the working principle of AOM is discussed in section \ref{sec:AOM}. Upon passing through the AOM the pump beam is then passes through a lens to collimate. Before interact with the Rb cell pump beam passes trough a N.D.F and polarizer to reduce the beam power. After that the linearly polarized light beam interact with Rb
+atoms. 
+
+The probe beam then passes through our vapour cell which sits inside the shield. Then the nonlinear Faraday rotation signals are analyzed by a balanced polarimeter.  A Wollaston prism is used to
 split the beam into its perpendicular polarization axes which are then
 analyzed individually by our photodiode. Our photodiode contains two
-individual diodes and an internal differential amplifier which outputs the difference in diodes P1 - P2. A lock-in amplifier was used to detect the polarimetric signal and stored on a computer.
+individual diodes and an internal differential amplifier which outputs the difference in diodes P1 - P2. A lock-in amplifier was used to detect the polarimetric signal and stored on a computer. Table \ref{table:laser power} shows the adjusted beam power at several positions of experimental setup.
 \begin{figure}%[h]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/experimental_setup}
@@ -111,11 +111,11 @@ individual diodes and an internal differential amplifier which outputs the diffe
 \end{figure}
 \section{External Cavity Diode Laser(ECDL)}
 \bigskip
-In our NMOR based optical magnetometry setup, laser light was provided by an external cavity diode laser. These kind of diodes are semiconductor diodes and thus vibration and shock resistant. They are also wavelength tunable. Besides that, external cavity diodes emit single mode laser light with a very narrow-band linewidth. A critical aspect of an ECDL is temperature control of the cavity, since the laser frequency depends on the cavity length and hence on the thermal expansion coefficient of the cavity material. Micrometer screws enable manual coarse tuning, while precise scans without mode hops are performed by a piezo actuator. This kind of grating stabilized diode lasers is especially advantageous for spectroscopy with the alkalines. Our Toptica DL-100 outputs a tunable wavelength near 795 nm with an output power $<100$ mW. The laser spot size is elliptical, and approximately 3 mm x 5 mm = $15 mm^2$.The laser was typically tuned to the D1 (F = 3,2 2) absorption minimum and then adjusted to maximize optical rotation. Our NMOR system uses an atomic vapour cell containing natural rubidium with stable isotopes $^{87}Rb$ and $^{85}Rb$ both being present.
+In our NMOR based optical magnetometry setup, laser light was provided by an external cavity diode laser. These kind of diodes are semiconductor diodes and thus vibration and shock resistant. They are also wavelength tunable. Besides that, external cavity diodes emit single mode laser light with a very narrow-band linewidth. A critical aspect of an ECDL is temperature control of the cavity, since the laser frequency depends on the cavity length and hence on the thermal expansion coefficient of the cavity material. Micrometer screws enable manual coarse tuning, while precise scans without mode hops are performed by a piezo actuator. This kind of grating stabilized diode lasers is especially advantageous for spectroscopy with the alkalines. Our Toptica DL-100 outputs a tunable wavelength near 795 nm with an output power $<100$ mW. The laser spot size is elliptical, and approximately 3 mm x 5 mm = $15 mm^2$. The laser was typically tuned to the D1 (F = 3,2 2) absorption minimum and then adjusted to maximize optical rotation. Our NMOR system uses an atomic vapour cell containing natural rubidium with stable isotopes $^{87}Rb$ and $^{85}Rb$ both being present.
 
 \section{Dichroic Atomic Vapor Laser Lock (DAVLL)}
 
-In order to control the laser frequency to a fraction of the Doppler-broadened linewidth of the relevant hyperfine atomic transition of the Rb D1-line, a frequency error signal is generated by taking usage of the Zeeman effect combined with circular dichroism of an atomic vapor which is exposed to a magnetic field \cite{doi:10.1063/1.3568824}. The generated error signal passes through zero crossings as the laser frequency coincident with the lock frequency. The schematic diagram of the apparatus used in  the DAVLL system has shown in Fig \ref{fig:DAVLL}. A linearly polarized probe beam is incident on a glass cell filled with Rb vapor surrounded by a set of permanent magnets. The wavevector of the light is parallel to the axis of the generated magnetic field by permanent magnets. After the interaction of the laser beam with the Rb cell, the beam passes through a quarter-wave plate before impinging on a polarizing beam splitter (PBS) or a Wollaston prism. The linearly polarized beam incident can be split into two orthogonal circularly polarized beams. A set of photodiodes are used to detect the intensity of the right and left circularly polarized beams. Both of the photodiodes are attached to a polarimeter board which is used to measure the difference in signals and amplifies it. One oscilloscope is used for monitoring each photodiode as well as the difference output. The signal is then fed into a PID controller which finally controls the laser diode current corresponding to a certain laser frequency.
+In order to control the laser frequency to a fraction of the Doppler-broadened linewidth of the relevant hyperfine atomic transition of the Rb D1-line, a frequency error signal is generated by taking usage of the Zeeman effect combined with circular dichroism of an atomic vapor which is exposed to a magnetic field \cite{doi:10.1063/1.3568824}. The generated error signal passes through zero crossings as the laser frequency coincident with the lock frequency. The schematic diagram of the apparatus used in  the DAVLL system has shown in Fig \ref{fig:DAVLL}. A linearly polarized probe beam is incident on a glass cell filled with Rb vapor surrounded by a set of permanent magnets. The wave vector of the light is parallel to the axis of the generated magnetic field by permanent magnets. After the interaction of the laser beam with the Rb cell, the beam passes through a quarter-wave plate before impinging on a polarizing beam splitter (PBS) or a Wollaston prism. The linearly polarized beam incident can be split into two orthogonal circularly polarized beams. A set of photodiodes are used to detect the intensity of the right and left circularly polarized beams. Both of the photodiodes are attached to a polarimeter board which is used to measure the difference in signals and amplifies it. A Tektronix TDS2024 oscilloscope is used for monitoring each photodiode signal as well as the difference output. The signal is then fed into a PID controller which finally controls the laser diode current corresponding to a certain laser frequency.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/DAVLL}
@@ -123,17 +123,22 @@ In order to control the laser frequency to a fraction of the Doppler-broadened l
 \end{figure}
 \section{Laser tuning and locking}
 In order to polarize atoms by optical pumping, it's important to tune the laser properly to expected transition line.
-Setting the laser temperature correctly is one of the important parts to achieve good tuning . First we need to turn on the temperature control panel and then it’s easy to adjust laser temperature manually by tuning the knob of temperature control panel. For our tune the laser temperature is set to 20.1 $\degree$c. For good tuning it is also important to know the laser current which corresponds to the emission of laser light with a wavelength matching the absorption line of the Rb atom. This is usually done by a DAVLL scan so it's necessary to make sure the DAVLL optical setup is done correctly. An oscilloscope is used to observe the output of the differential amplifier. Trigger the scope on the trigger output on the sweep control panel.
-Laser current can be controlled by adjusting the current control knob until the spectral structure of $^{85}Rb$ appears. we need to keep adjusting the current control knob until a maximum symmetry between the upsweep and downsweep portions is achieved. After that by adjusting the knob of sweep control panel we can zoom in the structure and set the trigger to steep of the absorption minima. 
+Setting the laser temperature correctly is one of the important parts to achieve good tuning . First we need to turn on the temperature control panel and then it’s easy to adjust laser temperature manually by tuning the knob of temperature control panel. For our tune the laser temperature is set to 20.1 $\degree$c. For good tuning it is also important to set the laser current which corresponds to the emission of laser light with a wavelength matching the absorption line of the Rb atom. This is usually done by a DAVLL scan so it's necessary to make sure the DAVLL optical setup is done correctly. An oscilloscope is used to observe the output of the differential amplifier. Trigger the scope on the trigger output on the scan control (SC) panel.
+Laser current can be controlled by adjusting the current control knob until the spectral structure of $^{85}Rb$ appears (see Fig \ref{fig:laser tune}). we need to keep adjusting the current control knob until a maximum symmetry between the upsweep and downsweep portions is achieved. After that by adjusting the knob of scan control panel we can zoom in the structure and set the trigger to steep of the absorption minima. 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/laser_control_}
-\caption{Diode laser controller unit consist of analog current control module, scan control module,low-noise temperature control module, feedback controlyzer and Diode Laser Controller display .\label{fig:laser controller}}
+\caption{Diode laser controller unit consist of analog current control module (CC), scan control module (SC),low-noise temperature control module (TC), feedback controlyzer (FC) and Diode Laser Controller display .\label{fig:laser controller}}
 \end{figure}
 
-Digilock 110 feedback controlyzer is used for laser locking. The DigiLock 110 is an up-to-date digital hardware allows to implement the scan generator, PID controllers and optional frequency modulation techniques all into one plug in module. It offers graphical user interface running on a PC makes the procedure of laser locking enormously easy. Different important features are also available in this module for analyzing and optimizing the control system.
- 
-The output of the laser feedback controlyzer panel is connected to the computer where Digilock software was already installed. The output signal of the differential photodiode is fed into the controlyser panel main input. After connecting the DigiLock 110 we can turn on scan and navigate to the autolock screen at the bottom. Then the the portion of the spectrum that we tuned earlier will appear. Then we need to select the crosshairs tool which allow us to drag the crosshairs on the part of the spectrum that we want to tune to. Finally for successful laser locking we need to click and select "PID lock to slope".
+Digilock 110 feedback controlyzer(FC) is used for laser locking. The DigiLock 110 is an up-to-date digital hardware allows to implement the scan generator, PID controllers and optional frequency modulation techniques all into one plug in module. It offers graphical user interface running on a PC makes the procedure of laser locking enormously easy. Different important features are also available in this module for analyzing and optimizing the control system.
+ \begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/laser tune.png}
+\caption{Oscilloscope trace of differential photodiode signal \label{fig:laser tune}}
+\end{figure}
+The output of the laser feedback controlyzer panel is connected to the computer where Digilock software was already installed. The output signal of the differential photodiode is fed into the controlyser panel main input. After connecting the DigiLock 110 we can turn on scan and navigate to the autolock screen at the bottom. Then the the portion of the spectrum that we tuned earlier will appear(see Fig \ref{fig:digilock}). Then we need to select the crosshairs tool which allow us to drag the crosshairs on the part of the spectrum that we want to tune to. Finally for successful laser locking we need to click and select "PID lock to slope". For most of the studies reported in this thesis we use the auto locking features of the DigiLock software.
+
 \begin{table}[h]
 \centering
 \begin{tabular}{|l | l|}
@@ -151,9 +156,14 @@ After Cell ~ &  ~ ~ ~ ~ ~ 18   \\
 
 \hline
 \end{tabular}
-\caption{Adjusted laser power at several positions in the experiment}
+\caption{Adjusted laser power at several positions in the experiment.\label{table:laser power}}
 \end{table}
-\section{Acousto-optic Modulator (AOM)}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\linewidth]{figures/digilock.jpg}
+\caption{digilock\label{fig:digilock}}
+\end{figure}
+\section{Acousto-optic Modulator (AOM)\label{sec:AOM}}
 
 The acousto-optic modulator offers a method of modulating the
 amplitude of the light.
