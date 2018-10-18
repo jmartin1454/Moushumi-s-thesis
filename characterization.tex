@@ -343,14 +343,14 @@ values, which are then fitted in different regions using the two
 different functions above, in a single overall least-squares fit.  The
 process is similar to that described in Ref.~\cite{mythesis}.
 
-Based on this measurement, the magnetic field is 1.004635 $\mu$T which is translated from central frequency $f_0= 9.37810$ kHz
-based on something. The width $\Delta f=15.66$~Hz is important, because the narrower the
-width, the more precise the measurement of the magnetic field would
-be.  The width can also be translated into magnetic field using the
-relation $\Delta B= \Delta f/2 \gamma$ where $\gamma$ is the
-gyromagnetic ratio of Rb as discussed in
-Section~\ref{sec:Rb structure}.  This results in a value
-of 1.67~nT for the width.
+Based on this measurement, the magnetic field is 1.004635 $\mu$T which
+is translated from central frequency $f_0= 9.37810$ kHz. The width
+$\Delta f=15.66$~Hz is important, because the narrower the width, the
+more precise the measurement of the magnetic field would be.  The
+width can also be translated into magnetic field using the relation
+$\Delta B= \Delta f/2 \gamma$ where $\gamma$ is the gyromagnetic ratio
+of Rb as discussed in Section~\ref{sec:Rb structure}.  This results in
+a value of 1.67~nT for the width.
 
 In general, measurements of the magnetic field that are a factor of a
 thousand more precise than the width are possible in forced
@@ -379,20 +379,47 @@ next section.
 
 \subsection{Free Induction Decay}
 
-\begin{itemize}
-\item The magnetometer can also be run in free induction decay
-  mode,where Rb atoms inside the cell is excited once via optical pumping and afterwards
-  the decaying process of coherent state is observed. A function
-  generator is used to delivered the pump pulses which are necessary
-  for pumping during a FID measurement. The output frequency of the
-  function generator is set to the resonance frequency
-\item Pumping is done for a very short time interval and the coherence decay takes place fast. The pumping process is instantaneously stopped by AOM which can also be used to trigger the  data acquisition (DAQ). A python script is used to 
-\item After turn off the pump beam the change in the optical rotation of probe beam is measured by balanced  photodiode and the output signal of the photodiode is then fed into the lock-in amplifier. 
-\item The reference signal on the lock-in amplifier has further to be set slightly off resonance ($\sim 100$ Hz) in internal frequency mode in order to properly record the FID.
-The X and Y channels output of the lock-in amplifier are further transfered to a Tektronix oscilloscope. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
-\end{itemize}
-Fig \ref{fig:FID example} shows the entire process of pumpimg and probing during a measurement cycle in FID mode. Rb atoms are pumped using amplitude modulated laser beam for 0.1 s and then  observed the spontaneous decay of coherence state for another 0.2 s using probe beam while the pump beam was off. \\
-Table 4.1 shows the function generator and lock-in amplifier settings for FID measurement at $0.2~\mu$T.
+The focus of this thesis was to study the magnetometer operation in
+free induction decay (FID) mode.  In FID mode, the quantum state of
+the Rb atoms inside the cell is prepared using the pump beam, and then
+the pump beam is switched off and the precession frequency of the
+coherent state is measured using the probe beam.  The measured
+precession frequency then determines the field via the gyromagnetic
+ratio.
+
+Fig.~\ref{fig:FID_example} shows an example of a pump/probe
+measurement cycle in FID mode at a field of $\sim 0.2~\mu$T.  The
+signal in the differential photodiode output is seen to grow when the
+AM pump beam is switched on.  After the pump is switched off, the
+collection of the FID signal begins.  The differential photodiode
+signal continues to oscillate and decays away exponentially in time.
+The measurement of the oscillation frequency of the probe beam in the
+FID signal region gives the magnetic field.
+
+\begin{figure}%[h]
+\centering\includegraphics[width=0.55\linewidth]{figures/Capture2}
+\caption{Sample FID measurement cycle.  The curve labelled ``data''
+  (blue) indicates the differential photodiode signal, as demodulated
+  in the lock-in amplifier.  Only the X (in-phase) signal is shown.
+  The curve labelled ``trigger'' is a signal which indicates a
+  non-zero value when the pump beam is on and with the amplitude
+  modulation described in the text.  The pump phase is indicated by
+  the orange arrow ``Optical Pumping'' which persisted for times from
+  0.0~s to 0.1~s.  The probe phase is indicated by the black arrow
+  ``FID'' which was done for the subsequent 0.2~s. The applied
+  magnetic field during the measurement is
+  $0.2~\mu$T.\label{fig:FID_example}}
+\end{figure}
+
+In Fig.~\ref{fig:FID_example}, the differential photodiode signal has
+been demodulated using a lock-in amplifier whose frequency has
+purposely been set to be about 100~Hz away from the oscillation
+frequency of the atoms.
+
+Table~\ref{tab:FID_setting} shows the function generator (fed to the
+AOM driver) and lock-in amplifier settings for FID measurement at
+$0.2~\mu$T.
+
 \begin{table}[h]
 \centering
 \begin{tabular}{|l |l|}
@@ -420,12 +447,24 @@ Time constant     &  $300\mu s$ \\
 Sensitivity      &  500mV  \\
 \hline
 \end{tabular}
-\caption{Setting for FID at $0.2 \mu$T field\label{table:FID setting}}
+\caption{Setting for FID at $0.2~\mu$T field.\label{tab:FID_setting}}
 \end{table}
-\begin{figure}[h]
-\centering\includegraphics[width=0.55\linewidth]{figures/Capture2}
-\caption{ An example of Free Induction Decay (FID) signal, when pumping the Rb atoms  was done for 0.1 s with linearly polarized light and probing was done for 0.2 s. The applied magnetic field during the measurement is $0.2~\mu T$. \label{fig:FID example}}
-\end{figure}
+
+
+
+The amplitude of the pump beam is again modulated at $\Omega_m\approx
+2\Omega_L$, using again a square-wave with low duty cycle.  Generally,
+the oscillation frequency is adjusted initially to maximize the
+initial amplitude of the FID once the pump beam has been switched off.
+
+
+
+\item After turn off the pump beam the change in the optical rotation of probe beam is measured by balanced  photodiode and the output signal of the photodiode is then fed into the lock-in amplifier. 
+\item The reference signal on the lock-in amplifier has further to be set slightly off resonance ($\sim 100$ Hz) in internal frequency mode in order to properly record the FID.
+The X and Y channels output of the lock-in amplifier are further transfered to a Tektronix oscilloscope. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
+\end{itemize}
+
+
 The signal recorded  from X channel will be a sinusoid with an exponentially damping, according to   
   \begin{equation}
  y(t) = y_0 + A   e^{(t-t_0)/\tau}\sin(\omega t + \phi_0)\label{eq:decaying sinwave}
