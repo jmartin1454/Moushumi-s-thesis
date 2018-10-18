@@ -309,7 +309,7 @@ and the Y output crosses zero near $\Omega_m=2\Omega_L$.  The data are
 fitted in order to determine the resonant frequency and other
 parameters.
 
-The functions being fitted simultaneously are~\cite{bib:michithesis}:
+The functions being fitted simultaneously are~\cite{mythesis}:
 \begin{equation}
 \phi_Y=\frac{A_0 (f-f_0 )\Delta f}{2(f-f_0 )^2+(\Delta f)^2/4}\cos\theta-\frac{(\Delta f)^2A_0}{(f-f_0 )^2+(\Delta f)^2/4}\sin\theta+C
 \end{equation}
@@ -341,23 +341,21 @@ A techical detail of the simultaneous fitting process is that the
 $\phi_X$ and $\phi_Y$ data are catenated into a single array of
 values, which are then fitted in different regions using the two
 different functions above, in a single overall least-squares fit.  The
-process is similar to that described in Ref.~\cite{bib:michithesis}.
+process is similar to that described in Ref.~\cite{mythesis}.
 
-Based on this measurement, the magnetic field is {\bf XXX}.1.005 uT
-based on something {\bf something}.
-
-The width $\Delta f=15.66$~Hz is important, because the narrower the
+Based on this measurement, the magnetic field is 1.004635 $\mu$T which is translated from central frequency $f_0= 9.37810$ kHz
+based on something. The width $\Delta f=15.66$~Hz is important, because the narrower the
 width, the more precise the measurement of the magnetic field would
 be.  The width can also be translated into magnetic field using the
 relation $\Delta B= \Delta f/2 \gamma$ where $\gamma$ is the
 gyromagnetic ratio of Rb as discussed in
-Section~\ref{sec:somewhereinChapter2maybe}.  This results in a value
+Section~\ref{sec:Rb structure}.  This results in a value
 of 1.67~nT for the width.
 
 In general, measurements of the magnetic field that are a factor of a
 thousand more precise than the width are possible in forced
-oscillation mode~\cite{bib:michthesis}, {\it i.e.}~a statistical
-precision of about 1~pT resulting from the scan.{\bf check this
+oscillation mode~\cite{mythesis}, {\it i.e.}~a statistical
+precision of about 0.17~pT resulting from the scan.{\bf check this
   number} Rather than fully optimizing this method, we decided instead
 to focus on the free-induction decay mode of operation, described in
 the next section.
@@ -376,30 +374,7 @@ the next section.
 
 % This should be in Chapter 2.
 
-%In self-oscillation mode\cite{PhysRevA.62.043403}, the output signal
-%of photodiode is fed back to AOM for amplitude modulation. In this
-%case the output signal of polarimeter is modified to act as a square
-%wave which drives the AOM directly. After setting the phase and gain
-%of the feedback system properly, the system start to oscillates
-%spontaneously at the Larmor frequency. In order to measure the
-%oscillation frequency a frequency counter can be used in this mode. An
-%online tracking of the oscillating signal is also possible.
-
-%A customized circuit board, consisting of an analog voltage amplifier,
-%a Schmitt trigger, and two metastable circuits, is used to process
-%optical rotation.  {\bf No, it isn't.}
-
-%Advantages: Being a quite fast process and having a high bandwidth are
-%the main features of this self-oscillation scan. In order to get rapid
-%update of the magnetic field the magnetometer can be operated in this
-%mode.
-
-%Disadvantages: Since feedback loop self-oscillate in the case of
-%constructive interference, it will work only for the signal having a
-%phase shift of integer multiple of $2\pi$. This additional phase shift
-%might be resulting into slightly off-centered resonance. As a result,
-%self-oscillation mode is more susceptible to systematic errors in
-%field measurement.
+%I
 
 
 
@@ -407,18 +382,18 @@ the next section.
 
 \begin{itemize}
 \item The magnetometer can also be run in free induction decay
-  mode,where Rb atoms inside the cell is excited once and afterwards
-  the decaying processes of the excited atoms is observed. A function
+  mode,where Rb atoms inside the cell is excited once via optical pumping and afterwards
+  the decaying process of coherent state is observed. A function
   generator is used to delivered the pump pulses which are necessary
   for pumping during a FID measurement. The output frequency of the
   function generator is set to the resonance frequency
-\item Pumping is done for a very short time interval and the coherence decay takes place fast. The pumping process is instantaneously stopped by AOM (by applying a digital TTL signal an acousto-optic modulator can be used to shutter a laser beam on and off), which can also be used to trigger the  data acquisition (DAQ). 
-\item The change in the optical rotation of probe beam is measured by balanced  photodiode and the output signal of the photodiode is then fed into the lock-in amplifier.
+\item Pumping is done for a very short time interval and the coherence decay takes place fast. The pumping process is instantaneously stopped by AOM which can also be used to trigger the  data acquisition (DAQ). A python script is used to 
+\item After turn off the pump beam the change in the optical rotation of probe beam is measured by balanced  photodiode and the output signal of the photodiode is then fed into the lock-in amplifier. 
 \item The reference signal on the lock-in amplifier has further to be set slightly off resonance ($\sim 100$ Hz) in internal frequency mode in order to properly record the FID.
 The X and Y channels output of the lock-in amplifier are further transfered to a Tektronix oscilloscope. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
 \end{itemize}
-The entire process of pumpimg and probing during a measurement cycle in FID mode  has shown in Figure 4.2. Rb atoms are pumped using amplitude modulated laser beam for 0.1 sec and then observed the spontaneous decay of excited atoms for another 0.2 sec while the pump beam was off. \\
-Table 4.1 shows the function generator and lock-in amplifier settings for FID measurement.
+Fig \ref{fig:FID example} shows the entire process of pumpimg and probing during a measurement cycle in FID mode. Rb atoms are pumped using amplitude modulated laser beam for 0.1 s and then  observed the spontaneous decay of coherence state for another 0.2 s using probe beam while the pump beam was off. \\
+Table 4.1 shows the function generator and lock-in amplifier settings for FID measurement at $0.2~\mu$T.
 \begin{table}[h]
 \centering
 \begin{tabular}{|l |l|}
@@ -428,7 +403,7 @@ Table 4.1 shows the function generator and lock-in amplifier settings for FID me
 \hline
 Function generator &   \\
 \hline
-Frequency & 9.4kHz   \\
+Frequency & 2.034 kHz   \\
 
 Waveform    &  Square  \\
 
@@ -436,21 +411,21 @@ Amplitude   &  $1V_{pp}$  \\
 Offset  &       500 mV  \\
 Phase       &    $0\degree$ \\
 Trigger     &   Manual  \\
-Burst       &    1000 cycle \\
+Burst       &    220 cycle \\
 Amplitude modulation & On \\
 \hline
 Lock-in amplifier &     \\
 \hline
-Lock in frequency     & 9.297 KHz \\
+Lock in frequency     & 1.9439 KHz \\
 Time constant     &  $300\mu s$ \\
 Sensitivity      &  500mV  \\
 \hline
 \end{tabular}
-\caption{Setting for FID at $1\mu T$ field\label{table:FID setting}}
+\caption{Setting for FID at $0.2 \mu$T field\label{table:FID setting}}
 \end{table}
 \begin{figure}[h]
 \centering\includegraphics[width=0.55\linewidth]{figures/Capture2}
-\caption{ An example of Free Induction Decay (FID) signal, when pumping the Rb atoms  was done for 0.1 s with linearly polarized light and probing was done for 0.2 s. The applied magnetic field during the measurement is $0.2~\mu T$. }
+\caption{ An example of Free Induction Decay (FID) signal, when pumping the Rb atoms  was done for 0.1 s with linearly polarized light and probing was done for 0.2 s. The applied magnetic field during the measurement is $0.2~\mu T$. \label{fig:FID example}}
 \end{figure}
 The signal recorded  from X channel will be a sinusoid with an exponentially damping, according to   
   \begin{equation}
@@ -463,10 +438,10 @@ And the signal recorded  from Y channel will be a decaying cosine wave, accordin
  y(t) = y_0 + A   e^{(t-t_0)/\tau}\cos(\omega t + \phi_0)\label{eq:decaying coswave}
 \end{equation}
 where $y_0$ describes a possible offset, A is the maximum amplitude of the sinusoidal oscillation,
-t the present time, $t_0$ the starting point of the measurement, $\omega$ the oscillation frequency and $\phi_0$  some possible phase shift. The data fitting procedure were done in two ways in order to study a variety of systematic effects that were encountered. One method is to take a least square fit of x and y data separately to a decaying sin and cosine wave respectively. Another way of data fitting is to fit X and Y data simultaneously. A least square-fit of the recorded data set to equation \ref{eq:decaying sinwave} or \ref{eq:decaying coswave} gives an estimate on frequency and  therefore the magnetic field.
+t the present time, $t_0$ the starting point of the measurement, $\omega$ the oscillation frequency and $\phi_0$  some possible phase shift. The data fitting procedure were done in two ways in order to study a variety of systematic effects that were encountered. One method is to take a least square fit of x and y data separately to a decaying sin and cosine wave respectively. Another way of data fitting is to fit x and y data simultaneously. A least square-fit of the recorded data set to equation \ref{eq:decaying sinwave} and \ref{eq:decaying coswave} gives an estimate on frequency and  therefore the magnetic field.
 \begin{figure}[h]
 \centering\includegraphics[width=0.55\linewidth]{figures/fid_simultaneous}
-\caption{ Simultaneous fit of X and Y signal(green and red dots are represents x and y data respectively whereas green and red curve represents fit curves\label{Fig:FID fit}}
+\caption{ Simultaneous fit of X and Y signal (green and red dots are represents x and y data respectively whereas green and red line  represents fit curves\label{Fig:FID fit}}
 \end{figure}
   
 
@@ -485,7 +460,7 @@ The data fitting procedure provides us the actual value for those parameters. Th
 \begin{equation}
  B= \frac{\nu_{fit}~ +~\nu_0}{2\gamma}\label{eq:field}
 \end{equation}
- where $\nu_{fit}$ denotes the oscilation  frequency, $\nu_{0}$ is lock-in frequency and $\gamma$ is the gyromagnetic ratio of Rb vapor. Fig \ref{Fig:FID fit} shows an example least square fit of FID signal where both x and y output of lock-in has displayed.
+ where $\nu_{fit}$ denotes the oscilation  frequency, $\nu_{0}$ is lock-in frequency and $\gamma$ is the gyromagnetic ratio of Rb vapor(see section \ref{sec:Rb structure}). Fig \ref{Fig:FID fit} shows an example least square fit of FID signal where both x and y output of lock-in has displayed.
  
 Advantages: FID mode is free of  pump light induced frequency shifts or instabilities because the optical pumping is done for a very short time period and the frequency measurement takes place quickly. This frequency is later translate into magnetic field.\\ 
 
@@ -495,7 +470,7 @@ Disadvantages: As a finite duty cycle is used (pump modulation only happens duri
 
 \subsection{FID in tilted magnetic field}
 For the nEDM experiment it is very important to do tilted field measurement in order to have better understanding of  geometric phase effects which are the leading sources for systematic uncertainties during nEDM measurement . 
-Since our Rb magnetometer is a scalar magnetometer, it is not possible to measure vector field components directly.In general,  The same study with frequency modulated light has been reported by Pustelny et al.\cite{PhysRevA.74.063420}. In this study the NMOR Signal was observed by connecting the balanced photodiode to the oscilloscope directly. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
+Since our Rb magnetometer is a scalar magnetometer, it is not possible to measure vector field components directly. In this study the NMOR Signal was observed by connecting the balanced photodiode to the oscilloscope directly. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
 
 \begin{figure}
     \centering
