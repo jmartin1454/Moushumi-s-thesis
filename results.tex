@@ -243,8 +243,9 @@ Another study has been conducted to understand the influence of pump beam power 
     \caption{ Magnetic field vs. time for different pump beam power. (a) measured magnetic field with duty cycle $5 \%$. Precession width is about $2.3$ pT (b) measured magnetic field with Precession width $4.6$ pT for  16 $\%$ duty cycle.}
     \label{fig:different pump power}
 \end{figure}
-   \stion{Systematic error check in frequency measurement in FID mode} 
-   \substion{How far the reference frequency of lock-in amplifier should set to measure field correctly}
+
+\section{Systematic error check in frequency measurement in FID mode} 
+\subsection{How far the reference frequency of lock-in amplifier should set to measure field correctly}
   
   In FID NMOR the atomic sample is polarized once by optical pumping and then observed the spontaneous decay of excited atom while the pump beam is off. In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2 \mu$T field. The FID signal for different reference frequency of Lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of Lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of Lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
  \begin{figure}
@@ -294,7 +295,7 @@ Another study has been conducted to understand the influence of pump beam power 
     \hfill
     \begin{subfigure}[b]{0.4\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/time_constant_300micro_s}
+        \includegraphics[width=\textwidth]{figures/time_constant_300micro_sec}
         \caption{}
         \label{fig:time constant short}
     \end{subfigure}
