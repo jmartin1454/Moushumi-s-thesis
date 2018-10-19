@@ -450,29 +450,34 @@ Sensitivity      &  500mV  \\
 \caption{Setting for FID at $0.2~\mu$T field.\label{tab:FID_setting}}
 \end{table}
 
-
-
 The amplitude of the pump beam is again modulated at $\Omega_m\approx
 2\Omega_L$, using again a square-wave with low duty cycle.  Generally,
 the oscillation frequency is adjusted initially to maximize the
 initial amplitude of the FID once the pump beam has been switched off.
 
- After turn off the pump beam the change in the optical rotation of probe beam is measured by balanced  photodiode and the output signal of the photodiode is then fed into the lock-in amplifier. 
+The reference signal on the lock-in amplifier has further to be set
+slightly off resonance ($\sim 100$~Hz) in internal frequency mode.
+The frequency offset may be adjusted in order to enhance the number of
+zero crossing of the FID signal and hence get a better measurement of
+the beat frequency.  In Section~\ref{sec:lockinoffset} I study the
+impact of this setting further.
 
- The reference signal on the lock-in amplifier has further to be set slightly off resonance ($ \sim100$ Hz) in internal frequency mode in order to properly record the FID.
-The X and Y channels output of the lock-in amplifier are further transfered to a Tektronix oscilloscope. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
+The X and Y outputs of the lock-in amplifier are recorded using a
+Tektronix oscilloscope.  A Python script may be used to transfer the
+data from the oscilloscope to computer for further analysis.
 
-
-
-The signal recorded  from X channel will be a sinusoid with an exponentially damping, according to   
-  \begin{equation}
- y(t) = y_0 + A   e^{(t-t_0)/\tau}\sin(\omega t + \phi_0)\label{eq:decaying sinwave}
+In Fig.~\ref{fig:FID_example}, the FID signal recorded by the X
+channel is sinusoidal with an exponentially decaying envelope, and may
+be fitted in order to determine the beat frequency
+\begin{equation}
+X(t)=X_0+Ae^{-(t-t_0)/\tau}\sin(\omega
+t+\phi_0).\label{eq:decaying_sinwave}
 \end{equation}  
-
-And the signal recorded  from Y channel will be a decaying cosine wave, according to
-                                       
-  \begin{equation}
- y(t) = y_0 + A   e^{(t-t_0)/\tau}\cos(\omega t + \phi_0)\label{eq:decaying coswave}
+To gain in precision, the signal from the Y channel is also recorded
+and may be simultaneously fit to a decaying cosine wave:
+\begin{equation}
+Y(t)=T_0+Ae^{-(t-t_0)/\tau}\cos(\omega
+t+\phi_0).\label{eq:decaying_coswave}
 \end{equation}
 where $y_0$ describes a possible offset, A is the maximum amplitude of the sinusoidal oscillation,
 t the present time, $t_0$ the starting point of the measurement, $\omega$ the oscillation frequency and $\phi_0$  some possible phase shift. The data fitting procedure were done in two ways in order to study a variety of systematic effects that were encountered. One method is to take a least square fit of x and y data separately to a decaying sin and cosine wave respectively. Another way of data fitting is to fit x and y data simultaneously. A least square-fit of the recorded data set to equation \ref{eq:decaying sinwave} and \ref{eq:decaying coswave} gives an estimate on frequency and  therefore the magnetic field.
