@@ -468,50 +468,73 @@ data from the oscilloscope to computer for further analysis.
 
 In Fig.~\ref{fig:FID_example}, the FID signal recorded by the X
 channel is sinusoidal with an exponentially decaying envelope, and may
-be fitted in order to determine the beat frequency
+be fitted in order to determine the beat frequency $\omega$
 \begin{equation}
 X(t)=X_0+Ae^{-(t-t_0)/\tau}\sin(\omega
-t+\phi_0).\label{eq:decaying_sinwave}
+t+\phi_0)\label{eq:decaying_sinwave}
 \end{equation}  
-To gain in precision, the signal from the Y channel is also recorded
-and may be simultaneously fit to a decaying cosine wave:
+where $X_0$, $\tau$, and $\phi_0$ are the other fit parameters.  The
+parameter $t_0$ allows to adjust the start time of the fit.  To gain
+in precision, the signal from the Y channel is also recorded and may
+be simultaneously fit to a decaying cosine wave
 \begin{equation}
-Y(t)=T_0+Ae^{-(t-t_0)/\tau}\cos(\omega
-t+\phi_0).\label{eq:decaying_coswave}
+Y(t)=Y_0+Ae^{-(t-t_0)/\tau}\cos(\omega
+t+\phi_0)\label{eq:decaying_coswave}
 \end{equation}
-where $y_0$ describes a possible offset, A is the maximum amplitude of the sinusoidal oscillation,
-t the present time, $t_0$ the starting point of the measurement, $\omega$ the oscillation frequency and $\phi_0$  some possible phase shift. The data fitting procedure were done in two ways in order to study a variety of systematic effects that were encountered. One method is to take a least square fit of x and y data separately to a decaying sin and cosine wave respectively. Another way of data fitting is to fit x and y data simultaneously. A least square-fit of the recorded data set to equation \ref{eq:decaying_sinwave} and \ref{eq:decaying_coswave} gives an estimate on frequency and  therefore the magnetic field.
-\begin{figure}[h]
+where $Y_0$ describes a possible offset in the $Y$ channel.
+
+\begin{figure}%[h]
 \centering\includegraphics[width=0.55\linewidth]{figures/fid_simultaneous}
-\caption{ Simultaneous fit of X and Y signal (green and red dots are represents x and y data respectively whereas green and red line  represents fit curves\label{Fig:FID fit}}
+\caption{Simultaneous fit of X and Y signal.  The green and red points
+  are the X and Y data respectively.  Green and red lines represent
+  the simultaneously fitted curves.  The important fit parameters are
+  displayed in the figure and discussed further in the text.  The
+  lock-in frequency setting was $f_0=1943.90$~Hz.\label{fig:FID_fit}}
 \end{figure}
-  
 
-The initial guesses for the least-square parameters are given
-as:
-\begin{itemize}
-\item
-Beat frequency $\omega$: In order to guess the beat frequency, the Fast Fourier Transform (FFT) of FID signal is done. The extracted FFT frequency is used as guess frequency.
-\item
-Amplitude A: In order to get guess amplitude, Averaging the maximum of the X and Y data is done.
-\item
-Offset $\phi_0$: The mean of FID signal is calculated. This mean value is used as guess for the offset. 
+Fig.~\ref{fig:FID_fit} shows an example least square fit of FID signal
+where both X and Y output of lock-in has displayed.
 
-\end{itemize}
-The data fitting procedure provides us the actual value for those parameters. The oscillation frequency, one of the extracted fit parameters, is then is used to estimate the magnetic field according to the following equation
+The data fitting procedure were done in two ways in order to study a
+variety of systematic effects that were encountered. One method is to
+take a least square fit of X and Y data separately to a decaying sin
+and cosine wave respectively.  Another way of data fitting is to fit X
+and Y data simultaneously, which is what has been done in
+Fig.~\ref{fig:FID_fit}.  The fit parameters determined in
+Fig.~\ref{fig:FID_fit} are $A=6.81$~V, $\tau=26.6$~ms, and beat
+frequency $f=92.07$~Hz.
+
+The fitted oscillation frequency $f=\omega/2\pi$ is then is used to
+determine the magnetic field via
 \begin{equation}
- B= \frac{\nu_{fit}~ +~\nu_0}{2\gamma}\label{eq:field}
+B=\frac{f+f_0}{2\gamma}\label{eq:field}
 \end{equation}
- where $\nu_{fit}$ denotes the oscilation  frequency, $\nu_{0}$ is lock-in frequency and $\gamma$ is the gyromagnetic ratio of Rb vapor(see section \ref{sec:Rb structure}). Fig \ref{Fig:FID fit} shows an example least square fit of FID signal where both x and y output of lock-in has displayed.
- 
-Advantages: FID mode is free of  pump light induced frequency shifts or instabilities because the optical pumping is done for a very short time period and the frequency measurement takes place quickly. This frequency is later translate into magnetic field.\\ 
+where $f_0$ is lock-in frequency setting and $\gamma$ is the
+gyromagnetic ratio of Rb vapor (see Section~\ref{sec:Rb structure}).
 
-Disadvantages: As a finite duty cycle is used (pump modulation only happens during a short period of time and the main idea is to watch the coherence decay, a decreasing of the maximum achievable sensitivity with this method.
+{\bf I think we should state the B value for Fig. FID_FIT.}
+
+% This probably belongs more in Chapter 2
+ 
+%Advantages: FID mode is free of pump light induced frequency shifts
+%or instabilities because the optical pumping is done for a very short
+%time period and the frequency measurement takes place quickly. This
+%frequency is later translate into magnetic field.\\
+
+%Disadvantages: As a finite duty cycle is used (pump modulation only
+%happens during a short period of time and the main idea is to watch
+%the coherence decay, a decreasing of the maximum achievable
+%sensitivity with this method.
 
 
 
 \subsection{FID in tilted magnetic field}
+
 For the nEDM experiment it is very important to do tilted field measurement in order to have better understanding of  geometric phase effects which are the leading sources for systematic uncertainties during nEDM measurement . 
+
+
+
+
 Since our Rb magnetometer is a scalar magnetometer, it is not possible to measure vector field components directly. In this study the NMOR Signal was observed by connecting the balanced photodiode to the oscilloscope directly. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
 
 \begin{figure}
