@@ -18,30 +18,7 @@
 
 
 
-\section{FID at 0.2 \texorpdfstring{$\mu$}{Lg}T and FID at 1 \texorpdfstring{$\mu$}{Lg}T (need to edit) }
-  Coherence time indicate the time atoms take to decay spontaneously from excited ground state after removing the pump beam. To measure the coherence time, a pump beam of linearly polarized light is
-used to align the atoms along the magnetic field by optical pumping. The pump
-beam is then blocked allowing the atoms to relax over time. Optical rotation of the linearly polarized probe beam is used to measure the coherence time. In this measurement optical pumping is done for 0.5 s. Since at higher field coherence state decays quickly so coherence time get smaller. Fig~\ref{fig:graphs} shows the FID signal for  two different field.  At  0.2 $\mu$T field the coherence life time is about 75 ms Fig~\ref{fig:small field} and when the applied magnetic field is 1 $\mu$T  the coherence lifetime is about 23 ms Fig~\ref{fig:1 micro tesla}. Since at higher field, FID signal contain less no of oscillation it becomes challenging to extract oscillation frequency precisely and therefore magnetic field. In order to avoid this systematic effect most of the studies reported in this thesis has done at 0.2 $\mu$T.
-   \begin{figure}
-    \centering
- 
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/FID_0_2_micro_tesla}
-        \caption{}
-        \label{fig:small field}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/FID_1_micro_tesla}
-        \caption{}
-        \label{fig:1 micro tesla}
-    \end{subfigure}
-    \caption{FID NMOR resonances 
-obtained with a probe light power of 22 $\mu W$, pump power of 40 $\mu$W. The pump and probe beam both are linearly polarized. FID signal was acquired at 0.2 $\mu$T (a).  FID signal at applied magnetic field 1 $\mu$T (b). The coherence time is larger for smaller field whereas for larger magnetic field the coherence time becomes small. }
-    \label{fig:graphs}
-\end{figure}
+
   \section{long term FID measurement}  
 The forced oscillation scans and the single FID shot gives information about the present magnetic field. In order to get information about the change in magnetic field over time, long term data was taken in the FID mode. During this long term process the laser frequency was locked into D1 transition line of Rb-85 using DigiLock 110 laser locking module. A stable power supply was used to run the coil system inside the shield. In order to observe the FID signal, a Tektronix DPO 2014 oscilloscope was connected to X and Y output of output of lock-in amplifier. A python script is used to setup function generator and to trigger DAQ for long term FID measurement. This same python script is also used to grab data continuously from oscilloscope screen to computer. For further data analysis  another python script is used. On the basis of the X
 and Y channel recordings, a least-square fit was done for each X and Y pair. The measured oscillation frequency of decaying signal was then convert to magnetic field using equation \ref{eq:field}. The recorded B-field data vs. time was further used to calculate Allan deviations, getting  information on the deviations from the mean magnetic field vs. integration time (bin size). Measuring magnetic field over long period of time gives us information about the magnetometer performance. Toward this end,we study long term field measurement. Fig~\ref{fig:long term field} ~represents the magnetic field recorder over 4 hours on three different day. Each data points in this graph correspond to single FID scan. The observed field drift is almost same (15 pT) for three days. This measurement was conducted at 0.2 $\mu$T magnetic field.
@@ -362,22 +339,38 @@ We therefore find that
 \caption{Allan deviation vs. averaging time(s)}
 \end{figure}
 In FID mode, the resonance signal looks like a decaying sine wave. By fitting the NMOR signal with a damped sine wave the oscillation frequency has been extracted and finally this oscillation frequency has been translated to field.The Allan deviation of the measure field has been plotted in Figure 5.23.
-\newpage
+
   \section{study the effect of room temperature in magnetic field} 
   \begin{figure}[h]
 \centering\includegraphics[width=0.6\linewidth]{figures/temp}
 \caption{Allan deviation vs. averaging time(s)}
 \end{figure}
-\newpage
- \section{Study magnetometer performance with transverse field}  
+
+\section{Study magnetometer performance with transverse field\label{sec:tilted-results}}  
+
 \begin{figure}
 \centering\includegraphics[width=0.5\linewidth]{figures/tilted_field_amp_vs_angle}
-\caption{The amplitude of the FID NMOR signals recorded at $2\Omega_L$ vs. the tilt angle of the magnetic field in xz-plane}
+\caption{The amplitude of the FID NMOR signals recorded at $2\Omega_L$
+  vs. the tilt angle of the magnetic field in
+  $xz$-plane.\label{fig:tilted-wrong}}
 \end{figure}
- The magnetometric method based on FID NMOR is a very sensitive technique of magnetic field measurements. Those measurements are scalar, i.e., the position of a given resonance depends only on the magnitude not the direction of the magnetic field. However, the relative magnitudes of the FID NMOR resonances could have some dependency on the magnetic field direction. Thus there is a possibility to get some information about the direction of the magnetic field by doing a detailed analysis of the FID NMOR signal.  For this reason, the dependency of the FID NMOR signal on the magnetic field direction has studied here.  In this Rb NMOR magnetometry setup the rubidium atoms interacted with a z-directed laser light beam which is linearly polarized
-along the y axis. In the FID NMOR technique, the magnetic field is generally directed along the light propagation direction and the resonance occurs at $2\Omega_L$.  This effect can be explained by considering that the polarization returns to its original state after a 180° rotation because of the two-fold symmetry of the optically pumped state. As a result, the optical rotation induced by the rotating linear dichroism is periodic at twice the Larmor frequency.
-We have observed that Resonances in nonlinear magneto-optical rotation with amplitude modulated light by tilting the magnetic field at angles away from the direction of light propagation while operating the Rb magnetometer in FID mode. When the field is tilted in the plane perpendicular to the light polarization direction an resonance appears at $2\Omega_L$. In this case no additional resonance appears for modulation frequency $\omega_L$. The amplitude of the resonance signal decreases with increasing tilt angle. Figure 5.24 shows the amplitude of the FID signal for the magnetic field tilted in the xz plane at various angles to the light propagation direction at modulation frequency $2\Omega_L$.
-However, We also observed that by tilting the field direction toward the light polarization direction a new resonance occurs at $\Omega_L$ along with the main resonance at $2\Omega_L$. The resonance signal recorded at $\Omega_L$ contains two frequency components. Figure 5.25 (b) display the FFT of resonance signal for tilt angle $15\degree$ where two peak corresponds to two frequency components . The amplitude of  resonance signal at $2\Omega_L$  decreases as the angle between magnetic field (B) and the light propagation direction increases while the amplitude of new resonance  increases with increasing tilt angle at $\Omega_L$. Figure 5.25(a) shows the resonance amplitude at $\Omega_m=2\Omega_L$ keep decreases with increasing tilt angle in yz plane while  the resonance amplitude measured at $\Omega_m=\Omega_L$ keep increase till $30\degree$ and after that amplitude start to decrease and reaches zero when the magnetic field is directed along the y axis.Consider a two-level system F=1→F=0 and the quantization vector is directed along the magnetic field. When the magnetic field is tilted in the yz plane, the light-polarization axis is perpendicular to the magnetic field. In this case the linearly polarized light containing two circularly polarized components can only create the coherence state between magnetic sublevels $m = ±1$ . Since the transition frequency between these two consecutive Zeeman energy sublevels is $2\Omega_L$  the resonance appears only at this frequency. However, when the magnetic field is tilted  in the xy plane, the light is a linear superposition of polarizations parallel and perpendicular to the magnetic field. In this case, the light can create coherences between sublevels with $m=1$ and $m=2$, so resonances are observed at both $\Omega_L $ and $2\Omega_L$.
+
+%The magnetometric method based on FID NMOR is a very sensitive
+%technique of magnetic field measurements. Those measurements are
+%scalar, i.e., the position of a given resonance depends only on the
+%magnitude not the direction of the magnetic field. However, the
+%relative magnitudes of the FID NMOR resonances could have some
+%dependency on the magnetic field direction. Thus there is a
+%possibility to get some information about the direction of the
+%magnetic field by doing a detailed analysis of the FID NMOR signal.
+%For this reason, the dependency of the FID NMOR signal on the
+%magnetic field direction has studied here.
+
+In this Rb NMOR magnetometry setup the rubidium atoms interacted with a $z$-directed laser light beam which is linearly polarized
+along the y axis. In the FID NMOR technique, the magnetic field is generally directed along the light propagation direction and the resonance occurs at $2\Omega_L$.  This effect can be explained by considering that the polarization returns to its original state after a $180\degree$ rotation because of the two-fold symmetry of the optically pumped state. As a result, the optical rotation induced by the rotating linear dichroism is periodic at twice the Larmor frequency.
+
+We have observed that Resonances in nonlinear magneto-optical rotation with amplitude modulated light by tilting the magnetic field at angles away from the direction of light propagation while operating the Rb magnetometer in FID mode. When the field is tilted in the plane perpendicular to the light polarization direction an resonance appears at $2\Omega_L$. In this case no additional resonance appears for modulation frequency $\omega_L$. The amplitude of the resonance signal decreases with increasing tilt angle. Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for the magnetic field tilted in the $xz$ plane at various angles to the light propagation direction at modulation frequency $2\Omega_L$.
+However, We also observed that by tilting the field direction toward the light polarization direction a new resonance occurs at $\Omega_L$ along with the main resonance at $2\Omega_L$. The resonance signal recorded at $\Omega_L$ contains two frequency components. Fig.~\ref{fig:something-tilted}(b) display the FFT of resonance signal for tilt angle $15\degree$ where two peak corresponds to two frequency components. The amplitude of resonance signal at $2\Omega_L$  decreases as the angle between magnetic field $B$ and the light propagation direction increases while the amplitude of new resonance  increases with increasing tilt angle at $\Omega_L$. Fig.~\ref{fig:something-tilted}(a) shows the resonance amplitude at $\Omega_m=2\Omega_L$ keep decreases with increasing tilt angle in $yz$ plane while  the resonance amplitude measured at $\Omega_m=\Omega_L$ keep increase till $30\degree$ and after that amplitude start to decrease and reaches zero when the magnetic field is directed along the y axis.Consider a two-level system $F=1\rightarrow F=0$ and the quantization vector is directed along the magnetic field. When the magnetic field is tilted in the yz plane, the light-polarization axis is perpendicular to the magnetic field. In this case the linearly polarized light containing two circularly polarized components can only create the coherence state between magnetic sublevels $m_F=\pm 1$ . Since the transition frequency between these two consecutive Zeeman energy sublevels is $2\Omega_L$  the resonance appears only at this frequency. However, when the magnetic field is tilted  in the xy plane, the light is a linear superposition of polarizations parallel and perpendicular to the magnetic field. In this case, the light can create coherences between sublevels with $m_F=1$ and $m_F=2$, so resonances are observed at both $\Omega_L $ and $2\Omega_L$.
 
 \begin{figure}
     \centering
@@ -394,6 +387,11 @@ However, We also observed that by tilting the field direction toward the light p
         \caption{}
         \label{fig:three sin x}
     \end{subfigure}
-    \caption{(a) The amplitude of the FID NMOR signals as a function of tilt angle recorded at $\Omega_L$ and $2\Omega_L$ vs. the tilt angle of the magnetic field in the plane defined by the light-polarization and light propagation vectors(yz-plane). (b) FFT of FID NMOR signal in the presence of trensverse field.}
+    \caption{(a) The amplitude of the FID NMOR signals as a function
+      of tilt angle recorded at $\Omega_L$ and $2\Omega_L$ vs. the
+      tilt angle of the magnetic field in the plane defined by the
+      light-polarization and light propagation vectors(yz-plane). (b)
+      FFT of FID NMOR signal in the presence of transverse
+      field.\label{fig:something-tilted}}
 \end{figure}
 

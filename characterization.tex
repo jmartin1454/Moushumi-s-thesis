@@ -512,7 +512,7 @@ B=\frac{f+f_0}{2\gamma}\label{eq:field}
 where $f_0$ is lock-in frequency setting and $\gamma$ is the
 gyromagnetic ratio of Rb vapor (see Section~\ref{sec:Rb structure}).
 
-{\bf I think we should state the B value for Fig. FID\_FIT.}
+{\bf I think we should state the B value for Fig.~\ref{fig:FID_fit}.}
 
 % This probably belongs more in Chapter 2
  
@@ -526,28 +526,119 @@ gyromagnetic ratio of Rb vapor (see Section~\ref{sec:Rb structure}).
 %the coherence decay, a decreasing of the maximum achievable
 %sensitivity with this method.
 
+%\section{FID at 0.2 \texorpdfstring{$\mu$}{Lg}T and FID at 1 \texorpdfstring{$\mu$}{Lg}T (need to edit) }
+
+\begin{figure}
+  \centering  
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/FID_0_2_micro_tesla}
+    \caption{}
+    \label{fig:small field}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/FID_1_micro_tesla}
+    \caption{}
+    \label{fig:1 micro tesla}
+  \end{subfigure}
+  \caption{FID measurements obtained with a probe power of 22~$\mu$W,
+    pump power of 40~$\mu$W (time-averaged over the pump period). The
+    pump and probe beam both are linearly polarized.  Acquired at (a)
+    0.2~$\mu$Tand (b) 1~$\mu$T.  The coherence time is larger for
+    smaller field whereas for larger magnetic field the coherence time
+    becomes small.  (Note that the time base is different for each
+    FID.)}
+    \label{fig:graphs}
+\end{figure}
+The magnetometer can also be operated at 1~$\mu$T in FID mode.
+Fig~\ref{fig:graphs} shows the FID signal for two different field.  At
+0.2~$\mu$T field the coherence life time $\tau$ is 75~ms and when the
+applied magnetic field is 1~$\mu$T, $\tau$ is 23~ms.  It is natural
+for $\tau$ to depend on field because it may be limited by
+spin-exchange collisions in the Rb vapour and/or by magnetic
+inhomogeneity which is also generally worse at larger fields.
+
+
+Generally we operated the magnetometer at either 0.2~$\mu$T or
+1.0~$\mu$T during most of our measurements.  The design magnetic field
+for the nEDM experiment is 1.0~$\mu$T.
+
+%But because $\tau$ was smaller at higher field, it made it more
+%difficult to measure the frequency of the FID signal using the lock-in
+%amplifier technique.
+
+%Since at higher field, FID signal contain less no of oscillation it
+%becomes challenging to extract oscillation frequency precisely and
+%therefore magnetic field. In order to avoid this systematic effect
+%most of the studies reported in this thesis has done at 0.2~$\mu$T.
+
+
+% Coherence time indicate the time atoms take to decay spontaneously from excited ground state after removing the pump beam. To measure the coherence time, a pump beam of linearly polarized light is
+%used to align the atoms along the magnetic field by optical pumping. The pump
+%beam is then blocked allowing the atoms to relax over time. Optical rotation of the linearly polarized probe beam is used to measure the coherence time. In this measurement optical pumping is done for 0.5 s. Since at higher field coherence state decays quickly so coherence time get smaller.
+
+
+
 
 
 \subsection{FID in tilted magnetic field}
 
-\begin{itemize}
-\item
-\end{itemize}
+The magnetometer as presented is a scalar magnetometer.  The
+precession frequency being sensed is proportional to the local scalar
+field.  However, as shown in Ref.~\cite{bib:pustelny}, magnetometers
+of this sort can also be used to sense the component of fields
+transverse to the laser beam axis.
 
+% This should also appear in Chapter 2.
 
-For the nEDM experiment it is very important to do tilted field
-measurement in order to have better understanding of geometric phase
-effects which are the leading sources for systematic uncertainties
-during nEDM measurement.
+Being able to sense transverse fields could have applications in nEDM
+experiments, as discussed in Chapter~\ref{ch:magnetometry},
+Section~\ref{sec:tilted-intro}.  One example is that it could give
+more information about magnetic field gradients, which may generate
+false EDM's.  Another example is that it could determine gradients
+that do not have any $z$-component.  Although these do not generate
+any false EDM's, the uncertainties in these difficult to measure
+fields tend to drive transverse field corrections when comparing the
+comagnetometer and neutron precession frequencies.  In past
+experiments, the transverse field correction was measured using
+fluxgate magnetometers.
 
+%For the nEDM experiment it is very important to do tilted field
+%measurement in order to have better understanding of geometric phase
+%effects which are the leading sources for systematic uncertainties
+%during nEDM measurement.
 
+Recall from Section~\ref{sec:tilted-intro}, in the work of
+Ref.~\ref{cite:pustelny}, it was discovered that resonances in
+continuously driven FM-NMOR occur at both $\Omega_m=2\Omega_L$ and
+$\Omega_m=\Omega_L$, where the growth of the resonance at
+$\Omega_m=\Omega_L$ signifies a tilted field in the plane defined by
+the polarization axis and the beam propagation direction.
 
+We define a coordinate system for these measurements.  The
+$z$-direction is the direction of propagation of the laser light.  The
+$y$-direction is the incident laser polarization direction.  The
+$x$-direction points perpendicular to the plane defined by these
+directions.  A tilted field oriented in the $yz$-plane is the one that
+will have an observable effect.
 
-Since our Rb magnetometer is a scalar magnetometer, it is not possible to measure vector field components directly. In this study the NMOR Signal was observed by connecting the balanced photodiode to the oscilloscope directly. A python script is used to transfer the data presented on the oscilloscope screen to computer for further analysis. 
+Our goal was to learn to make tilted field measurements using the
+pump-probe (FID) measurement scheme above.  When making our tilted
+field measurements, we used the same pump-probe scheme as described in
+Section~\ref{sec:FID}, with a few key changes to mimic the setup of
+Ref.~\cite{bib:pustelny}.  In addition to modulating the pump beam at
+$\Omega_m\approx 2\Omega_L$, we conducted measurements also at
+$\Omega_m\approx\Omega_L$.  In order to see the effect on the FID
+signal, we purposely did not use the lock-in amplifier to demodulate
+the signal but rather recorded the differential photodiode signal
+directly in the oscilloscope.  A Python script was used to transfer
+the data presented on the oscilloscope screen to computer for further
+analysis.
 
 \begin{figure}
     \centering
- 
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/transversefield_2.png}
@@ -561,7 +652,34 @@ Since our Rb magnetometer is a scalar magnetometer, it is not possible to measur
         \caption{}
         \label{fig:transverse2}
     \end{subfigure}
-    \caption{(a) Optical rotation as a function of time at $\Omega_L$ in the yz plane at tilt angle $15\degree$ with light propagation direction. (b) Optical rotation as a function of time at $2\Omega_L$ for same tilt angle}
-    \label{fig:Tilted field}
+    \caption{(a) Optical rotation as a function of time at $\Omega_L$
+      in the yz plane at tilt angle $15\degree$ with light propagation
+      direction. (b) Optical rotation as a function of time at
+      $2\Omega_L$ for same tilt angle.}
+    \label{fig:tilted-scope}
 \end{figure}
 
+Fig.~\ref{fig:tilted-scope} shows oscilloscope traces of such
+measurements.  The magnetic field has been oriented in the $yz$-plane
+at an angle of $15\degree$ relative to the $z$-axis (the beam axis).
+In the upper trace of each scope screen-shot, the entire pump-probe
+cycle may be seen.  In the lower trace, the scope trace has been
+zoomed in on the FID measurement region.
+
+In Fig.~\ref{fig:tilted-scope}(a), the modulation frequency has been
+set near Larmor frequency of the total field.  In the FID, two
+frequency components can clearly be seen.  The dominant component is
+at $2\Omega_L$ and the component arising due to the tilted field is at
+$\Omega_L$.  The phase relation between the two components is
+consistent with that measured by Ref.~\cite{bib:pustelny}.
+Fig.~\ref{fig:tilted-scope}(b) shows the FID for an excitation
+frequency near $\Omega_m=2\Omega_L$.  The component in the FID at
+$\Omega_L$ has disappeared.
+
+While the data are reminiscient of the previous work of
+Ref.~\cite{bib:pustelny}, to our knowledge they represent the first
+measurement of a tilted field using FID mode.  An interesting aspect
+not discussed in Ref.~\cite{bib:pustelny} is the persistence of the
+$2\Omega_L$ component even when the modulation frequency is near
+$\Omega_L$.  We analyze data as a function of tilt angle in both the
+$yz$ and $xz$ planes further in Section~\ref{sec:tilted-results}.
