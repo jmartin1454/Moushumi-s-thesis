@@ -85,15 +85,13 @@ polarization is rotated by passage through the cell, it will be sensed
  
  Fig.~\ref{fig:pumpprobe}  shows the schematic layout of the apparatus used for studying the
 non-linear magneto-optical effects with the amplitude modulated
-light. In this work, a paraffin-coated vapor cell (about 5 cm long)
+light. This experimental setup is used in Forced oscillation scan and FID NMOR discussed in section \ref{sec:Forced-Oscillation Mode} and \ref{sec:FID}. In this work, a paraffin-coated vapor cell (about 5 cm long)
 containing natural rubidium with stable isotopes $^{87}$Rb~ and~
-$^{85}$Rb, is used as the magneto-optical sample. To get maximum
-sensitivity and to reduce ambient fields the cell is placed within a
-magnetic shield made of four-layer of $\mu$ metal. A semiconductor diode laser is the light source. The laser
+$^{85}$Rb, is used as the magneto-optical sample. A semiconductor diode laser is the light source. The laser
 wavelength ($\lambda=795$ nm) is precisely controlled by an external locking system.  The light beam is splited into pump and
-probe beam using a beamsplliter. The typical light power of the pump
+probe beam using a microscope slide. The typical light power of the pump
 beam is 40 $\mu$W and the typical light power of the probe beam is 20
-$\mu$W. Acousto Optic Modulator (AOM) is used to modulate the pump beam. The details of the working principle of AOM is discussed in section \ref{sec:AOM}. Upon passing through the AOM the pump beam is then passes through a lens to collimate. Before interact with the Rb cell pump beam passes trough a N.D.F and polarizer to reduce the beam power. After that the linearly polarized light beam interact with Rb
+$\mu$W.  Acousto Optic Modulator (AOM) is used to modulate the amplitude of the pump beam. The details of the working principle of AOM is discussed in section \ref{sec:AOM}. Upon passing through the AOM the pump beam is then passes through a lens to collimate. Before interact with the Rb cell pump beam then passes trough a N.D.F and polarizer to reduce the beam power. After that the linearly polarized light beam interact with Rb
 atoms. 
 
 The probe beam then passes through our vapour cell which sits inside the shield. Then the nonlinear Faraday rotation signals are analyzed by a balanced polarimeter.  A Wollaston prism is used to
@@ -111,7 +109,7 @@ individual diodes and an internal differential amplifier which outputs the diffe
 \end{figure}
 \section{External Cavity Diode Laser(ECDL)}
 \bigskip
-In our NMOR based optical magnetometry setup, laser light was provided by an external cavity diode laser. These kind of diodes are semiconductor diodes and thus vibration and shock resistant. They are also wavelength tunable. Besides that, external cavity diodes emit single mode laser light with a very narrow-band linewidth. A critical aspect of an ECDL is temperature control of the cavity, since the laser frequency depends on the cavity length and hence on the thermal expansion coefficient of the cavity material. Micrometer screws enable manual coarse tuning, while precise scans without mode hops are performed by a piezo actuator. This kind of grating stabilized diode lasers is especially advantageous for spectroscopy with the alkalines. Our Toptica DL-100 outputs a tunable wavelength near 795 nm with an output power $<100$ mW. The laser spot size is elliptical, and approximately 3 mm x 5 mm = $15 mm^2$. The laser was typically tuned to the D1 (F = 3,2 2) absorption minimum and then adjusted to maximize optical rotation. Our NMOR system uses an atomic vapour cell containing natural rubidium with stable isotopes $^{87}Rb$ and $^{85}Rb$ both being present.
+In our NMOR based optical magnetometry setup, laser light was provided by an external cavity diode laser. These kind of diodes are semiconductor diodes and thus vibration and shock resistant. They are also wavelength tunable. Besides that, external cavity diodes emit single mode laser light with a very narrow-band linewidth. A critical aspect of an ECDL is temperature control of the cavity, since the laser frequency depends on the cavity length and hence on the thermal expansion coefficient of the cavity material. Micrometer screws enable manual coarse tuning, while precise scans without mode hops are performed by a piezo actuator. This kind of grating stabilized diode lasers is especially advantageous for spectroscopy with the alkalines. Our Toptica DL-100 outputs a tunable wavelength near 795 nm with an output power $<100$ mW. The laser spot size is elliptical, and approximately 3 mm x 5 mm = $15 mm^2$.  The laser was typically tuned to the D1 (F = 3,2 2) absorption minimum and then adjusted to maximize optical rotation. 
 
 \section{Dichroic Atomic Vapor Laser Lock (DAVLL)}
 
@@ -131,7 +129,7 @@ Laser current can be controlled by adjusting the current control knob until the 
 \caption{Diode laser controller unit consist of analog current control module (CC), scan control module (SC),low-noise temperature control module (TC), feedback controlyzer (FC) and Diode Laser Controller display .\label{fig:laser controller}}
 \end{figure}
 
-Digilock 110 feedback controlyzer(FC) is used for laser locking. The DigiLock 110 is an up-to-date digital hardware allows to implement the scan generator, PID controllers and optional frequency modulation techniques all into one plug in module. It offers graphical user interface running on a PC makes the procedure of laser locking enormously easy. Different important features are also available in this module for analyzing and optimizing the control system.
+Digilock 110 feedback controlyzer(FC) is used for laser locking. The DigiLock 110 is an up-to-date digital hardware allows to implement the scan generator, PID controllers and optional frequency modulation techniques all into one plug in module. It offers graphical user interface(see Fig \ref{fig:digilock}) running on a PC makes the procedure of laser locking enormously easy. Different important features are also available in this module for analyzing and optimizing the control system.
  \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{figures/laser tune.png}
@@ -160,8 +158,8 @@ After Cell ~ &  ~ ~ ~ ~ ~ 18   \\
 \end{table}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\linewidth]{figures/digilock.jpg}
-\caption{digilock\label{fig:digilock}}
+\includegraphics[width=0.6\linewidth]{figures/digilock.png}
+\caption{digilock user interface\label{fig:digilock}}
 \end{figure}
 \section{Acousto-optic Modulator (AOM)\label{sec:AOM}}
 
@@ -217,7 +215,7 @@ and supplying the coil with oscillating current. An Agilent 3522A function gener
 had to be performed without end caps. The calibration constant for z coil is 48nT/mA and the calibration constant for x and y coil is 25nT/mA. The calibration of the z-coil was verified using the NMOR magnetometer with an AM pump beam, and the known gyromagnetic ratios of Rb-85 and Rb-87. Homogeneity of the residual field and magnetic field generated by the coil system was measured by scanning a fluxgate magnetometer along the axis of the system with and without the coil energized. At a field of 1 $\mu$T, the axial field generated by the coil was uniform within the ROI to the $1\%$  level.
 
 \section{Rb Cell}
-When glass cell is used to store alkali atoms, the atomic mean free paths increase and alkali spins depolarize immediately after making non-elastic collision with the glass walls. Prolonging the atomic alignment is crucial to achieving ultra-narrow NMOR resonance widths. So it is necessary to prevent these non-elastic collisions for achieving the longer lifetimes of atomic ground state coherences \cite{PhysRevA.72.023401}\cite{Balabas:10}  \cite{doi:10.1063/1.3236649}. Two methods are currently in use to extent the atomic coherence lifetime. One of them is to add buffer gas to the cell containing alkali sample and the other method is to coat the inner walls of the cell with anti-relaxation materials. The advantage of using buffer gas is that it reduces the resonance width by extending the lifetime of coherence state. A paraffin-coated vapor cell containing  natural rubidium with stable isotopes $^{85}$Rb and $^{87}$Rb is used for this work. The reason behind using paraffin as a anti-relaxation coating is that it allow polarized atoms to bounce off the walls of a paraffin-coated cell $\sim 1000$ times before depolarizing\cite{PhysRev.147.41}\cite{PhysRevA.72.023401}. Coated cells have the advantages of providing larger optical rotation
+When glass cell is used to store alkali atoms, the atomic mean free paths increase and alkali spins depolarize immediately after making non-elastic collision with the glass walls. Prolonging the atomic alignment is crucial to achieving ultra-narrow NMOR resonance widths. So it is necessary to prevent these non-elastic collisions for achieving the longer lifetimes of atomic ground state coherences \cite{PhysRevA.72.023401}\cite{Balabas:10}  \cite{doi:10.1063/1.3236649}. Two methods are currently in use to extent the atomic coherence lifetime. One of them is to add buffer gas to the cell containing alkali sample and the other method is to coat the inner walls of the cell with anti-relaxation materials. The advantage of using buffer gas is that it reduces the resonance width by extending the lifetime of coherence state. A paraffin-coated vapor cell containing  natural rubidium with stable isotopes $^{85}$Rb and $^{87}$Rb is used for this work. The reason behind using paraffin as a anti-relaxation coating is that it allow polarized atoms to bounce off the walls of a paraffin-coated cell $\sim 1000$ times before depolarizing \cite{PhysRev.147.41} \cite{PhysRevA.72.023401}. Coated cells have the advantages of providing larger optical rotation
 signals, reducing the effect of magnetic field gradients on the spin polarization lifetime,
 and lowering the power requirements of the lasers used for pumping and probing. The vapor cell is cylindrical, 5 cm long and 5 cm in diameter with optical
 flats on the ends. The cell was provided by D. Budker, having been prepared in
