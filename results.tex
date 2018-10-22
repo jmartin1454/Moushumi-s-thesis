@@ -24,7 +24,7 @@ The forced oscillation scans and the single FID shot gives information about the
 and Y channel recordings, a least-square fit was done for each X and Y pair. The measured oscillation frequency of decaying signal was then convert to magnetic field using equation \ref{eq:field}. The recorded B-field data vs. time was further used to calculate Allan deviations, getting  information on the deviations from the mean magnetic field vs. integration time (bin size). Measuring magnetic field over long period of time gives us information about the magnetometer performance. Toward this end,we study long term field measurement. Fig~\ref{fig:long term field} ~represents the magnetic field recorder over 4 hours on three different day. Each data points in this graph correspond to single FID scan. The observed field drift is almost same (15 pT) for three days. This measurement was conducted at 0.2 $\mu$T magnetic field.
 \begin{figure}[h]
 \centering\includegraphics[width=0.85\linewidth]{figures/field_3_day}
-\caption{Magnetic field recorded over 4 hours on three different day. The observed field drift is almost same(15 pT) for three days.\label{fig:long term field}}
+\caption{Magnetic field recorded over 4 hours on three different day. The observed field drift is almost same (15 pT) for three days.\label{fig:long term field}}
 \end{figure}
    \begin{itemize}
    \item summary of statistical error, systematic error, stability via allan deviations.
@@ -163,8 +163,9 @@ Since  longer coherence time and larger signal amplitude indicate better frequen
     \caption{(a) Recorded FID signal while laser is perfectly tuned to atomic transition frequency. (b) FID resonance signal when laser is slightly detuned from transition frequency.}
     \label{fig:effect of tuning}
 \end{figure}
-   \item problem with drift of tune\\
-   For studying long term stability data was taken for about 12 hours.Laser was locked to D1 transition line of Rb using Digilock laser locking software. Fig \ref{fig:effect of tuning} shows 120 pT observed drift in magnetic field over 12 hours. Although DAVLL was in use laser frequency was not locked for 12 hours. As a result laser tuning moved due to mode hoping which causes the drift. The current laser locking system only works perfectly for maximum 4 hours. The possible reason for this mode hoping is the Polarizing beam splitting cube of our DAVLL system \cite{principles}. The disadvantage of using this type of PBS is that they show flaky optical behavior over longer times.
+   \item problem with drift of tune
+   
+   For studying long term stability data was taken for about 12 hours. Laser was locked to D1 transition line of Rb using Digilock laser locking software. Fig \ref{fig:effect of tuning} shows 120 pT observed drift in magnetic field over 12 hours. Although DAVLL was in use laser frequency was not locked for 12 hours. As a result laser tuning moved due to mode hoping which causes the drift. The current laser locking system only works perfectly for maximum 4 hours. The possible reason for this mode hoping is the Polarizing beam splitting cube of our DAVLL system \cite{principles}. The disadvantage of using this type of PBS is that they show flaky optical behavior over longer times.
    \begin{figure}[h]
 \centering\includegraphics[width=0.5\linewidth]{figures/field_drift}
 \caption{Magnetic field recorded over 12 hours.In this measurement the observed field drift is about 120 pT.\label{digilock field drift}}
@@ -221,7 +222,7 @@ Another study has been conducted to understand the influence of pump beam power 
     \label{fig:different pump power}
 \end{figure}
 
-\section{Systematic error check in frequency measurement in FID mode} 
+\section{Systematic error check in frequency measurement in FID mode \label{sec:reference-frequency}} 
 \subsection{How far the reference frequency of lock-in amplifier should set to measure field correctly}
   
   In FID NMOR the atomic sample is polarized once by optical pumping and then observed the spontaneous decay of excited atom while the pump beam is off. In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2 \mu$T field. The FID signal for different reference frequency of Lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of Lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of Lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
@@ -286,7 +287,10 @@ Another study has been conducted to understand the influence of pump beam power 
  \begin{equation}
  \bar{y}_{n}= \sum_{i=(n-1)N+1}^{nN} \frac{y_i}{N} 
  \end{equation}
-
+\begin{figure}[h]
+\centering\includegraphics[width=0.6\linewidth]{figures/allan_plot}
+\caption{Allan deviation vs. averaging time(s)}
+\end{figure}
 The Allan deviation can be express as
 \begin{equation}
 \sigma_y(\tau)=\sqrt{\sigma_y^2(\tau)}=Var_y(\tau)
@@ -334,26 +338,56 @@ We therefore find that
 {\sigma_y^2(\tau)}=(\frac{2A}
 {\tau \omega}sin^2(\frac{\omega \tau}{2}))^2
 \end{equation}
-\begin{figure}[h]
-\centering\includegraphics[width=0.6\linewidth]{figures/allan_plot}
-\caption{Allan deviation vs. averaging time(s)}
-\end{figure}
+
 In FID mode, the resonance signal looks like a decaying sine wave. By fitting the NMOR signal with a damped sine wave the oscillation frequency has been extracted and finally this oscillation frequency has been translated to field.The Allan deviation of the measure field has been plotted in Figure 5.23.
 
   \section{study the effect of room temperature in magnetic field} 
   \begin{figure}[h]
-\centering\includegraphics[width=0.6\linewidth]{figures/temp}
-\caption{Allan deviation vs. averaging time(s)}
+\centering\includegraphics[width=0.8\linewidth]{figures/temp_.png}
+\caption{Temperature measurement\label{temperature}}
+\end{figure}
+  \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/field_.png}
+\caption{Field measurement\label{field}}
+\end{figure}
+ \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/field_vs_temp.png}
+\caption{Field vs. temperature\label{field_vs_temp}}
+\end{figure}
+\newpage
+\section{Study magnetometer performance with tilted field} 
+\label{sec:tilted-results}
+ \begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt1.png}
+        \caption{}
+        \label{fig:tilt_0_degree}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt2.png}
+        \caption{}
+        \label{fig:tilt_40_degree}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt3.png}
+        \caption{}
+        \label{fig:tilt_70_degree}
+    \end{subfigure}
+     \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt4.png}
+        \caption{}
+        \label{fig:tilt_80_degree}
+    \end{subfigure}
+    \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle.\label{fig:optical-rotation-different-angle}}
 \end{figure}
 
-\section{Study magnetometer performance with transverse field\label{sec:tilted-results}}  
-
-\begin{figure}
-\centering\includegraphics[width=0.5\linewidth]{figures/tilted_field_amp_vs_angle}
-\caption{The amplitude of the FID NMOR signals recorded at $2\Omega_L$
-  vs. the tilt angle of the magnetic field in
-  $xz$-plane.\label{fig:tilted-wrong}}
-\end{figure}
 
 %The magnetometric method based on FID NMOR is a very sensitive
 %technique of magnetic field measurements. Those measurements are
@@ -369,29 +403,73 @@ In FID mode, the resonance signal looks like a decaying sine wave. By fitting th
 In this Rb NMOR magnetometry setup the rubidium atoms interacted with a $z$-directed laser light beam which is linearly polarized
 along the y axis. In the FID NMOR technique, the magnetic field is generally directed along the light propagation direction and the resonance occurs at $2\Omega_L$.  This effect can be explained by considering that the polarization returns to its original state after a $180\degree$ rotation because of the two-fold symmetry of the optically pumped state. As a result, the optical rotation induced by the rotating linear dichroism is periodic at twice the Larmor frequency.
 
-We have observed that Resonances in nonlinear magneto-optical rotation with amplitude modulated light by tilting the magnetic field at angles away from the direction of light propagation while operating the Rb magnetometer in FID mode. When the field is tilted in the plane perpendicular to the light polarization direction an resonance appears at $2\Omega_L$. In this case no additional resonance appears for modulation frequency $\omega_L$. The amplitude of the resonance signal decreases with increasing tilt angle. Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for the magnetic field tilted in the $xz$ plane at various angles to the light propagation direction at modulation frequency $2\Omega_L$.
-However, We also observed that by tilting the field direction toward the light polarization direction a new resonance occurs at $\Omega_L$ along with the main resonance at $2\Omega_L$. The resonance signal recorded at $\Omega_L$ contains two frequency components. Fig.~\ref{fig:something-tilted}(b) display the FFT of resonance signal for tilt angle $15\degree$ where two peak corresponds to two frequency components. The amplitude of resonance signal at $2\Omega_L$  decreases as the angle between magnetic field $B$ and the light propagation direction increases while the amplitude of new resonance  increases with increasing tilt angle at $\Omega_L$. Fig.~\ref{fig:something-tilted}(a) shows the resonance amplitude at $\Omega_m=2\Omega_L$ keep decreases with increasing tilt angle in $yz$ plane while  the resonance amplitude measured at $\Omega_m=\Omega_L$ keep increase till $30\degree$ and after that amplitude start to decrease and reaches zero when the magnetic field is directed along the y axis.Consider a two-level system $F=1\rightarrow F=0$ and the quantization vector is directed along the magnetic field. When the magnetic field is tilted in the yz plane, the light-polarization axis is perpendicular to the magnetic field. In this case the linearly polarized light containing two circularly polarized components can only create the coherence state between magnetic sublevels $m_F=\pm 1$ . Since the transition frequency between these two consecutive Zeeman energy sublevels is $2\Omega_L$  the resonance appears only at this frequency. However, when the magnetic field is tilted  in the xy plane, the light is a linear superposition of polarizations parallel and perpendicular to the magnetic field. In this case, the light can create coherences between sublevels with $m_F=1$ and $m_F=2$, so resonances are observed at both $\Omega_L $ and $2\Omega_L$.
+We have observed that Resonances in nonlinear magneto-optical rotation with amplitude modulated light by tilting the magnetic field at angles away from the direction of light propagation while operating the Rb magnetometer in FID mode. When the field is tilted in the plane perpendicular to the light polarization direction an resonance appears at $2\Omega_L$. In this case no additional resonance appears for modulation frequency $\Omega_L$. The amplitude of the FID NMOR signal decreases with increasing tilt angle. 
+
+However, We also observed that by tilting the field direction toward the light polarization direction a new resonance occurs at $\Omega_L$ along with the main resonance at $2\Omega_L$. The resonance signal recorded at $\Omega_L$ contains two frequency components.
+\begin{figure}[h]
+\centering\includegraphics[width=0.7\linewidth]{figures/fft_amp.png}
+\caption{FFT of FID  signal in the presence of transverse field at modulation frequency $\Omega_L$ while tilted the magnetic field direction toward light polarization direction  .\label{fig:fft-amplitude}}
+\end{figure}
+
+
+When direction of the magnetic is tilted toward the light polarization axis  the FID signal contain two frequency component at modulation frequency $\Omega_L$. Fig: \ref{fig:optical-rotation-different-angle} shows the FID signal for different tilt angle when pump beam is modulated at $\Omega_L$. In order to extract frequency components we have used two methods. One of them is the FFT of FID signal and the other one is the fit FID signal using equation \ref{eq:two_sinewave}.
+
+\begin{equation}
+     X = A e^{-t /\tau_1} \sin(\omega_1 t + \phi_1) + A_1 e^{-t /\tau_2}  \sin (\omega_2 t + \phi_2) + C  
+     \label{eq:two_sinewave}
+\end{equation}
+
+Where A and $A_1$ are amplitude for two decaying sin wave, $\omega_1$ and $\omega_2$ represents oscillation frequency, $\phi_1$ and $\phi_2$ indicate phase and $\tau_1$ and $\tau_2$ represents coherence time. A 10th order Infinite Impulse Response( IIR) Butterworth filter is also used to reduce background noise from the signal.
+Fig: \ref{fig:fft-amplitude} display the FFT of resonance signal for three different  tilt angle $0\degree$, $25\degree$ and $50\degree$. It can be seen from the plot that at $0\degree$ tilt angle there is only one frequency component while for $25\degree$ tilt angle two peak corresponds to two frequency components.
+
+Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for the magnetic field tilted in the $xz$ plane at various angles to the light propagation direction at modulation frequency $2\Omega_L$ and $\Omega_L$. It can be seen from the figure that the amplitude of the FID signal decreases with increasing tilt angle for both modulation frequency. 
 
 \begin{figure}
     \centering
    \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/amp_tiltangle}
+        \includegraphics[width=\textwidth]{figures/tilt_x_larmor.png}
         \caption{}
         \label{fig:y equals x}
     \end{subfigure}
     \hfill
      \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/tansverse_field_fft}
+        \includegraphics[width=\textwidth]{figures/tilt_x_2larmor.png}
         \caption{}
         \label{fig:three sin x}
+    \end{subfigure}
+    \caption{ The amplitude of the FID NMOR signals as a function
+      of tilt angle recorded at $\Omega_L$ and $2\Omega_L$ vs. the
+      tilt angle of the magnetic field in the plane defined by the
+      light-polarization and light propagation vectors(xz-plane). \label{fig:tilted-wrong}}
+\end{figure}
+
+\begin{figure}
+    \centering
+   \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt_y_larmor.png}
+        \caption{}
+        \label{fig:tilt_y}
+    \end{subfigure}
+    \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt_y_2larmor.png}
+        \caption{}
+        \label{fig:tilt_x}
     \end{subfigure}
     \caption{(a) The amplitude of the FID NMOR signals as a function
       of tilt angle recorded at $\Omega_L$ and $2\Omega_L$ vs. the
       tilt angle of the magnetic field in the plane defined by the
-      light-polarization and light propagation vectors(yz-plane). (b)
-      FFT of FID NMOR signal in the presence of transverse
-      field.\label{fig:something-tilted}}
+      light-polarization and light propagation vectors(yz-plane). \label{fig:something-tilted}}
 \end{figure}
 
+Fig.~\ref{fig:something-tilted}(a) indicates the signal amplitude vs. different tilt angle at $\Omega_m=2\Omega_L$ . The amplitude of resonance signal at $2\Omega_L$  decreases as the angle between magnetic field $B$ and the light propagation direction increases while the amplitude of new resonance  increases with increasing tilt angle at $\Omega_L$.
+      
+Fig.~\ref{fig:something-tilted}(b) shows the resonance amplitude at $\Omega_m=2\Omega_L$ keep decreases with increasing tilt angle in $yz$ plane while  the resonance amplitude measured at $\Omega_m=\Omega_L$ keep increase till $30\degree$ and after that amplitude start to decrease and reaches zero when the magnetic field is directed along the y axis. Consider a two-level system $F=1\rightarrow F=0$ and the quantization vector is directed along the magnetic field. When the magnetic field is tilted in the yz plane, the light-polarization axis is perpendicular to the magnetic field. In this case the linearly polarized light containing two circularly polarized components can only create the coherence state between magnetic sublevels $m_F=\pm 1$ . Since the transition frequency between these two consecutive Zeeman energy sublevels is $2\Omega_L$  the resonance appears only at this frequency. However, when the magnetic field is tilted  in the xy plane, the light is a linear superposition of polarizations parallel and perpendicular to the magnetic field. In this case, the light can create coherences between sublevels with $m_F=1$ and $m_F=2$, so resonances are observed at both $\Omega_L $ and $2\Omega_L$. 
+ \begin{figure}[h]
+\centering\includegraphics[width=0.9\linewidth]{figures/filtered_data.png}
+\caption{Raw and filtered FID signal.}
+\end{figure}
