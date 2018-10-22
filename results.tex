@@ -106,11 +106,18 @@ Degaussing process is done in order to avoid the environmental perturbation and 
         \caption{}
         \label{fig:ramp down}
     \end{subfigure}
-    \caption{ FID signal at $B_z=0.2 \mu$T magnetic field.(a) no degaussing (b) ) Ramp $B_z$  from  0.2 $\mu$T to 10 $\mu$T then again set it to 0.2 $\mu$T and collect FID signal.}
+     \begin{subfigure}[b]{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/ramp3}
+        \caption{}
+        \label{fig:degauss}
+    \end{subfigure}
+    \caption{ FID signal at $B_z=0.2 \mu$T magnetic field.(a) no degaussing (b) ) Ramp $B_z$  from  0.2 $\mu$T to 10 $\mu$T then again set it to 0.2 $\mu$T and collect FID signal(no degaussing). (c) study magnetic field stability after degaussing}
     \label{fig:ramp updown}
 \end{figure}
    
-   \item degaussing second innermost shield effect in field drift.\\
+   \item degaussing second innermost shield effect in field drift.
+   
    After doing transverse field study (applying current to X and Y coil along with Bz coil) magnetic field environment was pretty unstable. Fig \ref{fig:without DG} shows about 50 pT drift in magnetic field in 4000 s. In order to cancel background field inside shield degaussing innermost layer of $\mu$ metal is done but it doesn't help to solve field drift problem. Then degaussing the 2nd innermost layer of shield is done which solve the field drift problem. Since the end cap of the innermost shield layer is not in use some background field leaked into 2nd layer which was causing the drift in field. So by degaussing the 2nd layer of shield canceled background field and field becomes so stable (Fig \ref{fig:with DG}).
    
   \begin{figure}
