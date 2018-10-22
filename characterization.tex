@@ -638,26 +638,41 @@ the data presented on the oscilloscope screen to computer for further
 analysis.
 
 \begin{figure}
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/transversefield_2.png}
-        \caption{}
-        \label{fig:transverse}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/transversefield}
-        \caption{}
-        \label{fig:transverse2}
-    \end{subfigure}
+  \centering
+%trim={<left> <lower> <right> <upper>}
+  \includegraphics[width=\textwidth,trim={0cm 4cm 0cm 5cm},clip]{figures/transversefield_2.png}
+  \includegraphics[width=\textwidth,trim={0cm 4cm 0cm 5cm},clip]{figures/transversefield}
+  \includegraphics[width=\textwidth,trim={0cm 0cm 0cm 10.5cm},clip]{figures/transversefield}
+  \caption{(a) Optical rotation as a function of time at $\Omega_L$ in
+    the yz plane at tilt angle $15\degree$ with light propagation
+    direction. (b) Optical rotation as a function of time at
+    $2\Omega_L$ for same tilt angle.}
+    \label{fig:tilted-scope}
+\end{figure}
+
+\begin{figure}
+  \centering
+ %   \begin{subfigure}[b]{0.45\textwidth}
+ %       \centering
+%trim={<left> <lower> <right> <upper>}
+  \includegraphics[width=.8\textwidth,trim={0cm 0cm 0cm 0cm},clip]{figures/transversefield_2.png}
+ %       \caption{}
+ %       \label{fig:transverse}
+ %   \end{subfigure}
+%    \hfill
+ %   \begin{subfigure}[b]{0.45\textwidth}
+ %       \centering
+        \includegraphics[width=.8\textwidth,trim={0cm 0cm 0cm 0cm},clip]{figures/transversefield}
+ %       \caption{}
+ %       \label{fig:transverse2}
+ %   \end{subfigure}
     \caption{(a) Optical rotation as a function of time at $\Omega_L$
       in the yz plane at tilt angle $15\degree$ with light propagation
       direction. (b) Optical rotation as a function of time at
       $2\Omega_L$ for same tilt angle.}
     \label{fig:tilted-scope}
 \end{figure}
+
 
 Fig.~\ref{fig:tilted-scope} shows oscilloscope traces of such
 measurements.  The magnetic field has been oriented in the $yz$-plane
