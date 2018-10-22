@@ -124,10 +124,31 @@ In FID NMOR optical pumping is done for polarizing Rb atoms and afterward the sp
 \caption{The change in magnetic field  by changing coil current has been studied over 1400 sec. The blue line on different regions of the graph displays the measured magnetic field corresponding to the change in coil current. \label{fig:field change}}
 \end{figure}
    \end{itemize}
-   \section{degaussing studies\label{s:degaussing}}  
+   \section{degaussing studies\label{sec:degaussing}}  
    \begin{itemize}
-   \item different degaussing schemes(changing sample rate)\\
-Degaussing process is done in order to avoid the environmental perturbation and reduce any remnant field inside the four layer $\mu$ metal magnetic shield \cite{doi:10.1063/1.2713433}. For our degaussing system we are using an envelope function which has $1\times 10^6$ points.Degaussing is complete after $5\times 10^6$ points.Sample rate affects how quickly we move through this waveform. A detailed analysis of NMOR signal by changing the degaussing parameter could give us some information about the goodness of degaussing procedure. Toward this end, a study has been carried out to determine  the dependency of the resonance width on the sample rate. In this case, data was acquired by sweeping the magnetic field near zero field. Before each measurement degaussing the innermost layer of shield has done. During this measurement only one degaussing parameter,sample rate, was varied in order to study the effect of degaussing parameter on magnetic field measurement.  Optical rotation as a function of magnetic field for different sample rate has shown in Fig~\ref{fig:different sample rate}. The resonance width $\Delta B$, the difference between two peak of the dispersive curve, changed for different sampling rate. It can be seen from Fig~\ref{fig:different sample rate} that, the resonance width is about 0.49 nT for sample rate 10000 sample/s and the resonance width is 0.38 nT for sample rate 80000 sample/s. Fig~\ref{fig:different sample rate} shows the resonance width as a function of sample rate. It is obvious from the graph that the resonance width becomes narrower for larger sample rate.    
+   \item different degaussing schemes(changing sample rate)
+   
+ 
+\begin{table}%[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{ SETTING}    & \textbf{ VALUE} \\
+\hline
+Function generator &   \\
+\hline
+Frequency &  10 Hz   \\
+Sample rate    &  10000 sample/sec  \\
+Amplitude   &   10 V \\
+Offset  &       0 V  \\
+\hline
+\end{tabular}
+\caption{Setting for degaussing system \label{table:degaussing setting}}
+\end{table}
+  
+Degaussing process is done in order to avoid the environmental perturbation and reduce any remnant field inside the four layer $\mu$ metal magnetic shield \cite{doi:10.1063/1.2713433}. The setting for degaussing has shown in Table \ref{table:degaussing setting}. For our degaussing system we are using an envelope function which has $1\times 10^6$ points. Degaussing is complete after $5\times 10^6$ points. Sample rate affects how quickly we move through this waveform. A detailed analysis of NMOR signal by changing the degaussing parameter could give us some information about the goodness of degaussing procedure. Toward this end, a study has been carried out to determine  the dependency of the resonance width on the sample rate. 
+
+In this study, data was acquired by sweeping the magnetic field near zero field. Before each measurement degaussing the innermost layer of shield has done. During this measurement only one degaussing parameter,sample rate, was varied in order to study the effect of degaussing parameter on magnetic field measurement.  Optical rotation as a function of magnetic field for different sample rate has shown in Fig~\ref{fig:different sample rate}. The resonance width $\Delta B$, the difference between two peak of the dispersive curve, changed for different sampling rate. It can be seen from Fig~\ref{fig:different sample rate} that, the resonance width is about 0.49 nT for sample rate 10000 sample/s and the resonance width is 0.38 nT for sample rate 80000 sample/s. Fig~\ref{fig:different sample rate} shows the resonance width as a function of sample rate. It is obvious from the graph that the resonance width becomes narrower for larger sample rate.    
    
    \begin{figure}[h]
 \centering\includegraphics[width=0.65\linewidth]{figures/sample_rate}
@@ -162,7 +183,7 @@ Degaussing process is done in order to avoid the environmental perturbation and 
         \caption{}
         \label{fig:degauss}
     \end{subfigure}
-    \caption{ FID signal at $B_z=0.2 \mu$T magnetic field.(a) no degaussing (b) ) Ramp $B_z$  from  0.2 $\mu$T to 10 $\mu$T then again set it to 0.2 $\mu$T and collect FID signal(no degaussing). (c) study magnetic field stability after degaussing}
+    \caption{ FID signal at $B_z=0.2 \mu$T magnetic field.(a) no degaussing (b) Ramp $B_z$  from  0.2 $\mu$T to 10 $\mu$T then again set it to 0.2 $\mu$T and collect FID signal(no degaussing). (c) study magnetic field stability after degaussing.}
     \label{fig:ramp updown}
 \end{figure}
    
@@ -338,113 +359,7 @@ Another study has been conducted to understand the influence of pump beam power 
 \end{figure}
     \item timing drift in Tektronix oscilloscope clock
    \end{itemize}
-   \newpage
-   \section{Calculation of Allan deviation} 
-   Allan variance is used to investigate long term stability.In this case, the Allan deviation was calculated in order to determine the deviation of the average field value for a given integration time as a function of the integration time\cite{doe:website2}. Consider a time series of measurements $y_i$ is acquired at times $t_i$ and  a subset of N data points are present.
- \begin{equation}
- \bar{y}_{n}= \sum_{i=(n-1)N+1}^{nN} \frac{y_i}{N} 
- \end{equation}
-\begin{figure}[h]
-\centering\includegraphics[width=0.6\linewidth]{figures/allan_plot}
-\caption{Allan deviation vs. averaging time(s)}
-\end{figure}
-The Allan deviation can be express as
-\begin{equation}
-\sigma_y(\tau)=\sqrt{\sigma_y^2(\tau)}=Var_y(\tau)
-\end{equation}
-Where $\sigma_y$ is the Allan deviation, $\tau$ the time of each frequency estimate and $Var_y$ is the variance of the observed data points.
-\begin{equation}
-{\sigma_y^2(\tau)}=\frac{1}{2}(\bar{y}_{n+1}-\bar{y}_{n})
-\end{equation}
-where $\bar{y}_{n}$ is the fractional frequency average over the observation time $\tau$.
-Allan deviation formula for sinusoidal waveform:
-Suppose
-\begin{equation}
-y(t) = A\cos (\omega t + \phi)
-\end{equation}
-The average of this function over a time-interval  is
-\begin{equation}
-\bar{y}_{n}=\frac{2A}
-{\tau \omega}
-cos(\omega(t_n +\frac{\tau}{2})+\phi)sin(\frac{\omega \tau}{2})
-\end{equation}
-and
-\begin{equation}
-\bar{y}_{n+1}=\frac{2A}
-{\tau \omega}
-cos(\omega(t_{n+1} +\frac{\tau}{2})+\phi)sin(\frac{\omega \tau}{2})
-\end{equation}
-Now from equation(5.5) and (5.6) we can write
-\begin{equation}
-\bar{y}_{n+1}-\bar{y}_{n}=\frac{2A}
-{\tau \omega}sin(\frac{\omega \tau}{2})[cos( \omega(t_{n+1} +\frac{\tau}{2})+\phi)-cos(\omega(t_n +\frac{\tau}{2})+\phi)]
-\end{equation}
-Thus Allan deviation can be written as
-
-\begin{equation}
-{\sigma_y^2(\tau)}=\frac{1}{2}(\bar{y}_{n+1}-\bar{y}_{n})=(\frac{4A}
-{\tau \omega}sin^2(\frac{\omega \tau}{2}))^2 \sin^2     (\frac{\omega(t_{n+1} +t_{n}+\tau)}{2})+\phi)
-\end{equation}
-For a large number of randomly
-distributed tk the average of the sine-squared function is
-\begin{equation}
-\sin^2    (\frac{\omega(t_{n+1} +t_{n}+\tau)}{2})+\phi)=\frac{1}{2}
-\end{equation}
-We therefore find that
-\begin{equation}
-{\sigma_y^2(\tau)}=(\frac{2A}
-{\tau \omega}sin^2(\frac{\omega \tau}{2}))^2
-\end{equation}
-
-In FID mode, the resonance signal looks like a decaying sine wave. By fitting the NMOR signal with a damped sine wave the oscillation frequency has been extracted and finally this oscillation frequency has been translated to field.The Allan deviation of the measure field has been plotted in Figure 5.23.
-
-  \section{study the effect of room temperature in magnetic field} 
-  \begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/temp_.png}
-\caption{Temperature measurement\label{temperature}}
-\end{figure}
-  \begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/field_.png}
-\caption{Field measurement\label{field}}
-\end{figure}
- \begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/field_vs_temp.png}
-\caption{Field vs. temperature\label{field_vs_temp}}
-\end{figure}
-\newpage
-\section{Study magnetometer performance with tilted field} 
-\label{sec:tilted-results}
- \begin{figure}
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/tilt1.png}
-        \caption{}
-        \label{fig:tilt_0_degree}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/tilt2.png}
-        \caption{}
-        \label{fig:tilt_40_degree}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/tilt3.png}
-        \caption{}
-        \label{fig:tilt_70_degree}
-    \end{subfigure}
-     \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/tilt4.png}
-        \caption{}
-        \label{fig:tilt_80_degree}
-    \end{subfigure}
-    \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle.\label{fig:optical-rotation-different-angle}}
-\end{figure}
-
+   
 
 %The magnetometric method based on FID NMOR is a very sensitive
 %technique of magnetic field measurements. Those measurements are
