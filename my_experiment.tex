@@ -1,42 +1,53 @@
 \chapter{Overview of Rb magnetometer and apparatus}
 
-\begin{itemize}
-\item Purpose: Describe your experiment, focusing on the overall
-  function, and providing some description of the individual
-  components and their function.
-\item Outline:
-  \begin{itemize}
-  \item Overview of experimental apparatus.  I think this is done by
-    describing Figs.~\ref{fig:zerofield} and \ref{fig:pumpprobe}.
-  \item Group Fig.~\ref{fig:pumpprobe} into major components and
-    describe each one.  For example:
-    \begin{itemize}
-      \item ECDL and DAVLL
-      \item Pump beam and AOM
-      \item Probe beam and balanced polarimeter
-      \item Cell
-      \item Magnetic field system
-        \begin{itemize}
-        \item Shield arrangement
-        \item Degaussing system
-        \item Internal coil\underline{s}
-        \end{itemize}
-      \item DAQ
-    \end{itemize}
-  \item General operation is discussed in the next chapter.
-  \end{itemize}
-\end{itemize}
+%\begin{itemize}
+%\item Purpose: Describe your experiment, focusing on the overall
+%  function, and providing some description of the individual
+%  components and their function.
+%\item Outline:
+%  \begin{itemize}
+%  \item Overview of experimental apparatus.  I think this is done by
+%    describing Figs.~\ref{fig:zerofield} and \ref{fig:pumpprobe}.
+%  \item Group Fig.~\ref{fig:pumpprobe} into major components and
+%    describe each one.  For example:
+%    \begin{itemize}
+%      \item ECDL and DAVLL
+%      \item Pump beam and AOM
+%      \item Probe beam and balanced polarimeter
+%      \item Cell
+%      \item Magnetic field system
+%        \begin{itemize}
+%        \item Shield arrangement
+%        \item Degaussing system
+%        \item Internal coil\underline{s}
+%        \end{itemize}
+%      \item DAQ
+%    \end{itemize}
+%  \item General operation is discussed in the next chapter.
+%  \end{itemize}
+%\end{itemize}
 
 The purpose of this Chapter is to describe the experimental apparatus
-used at UW.  I start with an explanation of the overall experiment.  I
-then discuss each of the major components of the apparatus in more
-detail.
-
-
-% basic setup and its components,
-%the dichroic atomic vapor laser lock (DAVLL), which is used for laser
-%wavelength locking to the Cs absorption line will be
-%discussed. Followed by an elucidation of the data acquisition (DAQ),
+used at UW.
+The system is composed of three main parts:
+\begin{itemize}
+\item A tunable laser system, operating near the Rb D1 line.  Pump,
+  probe, and laser characterization beams all come from this light
+  source.  The beams are analyzed using various sensitive photodiode
+  sensors.
+\item A paraffin-coated natural Rb cell.  The cell provides a vapour
+  pressure of Rb atoms whose spin state can remain coherent after many
+  wall bounces.  The long coherence time is important for the best
+  magnetometer sensitivity.
+\item A magnetic shielding and field generation system.  The
+  magnetometer is being operated in magnetic fields that are
+  considerably smaller than Earth's field.  An aspect of the research
+  also is to use the magnetometer to learn about magnetic field
+  stability.
+\end{itemize}
+In this Chapter, I start with a more detailed overview of the overall
+experiment.  I then discuss each of the major components of the
+apparatus in more detail.
 
 In Chapter~\ref{ch:characterization}, I will cover the initial
 characterization of a few different modes of operation of the
@@ -60,44 +71,54 @@ the development of the Free-Induction-Decay mode of operation.
 \includegraphics[width=0.8\textwidth]{figures/experimental_setup_zero_field}
 \caption{Schematic diagram of experimental setup for zero field NMOR measurement (discussed in the text).\label{fig:zerofield}.}
 \end{figure}
-Fig.\ref{fig:zerofield} schematically depicts a top view of the Rb magnetometer, as it may be used for measurements of the magnetic field within a few hundred pT of zero.  This mode was used, for example, in Ref.~\cite{bib:nmor} to measure the axial magnetic shielding factor of
+
+Fig.\ref{fig:zerofield} schematically depicts a top view of the Rb
+magnetometer, as it may be used for measurements of the magnetic field
+within a few hundred pT of zero.  This mode was used, for example, in
+Ref.~\cite{bib:nmor} to measure the axial magnetic shielding factor of
 the passive magnetic shielding system.  In this thesis, this operation
 mode was not normally used because we desired to develop the system
 for larger magnetic fields.  But it is nonetheless instructive to
-demonstrate the starting point of my thesis research.
+demonstrate the starting point of my thesis research.  We also used
+this mode to study our process of degaussing of the magnetic shields,
+which was also being developed.
 
-  An external cavity diode laser produces light near the Rb D1 transition.  The laser is tuned near the $^{85}$Rb F=3,2$\rightarrow$2 absorption minimum.  A microscope slide is used as a beamsplitter in order to divert a reduced power into the experiment.  The power is further reduced using neutral density filters (indicated by N.D.F. in Fig.~\ref{fig:zerofield}).  A linear polarizing sheet is oriented at a 45$^\circ$ angle relative to the vertical direction.  Since the laser
-beam is polarized, this further reduces the power by a factor of two. The laser power after this point is normally in the range of 2-20~$\mu$W.  Small adjustments to the incident plane of polarization may be made by a $\lambda/2$ plate.  The beam then passes through a paraffin-coated cell containing Rb vapour.  The cell is within a
-magnetic shielding and field generation system that produces a uniform field along the beam axis.  The plane of polarization of the laser
-light will rotate slightly as it passes through the cell because of
-non-linear magneto-optical effects.  A balanced polarimeter is used to
-analyze the optical rotation of the laser light resulting from the
-interaction of the laser light with the atoms in the cell.  The
-polarimeter consists of a polarizing beam splitter (a Wollaston prism)
-which splits the beam into its vertical and horizontal polarization
-components.  Each component is sensed by a balanced photodiode which
-outputs the difference in light intensities.  If the polarizer is set
-at a 45$^\circ$ angle and aligned with the axis of the
-$\lambda/2$-plate, and in the absence of any optical rotation, the
-balanced photodiode would output zero volts.  If the plane of
-polarization is rotated by passage through the cell, it will be sensed
- by the differential photodiode signal.  This is discussed further in Section~\ref{sec:Signal Processing}.
- 
- Fig.~\ref{fig:pumpprobe}  shows the schematic layout of the apparatus used for studying the
-non-linear magneto-optical effects with the amplitude modulated
-light. This experimental setup is used in Forced oscillation scan and FID NMOR discussed in section \ref{sec:Forced-Oscillation Mode} and \ref{sec:FID}. In this work, a paraffin-coated vapor cell (about 5 cm long)
-containing natural rubidium with stable isotopes $^{87}$Rb~ and~
-$^{85}$Rb, is used as the magneto-optical sample. A semiconductor diode laser is the light source. The laser
-wavelength ($\lambda=795$ nm) is precisely controlled by an external locking system.  The light beam is splited into pump and
-probe beam using a microscope slide. The typical light power of the pump
-beam is 40 $\mu$W and the typical light power of the probe beam is 20
-$\mu$W.  Acousto Optic Modulator (AOM) is used to modulate the amplitude of the pump beam. The details of the working principle of AOM is discussed in section \ref{sec:AOM}. Upon passing through the AOM the pump beam is then passes through a lens to collimate. Before interact with the Rb cell pump beam then passes trough a N.D.F and polarizer to reduce the beam power. After that the linearly polarized light beam interact with Rb
-atoms. 
+An external cavity diode laser produces light near the Rb D1
+transition.  The laser is tuned near the $^{85}$Rb F=3,2$\rightarrow$2
+absorption minimum.  A microscope slide is used as a beamsplitter in
+order to divert a reduced power into the experiment.  The power is
+further reduced using neutral density filters (indicated by N.D.F. in
+Fig.~\ref{fig:zerofield}).  A linear polarizing sheet is oriented at a
+45$^\circ$ angle relative to the vertical direction.  Since the laser
+beam is polarized, this further reduces the power by a factor of
+two. The laser power after this point is normally in the range of
+2-20~$\mu$W.  Small adjustments to the incident plane of polarization
+may be made by a $\lambda/2$ plate.
 
-The probe beam then passes through our vapour cell which sits inside the shield. Then the nonlinear Faraday rotation signals are analyzed by a balanced polarimeter.  A Wollaston prism is used to
-split the beam into its perpendicular polarization axes which are then
-analyzed individually by our photodiode. Our photodiode contains two
-individual diodes and an internal differential amplifier which outputs the difference in diodes P1 - P2. A lock-in amplifier was used to detect the polarimetric signal and stored on a computer. Table \ref{table:laser power} shows the adjusted beam power at several positions of experimental setup.
+The beam then passes through a paraffin-coated cell containing Rb
+vapour.  The cell is within a magnetic shielding and field generation
+system that produces a uniform field along the beam axis.  The plane
+of polarization of the laser light will rotate slightly as it passes
+through the cell because of non-linear magneto-optical effects.  A
+balanced polarimeter is used to analyze the optical rotation of the
+laser light resulting from the interaction of the laser light with the
+atoms in the cell.  The polarimeter consists of a polarizing beam
+splitter (a Wollaston prism) which splits the beam into its vertical
+and horizontal polarization components.  Each component is sensed by a
+balanced photodiode which outputs the difference in light intensities.
+If the polarizer is set at a 45$^\circ$ angle and aligned with the
+axis of the $\lambda/2$-plate, and in the absence of any optical
+rotation, the balanced photodiode would output zero volts.  If the
+plane of polarization is rotated by passage through the cell, it will
+be sensed by the differential photodiode signal.  This is discussed
+further in Section~\ref{sec:Signal Processing}.
+
+Results of the operation of the zero-field magnetometer are discussed
+further in Sections~\ref{sec:something-in-ch4}
+and~\ref{sec:degaussing-section-in-ch5}.  In order to measure fields
+farther from zero, a pump-probe technique is used, where the amplitude
+of the pump beam is modulated.
+
 \begin{figure}%[h]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/experimental_setup}
@@ -107,9 +128,70 @@ individual diodes and an internal differential amplifier which outputs the diffe
   wave plate, N.D.F- neutral density filter, PBS- polarizing beam
   splitter.\label{fig:pumpprobe}}
 \end{figure}
-\section{External Cavity Diode Laser(ECDL)}
-\bigskip
-In our NMOR based optical magnetometry setup, laser light was provided by an external cavity diode laser. These kind of diodes are semiconductor diodes and thus vibration and shock resistant. They are also wavelength tunable. Besides that, external cavity diodes emit single mode laser light with a very narrow-band linewidth. A critical aspect of an ECDL is temperature control of the cavity, since the laser frequency depends on the cavity length and hence on the thermal expansion coefficient of the cavity material. Micrometer screws enable manual coarse tuning, while precise scans without mode hops are performed by a piezo actuator. This kind of grating stabilized diode lasers is especially advantageous for spectroscopy with the alkalines. Our Toptica DL-100 outputs a tunable wavelength near 795 nm with an output power $<100$ mW. The laser spot size is elliptical, and approximately 3 mm x 5 mm = $15 mm^2$.  The laser was typically tuned to the D1 (F = 3,2$\rightarrow$2) absorption minimum and then adjusted to maximize optical rotation. 
+
+Fig.~\ref{fig:pumpprobe} shows the schematic layout of the apparatus
+used for studying the non-linear magneto-optical effects with the
+amplitude modulated light. This experimental setup is used in Forced
+oscillation scan and FID NMOR discussed in
+Section~\ref{sec:Forced-Oscillation Mode} and~\ref{sec:FID}.
+
+% I think you said all this already, or can leave it for the more
+% detailed systems which follow.
+
+%In this work, a paraffin-coated vapor cell (about 5~cm long)
+%containing natural rubidium with stable isotopes $^{87}$Rb and
+%$^{85}$Rb, is used as the magneto-optical sample. A semiconductor
+%diode laser is the light source. The laser wavelength
+%($\lambda=795$~nm) is precisely controlled by an external locking
+%system.
+
+Pump and probe beams are created from the main beam using microscope
+slides as beam splitters. The typical light power of the pump beam is
+40 $\mu$W (time-averaged) and the typical light power of the probe
+beam is 20 $\mu$W.  An acousto-optic modulator (AOM) is used to
+modulate the amplitude of the pump beam, normally as a square wave
+with low duty cycle.  The details of the working principle of AOM is
+discussed in Section~\ref{sec:AOM}.  The pump beam is focused into the
+AOM and re-parallelized afterward using two lenses of the same focal
+length.  Before interact with the Rb cell pump beam then passes
+through an N.D.F to adjust the beam power, and then a linear
+polarizer.  After that the linearly polarized light beam interacts with
+Rb atoms.
+
+The probe beam follows essentially the same path as for the zero-field
+magnetometer.  The nonlinear Faraday rotation signals are analyzed by
+a balanced polarimeter.  A Wollaston prism (labelled as PBS in
+Fig.~\ref{fig:pumpprobe}) is used to split the beam into its
+perpendicular polarization axes which are then analyzed individually
+by a differential photodiode.
+
+In this case, the optical rotation is also modulated near the pump
+modulation frequency.  A lock-in amplifier is used to demodulate the
+signal. Table~\ref{table:laser power} shows the typical beam power at
+several positions in the experimental setup.
+
+
+
+\section{External Cavity Diode Laser}
+
+In our NMOR based optical magnetometry setup, laser light is provided
+by an external cavity diode laser (ECDL).  
+%These kind of diodes are
+%semiconductor diodes and thus vibration and shock resistant.
+%They are
+%also wavelength tunable.
+ECDLs emit a single mode laser light with a very narrow linewidth
+($\sim 100$~kHz).  A critical aspect of an ECDL is temperature control
+of the cavity, since the laser frequency depends on the cavity length
+and hence on the thermal expansion coefficient of the cavity
+material. Micrometer screws enable manual coarse tuning, while precise
+scans without mode hops are performed by a piezo actuator. This kind
+of grating stabilized diode lasers is especially advantageous for
+spectroscopy with the alkalines. Our Toptica DL-100 outputs a tunable
+wavelength near 795 nm with an output power $<100$ mW. The laser spot
+size is elliptical, and approximately 3 mm x 5 mm = $15 mm^2$.  The
+laser was typically tuned to the D1 (F = 3,2$\rightarrow$2) absorption
+minimum and then adjusted to maximize optical rotation.
 
 \section{Dichroic Atomic Vapor Laser Lock (DAVLL)}
 
