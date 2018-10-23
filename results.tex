@@ -120,7 +120,27 @@ In FID NMOR optical pumping is done for polarizing Rb atoms and afterward the sp
 \includegraphics[width=0.8\linewidth]{figures/field_current_study.png}
 \caption{Magnetic field vs. time. During this measurement coil current only changed by 30 nA.\label{fig:field_current} }
 \end{figure}
-   \item Change in magnetic field due to the change in coil current\\
+
+ \begin{figure}
+    \centering
+ 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/field_coil_current.png}
+        \caption{}
+        \label{fig:field_measure_and_produced}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/field_current_allan_plot.png}
+        \caption{}
+        \label{fig:allan_plot}
+    \end{subfigure}
+    \caption{(a)Measured and produced magnetic field vs. time. (b) Allan deviation of field.}
+    \label{fig:field_allan_deviation}
+\end{figure} 
+   \item Change in magnetic field due to the change in coil current
+   
  A study has been conducted to determine the field change by changing the coil current by a known amount. The main objective of this study is to check the Rb magnetometer performance on magnetic field measurement. During this measurement coil current has been changed by $\pm$ 0.001 mA. As a result a field change of $\pm$ 50  $\mu$T  has been observed. The laser frequency was locked to Rb transition frequency and all other setting kept unchanged. During this study the magnetometer has been operated in FID mode. Fig~\ref{fig:field change} presents the magnetic field change over time for different coil current. For better understanding Fig~\ref{fig:field change} has been divide into five different regions. In region-1 magnetic field  has been recorded for 300 s while the applied current to the Z coil was 4.5 mA. Then in region-2 the applied current to the z coil has been increased by 0.001 mA i.e., total current 4.501 mA and measured the magnetic field for another 300 sec. It is clear from the figure that the field has been changed instantly by 50 $\mu$T due to the changed coil current. Now in region-3, the coil current has been reduced to 4.5 mA and measured field for 300 s. After that the coil current has been decreased by 0.001 mA. As a result the field also decreased by 50~$\mu$T in this region.Finally in region-5 the coil current has been set to 4.5 mA again and observed the corresponing quick change in field.
 
    \begin{figure}[h]
@@ -277,35 +297,37 @@ Since  longer coherence time and larger signal amplitude indicate better frequen
     \caption{(a) magnetic field vs. time. (b) amplitude of recorded FID NMOR signal over 20000 sec. During this study laser tuning is maintained manually}
     \label{fig:manual tuning}
 \end{figure}
-   \section{Optimization of pump and probe beam power} 
- A study has been performed to determine how optimization of the pump and probe beam power effect on precise field measurement.  During this study, the magnetometer has operated in FID mode.  A  linearly polarized probe beam has been used to analyze the spin response. In Fig \ref{fig:different probe power} the measured magnetic field has been displayed for two different  Probe beam power. Fig \ref{fig:power less} present the measured field over 100 s with 15 $\mu$W probe power while fig \ref{fig:power double} display the measured field over 100 s for probe power 30 $\mu$W. In both cases, the pump beam power has been kept unchanged ($5\%$ duty cycle). Each blue points in this graph represent a single FID scan. As can be seen from Fig \ref{fig:different probe power} the magnetic field is more scattered for high beam power. Precession width is about $15$ pT for probe beam power 30 $\mu$W while for low beam power(15 $\mu$W) the precession width is about $7$ pT. It can be concluded lower probe beam power is better for precession  magnetometry because the narrower the precession width more sensitive the magnetometer. Although low probe beam power is better for precise field measurement, it's hard to work with because of the dimness of light.
+\section{Systematic error check in frequency measurement in FID mode \label{sec:reference-frequency}} 
+   \subsection{Optimization of pump and probe beam power} 
+ A study has been performed to determine how optimization of the pump and probe beam power effect on precise field measurement.  During this study, the magnetometer has operated in FID mode.  A  linearly polarized probe beam has been used to analyze the spin response. In Fig \ref{fig:different probe power} the measured magnetic field has been displayed for two different  Probe beam power. Fig \ref{fig:power less} present the measured field over 100 s with 15 $\mu$W probe power while fig \ref{fig:power double} display the measured field over 100 s for probe power 30 $\mu$W. In both cases, the pump beam power has been kept unchanged ($5\%$ duty cycle). Each blue points in this graph represent a single FID scan. As can be seen from Fig \ref{fig:different probe power} the magnetic field is more scattered for high beam power. Precession width is about $7.2$ pT for probe beam power 30 $\mu$W while for low beam power(15 $\mu$W) the precession width is about $3.01$ pT. It can be concluded lower probe beam power is better for precession  magnetometry because the narrower the precession width more sensitive the magnetometer. Although low probe beam power is better for precise field measurement, it's hard to work with because of the dimness of light.
   \begin{figure}
     \centering
  
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.7\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/beam_power_less}
         \caption{}
         \label{fig:power less}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
+
+    \begin{subfigure}[b]{0.7\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/beam_power_double}
         \caption{}
         \label{fig:power double}
     \end{subfigure}
-    \caption{ Magnetic field as a function of time for different power of probe beam.(a) measured magnetic field with probe beam power 15 $\mu$w. Precession width is about $7$ pT (b) measured magnetic field with precession width $15$ pT for probe beam power 30 $\mu$w.}
+    \caption{ Magnetic field as a function of time for different power of probe beam.(a) measured magnetic field with probe beam power 15 $\mu$w. Precession width is about $3.01$ pT (b) measured magnetic field with precession width $7.2$ pT for probe beam power 30 $\mu$w.}
     \label{fig:different probe power}
 \end{figure}
-Another study has been conducted to understand the influence of pump beam power on precession magnetometry. During this study, the probe beam power has kept unchanged while pump power has changed. In this measurement data has been acquired by running the magnetometer in FID mode. In FID mode amplitude modulation of pump beam has been done by using a AOM.  So the pump beam power can be change by changing the duty cycle of square wave modulation. When duty cycle is set to $5\%$ the pump beam power is 40 $\mu$W and for $16 \%$ duty cycle power is 128 $\mu$W. The histogram of measured magnetic field for different pump beam power has been showed in fig \ref{fig:different pump power}. The precession width (sigma) become larger for higher duty cycle while it becomes narrower for small duty cycle. In the case of 5$\%$  duty cycle precession width is about $2.3$ pT  (fig \ref{fig:different pump power}(a)) and for 16 $\%$ duty cycle the spread is about 4.6 pT (fig \ref{fig:different pump power}(b)). It is clear from the plot that, at higher duty cycle data points are not statistically distributed.  When a pump beam with a higher duty cycle is used  in precession magnetometry, the NMOR  signal amplitude increase accordingly. But it has been observed that error in frequency measurement also increases with higher signal amplitude which was not expected. A strong correlation between magnetic field and phase of the NMOR signal also has been observed for higher pump power. So it can be concluded that using higher duty cycle could induce more systematic errors in field measurement which led to the next study.
+%data colllected 13th August 2018
+
+Another study has been conducted to understand the influence of pump beam power on precession magnetometry. During this study, the probe beam power ($\sim$ 15 $ \mu$W) has kept unchanged while pump power has changed. In this measurement data has been acquired by running the magnetometer in FID mode. In FID mode amplitude modulation of pump beam has been done by using a AOM.  So the pump beam power can be change by changing the duty cycle of square wave modulation. When duty cycle is set to $5\%$ the pump beam power is 40 $\mu$W and for $16 \%$ duty cycle power is 128 $\mu$W. During this measurement the lock-in reference frequency was set to 1943.9 Hz while the AOM frequency was 2036 Hz. The histogram of measured magnetic field for different pump beam power has been showed in fig \ref{fig:different pump power}. The precession width (sigma) become larger for higher duty cycle while it becomes narrower for small duty cycle. In the case of 5$\%$  duty cycle precession width is about $2.3$ pT  (fig \ref{fig:different pump power}(a)) and for 16 $\%$ duty cycle the spread is about 4.6 pT (fig \ref{fig:different pump power}(b)). It is clear from the plot that, at higher duty cycle data points are not statistically distributed.  When a pump beam with a higher duty cycle is used  in precession magnetometry, the NMOR  signal amplitude increase accordingly. But it has been observed that error in frequency measurement also increases with higher signal amplitude which was not expected. A strong correlation between magnetic field and phase of the NMOR signal also has been observed for higher pump power. So it can be concluded that using higher duty cycle could induce more systematic errors in field measurement which led to the next study.
  \begin{figure}
     \centering  \includegraphics[width=\textwidth]{figures/pump_beam}
     \caption{ Magnetic field vs. time for different pump beam power. (a) measured magnetic field with duty cycle $5 \%$. Precession width is about $2.3$ pT (b) measured magnetic field with Precession width $4.6$ pT for  16 $\%$ duty cycle.}
     \label{fig:different pump power}
 \end{figure}
 
-\section{Systematic error check in frequency measurement in FID mode \label{sec:reference-frequency}} 
 \subsection{How far the reference frequency of lock-in amplifier should set to measure field correctly}
   
   In FID NMOR the atomic sample is polarized once by optical pumping and then observed the spontaneous decay of excited atom while the pump beam is off. In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2 \mu$T field. The FID signal for different reference frequency of Lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of Lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of Lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
@@ -365,7 +387,22 @@ Another study has been conducted to understand the influence of pump beam power 
     \item timing drift in Tektronix oscilloscope clock
    \end{itemize}
    
-
+ \section{Study the effect of room temperature in magnetic field} 
+ 
+ Room temperature is measured using precision thermometer and laser temperature is measured from the output of the laser temperature controller panel. The temperature on the magnetic shielding is measured by a T-type Thermocouple. During the measurement the laser temperature was unchanged but room temperature fluctuation is 1\degree
+  \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/temp_.png}
+\caption{Temperature measurement\label{temperature}}
+\end{figure}
+  \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/field_.png}
+\caption{Field measurement\label{field}}
+\end{figure}
+ \begin{figure}[h]
+\centering\includegraphics[width=0.6\linewidth]{figures/field_vs_temp.png}
+\caption{Field vs. temperature\label{field_vs_temp}}
+\end{figure}
+\newpage
 %The magnetometric method based on FID NMOR is a very sensitive
 %technique of magnetic field measurements. Those measurements are
 %scalar, i.e., the position of a given resonance depends only on the
@@ -376,7 +413,38 @@ Another study has been conducted to understand the influence of pump beam power 
 %magnetic field by doing a detailed analysis of the FID NMOR signal.
 %For this reason, the dependency of the FID NMOR signal on the
 %magnetic field direction has studied here.
-
+\section{Study magnetometer performance with tilted field} 
+\label{sec:tilted-results}
+ \begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt1.png}
+        \caption{}
+        \label{fig:tilt_0_degree}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt2.png}
+        \caption{}
+        \label{fig:tilt_40_degree}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt3.png}
+        \caption{}
+        \label{fig:tilt_70_degree}
+    \end{subfigure}
+     \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/tilt4.png}
+        \caption{}
+        \label{fig:tilt_80_degree}
+    \end{subfigure}
+    \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle.\label{fig:optical-rotation-different-angle}}
+\end{figure}
 In this Rb NMOR magnetometry setup the rubidium atoms interacted with a $z$-directed laser light beam which is linearly polarized
 along the y axis. In the FID NMOR technique, the magnetic field is generally directed along the light propagation direction and the resonance occurs at $2\Omega_L$.  This effect can be explained by considering that the polarization returns to its original state after a $180\degree$ rotation because of the two-fold symmetry of the optically pumped state. As a result, the optical rotation induced by the rotating linear dichroism is periodic at twice the Larmor frequency.
 
@@ -450,3 +518,5 @@ Fig.~\ref{fig:something-tilted}(b) shows the resonance amplitude at $\Omega_m=2\
 \centering\includegraphics[width=0.9\linewidth]{figures/filtered_data.png}
 \caption{Raw and filtered FID signal.}
 \end{figure}
+ 
+
