@@ -497,12 +497,15 @@ space available for experimental equipment.
 
 Our four layer $\mu$ metal magnetic shield is designed to minimize the
 magnetic field at the cell, but magnetic hysteresis limits the
-magnetic field in any region to be exactly zero. Degaussing
-(demagnetizing) process is used to reduce the background magnetic
-field inside the shield. Although Rb cell is securely placed inside
-the four layer mu-metal shielding it is necessary to demagnetize the
-shield before every measurement session to eliminate accidentally
-created local magnetizations.
+magnetic field in any region to be exactly zero.  A degaussing process
+is used to reset the magnetic properties of the material.  Ideally
+this should reduce any remanent magnetic field in the volume
+surrounded by the innermost shielding layer.  
+
+Part of the work presented in this thesis relates to studies of the
+effectiveness and reproducibility of the degaussing system.  The new
+system was developed subsequent to the results presented in
+Ref.~\cite{bib:nmor}.
 
 \begin{figure}%[h]
 \centering
@@ -510,13 +513,32 @@ created local magnetizations.
 \caption{Photograph of degaussing coil.\label{fig:degaussing_ccoil.}}
 \end{figure}
 
- For degaussing a special coil (like the 16 turn white wire  shown in Fig \ref{fig:degaussing_ccoil.}) is wind around inner most layer of shielding  in toroidal configuration
-and  since the endcap of innermost shield is open it might important to degauss the outer layers of shield. Toward this end, a single turn wire is wind around the outer 3-layers of shielding.
-In practice, demagnetizing is achieved  by supplying the coil with oscillating current. The current amplitude decreases depending on the chosen envelope function starting from a current that yields magnetic saturation inside the ferromagnetic material, down to zero. 
-\begin{figure}[h]
+The degaussing system consists of two coils.  The most important of
+these is a 16-turn toroidal winding on the innermost magnetic
+shielding layer.  The coil used in our experiments is similar to the
+white wire shown in Fig.~\ref{fig:degaussing_ccoil.}.  The windings
+conflict with the endcaps of the innermost shield, and so these were
+removed for most experiments reported in this thesis.
+
+Since the endcaps of innermost shield are removed, magnetic coupling
+between the innermost volume and the second-to-innermost magnetic
+shielding layer is increased substantially.  To potentially be able to
+degauss this and the other shield layers, a single turn of wire was
+wound around through the outer 3-layers of shielding.
+
+Degaussing is achieved by supplying the coil with an oscillating
+current with a decreasing envelope over time. The current amplitude
+starts from a current that yields magnetic saturation inside the
+ferromagnetic material, and generally we used a linear envelope to
+decrease the amplitude to zero.  Various parameters of the degaussing
+sequence were studied.
+\begin{figure}%[h]
 \centering
 \includegraphics[width=1.0\linewidth]{figures/degaussing_system}
-\caption{Schematic diagram of degaussing system consist of function generator, power amplifier, transformer, variable resistor(R), 1 $\ohm$ sense resistor (A), oscilloscope (V) and degaussing coil. \label{fig:schematic-of-degaussing_system.}}
+\caption{Schematic diagram of degaussing system consist of function
+  generator, power amplifier, transformer, variable resistor(R), 1
+  $\ohm$ sense resistor (A), oscilloscope (V) and degaussing
+  coil. \label{fig:schematic-of-degaussing_system.}}
 \end{figure}
 
 In our degaussing system, an Agilent 3522A function generator  provides a ramped sinusoidal that controls a current supply driving the degaussing coil \cite{Martin:2014foa}. The wires going to the degaussing loop should be twisted together to avoid picking up or causing noise.  A DCP 260 Servowatt is used as the amplifier for degaussing system which outputs $\pm$ 60~V at idle and nominal output current is  $\pm$ 5 A. The used transformer for this setup is a  HS1B250 hevi-duty transformer which provide unity gain (wire connection is set to in 240:240 mode). The frequency of the transformer is  60 Hz.  A double-pole, double-throw (DPDT) switch is used to electrically connect and disconnect the degaussing coil from the circuit. The function generator settings has discussed in Table \ref{table:degaussing setting}. For our degaussing system we are using an envelope function which has $1\times 10^6$ points. Degaussing is complete after $5\times 10^6$ points. Sample rate affects how quickly we move through this waveform. If sample rate is set to 10000 samples/sec and the frequency of the carrier wave is set to 10 Hz then it means 500 cycles were completed. 
