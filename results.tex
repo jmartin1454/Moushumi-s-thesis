@@ -153,25 +153,8 @@ In FID NMOR optical pumping is done for polarizing Rb atoms and afterward the sp
    \begin{itemize}
    \item different degaussing schemes(changing sample rate)
    
- 
-\begin{table}%[h]
-\centering
-\begin{tabular}{|l|l|}
-\hline
-\textbf{ SETTING}    & \textbf{ VALUE} \\
-\hline
-Function generator &   \\
-\hline
-Frequency &  10 Hz   \\
-Sample rate    &  10000 sample/sec  \\
-Amplitude   &   10 V \\
-Offset  &       0 V  \\
-\hline
-\end{tabular}
-\caption{Setting for degaussing system \label{table:degaussing setting}}
-\end{table}
   
-Degaussing process is done in order to avoid the environmental perturbation and reduce any remnant field inside the four layer $\mu$ metal magnetic shield \cite{doi:10.1063/1.2713433}. The setting for degaussing has shown in Table \ref{table:degaussing setting}. For our degaussing system we are using an envelope function which has $1\times 10^6$ points. Degaussing is complete after $5\times 10^6$ points. Sample rate affects how quickly we move through this waveform. A detailed analysis of NMOR signal by changing the degaussing parameter could give us some information about the goodness of degaussing procedure. Toward this end, a study has been carried out to determine  the dependency of the resonance width on the sample rate. 
+Degaussing process is done in order to avoid the environmental perturbation and reduce any remnant field inside the four layer $\mu$ metal magnetic shield \cite{doi:10.1063/1.2713433}. The setting for degaussing has shown in Table \ref{table:degaussing setting}.  A detailed analysis of NMOR signal by changing the degaussing parameter could give us some information about the goodness of degaussing procedure. Toward this end, a study has been carried out to determine  the dependency of the resonance width on the sample rate. 
 
 In this study, data was acquired by sweeping the magnetic field near zero field. Before each measurement degaussing the innermost layer of shield has done. During this measurement only one degaussing parameter,sample rate, was varied in order to study the effect of degaussing parameter on magnetic field measurement.  Optical rotation as a function of magnetic field for different sample rate has shown in Fig~\ref{fig:different sample rate}. The resonance width $\Delta B$, the difference between two peak of the dispersive curve, changed for different sampling rate. It can be seen from Fig~\ref{fig:different sample rate} that, the resonance width is about 0.49 nT for sample rate 10000 sample/s and the resonance width is 0.38 nT for sample rate 80000 sample/s. Fig~\ref{fig:different sample rate} shows the resonance width as a function of sample rate. It is obvious from the graph that the resonance width becomes narrower for larger sample rate.    
    
@@ -419,31 +402,45 @@ Another study has been conducted to understand the influence of pump beam power 
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/tilt1.png}
+        \includegraphics[width=\textwidth,trim={0cm 0.5cm 0cm 0cm},clip]{figures/tilt1.png}
         \caption{}
         \label{fig:tilt_0_degree}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/tilt2.png}
+        \includegraphics[width=\textwidth,trim={0.7cm 0.5cm 0cm 0cm},clip]{figures/tilt2.png}
         \caption{}
         \label{fig:tilt_40_degree}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/tilt3.png}
+        \includegraphics[width=\textwidth,trim={0cm 0.5cm 3.2cm 0cm},clip]{figures/tilt3.png}
         \caption{}
         \label{fig:tilt_70_degree}
     \end{subfigure}
      \hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/tilt4.png}
+        \includegraphics[width=\textwidth,trim={0.5cm 0.5cm 2.9cm 0cm},clip]{figures/tilt4.png}
         \caption{}
         \label{fig:tilt_80_degree}
     \end{subfigure}
     \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle.\label{fig:optical-rotation-different-angle}}
+\end{figure}
+\begin{figure}
+  \centering
+%trim={<left> <lower> <right> <upper>}
+\includegraphics[width=\textwidth,trim={0cm 5.7cm 4.1cm 4.3cm},clip]{figures/tilt3}
+ \includegraphics[width=\textwidth,trim={0cm 5cm 0cm 3.5cm},clip]{figures/tilt2}
+  \includegraphics[width=\textwidth,trim={0.4cm 4.5cm 1.7cm 3cm},clip]{figures/tilt1}
+  \includegraphics[width=\textwidth,trim={0.4cm 0cm 0.5cm 10.9cm},clip]{figures/transversefield}
+  
+  \caption{(a) Optical rotation as a function of time at $\Omega_L$ in
+    the yz plane at tilt angle $15\degree$ with light propagation
+    direction. (b) Optical rotation as a function of time at
+    $2\Omega_L$ for same tilt angle.}
+    \label{fig:tilted}
 \end{figure}
 In this Rb NMOR magnetometry setup the rubidium atoms interacted with a $z$-directed laser light beam which is linearly polarized
 along the y axis. In the FID NMOR technique, the magnetic field is generally directed along the light propagation direction and the resonance occurs at $2\Omega_L$.  This effect can be explained by considering that the polarization returns to its original state after a $180\degree$ rotation because of the two-fold symmetry of the optically pumped state. As a result, the optical rotation induced by the rotating linear dichroism is periodic at twice the Larmor frequency.
