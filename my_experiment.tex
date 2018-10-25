@@ -510,21 +510,21 @@ Ref.~\cite{Martin:2014foa}.
 \begin{figure}%[h]
 \centering
 \includegraphics[width=0.6\linewidth]{figures/degaussing_coil.png}
-\caption{Photograph of degaussing coil.\label{fig:degaussing_ccoil.}}
+\caption{Photograph of degaussing coil.\label{fig:degaussing_coil}}
 \end{figure}
 
 The degaussing system consists of two coils.  The most important of
 these is a 16-turn toroidal winding on the innermost magnetic
 shielding layer.  The coil used in our experiments is similar to the
-white wire shown in Fig.~\ref{fig:degaussing_ccoil.}.  The windings
+white wire shown in Fig.~\ref{fig:degaussing_coil}.  The windings
 conflict with the endcaps of the innermost shield, and so these were
 removed for most experiments reported in this thesis.
 
 Since the endcaps of innermost shield are removed, magnetic coupling
 between the innermost volume and the second-to-innermost magnetic
 shielding layer is increased substantially.  To potentially be able to
-degauss this and the other shield layers, a single turn of wire was
-wound around through the outer 3-layers of shielding.
+degauss this and the other shield layers, a wire was wound in a single
+loop through the outer 3-layers of shielding.
 
 Degaussing is achieved by supplying the coil with an oscillating
 current with a decreasing envelope over time. The current amplitude
@@ -532,46 +532,180 @@ starts from a current that yields magnetic saturation inside the
 ferromagnetic material, and generally we used a linear envelope to
 decrease the amplitude to zero.  Various parameters of the degaussing
 sequence were studied.
+
 \begin{figure}%[h]
 \centering
 \includegraphics[width=1.0\linewidth]{figures/degaussing_system}
 \caption{Schematic diagram of degaussing system consist of function
-  generator, power amplifier, transformer, variable resistor(R), 1
-  $\ohm$ sense resistor (A), oscilloscope (V) and degaussing
-  coil. \label{fig:schematic-of-degaussing_system.}}
+  generator, power amplifier, transformer, variable resistor (R),
+  1~$\ohm$ sense resistor (A), oscilloscope (V) and degaussing
+  coil.\label{fig:schematic-of-degaussing_system}}
 \end{figure}
 
-In our degaussing system, an Agilent 3522A function generator  provides a ramped sinusoidal that controls a current supply driving the degaussing coil \cite{Martin:2014foa}. The wires going to the degaussing loop should be twisted together to avoid picking up or causing noise.  A DCP 260 Servowatt is used as the amplifier for degaussing system which outputs $\pm$ 60~V at idle and nominal output current is  $\pm$ 5 A. The used transformer for this setup is a  HS1B250 hevi-duty transformer which provide unity gain (wire connection is set to in 240:240 mode). The frequency of the transformer is  60 Hz.  A double-pole, double-throw (DPDT) switch is used to electrically connect and disconnect the degaussing coil from the circuit. The function generator settings has discussed in Table \ref{table:degaussing setting}. For our degaussing system we are using an envelope function which has $1\times 10^6$ points. Degaussing is complete after $5\times 10^6$ points. Sample rate affects how quickly we move through this waveform. If sample rate is set to 10000 samples/sec and the frequency of the carrier wave is set to 10 Hz then it means 500 cycles were completed. 
- \begin{table}%[h]
+A schematic diagram of the degaussing system is presented in
+Fig.~\ref{fig:schematic-of-degaussing_system}.  An Agilent 33522A
+function generator provides a sinusoidal voltage output with a
+linearly decreasing envelope from 10~V amplitude to zero.  The
+function generator controls a transimpedance power amplifier driving
+the degaussing coil.
+% \cite{Martin:2014foa} This was not used in this reference.
+A DCP 260 Servowatt amplifier is used in transimpedance (voltage to
+current) mode to output a current maximally $\pm 5$~A.  The
+transimpedance gain is 0.5~A/V; {\it i.e.} for 10~V input, the current
+output is 5~A.
+
+The transformer is a HS1B250 Hevi-Duty transformer which provides
+near-unity gain (wire connection is set to in 240:240 mode).  A
+double-pole, double-throw (DPDT) switch is used to electrically
+connect and disconnect the degaussing coil from the circuit.  A
+rheostat of resistance 44~$\ohm$ was typically used to ramp the
+resistance of the system connected to the degaussing coil slowly to
+zero before opening the switch.  This is believed to reduce transients
+injected into the degaussing coil which could be induced by opening
+the switch, although in our trials it seemed to have little effect and
+so it was not always used; part of the reason for this could be
+because the transformer itself has a resistance of only 5~$\ohm$.
+
+An oscilloscope measuring across the degaussing coil could be use to
+monitor the degaussing, or measuring across a 1~$\ohm$ resistor in
+series with the degaussing coil in order to measure current.  The
+wires going to the degaussing coil are twisted together to avoid
+picking up noise.
+
+Degaussing was normally conducted at 10~Hz.  For a sinusoidal input of
+amplitude 10~V at 10~Hz, the measured current was observed to vary
+sinusoidally with amplitude 4.2~A.  The discrepancy with the
+transimpedance gain mentioned above is believed to be dominated by
+losses in the transformer.
+
+At 10~Hz, the coercivity is $H_c=25-30$~A/m.  This was measured by using
+a primary/secondary winding system similar to that shown in
+Fig.~\ref{fig:degaussing_coil} in order to map out the full $B-H$
+curve~\cite{bib:henri-week-10}.  To degauss properly, it is
+important to drive the shield well into saturation, normally at 10
+times the coercivity or larger.  For a winding of $N$ turns on a thin
+toroidal material of radius $R$, the $H$-field in the material
+is~\cite{bib:taraneh-paper}
+\begin{equation}
+H(t)=\frac{NI(t)}{2\pi R}.
+\end{equation}
+For our current of 4.2~A, and a 16-turn degaussing coil, wound on our
+innermost shield of radius 2'', the $H$-field reaches a maximum of
+210~A/m which is more than required.  This was how the number of turns
+was selected to be 16, based on the capabilities of the current
+amplifier, and the coercivity of the material.
+
+Example function generator settings are shown in
+Table~\ref{table:degaussing-setting}.  In the function generator we
+use an envelope function which has $1\times 10^6$ points. The
+degaussing linear ramp sequence uses the initial $5\times 10^5$
+points, and the envelope is set to zero for the other $5\times 10^5$
+points in order to give the user sufficient time to decrease the
+rheostat resistance and open the manual DPDT switch.  It was found
+that if the function generator output was turned off, this would give
+a clearly observable spike if the switch had not been opened by that
+time.
+
+The ``sample rate'' setting affects how quickly we move through this
+waveform.  For example, if the sample rate is set to 10000~samples/s,
+it will take 50~s to complete the degaussing ramp sequence.  If the
+frequency of the carrier wave is set to 10 Hz then it means 500 cycles
+were completed.  A typical recommended number of cycles for good
+degaussing is 500-1000~cycles~\cite{bib:thiel}.  In studies where we
+vary the sample rate, it is essentially the number of cycles which we
+are varying.
+\begin{table}%[h]
 \centering
-\begin{tabular}{|l|l|}
-\hline
-\textbf{ SETTING}    & \textbf{ VALUE} \\
-\hline
-Function generator &   \\
-\hline
+\begin{tabular}{|l|c|}\hline
+\textbf{Setting}    & \textbf{Value} \\\hline
+Function generator &   \\\hline
 Frequency &  10 Hz   \\
-Sample rate    &  10000 sample/sec  \\
-Amplitude   &   10 V \\
-Offset  &       0 V  \\
+Sample rate    &  10000 samples/s  \\
+Initial amplitude   &   10 V \\
+%Offset  &       0 V  \\
 \hline
 \end{tabular}
-\caption{Setting for degaussing system \label{table:degaussing setting}}
+\caption{Typical settings for the degaussing system.  The envelope
+  function was programmed into the function generator amplitude
+  modulation system, which uses 10$^6$ individual points to define the
+  envelope.\label{table:degaussing-setting}}
 \end{table}
 
 
 \subsection{Internal coil\label{sec:Internal coil}}
- For the Rb atomic magnetometer an internal coil referred as z-coil is used to provide the magnetic field along the axis of light propagation direction (z-direction). This coil produces uniform field in the ROI  of magnetic shielding. The z-coil was wound on a 7.62 cm diameter, 20.32 cm long ABS plastic pipe. Seven turns of 26 AWG magnet wire were wound at 2.54 cm spacing, with 1.27 cm spacing from the magnetic faces of the endcaps of the innermost magnetic shield. The spacings were chosen so that, in the infinite permeability limit, and in the limit where the axial aperture holes in the endcaps are small, the boundary conditions would produce image currents forming an infinitely long solenoid. Two saddle coils were wound on the same cylinder in order to control transverse fields( along x and y direction) internally; these were normally disconnected during precision measurements. The internal coil system was calibrated using a three-axis fluxgate magnetometer at fields of ∼100 nT.  The calibration constant for z coil is 48 nT/mA and the calibration constant for x and y coil is 25 nT/mA. The calibration of the z-coil was verified using the NMOR magnetometer with an AM pump beam, and the known gyromagnetic ratios of~ $^{85}Rb$ and $^{87}Rb$. Homogeneity of the residual field and magnetic field generated by the coil system was measured by scanning a fluxgate magnetometer along the axis of the system with and without the coil energized. At a field of 1 $\mu$T, the axial field generated by the coil was uniform within the ROI to the $1\%$  level.
+
+For the Rb atomic magnetometer an internal coil referred as $z$-coil
+is used to provide the magnetic field along the axis of light
+propagation direction ($z$-direction). This coil was designed to
+produce a uniform field in the central region of the Rb cell. The
+$z$-coil was wound on a 7.62~cm diameter, 20.32~cm long ABS plastic
+pipe. Seven turns of 26~AWG magnet wire were wound at 2.54~cm spacing,
+with 1.27~cm spacing from the magnetic faces of the endcaps of the
+innermost magnetic shield.  The spacings were chosen so that, in the
+infinite permeability limit, and in the limit where the axial aperture
+holes in the endcaps are small, the boundary conditions would produce
+image currents forming an infinitely long solenoid.  This was the
+configuration used in Ref.~\cite{bib:nmor-shielding}.  For those
+measurements, homogeneity of the residual field and magnetic field
+generated by the coil system was measured by scanning a fluxgate
+magnetometer along the axis of the system with and without the coil
+energized. At a field of 1~$\mu$T, the axial field generated by the
+coil was uniform to the 1\% level.
+
+Unfortunately this is not true for the data presented in this thesis,
+because the endcaps are removed.  The homogeneity is expected to be
+$\lesssim 5$\% which is adequate for our experiments.  As implied
+earlier, the main problem found in removing the endcaps has to do with
+degaussing the second-to-innermost shield which is magnetically
+coupled to the $z$-coil when the endcaps are removed.
+
+Two saddle coils were wound on the same cylindrical ABS pipe in order
+to control transverse fields (along the $x$- and $y$-directions)
+internally; these were normally disconnected during precision
+measurements.  They were used also for the tilted field measurements.
+
+The internal coil system was calibrated using a three-axis fluxgate
+magnetometer at fields of 100~nT.  The calibration constant for the
+$z$-coil is 48~nT/mA and the calibration constant for $x$- and
+$y$-coil is 25~nT/mA. The calibration of the $z$-coil was verified
+using our magnetometer the known gyromagnetic ratio of $^{85}Rb$.
 
 
 \section{Lock in Amplifier}
-SR830 DSP Lock in Amplifier is a elementary part in the DAQ system of Rb magnetometry. It can measure very  small voltages. The most attractive feature of a lock in amplifier is that it is able to suppress all noise contributions which differ from the reference frequency. A reference signal is applied to the lock-in amplifier which is usually done by an external oscillator which passes a discriminator. In this magnetometry setup sync output of a function generator is used as external reference signal for force oscillation scan. The external reference signal is phase locked to an internal reference frequency, provided internal oscillator of the lock-in. Since a lock-in amplifier has two phase sensitive detectors we obtain two output signals. During the process of phase sensitive detection (PSD), the reference signal is first multiplied with the real input signal  and in a second stage, the real input signal is multiplied by
-the lock-in reference signal with a phase shift of $90\degree$. Then a lowpass filter is used to filter both signals. The first one is referred to as X output and the 2nd output signal is referred to as Y output. X output is knows as in phase component and the Y output is called out of phase component.
+
+For the 0.2~$\mu$T magnetic field and higher measurements, we used a
+SR830 DSP lock-in amplifier to demodulate the signals.  The most
+attractive feature of a lock in amplifier is that it is able to
+suppress noise contributions which differ from the reference
+frequency. A reference signal is applied to the lock-in amplifier
+which is usually done by an external oscillator which passes a
+discriminator. In this magnetometry setup sync output of a function
+generator is used as external reference signal for force oscillation
+scan. The external reference signal is phase locked to an internal
+reference frequency, provided internal oscillator of the
+lock-in. Since a lock-in amplifier has two phase sensitive detectors
+we obtain two output signals. During the process of phase sensitive
+detection (PSD), the reference signal is first multiplied with the
+real input signal and in a second stage, the real input signal is
+multiplied by the lock-in reference signal with a phase shift of
+$90\degree$. Then a lowpass filter is used to filter both signals. The
+first one is referred to as X output and the 2nd output signal is
+referred to as Y output. X output is knows as in phase component and
+the Y output is called out of phase component.
 
 
-\section{Signal Processing\label{sec:Signal Processing}}
-Sensitive magnetometry requires detection of extremely small optical rotation angles. There are numerous methods for detecting the optical rotation of the probe beam.  we instead use the balanced polarimetry technique.  Transmitted light was analyzed for optical rotation by a balanced polarimeter system containing a Wollaston prism and a Newport model 2307 balanced photo receiver. The power delivered to the vapour cell was typically 15 $\mu$W, measured periodically using a Newport model 818-SL power meter inserted into the
-beamline. After the cell the probe beam passes through a polarizing beamsplitter set at 45\degree~to the initial polarization direction resulting in two separate beams with individual intensities given by 
+\section{Balanced Polarimeter\label{sec:Signal Processing}}
+Sensitive magnetometry requires detection of extremely small optical
+rotation angles. There are numerous methods for detecting the optical
+rotation of the probe beam.  we instead use the balanced polarimetry
+technique.  Transmitted light was analyzed for optical rotation by a
+balanced polarimeter system containing a Wollaston prism and a Newport
+model 2307 balanced photo receiver. The power delivered to the vapour
+cell was typically 15 $\mu$W, measured periodically using a Newport
+model 818-SL power meter inserted into the beamline. After the cell
+the probe beam passes through a polarizing beamsplitter set at
+45\degree~to the initial polarization direction resulting in two
+separate beams with individual intensities given by
 \begin{equation}
 I_1 = I_0\sin^2(\theta-\frac{\pi}{4})
 \end{equation}
@@ -585,6 +719,9 @@ For small rotations $\theta << 1$ in terms of power we can write,
 \begin{equation}
   \theta \approx \frac{P_1-P_2}{2(P_1-P_2)}  
 \end{equation}
-
-where $P_1$ and $P_2$ represent signals of the two photodiodes in the polarimeter. The differential value is acquired with a lock-in amplifier (LIA) referenced to the pump beam modulation provided by a function generator. The demodulated signal from the LIA is acquired by a personal computer for analysis. 
+where $P_1$ and $P_2$ represent signals of the two photodiodes in the
+polarimeter. The differential value is acquired with a lock-in
+amplifier (LIA) referenced to the pump beam modulation provided by a
+function generator. The demodulated signal from the LIA is acquired by
+a personal computer for analysis.
 
