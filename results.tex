@@ -344,8 +344,8 @@ Another study has been conducted to understand the influence of pump beam power 
 
 \subsection{How far the reference frequency of lock-in amplifier should set to measure field correctly}
   
-  In FID NMOR the atomic sample is polarized once by optical pumping and then observed the spontaneous decay of excited atom while the pump beam is off. In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2 \mu$T field. The FID signal for different reference frequency of Lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of Lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of Lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
- \begin{figure}
+  In FID NMOR the atomic sample is polarized once by optical pumping and then observed the spontaneous decay of excited atom while the pump beam is off. In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2 \mu$T field. 
+   \begin{figure}
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \centering
@@ -366,31 +366,46 @@ Another study has been conducted to understand the influence of pump beam power 
         \caption{}
         \label{fig:close to resonance}
     \end{subfigure}
-    \caption{FID signal for different reference frequency of Lock-in amplifier while the resonance frequency was 2035 kHz.(a) reference frequency was set to 100 Hz far from resonance (b) difference between resonance and reference frequency is 40 Hz, (c) reference frequency was set to 2015 Hz while resonance frequency 2035 Hz. \label{fig:different reference signal}}
+ \caption{FID signal for different reference frequency of Lock-in amplifier while the resonance frequency was 2035 kHz.(a) reference frequency was set to 100 Hz far from resonance (b) difference between resonance and reference frequency is 40 Hz, (c) reference frequency was set to 2015 Hz while resonance frequency 2035 Hz. \label{fig:different reference signal}}
 \end{figure}
+  
+  The FID signal for different reference frequency of Lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of Lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of Lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
+   
 \begin{figure}[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/reference_frequency}
 \caption{Measured magnetic field for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz which is 20 Hz far from resonance frequency. The blue curve shows magnetic field for lock-in reference frequency 1943.9 Hz.\label{fig:field for different lockin ref freq}}
 \end{figure}
+   
 
 \begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/phase}
-\caption{Measured magnetic field for different lock-in reference frequency.The red curve represents measured magnetic field when reference frequency was set to 2015 Hz and field for lock-in reference frequency 1943.9 Hz.}
+\centering\includegraphics[width=0.8\linewidth]{figures/sigma_diff_lock-in_frequency.png}
+\caption{Histogram of the measured magnetic field for different lock-in reference frequency.\label{histogram-of-diff-lock-in freq}}
 \end{figure}
-   \begin{itemize}
+
+\begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/phase_vs_time.png}
+\caption{Phase for different lock-in reference frequency.\label{phase_different_lock-in_frequency}}
+\end{figure} 
+
+ \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/phase}
+\caption{Measured magnetic field as a function of phase for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz and the blue data points indicates field for lock-in reference frequency 1943.9 Hz.}
+\end{figure} 
+
+ \begin{itemize}
    \item effect of lock-in time constant
    
   A SRS-830 lock-in amplifier is used to grab FID NMOR signal which was connected to the output of balanced photodiode. Table \ref{tab:FID_setting} represents all settings for FID NMOR. In this study the systematic effect of changing locking amplifier time constant on magnetic field measurement has been discussed.
    \begin{figure}
     \centering
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/time_constant}
         \caption{}
         \label{fig:time constant long}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/time_constant_300micro_sec}
         \caption{}
@@ -399,7 +414,7 @@ Another study has been conducted to understand the influence of pump beam power 
     \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier. (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. \label{fig:different time constant} }
 \end{figure}
   
-  Fig \ref{fig:different time constant}  shows the histogram of measured magnetic field for two different time constant of lock-in amplifier while all other settings is same. In the case of Fig \ref{fig:time constant long} the lock-in time constant is 1 ms and Fig \ref{fig:time constant short} shows the histogram of magnetic field for time constant 300 $\mu$s. Here sigma is representing the precession width of field. It can be seen from the figure that the calculated sigma is larger for time constant 1 ms compared to 300 $\mu$s. This measurements was conducted at 0.2 $\mu$T field. The resonance frequency and lock-in reference frequency are 2035 Hz and 1943 Hz respectively.
+  Fig \ref{fig:different time constant}  shows the histogram of measured magnetic field for two different time constant of lock-in amplifier while all other settings is same. In the case of Fig \ref{fig:time constant long} the lock-in time constant is 1 ms and Fig \ref{fig:time constant short} shows the histogram of magnetic field for time constant 300 $\mu$s. Here sigma is representing the precession width of field. It can be seen from the figure that the calculated sigma is larger for time constant 1 ms compared to 300 $\mu$s.  This measurements was conducted at 0.2 $\mu$T field. The resonance frequency and lock-in reference frequency are 2035 Hz and 1943 Hz respectively. The same study has also been done for higher lock-in reference frequency while resonance frequency was unchanged (2035 Hz). Fig: \ref{fig:diff time constant_high_frequency} display the histogram of the recorded magnetic field for different settings of time constant.
   
     \item timing drift in Tektronix oscilloscope clock
    \end{itemize}
@@ -417,7 +432,7 @@ Another study has been conducted to understand the influence of pump beam power 
         \caption{}
         \label{fig:time constant 300microsec}
     \end{subfigure}
-    \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier while lock-in frequency is set to 2015 Hz (20 Hz far from resonance frequency). (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. \label{fig:different time constant} }
+    \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier while lock-in frequency is set to 2015 Hz (20 Hz far from resonance frequency). (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. \label{fig:diff time constant_high_frequency} }
 \end{figure}
 
  \section{Study the effect of room temperature in magnetic field} 
