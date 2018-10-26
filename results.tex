@@ -1,56 +1,75 @@
 \chapter{Experiments using the magnetometer\label{ch:results}}
 
-
+In this Chapter I present the main results on measurements of the
+properties of the magnetometer, optimization studies, and applications
+of the magnetometer to characterize magnetic fields.  The main studies
+that are presented are:
 \begin{itemize}
-\item Measurements of magnetic fields over long timescales.
-  Conclusion: fields drift over time.  Question: how much is due to
-  magnetometer drift vs. other sources?
-\item Improving statistical precision I: cycle time adjustment.
-  Allowed us to measure faster.
-\item Stability of coil current and room temperature.  Conclusion:
-  neither drift seems particularly correlated with field drift over
-  long time periods.  Temperature stability seems quite good,
-  consistent with Michi's thesis.  Side conclusion: when field {\bf
-    only} is changed, the magnetometer responds as expected.  Implies
-  that magnetometer works well at sensing small changes in field, at
-  least on shorter timescales.
-\item Studies of degaussing, with multiple goals, telling the story of
-  our degaussing
+\item Measurements of magnetic fields over long timescales using FID mode.
+%  Conclusion: fields drift over time.  Question: how much is due to
+%  magnetometer drift vs. other sources?
+\item Adjustment of the pump and probe timescales in order to measure
+  the field faster.
+%  Allowed us to measure faster.
+\item Magnetometer drift compared with drifts in the coil current and
+  room temperature.  This study aimed at finding sources of drifts.
+%Conclusion: neither drift seems
+%  particularly correlated with field drift over long time periods.
+%  Temperature stability seems quite good, consistent with Michi's
+%  thesis.  Side conclusion: when field {\bf only} is changed, the
+%  magnetometer responds as expected.  Implies that magnetometer works
+%  well at sensing small changes in field, at least on shorter
+%  timescales.
+\item Studies of degaussing, which in part tell the story of our
+  degaussing development and learning.  This includes studies of:
+%with multiple goals, telling the story of
+%  our degaussing
   \begin{itemize}
-    \item Degaussing setup and testing at zero field: we set up the
-      system, we tested mainly sample rate (related to number of
-      oscillations) stated to be important in Thiel et al.  We found
-      that if the innermost shield was already degaussed that
-      additional poor/rapid degauss did not screw it up as badly as we
-      expected, until degaussing was very rapid.
-    \item Non-zero field.  Ramp field to large values, without
-      degaussing was bad.  After degaussing was better.
-    \item Degaussing next to innermost shield was important.
+    \item the degaussing setup and testing it near zero field
+%we set up the
+%      system, we tested mainly sample rate (related to number of
+%      oscillations) stated to be important in Thiel et al.  We found
+%      that if the innermost shield was already degaussed that
+%      additional poor/rapid degauss did not screw it up as badly as we
+%      expected, until degaussing was very rapid.
+    \item initial operations at non-zero field, and
+%Ramp field to large values, without
+%      degaussing was bad.  After degaussing was better.
+    \item final degaussing procedure, in which degaussing the next to
+      innermost shield was studied.
   \end{itemize}
-\item Laser locking and tuning, again multiple goals:
-  \begin{itemize}
-    \item Lock point or laser seems to drift over time.  See ``Drift
-      is about 120 pT'' where statistical error gets worse.  Also
-      would lose lock sometimes.  We think this may be due to PBS.
-    \item Other concern is whether drift of lock affects measured
-      field.  Studied by ``manual locking'' and found not to be
-      important.  Lock drift does not affect measured field drift very
-      much, but does affect statistical precision of magnetometer.
-  \end{itemize}
-\item Pushing below 1~pT in an individual measurement.  Statistical
-  precision can be improved by tuning pump and probe powers.  But when
-  we improved the statistical precision significantly, we began to run
-  into systematic errors in frequency measurement.  This led us to
-  study additional errors related to lock-in amplifier settings.
-  Future work is to finalize these studies in order to further reduce
-  the errors
-\item Finally, transverse fields.  We show our studies which reveal a
-  way to use FID mode to measure transverse fields.  Further work is
-  required to push to nT-scale transverse fields relevant for
-  typ.~unmeasurable gradients that enter $\delta_T$ correction in Hg-n
-  signals in nEDM experiments.
+\item Studies of laser locking and tuning, and the requirements on
+  tune stability
+%again multiple goals:
+%  \begin{itemize}
+%    \item Lock point or laser seems to drift over time.  See ``Drift
+%      is about 120 pT'' where statistical error gets worse.  Also
+%      would lose lock sometimes.  We think this may be due to PBS.
+%    \item Other concern is whether drift of lock affects measured
+%      field.  Studied by ``manual locking'' and found not to be
+%      important.  Lock drift does not affect measured field drift very
+%      much, but does affect statistical precision of magnetometer.
+%  \end{itemize}
+\item Studies pushing below 1~pT in an individual FID measurement.
+  This includes adjustment of the pump and probe powers, and lock-in
+  amplifier settings.  As will be shown, this study revealed problems
+  in the procedures used to determine the precession frequency at such
+  high precision and suggests avenues for further study.
+%But when
+%  we improved the statistical precision significantly, we began to run
+%  into systematic errors in frequency measurement.  This led us to
+%  study additional errors related to lock-in amplifier settings.
+%  Future work is to finalize these studies in order to further reduce
+%  the errors
+\item Finally, I show my studies which revealed a way to use FID mode
+  to measure transverse fields.
+%Further work is
+%  required to push to nT-scale transverse fields relevant for
+%  typ.~unmeasurable gradients that enter $\delta_T$ correction in Hg-n
+%  signals in nEDM experiments.
 \end{itemize}
-
+Each study will now be presented in turn and conclusions will be
+summarized in Chapter~\ref{ch:conclusion}.
 
 % Belongs in Magnetometer Literature Review Chapter 2?
 
@@ -69,23 +88,79 @@
 
 
 
-  \section{long term FID measurement}  
-The forced oscillation scans and the single FID shot gives information about the present magnetic field. In order to get information about the change in magnetic field over time, long term data was taken in the FID mode. During this long term process the laser frequency was locked into D1 transition line of Rb-85 using DigiLock 110 laser locking module. In order to observe the FID signal, a Tektronix DPO 2014 oscilloscope was connected to X and Y output of output of lock-in amplifier. A python script is used to setup function generator and to trigger DAQ for long term FID measurement. This same python script is also used to transfer data continuously from oscilloscope screen to computer. For further data analysis  another python script is used. On the basis of the X
-and Y channel recordings, a least-square fit was done for each X and Y pair. The measured oscillation frequency of decaying signal was then convert to magnetic field using equation \ref{eq:field}.  Measuring magnetic field over long period of time gives us information about the magnetometer performance. Toward this end, we study long term field measurement.
-\begin{figure}[h]
+\section{Long-term FID measurements}
+
+A forced-oscillation scan or an acquisition of a single FID give a
+measurement of the magnetic field within a relatively short time
+period ($<1$~s).  For nEDM experiments, it is important to get
+information about the change in the average magnetic field over time
+periods of 100~s and longer.
+
+In order to study the fluctuations and drifts in the magnetic field
+over time, and to search for possible drifts in the magnetometer
+itself, repeated measurements of FID's were made and recorded.
+
+%long
+%term data was taken in the FID mode.
+During this long term process the laser frequency was tuned for
+maximal FID amplitude, and locked using the DigiLock 110 module.  In
+order to observe the FID signal, a Tektronix DPO 2014 oscilloscope was
+connected to X and Y output of output of lock-in amplifier. A Python
+script was used to set up the function generator and to trigger data
+acquisition using the oscilloscope. The same script is also used to
+transfer data continuously from oscilloscope to the computer.  For
+further data analysis another Python script was used to process each
+FID.  A least-squares fit was done for each FID for each X and Y pair.
+The measured oscillation frequency of the decaying oscillating signal
+was then convert to magnetic field using Equation~(\ref{eq:field}).
+
+\begin{figure}%[h]
 \centering\includegraphics[width=0.85\linewidth]{figures/field_3_day}
-\caption{Magnetic field recorded over 4 hours on three different day. The observed field drift is almost same (15 pT) for three days.\label{fig:long term field}}
+\caption{Magnetic field recorded over 4 hours on three different
+  days. The observed field drift is similar ($\sim 15$~pT) for each
+  day.\label{fig:long-term-field}}
 \end{figure}
 
-Fig~\ref{fig:long term field} ~represents the magnetic field recorded over 4 hours on three different day. Each data points in this graph correspond to single FID scan. The observed field drift is almost same (15 pT) for three days. This measurement was conducted at 0.2 $\mu$T magnetic field.
-\begin{figure}[h]
+Fig.~\ref{fig:long-term-field} shows the magnetic field recorded over
+4 hours on three different days. Each data points in the graph
+corresponds to a single FID measurement.  The observed field drift is
+similar ($\sim 15$~pT) for each day.  The measurement was conducted at
+0.2 $\mu$T magnetic field.
+
+\begin{figure}%[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/field_3_day_allan.png}
-\caption{Allan deviation of recorded magnetic field vs. averaging time for three different day.\label{fig:allan_deviation}}
+\caption{Allan deviation of recorded magnetic field vs.~averaging time
+  for the time-series data presented in in
+  Fig.~\ref{fig:long-term-field}.\label{fig:allan_deviation}}
 \end{figure}
 
- Allan variance is used to investigate long term stability. The recorded B-field data vs. time (\ref{fig:long term field}) was further used to calculate Allan deviations. Fig \ref{fig:allan_deviation} shows the allan deviation of measured magnetic field.  In this case, the Allan deviation was calculated in order to determine the deviation of the average field value for a given integration time as a function of the integration time\cite{doe:website2}.
+The Allan deviation was used to further quantify the long-term
+stability~\cite{doe:website2}.  Allan deviations characterize changes
+in the measured quantity when the data are averaged on different
+timescales.  When the data behave statistically on short timescales,
+the Allan deviation is equal to the standard deviation.  If drifts
+occur, normally on longer timescales, the Allan deviation grows
+linearly with a slope that $1/\sqrt{2}$ times the slope of the drift
+in time.
 
-  
+Fig.~\ref{fig:allan_deviation} shows the Allan deviations of the
+measurements field presented in Fig.~\ref{fig:long-term-field}.  The
+minimum in the Allan deviation occurs when statistical behavior is
+overtaken by drift.  Fig.~\ref{fig:allan_deviation} shows that this
+transition generally occurs after 10-60~s of averaging, corresponding
+to a precision in magnetic field of 300-500~fT at the Allan minimum.
+
+For an nEDM experiment, the goal precision is $\sim 20$~fT for the
+average field over as measured over the 100~s neutron free-precession
+measurement cycle.  This is not likely to be equivalent to the Allan
+deviation minimum of our one magnetometer, because the long-term drift
+is driven in part by the drift of the magnetic field within the
+shield.  The goal of subsequent work was twofold:
+\begin{itemize}
+\iteim to attempt to identify some of the sources of drift, especially
+searching for any of those that might be caused by the magnetometer
+operation itself.
+
    \section{Optimization of cycle time} 
    \begin{figure}
     \centering
