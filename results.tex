@@ -70,32 +70,38 @@
 
 
   \section{long term FID measurement}  
-The forced oscillation scans and the single FID shot gives information about the present magnetic field. In order to get information about the change in magnetic field over time, long term data was taken in the FID mode. During this long term process the laser frequency was locked into D1 transition line of Rb-85 using DigiLock 110 laser locking module. A stable power supply was used to run the coil system inside the shield. In order to observe the FID signal, a Tektronix DPO 2014 oscilloscope was connected to X and Y output of output of lock-in amplifier. A python script is used to setup function generator and to trigger DAQ for long term FID measurement. This same python script is also used to grab data continuously from oscilloscope screen to computer. For further data analysis  another python script is used. On the basis of the X
-and Y channel recordings, a least-square fit was done for each X and Y pair. The measured oscillation frequency of decaying signal was then convert to magnetic field using equation \ref{eq:field}. The recorded B-field data vs. time was further used to calculate Allan deviations, getting  information on the deviations from the mean magnetic field vs. integration time (bin size). Measuring magnetic field over long period of time gives us information about the magnetometer performance. Toward this end,we study long term field measurement. Fig~\ref{fig:long term field} ~represents the magnetic field recorder over 4 hours on three different day. Each data points in this graph correspond to single FID scan. The observed field drift is almost same (15 pT) for three days. This measurement was conducted at 0.2 $\mu$T magnetic field.
+The forced oscillation scans and the single FID shot gives information about the present magnetic field. In order to get information about the change in magnetic field over time, long term data was taken in the FID mode. During this long term process the laser frequency was locked into D1 transition line of Rb-85 using DigiLock 110 laser locking module. In order to observe the FID signal, a Tektronix DPO 2014 oscilloscope was connected to X and Y output of output of lock-in amplifier. A python script is used to setup function generator and to trigger DAQ for long term FID measurement. This same python script is also used to transfer data continuously from oscilloscope screen to computer. For further data analysis  another python script is used. On the basis of the X
+and Y channel recordings, a least-square fit was done for each X and Y pair. The measured oscillation frequency of decaying signal was then convert to magnetic field using equation \ref{eq:field}.  Measuring magnetic field over long period of time gives us information about the magnetometer performance. Toward this end, we study long term field measurement.
 \begin{figure}[h]
 \centering\includegraphics[width=0.85\linewidth]{figures/field_3_day}
 \caption{Magnetic field recorded over 4 hours on three different day. The observed field drift is almost same (15 pT) for three days.\label{fig:long term field}}
 \end{figure}
-   \begin{itemize}
-   \item summary of statistical error, systematic error, stability via allan deviations.
-   \end{itemize}
+
+Fig~\ref{fig:long term field} ~represents the magnetic field recorded over 4 hours on three different day. Each data points in this graph correspond to single FID scan. The observed field drift is almost same (15 pT) for three days. This measurement was conducted at 0.2 $\mu$T magnetic field.
+\begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/field_3_day_allan.png}
+\caption{Allan deviation of recorded magnetic field vs. averaging time for three different day.\label{fig:allan_deviation}}
+\end{figure}
+
+ Allan variance is used to investigate long term stability. The recorded B-field data vs. time (\ref{fig:long term field}) was further used to calculate Allan deviations. Fig \ref{fig:allan_deviation} shows the allan deviation of measured magnetic field.  In this case, the Allan deviation was calculated in order to determine the deviation of the average field value for a given integration time as a function of the integration time\cite{doe:website2}.
+
   
    \section{Optimization of cycle time} 
    \begin{figure}
     \centering
  
-    \begin{subfigure}[b]{0.425\textwidth}
+    \begin{subfigure}[b]{0.46\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/Capture}
         \caption{}
-        \label{fig:pump short}
+        \label{fig:pump long}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.42\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/Capture2}
+        \includegraphics[width=\textwidth]{figures/FID_optimized.png}
         \caption{}
-        \label{fig:pump long}
+        \label{fig:pump short}
     \end{subfigure}
     \caption{(a) FID signal for pump time~ 0.49 s and probe time~ 0.4 s. (b) FID signal for pump time  0.1 s and probe time ~0.2 s. Both measurement were conducted at $0.2~\mu$T magnetic field.}
     \label{fig:pump time}
@@ -104,7 +110,7 @@ and Y channel recordings, a least-square fit was done for each X and Y pair. The
 \centering\includegraphics[width=0.75\linewidth]{figures/pump_time}
 \caption{Measured B-field vs. time   for different pump time. The longest pump time is 0.49 s while the shortest pump time is 0.1 s. No obvious dependency of pump time on  measured magnetic field has been observed during this study.\label{fig:different pump time}}
 \end{figure}
-During this study the magnetometer is operated in FID mode at 0.2 $ \mu$T field.  A complete cycle of FID measurement consist of pump and probe time. Pump time represents the time atoms take to generate a polarized ground state. In this study we were trying to study how long the optical pumping of Rb atom should have continued in order to generate an alignment and optical pumping for long time does make any difference in measuring magnetic field precisely or not. FID signal with 0.49 s pump time and 0.4 sec probe time has shown in Fig \ref{fig:pump short}. On the other hand, Fig \ref{fig:pump long} shows  the FID signal for 0.1 s pump time and 0.2 s probe time. In Fig \ref{fig:different pump time} the histogram of measured magnetic field over 300 s has shown for different pump time. The longer pump time is 0.49 s   and the shorter one is 0.1 sec. It is obvious from the plot that pump time doesn't effect in field precision. However for our Rb magnetometry setup it is not possible to make the pump time shorter than 0.1 s because this 0.1 s is the minimum time atoms need to get aligned for making a coherence state after interacting with laser beam. Since the amplitude of FID NMOR signal reach it's maximum while atoms are in coherence state. Thus It is easy to understand coherence state is ready or not by observing the signal amplitude. In Fig~\ref{fig:pump short} the optical pumping is done for 0.49 s while signal amplitude reach its maximum over 0.1 s and after that signal amplitude remains unchanged till 0.49 s. In this case there is no point to pump more than 0.1 s. Same situation happens about probe time. If signal amplitude decays so quickly there is no point to set longer probe time. By optimizing pump and probe time we can speed up data acquisition system. After optimization for a single FID scan it only takes 0.35 s  without losing any information. By using this faster data acquisition system it is possible to record multiple FID run with in a short period of time which is helpful to gather more information about magnetic field environment.
+During this study the magnetometer is operated in FID mode at 0.2 $ \mu$T field.  A complete cycle of FID measurement consist of pump and probe time. Pump time represents the time atoms take to generate a polarized ground state. In this study we were trying to study how long the optical pumping of Rb atom should have continued in order to generate an alignment and optical pumping for long time does make any difference in measuring magnetic field precisely or not. FID signal with 0.49 s pump time and 0.4 sec probe time has shown in Fig \ref{fig:pump long}. On the other hand, Fig \ref{fig:pump short} shows  the FID signal for 0.1 s pump time and 0.2 s probe time. In Fig \ref{fig:different pump time} the histogram of measured magnetic field over 300 s has shown for different pump time. The longer pump time is 0.49 s   and the shorter one is 0.1 s. It is obvious from the plot that pump time doesn't effect in field precision. However for our Rb magnetometry setup the shortest pump time  0.1 s because 0.1 s is the minimum time atoms need to get aligned for making a coherence state after interacting with laser beam. Since the amplitude of FID NMOR signal reach it's maximum while atoms are in coherence state. Thus It is easy to understand coherence state is ready or not by observing the signal amplitude. In Fig~\ref{fig:pump long} the optical pumping is done for 0.49 s while signal amplitude reach its maximum over 0.1 s and after that signal amplitude remains unchanged till 0.49 s. In this case there is no point to pump more than 0.1 s. Same situation happens about probe time. If signal amplitude decays so quickly there is no point to set longer probe time. By optimizing pump and probe time we can speed up data acquisition system. After optimization for a single FID scan it only takes 0.35 s  without losing any information. By using this faster data acquisition system it is possible to record multiple FID run with in a short period of time which is helpful to gather more information about magnetic field environment and helpful to achieve statistical precession.
    \section{current with existing power supply}
    \begin{itemize}
    \item Analysis of current stability.
@@ -123,10 +129,7 @@ During this study the magnetometer is operated in FID mode at 0.2 $ \mu$T field.
 
 
  Fig~\ref{fig:current} shows the current stability of power supply over 10000 sec. During this time the current only change by 30 nA.  
- 
- Fig~\ref{fig:field_measure_and_produced} display the magnetic field produced by z-coil(green line) and measured field (red line) by running the magnetometer in FID mode over 8000 sec. The field generated by z-coil is calculated by converting measured current to field with coil constant of z-coil (discussed in section \ref{sec:Internal coil}). At t=0 both fields coincide but over time a huge drift can be seen in measured field.  For better understanding of the stability of the power supply, providing current to the z coil, the Allan deviation of the generated field and measured field has shown in Fig \ref{fig:allan_plot}.  It can be seen from the figure that current stability is better than typical measured field changes.
-  
- \begin{figure}
+  \begin{figure}
     \centering
  
     \begin{subfigure}[b]{0.65\textwidth}
@@ -144,6 +147,10 @@ During this study the magnetometer is operated in FID mode at 0.2 $ \mu$T field.
     \caption{(a)Measured and produced magnetic field vs. time. (b) Allan deviation of field.}
     \label{fig:current_vs_field_allan_deviation}
 \end{figure} 
+
+ Fig~\ref{fig:field_measure_and_produced} display the magnetic field produced by z-coil(green line) and measured field (red line) by running the magnetometer in FID mode over 8000 s. The field generated by z-coil is calculated by converting measured current to field with coil constant of z-coil (discussed in section \ref{sec:Internal coil}). At t=0 both fields coincide but over time a huge drift can be seen in measured field.  For better understanding of the stability of the power supply, providing current to the z coil, the Allan deviation of the generated field and measured field has shown in Fig \ref{fig:allan_plot}.  It can be seen from the figure that current stability is better than typical measured field changes.
+  
+
 
    \item Change in magnetic field due to the change in coil current
    
@@ -163,7 +170,7 @@ During this study the magnetometer is operated in FID mode at 0.2 $ \mu$T field.
    \item different degaussing schemes(changing sample rate)
    
   
-Degaussing process is done in order to avoid the environmental perturbation and reduce any remnant field inside the four layer $\mu$ metal magnetic shield \cite{doi:10.1063/1.2713433}. The setting for degaussing has shown in Table \ref{table:degaussing setting}.  A detailed analysis of NMOR signal by changing the degaussing parameter could give us some information about the goodness of degaussing procedure. Toward this end, a study has been carried out to determine  the dependency of the resonance width on the sample rate (see discussion on section \ref{sec:Degaussing}). 
+Degaussing process is done in order to avoid the environmental perturbation and reduce any remnant field inside the four layer $\mu$ metal magnetic shield \cite{doi:10.1063/1.2713433}. The setting for degaussing has shown in Table \ref{table:degaussing-setting}.  A detailed analysis of NMOR signal by changing the degaussing parameter could give us some information about the goodness of degaussing procedure. Toward this end, a study has been carried out to determine  the dependency of the resonance width on the sample rate (see discussion on section \ref{sec:Degaussing}). 
 
 In this study, data was acquired by sweeping the magnetic field near zero field. Before each measurement degaussing the innermost layer of shield has done. During this measurement only one degaussing parameter, sample rate, was varied in order to study the effect of degaussing parameter on magnetic field measurement.  
 
