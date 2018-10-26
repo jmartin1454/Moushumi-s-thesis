@@ -496,11 +496,11 @@ space available for experimental equipment.
 \subsection{Degaussing system\label{sec:Degaussing}}
 
 Our four layer $\mu$ metal magnetic shield is designed to minimize the
-magnetic field at the cell, but magnetic hysteresis limits the
-magnetic field in any region to be exactly zero.  A degaussing process
-is used to reset the magnetic properties of the material.  Ideally
-this should reduce any remanent magnetic field in the volume
-surrounded by the innermost shielding layer.  
+magnetic field at the cell, but magnetic hysteresis limits the ability
+to do so.  A degaussing process is used to reset the magnetic
+properties of the material.  Ideally the degaussing process reduces
+the remanent magnetic field in the volume surrounded by the innermost
+shielding layer.
 
 Part of the work presented in this thesis relates to studies of the
 effectiveness and reproducibility of the degaussing system.  The new
@@ -634,8 +634,8 @@ Initial amplitude   &   10 V \\
 
 \subsection{Internal coil\label{sec:Internal coil}}
 
-For the Rb atomic magnetometer an internal coil referred as $z$-coil
-is used to provide the magnetic field along the axis of light
+For the Rb atomic magnetometer an internal coil referred to as
+$z$-coil is used to provide the magnetic field along the axis of light
 propagation direction ($z$-direction). This coil was designed to
 produce a uniform field in the central region of the Rb cell. The
 $z$-coil was wound on a 7.62~cm diameter, 20.32~cm long ABS plastic
@@ -671,57 +671,69 @@ $y$-coil is 25~nT/mA. The calibration of the $z$-coil was verified
 using our magnetometer the known gyromagnetic ratio of $^{85}Rb$.
 
 
-\section{Lock in Amplifier}
+\section{Lock-in Amplifier}
 
 For the 0.2~$\mu$T magnetic field and higher measurements, we used a
-SR830 DSP lock-in amplifier to demodulate the signals.  The most
-attractive feature of a lock in amplifier is that it is able to
-suppress noise contributions which differ from the reference
-frequency. A reference signal is applied to the lock-in amplifier
-which is usually done by an external oscillator which passes a
-discriminator. In this magnetometry setup sync output of a function
-generator is used as external reference signal for force oscillation
-scan. The external reference signal is phase locked to an internal
-reference frequency, provided internal oscillator of the
-lock-in. Since a lock-in amplifier has two phase sensitive detectors
-we obtain two output signals. During the process of phase sensitive
-detection (PSD), the reference signal is first multiplied with the
-real input signal and in a second stage, the real input signal is
-multiplied by the lock-in reference signal with a phase shift of
-$90\degree$. Then a lowpass filter is used to filter both signals. The
-first one is referred to as X output and the 2nd output signal is
-referred to as Y output. X output is knows as in phase component and
-the Y output is called out of phase component.
+SR830 DSP lock-in amplifier to demodulate the signals.  The lock-in
+amplifier is that it is able to suppress noise contributions which
+differ from the reference frequency.  A reference signal is applied to
+the lock-in amplifier which may be done by an internal or external
+oscillator. In this magnetometry setup, the sync output of the
+function generator is used as external reference signal for
+forced-oscillation scans.  The external reference signal is monitored
+by a phase-locked loop (PLL) which provides the internal reference of
+the lock-in.  The lock-in amplifier has two phase sensitive detectors
+providing two output signals (X and Y). To generate the X signal the
+internal reference is multiplied with the input signal and a low-pass
+filter of a certain corner frequency (given by the lock-in time
+constant) and order sets the bandwidth around the reference frequency.
+To generate the Y signal, the same process is done for a reference
+signal phase shifted by $90\degree$.  The X signal is often called the
+``in-phase'' and the Y signal the ``out-of-phase'' or ``quadrature''
+signal.
 
 
-\section{Balanced Polarimeter\label{sec:Signal Processing}}
-Sensitive magnetometry requires detection of extremely small optical
-rotation angles. There are numerous methods for detecting the optical
-rotation of the probe beam.  we instead use the balanced polarimetry
-technique.  Transmitted light was analyzed for optical rotation by a
-balanced polarimeter system containing a Wollaston prism and a Newport
-model 2307 balanced photo receiver. The power delivered to the vapour
-cell was typically 15 $\mu$W, measured periodically using a Newport
-model 818-SL power meter inserted into the beamline. After the cell
-the probe beam passes through a polarizing beamsplitter set at
-45\degree~to the initial polarization direction resulting in two
-separate beams with individual intensities given by
+\section{Optical Rotation and Balanced Polarimeter\label{sec:Signal Processing}}
+
+Sensitive magnetometry based on optical rotation requires the accurate
+detection of small optical rotation angles. We use a balanced
+polarimeter technique.  Transmitted light was analyzed for optical
+rotation by a balanced polarimeter system containing a Wollaston prism
+and a Newport model 2307 balanced photo-receiver.
+%The power delivered
+%to the vapour cell was typically 15 $\mu$W, measured periodically
+%using a Newport model 818-SL power meter inserted into the
+%beamline.
+%After the cell the probe beam passes through a polarizing
+The Wollaston prism separates incident light into its horizontal (X)
+and vertical (Y) polarization components, and the difference of these
+signals is reported by the balanced photo-receiver.
+%beamsplitter set
+%at 45\degree~to the initial polarization direction resulting in two
+%separate beams with individual intensities given by
+If incident light is linearly polarized with an angle $\pi/4$ between
+the plane of polarization and axis of the prism, the X and Y
+intensities will be equal and the differential photodiode will report
+zero output.  If the plane of polarization is then rotated by a small
+angle $\alpha$ relative to the initial $\pi/4$ angle (a total angle
+$\theta=\alpha+\pi/4$ from the X axis), the X and Y intensities
+selected by the prism are
 \begin{equation}
-I_1 = I_0\sin^2(\theta-\frac{\pi}{4})
+I_X=I_0\sin^2(\alpha-\frac{\pi}{4})
 \end{equation}
-
+and
 \begin{equation}
-I_2 = I_0 \cos^2(\theta-\frac{\pi}{4})   
+I_Y=I_0\cos^2(\alpha-\frac{\pi}{4})   
 \end{equation}
-
-such that $I_1 + I_2 = I_0$, and the intensities are balanced when $\theta = 0$ and unbalanced otherwise. 
-For small rotations $\theta << 1$ in terms of power we can write,
+where $I_0=I_X+I_Y$ is the intensity of the incident light.  The
+intensities $I_X$ and $I_Y$ would be detected by each of the
+photodiode channels.  For small rotations $\alpha<<1$ we can write
 \begin{equation}
-  \theta \approx \frac{P_1-P_2}{2(P_1-P_2)}  
+  \alpha\approx-\frac{I_X-I_Y}{2(I_X+I_Y)}.
 \end{equation}
-where $P_1$ and $P_2$ represent signals of the two photodiodes in the
-polarimeter. The differential value is acquired with a lock-in
-amplifier (LIA) referenced to the pump beam modulation provided by a
-function generator. The demodulated signal from the LIA is acquired by
-a personal computer for analysis.
-
+In general, we measured the balanced photodiode output, which is
+proportional to $I_X-I_Y$.  Hence most ``optical rotations'' are
+measured in Volts in this thesis.  In cases where the lock-in
+amplifier is used, the demodulated signals are also sometimes referred
+to as ``optical rotation'' although in reality they are proportional
+to the demodulated $I_X-I_Y$.
