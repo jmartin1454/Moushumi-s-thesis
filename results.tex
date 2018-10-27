@@ -238,9 +238,29 @@ During this study the magnetometer is operated in FID mode at 0.2 $ \mu$T field.
 \end{figure} 
  
  Fig~\ref{fig:field change} presents the magnetic field change over time for different coil current. For better understanding Fig~\ref{fig:field change} has been divide into five different regions. In region-1 magnetic field  has been recorded for 300 s while the applied current to the Z coil was 4.5 mA. Then in region-2 the applied current to the z coil has been increased by 0.001 mA i.e., total current 4.501 mA and measured the magnetic field for another 300 s. It is clear from the figure that the field has been changed instantly by 50 $\mu$T due to the changed coil current. Now in region-3, the coil current has been reduced to 4.5 mA and measured field for 300 s. After that the coil current has been decreased by 0.001 mA. As a result the field also decreased by 50~$\mu$T in this region.  Finally in region-5 the coil current has been set to 4.5 mA again and observed the corresponing quick change in field.
-
-
    \end{itemize}
+    \section{Study the effect of room temperature in magnetic field} 
+ \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/temp_.png}
+\caption{Temperature measurement\label{fig:temperature measurement}}
+\end{figure}
+ Room temperature is measured using precision thermometer and laser temperature is measured from the output of the laser temperature controller panel. The temperature on the magnetic shielding is measured by a T-type thermocouple.  Since T- type thermocouple is non-magnetic we use this specific type of thermocouple instead of K-type. 
+ 
+  \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/field_.png}
+\caption{Field measurement\label{fig:field}}
+\end{figure}
+
+ Fig \ref{fig:temperature measurement} display the measured temperature vs time.  During the measurement the laser temperature (green line) remain  unchanged which provide an indication about well controlled laser diode temperature.  It can be seen from the figure that room temperature fluctuation is 1\degree while temperature outside of the magnetic shielding is about 0.8\degree. 
+ 
+ Fig \ref{fig:field} shows the magnetic field vs. time while the temperature measurement has taken place. In order to understand the correlation between temperature change and field change, the measured field vs. temperature has shown in Fig \ref{fig:field_vs_temp}. It is clear from the graph that there is no obvious of field drift dependency on temperature.
+  
+ \begin{figure}[h]
+\centering\includegraphics[width=0.6\linewidth]{figures/field_vs_temp.png}
+\caption{Field vs. temperature\label{fig:field_vs_temp}}
+\end{figure}
+ 
+   
    \section{degaussing studies\label{sec:degaussing}}  
    \begin{itemize}
    \item different degaussing schemes(changing sample rate)
@@ -408,6 +428,24 @@ Since  longer coherence time and larger signal amplitude indicate better frequen
 %data colllected 13th August 2018
  
  In Fig \ref{fig:different probe power} the measured magnetic field has been displayed for two different  Probe beam power. Fig \ref{fig:power less} present the measured field over 100 s with 15 $\mu$W probe power while fig \ref{fig:power double} display the measured field over 100 s for probe power 30 $\mu$W. In both cases, the pump beam power has been kept unchanged ($5\%$ duty cycle). Each blue points in this graph represent a single FID scan. As can be seen from Fig \ref{fig:different probe power} the magnetic field is more scattered for high beam power. Precession width is about $7.2$ pT for probe beam power 30 $\mu$W while for low beam power(15 $\mu$W) the precession width is about $3.01$ pT. It can be concluded lower probe beam power is better for precession  magnetometry because the narrower the precession width more sensitive the magnetometer. Although low probe beam power is better for precise field measurement, it's hard to work with because of the dimness of light.
+Table  \ref{table:Coherence time for different probe power} represent the coherence time for different probe power while the pump beam power was unchanged.
+ \begin{table}%[h]
+\centering
+\begin{tabular}{|l  |c|c|}\hline
+\textbf{Probe power($\mu$w)}    & \textbf{Coherence time(ms)}  & \textbf{Amplitude(Volts)}\\\hline
+~~~~~~~~2 & 84 & 2.13   \\
+\hline
+~~~~~~~~5    & 82 & 2.11  \\
+\hline
+~~~~~~~~10   &  68 & 4.06 \\
+\hline
+~~~~~~~~15  &   59 & 5.8  \\
+\hline
+~~~~~~~~35  &   32 & 10  \\
+\hline
+\end{tabular}
+\caption{Coherence time for different probe power\label{table:Coherence time for different probe power}}
+\end{table}
  
  \begin{figure}
     \centering  \includegraphics[width=\textwidth]{figures/pump_beam}
@@ -511,26 +549,7 @@ Another study has been conducted to understand the influence of pump beam power 
     \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier while lock-in frequency is set to 2015 Hz (20 Hz far from resonance frequency). (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. \label{fig:diff time constant_high_frequency} }
 \end{figure}
 
- \section{Study the effect of room temperature in magnetic field} 
- \begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/temp_.png}
-\caption{Temperature measurement\label{fig:temperature measurement}}
-\end{figure}
- Room temperature is measured using precision thermometer and laser temperature is measured from the output of the laser temperature controller panel. The temperature on the magnetic shielding is measured by a T-type thermocouple.  Since T- type thermocouple is non-magnetic we use this specific type of thermocouple instead of K-type. 
- 
-  \begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/field_.png}
-\caption{Field measurement\label{fig:field}}
-\end{figure}
 
- Fig \ref{fig:temperature measurement} display the measured temperature vs time.  During the measurement the laser temperature (green line) remain  unchanged which provide an indication about well controlled laser diode temperature.  It can be seen from the figure that room temperature fluctuation is 1\degree while temperature outside of the magnetic shielding is about 0.8\degree. 
- 
- Fig \ref{fig:field} shows the magnetic field vs. time while the temperature measurement has taken place. In order to understand the correlation between temperature change and field change, the measured field vs. temperature has shown in Fig \ref{fig:field_vs_temp}. It is clear from the graph that there is no obvious of field drift dependency on temperature.
-  
- \begin{figure}[h]
-\centering\includegraphics[width=0.6\linewidth]{figures/field_vs_temp.png}
-\caption{Field vs. temperature\label{fig:field_vs_temp}}
-\end{figure}
 %The magnetometric method based on FID NMOR is a very sensitive
 %technique of magnetic field measurements. Those measurements are
 %scalar, i.e., the position of a given resonance depends only on the
@@ -602,11 +621,11 @@ However, We also observed that by tilting the field direction toward the light p
 When direction of the magnetic is tilted toward the light polarization axis  the FID signal contain two frequency component at modulation frequency $\Omega_L$. Fig: \ref{fig:optical-rotation-different-angle} shows the FID signal for different tilt angle when pump beam is modulated at $\Omega_L$. In order to extract frequency components we have used two methods. One of them is the FFT of FID signal and the other one is the fit FID signal using equation \ref{eq:two_sinewave}.
 
 \begin{equation}
-     X = A e^{-t /\tau_1} \sin(\omega_1 t + \phi_1) + A_1 e^{-t /\tau_2}  \sin (\omega_2 t + \phi_2) + C  
+     X = A_1 e^{-t /\tau_1} \sin(\omega_1 t + \phi_1) + A_2 e^{-t /\tau_2}  \sin (\omega_2 t + \phi_2) + C  
      \label{eq:two_sinewave}
 \end{equation}
 
-Where A and $A_1$ are amplitude for two decaying sin wave, $\omega_1$ and $\omega_2$ represents oscillation frequency, $\phi_1$ and $\phi_2$ indicate phase and $\tau_1$ and $\tau_2$ represents coherence time. A 10th order Infinite Impulse Response( IIR) Butterworth filter is also used to reduce background noise from the signal.
+Where $A_1$ and $A_2$ are amplitude for two decaying sin wave, $\omega_1$ and $\omega_2$ represents oscillation frequency, $\phi_1$ and $\phi_2$ indicate phase and $\tau_1$ and $\tau_2$ represents coherence time. A 10th order Infinite Impulse Response( IIR) Butterworth filter is also used to reduce background noise from the signal.
 Fig: \ref{fig:fft-amplitude} display the FFT of resonance signal for three different  tilt angle $0\degree$, $25\degree$ and $50\degree$. It can be seen from the plot that at $0\degree$ tilt angle there is only one frequency component while for $25\degree$ tilt angle two peak corresponds to two frequency components.
 
 Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for the magnetic field tilted in the $xz$ plane at various angles to the light propagation direction at modulation frequency $2\Omega_L$ and $\Omega_L$. It can be seen from the figure that the amplitude of the FID signal decreases with increasing tilt angle for both modulation frequency. 
