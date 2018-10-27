@@ -435,29 +435,106 @@ of field drift dependency on temperature.
 \end{figure}
  
    
-\section{degaussing studies\label{sec:degaussing}}  
-\begin{itemize}
-\item different degaussing schemes(changing sample rate)
+\section{Degaussing studies\label{sec:degaussing}}
+
+\subsection{Initial tests using the magnetometer near zero field}
+
+%different degaussing schemes(changing sample rate)
    
   
-Degaussing process is done in order to avoid the environmental perturbation and reduce any remnant field inside the four layer $\mu$ metal magnetic shield \cite{doi:10.1063/1.2713433}. The setting for degaussing has shown in Table \ref{table:degaussing-setting}.  A detailed analysis of NMOR signal by changing the degaussing parameter could give us some information about the goodness of degaussing procedure. Toward this end, a study has been carried out to determine  the dependency of the resonance width on the sample rate (see discussion on section \ref{sec:Degaussing}). 
+%Degaussing process is done in order to avoid the environmental
+%perturbation and reduce any remnant field inside the four layer $\mu$
+%metal magnetic shield \cite{doi:10.1063/1.2713433}. The setting for
+%degaussing has shown in Table \ref{table:degaussing-setting}.  A
+%detailed analysis of NMOR signal by changing the degaussing parameter
+%could give us some information about the goodness of degaussing
+%procedure. Toward this end, a study has been carried out to determine
+%the dependency of the resonance width on the sample rate (see
+%discussion on section \ref{sec:Degaussing}).
 
-In this study, data was acquired by sweeping the magnetic field near zero field. Before each measurement degaussing the innermost layer of shield has done. During this measurement only one degaussing parameter, sample rate, was varied in order to study the effect of degaussing parameter on magnetic field measurement.  
+We used the procedure described in Section~\ref{sec:zerofield}.  To
+remind the reading, the procedure is:
+\begin{itemize}
+\item Initiate degaussing in function generator.
+\item Once complete, ramp the rheostat to zero and open the switch.
+\item Pressing a button on the computer initiates the ramp of the
+  $z$-coil, which calibrates the optical rotation to field.
+\item Both the current in the $z$-coil and the differential photodiode
+  signal are monitored at all times using an oscillscope.
+\end{itemize}
 
-   \begin{figure}[h]
-\centering\includegraphics[width=0.7\linewidth]{figures/sample_rate}
-\caption{ Optical rotation vs. measured B-field   for different sample rate. The resonance width is narrower(0.38 nT) for higher sample rate(80000 sample/s) whereas the resonance width becomes broaden (0.49 nT) for lower sample rate.\label{fig:different sample rate} }
+%In this study, data was acquired by sweeping the magnetic field near zero field. Before each measurement degaussing the innermost layer of shield has done. During this measurement only one degaussing parameter, sample rate, was varied in order to study the effect of degaussing parameter on magnetic field measurement.  
+
+\begin{figure}%[h]
+  \centering\includegraphics[width=\linewidth]{figures/sample_rate}
+  \caption{ Optical rotation vs. measured B-field for different sample
+    rate.  {\bf What order were the data taken in?}  The numbers
+    written in the red circles indicate the distance in magnetic field
+    from the optical rotation minimum to the optical rotation maximum
+    $\Delta B$, as deduced from the fit parameter $a$.  The fit
+    parameter $B_0$ indicates the remnant field sensed by the
+    horizontal offset of the dispersive shape, reported in
+    nT.\label{fig:different-sample-rate}}
 \end{figure}
 
-Optical rotation as a function of magnetic field for different sample rate has shown in Fig~\ref{fig:different sample rate}. The resonance width $\Delta B$, the difference between two peak of the dispersive curve, changed for different sampling rate. It can be seen from Fig~\ref{fig:different sample rate} that, the resonance width is about 0.49 nT for sample rate 10000 sample/s and the resonance width is 0.38 nT for sample rate 80000 sample/s.
-\begin{figure}[h]
-\centering\includegraphics[width=0.6\linewidth]{figures/field_vs_sample_rate}
-\caption{Resonance width vs. sample rate. Resonance width decreases with increasing sample rate.When sample rate is 5000 sample/s the observed resonance width is 0.55 nT. On the other hand the resonance width is 0.38 for sample rate 80000 sample/s. \label{fig:resonance width vs. sample rate} }
-\end{figure}
+Optical rotation as a function of magnetic field for different sample
+rate has shown in Fig.~\ref{fig:different-sample-rate}.  Recall that
+the sample rate determines the rapidity with which the $5\times 10^5$
+individual samples of the linear degaussing envelope function are
+stepped through.  A sample rate of 10,000/s therefore represents a
+degaussing time of 50~s.  Since the carrier wave in all cases is
+10~Hz, it means that 500~cycles were used.  The sample rate of
+80,000/s represents a degaussing time of 6.25~s and 62.5 cycles.
 
-Fig~\ref{fig:resonance width vs. sample rate} shows the resonance width as a function of sample rate. Resonance width decreases with increasing sample rate.  It is obvious from the graph that the resonance width becomes narrower for larger sample rate.    
-   \item Ramp field up/down 
-  A study has conducted by making the magnetic field environment bad inside the shielding intentionally  by ramping the field from a lower value to higher value and observe any change in field drift. This study has done in 3-steps: 
+It should also be noted that the data were acquired in order of
+increasing sample rate, and that many additional degaussing sequences
+were conducted which are not shown in
+Fig.~\ref{fig:different-sample-rate}.
+
+We had expected that larger sample rate would manifest itself as a
+worse degaussing resulting possibly in worse magnetometer performance.q
+Paradoxically, the resonance width $\Delta B$, the difference between
+two peak of the dispersive curve, reduced as the sample rate was
+increased.  It can be seen from Fig~\ref{fig:different-sample-rate}
+that, the resonance width is about 0.49~nT for sample rate 10,000/s
+and the resonance width is 0.38~nT for sample rate 80,000/s.  This is
+likely an indication of a small change in the transverse fields or
+generally an improvement the homogeneity of the field.  This is
+consistent with the observation that the amplitude grows slightly with
+amplitude, which is another indication of the field quality, all other
+magnetometer settings being equal.
+
+The remnant field $B_0$ is an indication of the average longitudinal
+field (along the laser beam axis) and is within 20~pT of zero.  It
+increased with the sample rate from a starting negative value to a
+positive value.
+
+The conclusion of this study was that additional degaussing, as long
+as it has a reasonable number of cycles, tends not to affect the field
+or to improve slightly the homogeneity of the field.  Generally the
+field is always reduced below 20~pT.
+
+%\begin{figure}%[h]
+%\centering\includegraphics[width=0.6\linewidth]{figures/field_vs_sample_rate}
+%\caption{Resonance width vs.~sample rate. Resonance width decreases
+%  with increasing sample rate.  When the sample rate is 5000~samples/s
+%  the observed resonance width is 0.55~nT. On the other hand the
+%  resonance width is 0.38~nT for sample rate 80000
+%  sample/s. \label{fig:resonance width vs. sample rate} }
+%\end{figure}
+
+%Fig~\ref{fig:resonance width vs. sample rate} shows the resonance
+%width as a function of sample rate. Resonance width decreases with
+%increasing sample rate.  It is obvious from the graph that the
+%resonance width becomes narrower for larger sample rate.
+
+\subsection{Measurements at 0.2~$\mu$T and initial studies of the effect of degaussing on field stability}
+%Ramp field up/down 
+
+A study has conducted by making the magnetic field environment bad
+inside the shielding intentionally by ramping the field from a lower
+value to higher value and observe any change in field drift. This
+study has done in 3-steps:
   \begin{itemize}
       \item take field measurement for about 2000 s without performing any degaussing.
       \item Intentionally make the field environment bad and take field measurement for another 2000 s. No degaussing has done in this step also.
@@ -490,7 +567,8 @@ Fig~\ref{fig:resonance width vs. sample rate} shows the resonance width as a fun
     \label{fig:ramp updown}
 \end{figure}
    
-   \item degaussing second innermost shield effect in field drift.
+   \subsection{Effect of degaussing second innermost shield}
+   degaussing second innermost shield effect in field drift.
    
    After doing transverse field study (applying current to X and Y coil along with Bz coil) magnetic field environment was pretty unstable. Fig \ref{fig:without DG} shows about 50 pT drift in magnetic field in 4000 s. In order to cancel background field inside shield degaussing innermost layer of $\mu$ metal is done but it doesn't help to solve field drift problem. Then degaussing the 2nd innermost layer of shield is done which solve the field drift problem. Since the end cap of the innermost shield layer is not in use some background field leaked into 2nd layer which was causing the drift in field. So by degaussing the 2nd layer of shield canceled background field and field becomes so stable (Fig \ref{fig:with DG}). During this two measurement all other setting remain unchanged only the degaussing of the 2nd innermost shield has performed.
    
@@ -513,9 +591,9 @@ Fig~\ref{fig:resonance width vs. sample rate} shows the resonance width as a fun
     \caption{ Magnetic field recorded over 3 hours. (a) The stability of magnetic field without performing any degaussing. A downward field drift of about 45 pT  has observed in this case (b) magnetic field stability after degaussing the 2nd innermost layer of magnetic shielding. Only a couple pT field drift has observed in this case.}
     \label{fig:effect of DG}
 \end{figure}
-   \end{itemize}
+%   \end{itemize}
   
-   \section{Laser tuning} 
+  \section{Laser tuning} 
    \begin{itemize}
    \item effect of careful tuning\\
 	The main purpose of this study is to understand the importance of laser tuning on coherence life time of excited atoms. During the study optical pumping is done to polarize the rubidium atom and hence produce coherence state. When the laser light  is  exactly tuned to resonance with the atomic transition, the lifetime of coherence state becomes longer and the amplitude of resonance signal reaches its maximum. On the other hand coherence state decay  quickly when laser frequency detunes from atomic transition. In this case, the signal amplitude reduces due to frequency detuning.
