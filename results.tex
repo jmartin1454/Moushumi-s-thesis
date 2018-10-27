@@ -170,7 +170,8 @@ minimum lower and to the right.
 
 The goal of this optimization study was to reduce the cycle time
 without sacrificing too much precision in the single-FID frequency
-measurement.
+measurement.  If more measurements can be made more quickly, the
+precision of the magnetometer over time would be improved.
 
 \begin{figure}
 \centering
@@ -193,16 +194,8 @@ measurement.
     \label{fig:pump-time}
 \end{figure} 
 
-\begin{figure}%[h]
-  \centering\includegraphics[width=0.75\linewidth]{figures/pump_time}
-  \caption{Measured B-field vs. time for different pump times. The
-    longest pump time is 0.49~s while the shortest pump time is
-    0.1~s. No obvious dependence of pump time on measured magnetic
-    field has been observed during this
-    study.\label{fig:different-pump-time}}
-\end{figure}
 
-During this study the magnetometer is operated in FID mode at
+During this study the magnetometer was operated in FID mode at
 0.2~$\mu$T field.
 %A complete cycle of FID measurement consist of a
 %pump time followed by a probe time.  Pump time represents the time
@@ -211,35 +204,66 @@ During this study the magnetometer is operated in FID mode at
 %continued in order to generate an alignment and optical pumping for
 %long time does make any difference in measuring magnetic field
 %precisely or not.
-FID signal with 0.49~s pump time and 0.4~s probe time has shown in Fig
-\ref{fig:pump-long}. On the other hand, Fig \ref{fig:pump-short} shows
-the FID signal for 0.1 s pump time and 0.2 s probe time. In Fig
-\ref{fig:different-pump-time} the histogram of measured magnetic field
-over 300 s has shown for different pump time. The longer pump time is
-0.49 s and the shorter one is 0.1 s. It is obvious from the plot that
-pump time doesn't effect in field precision. However for our Rb
-magnetometry setup the shortest pump time 0.1 s because 0.1 s is the
-minimum time atoms need to get aligned for making a coherence state
-after interacting with laser beam. Since the amplitude of FID NMOR
-signal reach it's maximum while atoms are in coherence state. Thus It
-is easy to understand coherence state is ready or not by observing the
-signal amplitude. In Fig~\ref{fig:pump-long} the optical pumping is
-done for 0.49 s while signal amplitude reach its maximum over 0.1 s
-and after that signal amplitude remains unchanged till 0.49 s. In this
-case there is no point to pump more than 0.1 s. Same situation happens
-about probe time. If signal amplitude decays so quickly there is no
-point to set longer probe time. By optimizing pump and probe time we
-can speed up data acquisition system. After optimization for a single
-FID scan it only takes 0.35 s without losing any information. By using
-this faster data acquisition system it is possible to record multiple
-FID run with in a short period of time which is helpful to gather more
-information about magnetic field environment and helpful to achieve
-statistical precession.
+An example of our initial settings is shown in
+Fig.~\ref{fig:pump-long}.  The pump time is 0.49~s and the probe time
+is 0.4~s.  The amplitude of the differential photodiode signal is seen
+to saturate well within 0.1~s.  The coherence time, indicated by the
+decay time of the oscillating signal, is about 0.06~s.
+Fig.~\ref{fig:pump-short} shows a more optimized the FID signal for
+0.1~s pump time and 0.2~s probe time.
+
+\begin{figure}%[h]
+  \centering\includegraphics[width=0.75\linewidth]{figures/pump_time}
+  \caption{Histograms of measured B-field for different pump times,
+    {\bf for a measurement time of 300~s?}. {\bf (a) is a pump time of
+      XX (b) is a pump time of XX (c) is a pump time of XX (d) is a
+      pump time of XX.  The probe time in each case is XX.  The number
+      of measurements taken in each case is therefore (a) YY (b) YY
+      (c) YY (d) YY.  The standard deviation of each set of
+      measurements is indicated in the respective
+      figure.}\label{fig:different-pump-time}}
+\end{figure}
+
+In Fig.~\ref{fig:different-pump-time} a histogram of measured magnetic
+fields by making subsequent measurements over 300~s is shown for
+different pump times.  {\bf Which one is which? What is in the figure?
+  The longer pump time is 0.49 s and the shorter one is 0.1 s.  What
+  is the probe time.  How many measurements appear in each graph?}
+
+From Fig.~\ref{fig:different-pump-time}, the pump time, when varied
+over this limited range, does not strongly affect the precision of the
+individual FID measurements.  {\bf However, it allows us to take
+  measurements faster.  How much faster?  You need to say the times
+  and/or how many measurements.}
+  
+%  However for our Rb magnetometry setup the
+%shortest pump time 0.1 s because 0.1 s is the minimum time atoms need
+%to get aligned for making a coherence state after interacting with
+%laser beam. Since the amplitude of FID NMOR signal reach it's maximum
+%while atoms are in coherence state. Thus It is easy to understand
+%coherence state is ready or not by observing the signal amplitude.
+
+It is not surprising that the precision does not change much because
+the amplitude of the differential photodiode signal during the pump
+phase has saturated.
+
+%In Fig.~\ref{fig:pump-long} the optical pumping is done for 0.49 s
+%while signal amplitude reach its maximum over 0.1 s and after that
+%signal amplitude remains unchanged till 0.49 s. In this case there is
+%no point to pump more than 0.1 s. Same situation happens about probe
+%time. If signal amplitude decays so quickly there is no point to set
+%longer probe time. By optimizing pump and probe time we can speed up
+%data acquisition system. After optimization for a single FID scan it
+%only takes 0.35 s without losing any information. By using this faster
+%data acquisition system it is possible to record multiple FID run with
+%in a short period of time which is helpful to gather more information
+%about magnetic field environment and helpful to achieve statistical
+%precession.
 
 
 \section{Current with existing power supply}
-   \begin{itemize}
-   \item Analysis of current stability.
+\begin{itemize}
+\item Analysis of current stability.
    
  An Agilent B2962A power supply was used to run the coil (z-coil) which produce magnetic field inside the shield. In order to develop a highly sensitive magnetometer, it is very important to make use of a highly stable power supply. The idea was to determine the current drifts of the power supplies, mainly based on the fact that the given current supply actually acts as a voltage supply with the output voltage transformed into an output current by a resistor which is sensitive to external influences such as temperature.
   \begin{figure}[h]
