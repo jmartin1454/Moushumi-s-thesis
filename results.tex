@@ -532,41 +532,72 @@ field is always reduced below 20~pT.
 \subsection{Measurements at 0.2~$\mu$T and initial studies of the effect of degaussing on field stability}
 %Ramp field up/down 
 
-A study has conducted by making the magnetic field environment bad
-inside the shielding intentionally by ramping the field from a lower
-value to higher value and observe any change in field drift. This
-study has done in 3-steps:
-  \begin{itemize}
-      \item take field measurement for about 2000 s without performing any degaussing.
-      \item Intentionally make the field environment bad and take field measurement for another 2000 s. No degaussing has done in this step also.
-      \item perform degaussing of the innermost shield and again measured magnetic field for 2000 s.
-  \end{itemize}
-  In the 1st part of this study the magnetometer has been operated in FID mode at 0.2 $\mu$T field. The recorded magnetic field over 2200 s has been showed in Fig \ref{fig:ramp up}. It can be seen from the figure the magnetic field increase linearly for first 300 s then showed a decrease in field. The field was pretty stable between 600 s and 1800 s and after that the field showed a rapid increase. The overall field change is about 15 pT during the measurement. Data was acquired by ramping $B_z$  from  0.2 $\mu$T to 10 $\mu$T then again set it to 0.2 $\mu$T and collect FID signal. By doing this field ramping we intentionally perturb the magnetic field environment inside the shield. After this field ramping the long term field measurement has been conducted for another 2200 s. In this case, the field showed a downward drift of about 35 pT. Thus field ramping has been changed the magnetic field environment inside the magnetic shielding.
-   \begin{figure}
+The previous results implied that additional (even poor) degaussing
+had little impact if the previous degaussing was done adequately.  To
+address this, we began to do studies where the internal $z$-coil field
+was purposely ramped to a large value, then reset to a low value for
+measurements at non-zero field.
+
+%A study has conducted by making the magnetic field environment bad
+%inside the shielding intentionally by ramping the field from a lower
+%value to higher value and observe any change in field drift. This
+%study has done in 3-steps:
+%  \begin{itemize}
+%      \item take field measurement for about 2000 s without performing any degaussing.
+%      \item Intentionally make the field environment bad and take field measurement for another 2000 s. No degaussing has done in this step also.
+%      \item perform degaussing of the innermost shield and again measured magnetic field for 2000 s.
+%  \end{itemize}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.425\textwidth}
     \centering
- 
-    \begin{subfigure}[b]{0.425\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/ramp_1}
-        \caption{}
-        \label{fig:ramp up}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.42\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/ramp_2}
-        \caption{}
-        \label{fig:ramp down}
-    \end{subfigure}
-     \begin{subfigure}[b]{0.42\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/ramp3}
-        \caption{}
-        \label{fig:degauss}
-    \end{subfigure}
-    \caption{ FID signal at $B_z=0.2 \mu$T magnetic field.(a) no degaussing (b) Ramp $B_z$  from  0.2 $\mu$T to 10 $\mu$T then again set it to 0.2 $\mu$T and collect FID signal(no degaussing). (c) study magnetic field stability after degaussing.}
-    \label{fig:ramp updown}
+    \includegraphics[width=\textwidth]{figures/ramp_1}
+    \caption{}
+    \label{fig:ramp-up}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.42\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/ramp_2}
+    \caption{}
+    \label{fig:ramp-down}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.42\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/ramp3}
+    \caption{}
+    \label{fig:degauss}
+  \end{subfigure}
+  \caption{{\bf Are these measurements conducted in time order from
+      (a) to (b) to (c)?}  FID signal at $B_z=0.2~\mu$T magnetic
+    field.(a) no degaussing (b) Ramp $B_z$ from 0.2~$\mu$T to~10
+    $\mu$T then again set it to 0.2~$\mu$T and collect FID signal (no
+    degaussing). (c) study magnetic field stability after degaussing.}
+  \label{fig:ramp-updown}
 \end{figure}
+
+Fig.~\ref{fig:ramp-updown} shows an example of such a study.  In all
+three cases shown in Fig.~\ref{fig:ramp-updown}, the magnetometer
+settings are similar.  Since the field changed in each measurement,
+the magnetometer was retuned each time, principally the pump frequency
+and the lock-in amplifier internal reference frequency.  {\bf What are
+  the magnetometer settings?}
+
+In the 1st part of this study the magnetometer was operated in FID
+mode at 0.2 $\mu$T field. The recorded magnetic field over 2200 s has
+been showed in Fig \ref{fig:ramp up}. It can be seen from the figure
+the magnetic field increase linearly for first 300 s then showed a
+decrease in field. The field was pretty stable between 600 s and 1800
+s and after that the field showed a rapid increase. The overall field
+change is about 15 pT during the measurement. Data was acquired by
+ramping $B_z$ from 0.2 $\mu$T to 10 $\mu$T then again set it to 0.2
+$\mu$T and collect FID signal. By doing this field ramping we
+intentionally perturb the magnetic field environment inside the
+shield. After this field ramping the long term field measurement has
+been conducted for another 2200 s. In this case, the field showed a
+downward drift of about 35 pT. Thus field ramping has been changed the
+magnetic field environment inside the magnetic shielding.
    
    \subsection{Effect of degaussing second innermost shield}
    degaussing second innermost shield effect in field drift.
