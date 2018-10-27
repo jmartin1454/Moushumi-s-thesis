@@ -277,8 +277,8 @@ current to the $z$-coil.
 \begin{figure}%[h]
 \centering
 \includegraphics[width=0.6\linewidth]{figures/current}
-\caption{Recorded current over 10000~s using Agilent B2962A power
-  source {\bf How is this measured?  What is recorded by the power
+\caption{Recorded current over 10000~s using Keithley multimeter %Agilent B2962A power source
+{\bf How is this measured?  What is recorded by the power
     source?}.\label{fig:current} }
 \end{figure}
 
@@ -426,7 +426,7 @@ has taken place. In order to understand the correlation between
 temperature change and field change, the measured field
 vs. temperature has shown in Fig.~\ref{fig:field_vs_temp}. {\bf What
   was the data acquisition system for each device?  How were the data
-  synchronized?% For room temperature measurement a precision themometer was connec Agilent 34410A/11A 6 ½ Digit Multimeter. A python script is used to configures the multimeter for a 2-wire RTD measurement, triggers the meter, and then transfers the reading to the instrument output buffer. .
+  synchronized?% For room temperature measurement a precision themometer was connected to a Agilent 34410A/11A 6 ½ Digit Multimeter. A python script is used to configures the multimeter for a 2-wire RTD measurement, triggers the meter, and then transfers the reading to the computer via instrument output buffer. .
   }  It is clear from the graph that there is no obvious
 of field drift dependency on temperature.
   
@@ -469,7 +469,8 @@ remind the reading, the procedure is:
 \begin{figure}%[h]
   \centering\includegraphics[width=\linewidth]{figures/sample_rate}
   \caption{ Optical rotation vs. measured B-field for different sample
-    rate.  {\bf What order were the data taken in?}  The numbers
+    rate.  {\bf What order were the data taken in?% smaller sample rate to higher sample rate
+    }  The numbers
     written in the red circles indicate the distance in magnetic field
     from the optical rotation minimum to the optical rotation maximum
     $\Delta B$, as deduced from the fit parameter $a$.  The fit
@@ -649,9 +650,9 @@ magnetic field environment inside the magnetic shielding.
     \label{fig:effect of tuning}
 \end{figure}
 	
-	Fig~ \ref{fig:effect of tuning} shows the effect of laser tuning on coherence lifetime. For proper laser tuning the observed coherence time is 68 ms (Fig \ref{fig:good tuning}) whereas for bad tuning coherence time reduces to 59 ms (Fig \ref{fig:bad tuning}). On a fundamental level, the magnetometer actually measures the energy splitting between the Zeeman sublevels of the atomic ground state due to the magnetic field. The linewidth of such a spectroscopic measurement is given by the coherence lifetime $T_2$ of the atomic spins:
+	Fig~ \ref{fig:effect of tuning} shows the effect of laser tuning on coherence lifetime. During this measurement the AOM frequency was set to 2.068~kHz and Lock-in frequency was 1.950~kHz.  For proper laser tuning the observed coherence time is 68 ms (Fig \ref{fig:good tuning}) whereas for bad tuning coherence time reduces to 59 ms (Fig \ref{fig:bad tuning}). On a fundamental level, the magnetometer actually measures the energy splitting between the Zeeman sublevels of the atomic ground state due to the magnetic field. The linewidth of such a spectroscopic measurement is given by the coherence lifetime $T_2$ of the atomic spins \cite{bib:Seltzer_thesis}
 \begin{equation}
- ΔB = \Delta\omega/\gamma  = 1/γ T_2
+ \Delta B = \Delta\omega/\gamma  = 1/γ T_2
 \end{equation}
 
 The development of a sensitive magnetometer depends on achieving the maximum possible polarization lifetime.  For very short coherence time atomic spin depolarize quickly which limits the sensitivity of the magnetometer.
