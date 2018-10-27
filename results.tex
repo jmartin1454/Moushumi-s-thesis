@@ -167,31 +167,77 @@ In terms of the Allan deviation, it means trying to move the Allan
 minimum lower and to the right.
 
 \section{Optimization of cycle time} 
-   \begin{figure}
-    \centering
- 
-    \begin{subfigure}[b]{0.46\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/Capture}
-        \caption{}
-        \label{fig:pump long}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/FID_optimized.png}
-        \caption{}
-        \label{fig:pump short}
-    \end{subfigure}
-    \caption{(a) FID signal for pump time~ 0.49 s and probe time~ 0.4 s. (b) FID signal for pump time  0.1 s and probe time ~0.2 s. Both measurement were conducted at $0.2~\mu$T magnetic field.}
-    \label{fig:pump time}
+
+The goal of this optimization study was to reduce the cycle time
+without sacrificing too much precision in the single-FID frequency
+measurement.
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.46\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{figures/Capture}
+  \caption{}
+  \label{fig:pump-long}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{figures/FID_optimized.png}
+  \caption{}
+  \label{fig:pump-short}
+\end{subfigure}
+\caption{(a) FID signal for pump time 0.49~s and probe time 0.4~s. (b)
+  FID signal for pump time 0.1~s and probe time 0.2~s.  Both
+  measurements were conducted at $0.2~\mu$T magnetic field.}
+    \label{fig:pump-time}
 \end{figure} 
-   \begin{figure}[h]
-\centering\includegraphics[width=0.75\linewidth]{figures/pump_time}
-\caption{Measured B-field vs. time   for different pump time. The longest pump time is 0.49 s while the shortest pump time is 0.1 s. No obvious dependency of pump time on  measured magnetic field has been observed during this study.\label{fig:different pump time}}
+
+\begin{figure}%[h]
+  \centering\includegraphics[width=0.75\linewidth]{figures/pump_time}
+  \caption{Measured B-field vs. time for different pump times. The
+    longest pump time is 0.49~s while the shortest pump time is
+    0.1~s. No obvious dependence of pump time on measured magnetic
+    field has been observed during this
+    study.\label{fig:different-pump-time}}
 \end{figure}
-During this study the magnetometer is operated in FID mode at 0.2 $ \mu$T field.  A complete cycle of FID measurement consist of pump and probe time. Pump time represents the time atoms take to generate a polarized ground state. In this study we were trying to study how long the optical pumping of Rb atom should have continued in order to generate an alignment and optical pumping for long time does make any difference in measuring magnetic field precisely or not. FID signal with 0.49 s pump time and 0.4 sec probe time has shown in Fig \ref{fig:pump long}. On the other hand, Fig \ref{fig:pump short} shows  the FID signal for 0.1 s pump time and 0.2 s probe time. In Fig \ref{fig:different pump time} the histogram of measured magnetic field over 300 s has shown for different pump time. The longer pump time is 0.49 s   and the shorter one is 0.1 s. It is obvious from the plot that pump time doesn't effect in field precision. However for our Rb magnetometry setup the shortest pump time  0.1 s because 0.1 s is the minimum time atoms need to get aligned for making a coherence state after interacting with laser beam. Since the amplitude of FID NMOR signal reach it's maximum while atoms are in coherence state. Thus It is easy to understand coherence state is ready or not by observing the signal amplitude. In Fig~\ref{fig:pump long} the optical pumping is done for 0.49 s while signal amplitude reach its maximum over 0.1 s and after that signal amplitude remains unchanged till 0.49 s. In this case there is no point to pump more than 0.1 s. Same situation happens about probe time. If signal amplitude decays so quickly there is no point to set longer probe time. By optimizing pump and probe time we can speed up data acquisition system. After optimization for a single FID scan it only takes 0.35 s  without losing any information. By using this faster data acquisition system it is possible to record multiple FID run with in a short period of time which is helpful to gather more information about magnetic field environment and helpful to achieve statistical precession.
-   \section{current with existing power supply}
+
+During this study the magnetometer is operated in FID mode at
+0.2~$\mu$T field.
+%A complete cycle of FID measurement consist of a
+%pump time followed by a probe time.  Pump time represents the time
+%atoms take to generate a polarized ground state. In this study we were
+%trying to study how long the optical pumping of Rb atom should have
+%continued in order to generate an alignment and optical pumping for
+%long time does make any difference in measuring magnetic field
+%precisely or not.
+FID signal with 0.49~s pump time and 0.4~s probe time has shown in Fig
+\ref{fig:pump-long}. On the other hand, Fig \ref{fig:pump-short} shows
+the FID signal for 0.1 s pump time and 0.2 s probe time. In Fig
+\ref{fig:different-pump-time} the histogram of measured magnetic field
+over 300 s has shown for different pump time. The longer pump time is
+0.49 s and the shorter one is 0.1 s. It is obvious from the plot that
+pump time doesn't effect in field precision. However for our Rb
+magnetometry setup the shortest pump time 0.1 s because 0.1 s is the
+minimum time atoms need to get aligned for making a coherence state
+after interacting with laser beam. Since the amplitude of FID NMOR
+signal reach it's maximum while atoms are in coherence state. Thus It
+is easy to understand coherence state is ready or not by observing the
+signal amplitude. In Fig~\ref{fig:pump-long} the optical pumping is
+done for 0.49 s while signal amplitude reach its maximum over 0.1 s
+and after that signal amplitude remains unchanged till 0.49 s. In this
+case there is no point to pump more than 0.1 s. Same situation happens
+about probe time. If signal amplitude decays so quickly there is no
+point to set longer probe time. By optimizing pump and probe time we
+can speed up data acquisition system. After optimization for a single
+FID scan it only takes 0.35 s without losing any information. By using
+this faster data acquisition system it is possible to record multiple
+FID run with in a short period of time which is helpful to gather more
+information about magnetic field environment and helpful to achieve
+statistical precession.
+
+
+\section{Current with existing power supply}
    \begin{itemize}
    \item Analysis of current stability.
    
