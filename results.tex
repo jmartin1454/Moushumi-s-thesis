@@ -88,7 +88,7 @@ summarized in Chapter~\ref{ch:conclusion}.
 
 
 
-\section{Long-term FID measurements}
+\section{Long-term FID measurements\label{sec:long-term FID measurement}}
 
 A forced-oscillation scan or an acquisition of a single FID give a
 measurement of the magnetic field within a relatively short time
@@ -573,7 +573,8 @@ measurements at non-zero field.
     \label{fig:degauss}
   \end{subfigure}
   \caption{{\bf Are these measurements conducted in time order from
-      (a) to (b) to (c)?}  FID signal at $B_z=0.2~\mu$T magnetic
+      (a) to (b) to (c)?}% yes 
+      FID signal at $B_z=0.2~\mu$T magnetic
     field.(a) no degaussing (b) Ramp $B_z$ from 0.2~$\mu$T to~10
     $\mu$T then again set it to 0.2~$\mu$T and collect FID signal (no
     degaussing). (c) study magnetic field stability after degaussing.}
@@ -585,9 +586,11 @@ three cases shown in Fig.~\ref{fig:ramp-updown}, the magnetometer
 settings are similar.  Since the field changed in each measurement,
 the magnetometer was retuned each time, principally the pump frequency
 and the lock-in amplifier internal reference frequency.  {\bf What are
-  the magnetometer settings?
- % AOM frequency 2.068 kHz and 
-  }
+  the magnetometer settings?}
+ % AOM frequency 2064 Hz and lock-in frequency 1950.2 Hz (fig:5.12(a))
+ % AOM frequency 2059 Hz and lock-in frequency 1950.2 Hz (fig:5.12(b))
+ % AOM frequency 2078 Hz and lock-in frequency 1950.2 Hz (fig:5.12(c))
+  
 
 In the 1st part of this study the magnetometer was operated in FID
 mode at 0.2 $\mu$T field. The recorded magnetic field over 2200 s has
@@ -605,9 +608,9 @@ downward drift of about 35 pT. Thus field ramping has been changed the
 magnetic field environment inside the magnetic shielding.
    
    \subsection{Effect of degaussing second innermost shield}
-   degaussing second innermost shield effect in field drift.
+ 
    
-   After doing transverse field study (applying current to X and Y coil along with Bz coil) magnetic field environment was pretty unstable. Fig \ref{fig:without DG} shows about 50 pT drift in magnetic field in 4000 s. In order to cancel background field inside shield degaussing innermost layer of $\mu$ metal is done but it doesn't help to solve field drift problem. Then degaussing the 2nd innermost layer of shield is done which solve the field drift problem. Since the end cap of the innermost shield layer is not in use some background field leaked into 2nd layer which was causing the drift in field. So by degaussing the 2nd layer of shield canceled background field and field becomes so stable (Fig \ref{fig:with DG}). During this two measurement all other setting remain unchanged only the degaussing of the 2nd innermost shield has performed.
+    The usual field was about 15 pT over 3000~s (discussed in sec \ref{sec:long-term FID measurement}) although  the reason behind field drifting problem was unknown.  After doing transverse field study (applying current to X and Y coil along with Bz coil) magnetic field environment became more unstable.  Fig \ref{fig:without DG} shows about 50 pT drift in magnetic field in 4000 s. In order to cancel background field inside shield degaussing innermost layer of $\mu$ metal is done but it doesn't help to solve field drift problem. During this study the lock-in reference frequency is set to 1938.5~Hz and lock-in time constant is 300$ \mu$s. Then degaussing the 2nd innermost layer of shield is done which solve the field drift problem. Since the end cap of the innermost shield layer is not in use some background field leaked into 2nd layer which was causing the drift in field. So by degaussing the 2nd layer of shield canceled background field and field becomes so stable (Fig \ref{fig:with DG}). During this two measurement all other setting remain unchanged only the degaussing of the 2nd innermost shield has performed.
    
   \begin{figure}
     \centering
@@ -625,7 +628,7 @@ magnetic field environment inside the magnetic shielding.
         \caption{}
         \label{fig:with DG}
     \end{subfigure}
-    \caption{ Magnetic field recorded over 3 hours. (a) The stability of magnetic field without performing any degaussing. A downward field drift of about 45 pT  has observed in this case (b) magnetic field stability after degaussing the 2nd innermost layer of magnetic shielding. Only a couple pT field drift has observed in this case.}
+    \caption{ Magnetic field recorded over 3 hours. (a) The stability of magnetic field without performing any degaussing. A downward field drift of about 45 pT  has observed in this case (b) magnetic field stability after degaussing the 2nd innermost layer of magnetic shielding. Only a couple pT field drift has observed in this case. During this study the signal amplitude was pretty low($\sim$)3V} because of the low pump beam power(I think) or ther poor settings. As a result the precession width becomes wider(10~pT) while the usual is about 5~p 
     \label{fig:effect of DG}
 \end{figure}
 %   \end{itemize}
