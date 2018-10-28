@@ -88,7 +88,7 @@ summarized in Chapter~\ref{ch:conclusion}.
 
 
 
-\section{Long-term FID measurements\label{sec:long-term FID measurement}}
+\section{Long-term FID measurements\label{sec:long-term}}
 
 A forced-oscillation scan or an acquisition of a single FID give a
 measurement of the magnetic field within a relatively short time
@@ -458,10 +458,12 @@ of field drift dependency on temperature.
 We used the procedure described in Section~\ref{sec:zerofield}.  To
 remind the reading, the procedure is:
 \begin{itemize}
-\item Initiate degaussing in function generator.
+\item Initiate the degaussing sequence in one channel of the function
+  generator.
 \item Once complete, ramp the rheostat to zero and open the switch.
 \item Pressing a button on the computer initiates the ramp of the
-  $z$-coil, which calibrates the optical rotation to field.
+  $z$-coil on the second channel of the function generator, which
+  calibrates the optical rotation to field.
 \item Both the current in the $z$-coil and the differential photodiode
   signal are monitored at all times using an oscillscope.
 \end{itemize}
@@ -532,7 +534,7 @@ field is always reduced below 20~pT.
 %increasing sample rate.  It is obvious from the graph that the
 %resonance width becomes narrower for larger sample rate.
 
-\subsection{Measurements at 0.2~$\mu$T and initial studies of the effect of degaussing on field stability}
+\subsection{Measurements at 0.2~$\mu$T and initial studies of the effect of degaussing on field stability\label{sec:three-degauss}}
 %Ramp field up/down 
 
 The previous results implied that additional (even poor) degaussing
@@ -572,12 +574,11 @@ measurements at non-zero field.
     \caption{}
     \label{fig:degauss}
   \end{subfigure}
-  \caption{{\bf Are these measurements conducted in time order from
-      (a) to (b) to (c)?}% yes 
-      FID signal at $B_z=0.2~\mu$T magnetic
-    field.(a) no degaussing (b) Ramp $B_z$ from 0.2~$\mu$T to~10
-    $\mu$T then again set it to 0.2~$\mu$T and collect FID signal (no
-    degaussing). (c) study magnetic field stability after degaussing.}
+  \caption{Measurements conducted in time order from (a) to (b) to (c)
+    under different degaussing conditions at $B_z=0.2~\mu$T magnetic
+    field: (a) no degaussing, (b) ramp $B_z$ from 0.2~$\mu$T to
+    10~$\mu$T then again set it to 0.2~$\mu$T and collect FID signal
+    before degaussing, and (c) after degaussing.}
   \label{fig:ramp-updown}
 \end{figure}
 
@@ -593,87 +594,204 @@ and the lock-in amplifier internal reference frequency.  {\bf What are
   
 
 In the 1st part of this study the magnetometer was operated in FID
-mode at 0.2 $\mu$T field. The recorded magnetic field over 2200 s has
-been showed in Fig \ref{fig:ramp up}. It can be seen from the figure
-the magnetic field increase linearly for first 300 s then showed a
-decrease in field. The field was pretty stable between 600 s and 1800
-s and after that the field showed a rapid increase. The overall field
-change is about 15 pT during the measurement. Data was acquired by
-ramping $B_z$ from 0.2 $\mu$T to 10 $\mu$T then again set it to 0.2
-$\mu$T and collect FID signal. By doing this field ramping we
-intentionally perturb the magnetic field environment inside the
-shield. After this field ramping the long term field measurement has
-been conducted for another 2200 s. In this case, the field showed a
-downward drift of about 35 pT. Thus field ramping has been changed the
-magnetic field environment inside the magnetic shielding.
-   
-   \subsection{Effect of degaussing second innermost shield}
+mode at 0.2~$\mu$T field, {\bf at a point in time when the
+  magnetometer had been operated in a quiet environment for several
+  days?}. The recorded magnetic field measurement over a 2200~s period
+in this condition is shown in Fig.~\ref{fig:ramp-up}.  It can be seen
+from Fig.~\ref{fig:ramp-up} that the magnetic field increased linearly
+for first 300~s then showed a decrease in field. The field was pretty
+stable between 600~s and 1800~s and after that the field showed an
+increase. The overall field change is about 15 pT during the
+measurement.  In Fig.~\ref{fig:ramp-down}, data was acquired by
+ramping $B_z$ from 0.2~$\mu$T to 10~$\mu$T then down again to
+0.2~$\mu$T and collect FID signal.  Since the $z$-coil is coupled to
+the inner shield system, this should magnetize the shields.  By doing
+this field ramping we intentionally perturb the magnetic field
+environment inside the shield.  After this field ramping the long term
+field measurement has been conducted for another 2200 s. In this case,
+the field showed a downward drift of about 35~pT.  Thus field ramping
+did seem to change the magnetic environment inside the magnetic
+shielding.  Finally, for Fig.~\ref{fig:degauss}, the innermost
+magnetic shield was degaussed {\bf with what sample rate, etc.?  What
+  procedure was followed?}.  While this changed the direction of the
+drift, it did not change the magnitude of the drift which was again
+35~pT over 2200~s.  {\bf Is it true that no amount of degaussing of
+  the innermost shield changed this significantly?}
+
+During this time we began to develop a hypothesis about magnetic
+couplings inside the magnetic shielding.  We realized that the
+$z$-coil, which had been designed to be coupled to the innermost
+shield, was now more strongly coupled to the second innermost shield.
+This is because most of the flux in the solenoidal winding exits the
+end of the innermost shield, whose endcaps have been removed in order
+to accommodate its degaussing coil.
+
+
+\subsection{Effect of degaussing second innermost and two other outer shields}
  
-   
-    The usual field was about 15 pT over 3000~s (discussed in sec \ref{sec:long-term FID measurement}) although  the reason behind field drifting problem was unknown.  After doing transverse field study (applying current to X and Y coil along with Bz coil) magnetic field environment became more unstable.  Fig \ref{fig:without DG} shows about 50 pT drift in magnetic field in 4000 s. In order to cancel background field inside shield degaussing innermost layer of $\mu$ metal is done but it doesn't help to solve field drift problem. During this study the lock-in reference frequency is set to 1938.5~Hz and lock-in time constant is 300$ \mu$s. Then degaussing the 2nd innermost layer of shield is done which solve the field drift problem. Since the end cap of the innermost shield layer is not in use some background field leaked into 2nd layer which was causing the drift in field. So by degaussing the 2nd layer of shield canceled background field and field becomes so stable (Fig \ref{fig:with DG}). During this two measurement all other setting remain unchanged only the degaussing of the 2nd innermost shield has performed.
-   
-  \begin{figure}
+If the system had been kept at low field for several days, the usual
+field drift was about 15 pT over 3000~s (as discussed in
+Sections~\ref{sec:three-degauss} and~\ref{sec:long-term}).
+After doing a transverse field study (applying current to $x$- and
+$y$-coils along with $z$-coil, like that reported in
+Sections~\ref{sec:ch4-transverse} and~\ref{sec:ch5-transverse}) the
+magnetic field environment became even more unstable.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
     \centering
- 
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/before_degaussing}
-        \caption{}
-        \label{fig:without DG}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/after_degaussing}
-        \caption{}
-        \label{fig:with DG}
-    \end{subfigure}
-    \caption{ Magnetic field recorded over 3 hours. (a) The stability of magnetic field without performing any degaussing. A downward field drift of about 45 pT  has observed in this case (b) magnetic field stability after degaussing the 2nd innermost layer of magnetic shielding. Only a couple pT field drift has observed in this case. During this study the signal amplitude was pretty low($\sim$)3V} because of the low pump beam power(I think) or ther poor settings. As a result the precession width becomes wider(10~pT) while the usual is about 5~p 
+    \includegraphics[width=\textwidth]{figures/before_degaussing}
+    \caption{}
+    \label{fig:without DG}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/after_degaussing}
+    \caption{}
+    \label{fig:with DG}
+  \end{subfigure}
+  \caption{Magnetic field recorded over 3 hours. (a) The stability of
+    magnetic field without performing any degaussing. A downward field
+    drift of about 45 pT was observed in this case. (b) Magnetic field
+    stability after degaussing the 2nd innermost layer of magnetic
+    shielding. Only a couple pT field drift has observed in this
+    case. During this study the signal amplitude was pretty
+    low($\sim$)3V} because of the low pump beam power(I think) or ther
+  poor settings. As a result the precession width becomes wider(10~pT)
+  while the usual is about 5~p
     \label{fig:effect of DG}
 \end{figure}
+
+Fig.~\ref{fig:without-DG} shows about 50~pT drift in magnetic field in
+4000~s.  In order to cancel background field inside shield degaussing
+innermost layer of mu-metal is done but it doesn't help to solve field
+drift problem {\bf where is this data?}. During this study {\bf which
+  study? the one ``without performing any degaussing'' as written in
+  the figure caption, or after degaussing the innermost shield?}  the
+lock-in reference frequency is set to 1938.5~Hz and lock-in time
+constant is 300~$\mu$s.  Then degaussing the 2nd innermost layer of
+shield is done which solve the field drift problem {\bf where is this
+  data?  Is this (b)?}.
+
+Since the end cap of the innermost shield layer is not in use some
+background field leaked into 2nd layer which was causing the drift in
+field. So by degaussing the 2nd layer of shield canceled background
+field and field becomes so stable (Fig.~\ref{fig:with-DG}). During this
+two measurement all other setting remain unchanged only the degaussing
+of the 2nd innermost shield has performed.
+   
 %   \end{itemize}
   
-  \section{Laser tuning} 
-   \begin{itemize}
-   \item effect of careful tuning\\
-	The main purpose of this study is to understand the importance of laser tuning on coherence life time of excited atoms. During the study optical pumping is done to polarize the rubidium atom and hence produce coherence state. When the laser light  is  exactly tuned to resonance with the atomic transition, the lifetime of coherence state becomes longer and the amplitude of resonance signal reaches its maximum. On the other hand coherence state decay  quickly when laser frequency detunes from atomic transition. In this case, the signal amplitude reduces due to frequency detuning.
-	 \begin{figure}
+\section{Laser tuning} 
+\begin{itemize}
+\item effect of careful tuning\\
+
+The main purpose of this study is to understand the importance of
+laser tuning on coherence life time of excited atoms. During the study
+optical pumping is done to polarize the rubidium atom and hence
+produce coherence state. When the laser light is exactly tuned to
+resonance with the atomic transition, the lifetime of coherence state
+becomes longer and the amplitude of resonance signal reaches its
+maximum. On the other hand coherence state decay quickly when laser
+frequency detunes from atomic transition. In this case, the signal
+amplitude reduces due to frequency detuning.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
     \centering
- 
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/perfect_tuning}
-        \caption{}
-        \label{fig:good tuning}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/bad_tuning}
-        \caption{}
-        \label{fig:bad tuning}
-    \end{subfigure}
-    \caption{(a) Recorded FID signal while laser is perfectly tuned to atomic transition frequency. (b) FID resonance signal when laser is slightly detuned from transition frequency.}
-    \label{fig:effect of tuning}
+    \includegraphics[width=\textwidth]{figures/perfect_tuning}
+    \caption{}
+    \label{fig:good tuning}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/bad_tuning}
+    \caption{}
+    \label{fig:bad tuning}
+  \end{subfigure}
+  \caption{(a) Recorded FID signal while laser is perfectly tuned to
+    atomic transition frequency. (b) FID resonance signal when laser
+    is slightly {\bf quantify} detuned from transition frequency.}
+  \label{fig:effect of tuning}
 \end{figure}
 	
-	Fig~ \ref{fig:effect of tuning} shows the effect of laser tuning on coherence lifetime. During this measurement the AOM frequency was set to 2.068~kHz and Lock-in frequency was 1.950~kHz.  For proper laser tuning the observed coherence time is 68 ms (Fig \ref{fig:good tuning}) whereas for bad tuning coherence time reduces to 59 ms (Fig \ref{fig:bad tuning}). On a fundamental level, the magnetometer actually measures the energy splitting between the Zeeman sublevels of the atomic ground state due to the magnetic field. The linewidth of such a spectroscopic measurement is given by the coherence lifetime $T_2$ of the atomic spins \cite{bib:Seltzer_thesis}
+Fig~ \ref{fig:effect of tuning} shows the effect of laser tuning on
+coherence lifetime. During this measurement the AOM frequency was set
+to 2.068~kHz and Lock-in frequency was 1.950~kHz.  For proper {\bf
+  what does ``proper'' mean?  How proper is proper?}  laser tuning the
+observed coherence time is 68 ms (Fig \ref{fig:good tuning}) whereas
+for bad tuning {\bf what does ``bad'' mean in this case?  How bad is
+  bad?}  coherence time reduces to 59 ms (Fig \ref{fig:bad
+  tuning}). On a fundamental level, the magnetometer actually measures
+the energy splitting between the Zeeman sublevels of the atomic ground
+state due to the magnetic field. The linewidth of such a spectroscopic
+measurement is given by the coherence lifetime $T_2$ of the atomic
+spins \cite{bib:Seltzer_thesis}
 \begin{equation}
  \Delta B = \Delta\omega/\gamma  = 1/γ T_2
 \end{equation}
 
-The development of a sensitive magnetometer depends on achieving the maximum possible polarization lifetime.  For very short coherence time atomic spin depolarize quickly which limits the sensitivity of the magnetometer.
-Since  longer coherence time and larger signal amplitude indicate better frequency precession and therefore precise field measurement it is very important to make sure the laser tuning has done carefully.
-  
-   \item problem with drift of tune
-      \begin{figure}[h]
-\centering\includegraphics[width=0.6\linewidth]{figures/field_drift}
-\caption{Magnetic field recorded over 12 hours.In this measurement the observed field drift is about 120 pT.\label{digilock field drift}}
-\end{figure}
-   For studying long term stability data was taken for about 12 hours. Laser was locked to D1 transition line of Rb using Digilock laser locking software. Fig \ref{fig:effect of tuning} shows 120~pT observed drift in magnetic field over 12 hours. Although DAVLL was in use laser frequency was not locked for 12 hours. As a result laser tuning moved due to mode hoping which causes the drift. The current laser locking system only works perfectly for maximum 4 hours. The possible reason for this mode hoping is the Polarizing beam splitting cube of our DAVLL system \cite{principles}. The disadvantage of using this type of PBS is that they show flaky optical behavior over longer times.
+The development of a sensitive magnetometer depends on achieving the
+maximum possible polarization lifetime.  For very short coherence time
+atomic spin depolarize quickly which limits the sensitivity of the
+magnetometer.  Since longer coherence time and larger signal amplitude
+indicate better frequency precession and therefore precise field
+measurement it is very important to make sure the laser tuning has
+done carefully.
 
+{\bf I do not understand the above item at all.  There is no
+  indication of what good or bad means.  There is no indication of
+  even the scale of the detuning.  I have no idea how to learn
+  anything from this section and I don't understand the point of it.}
+
+
+\item problem with drift of tune {\bf this will turn out to be a bad
+  title for this bullet}\\
+  \begin{figure}%[h]
+    \centering\includegraphics[width=0.6\linewidth]{figures/field_drift}
+    \caption{Magnetic field recorded over 12~hours.  In this
+      measurement the observed field drift is
+      about~120~pT.\label{digilock-drift}}
+  \end{figure}
+  For studying long term stability data was taken for about
+  12~hours. Laser was locked using the DAVLL system described in
+  Section~\ref{sec:davll}. Fig \ref{fig:digilock-drift} shows 120~pT
+  observed drift in magnetic field over 12~hours. Although DAVLL was
+  in use laser frequency was not locked for 12~hours {\bf it was
+    locked.  It's just that the lock-point was changing, we think.
+    What you mean is that the frequency was drifting.  The reason we
+    {\it think} or {\it suspect} that it was drifting is because the
+    error bar is increasing.  Strangely, you do not mention this.}. As
+  a result laser tuning moved due to mode hoping which causes the
+  drift {\bf I have never seen any evidence of this.  What is the
+    evidence?}. The current laser locking system only works perfectly
+  for maximum 4 hours {\bf Please show the data that proves this}. The
+  possible reason for this mode hoping is the Polarizing beam
+  splitting cube of our DAVLL system~\cite{principles}. The
+  disadvantage of using this type of PBS is that they show flaky
+  optical behavior over longer times {\bf please provide a citation
+    for this statement}.
+
+  {\bf Again, I do not understand this section.  A bunch of statements
+    are made with only one graph showing that the drift in the field
+    is 120~pT.  Where is all the evidence for the other statements?}
+
+  {\bf The only point to made here is that the statistical error in
+    the data gets bigger over time and we think hey, maybe that's due
+    to the laser tune drifting.  Do we know that at this point?  No,
+    because there is absolutely no data that you have shown that
+    demonstrates it.  This is called a ``hypothesis''.  I think in the
+    next section, you are testing that hypothesis.}
+
+  {\bf If there is any other data that would substantiate your
+    statements, please present it.}
+  
 \item manual tuning\\
-   During this study frequency of laser light is tuned to atomic transition maximize optical rotation. The laser tuning was adjusted manually time to time for maintaining same signal amplitude during measurement. The main objective of this study is to check the observed drift in field measurement is the real field drift or the magnetometer drift due to the mode hoping. Instability of laser locking system due to the poor performance of PBS which is used in DAVLL system is the probable reason behind this mode-hoping. According to Fig \ref{fig:amplitude manual tuning} we can say that during this measurement the amplitude of FID NMOR was pretty stable except small fluctuations over 20000 s . The observed small fluctuation is due to the manual adjustment while keeping the laser frequency tuned to atomic transition over long period of time. Obtaining stable signal amplitude is a indication that laser is not drifting to much. Although laser frequency was not drifting a lot during  the measurement, still there is a  drift in magnetic field (Fig \ref{fig:field manual tuning}). The overall drift is about 20 pT over 20000 s. So it can be conclude that the drift in laser frequency is not the main reason behind this induced field drift. 
+ During this study frequency of laser light is tuned to atomic transition maximize optical rotation. The laser tuning was adjusted manually time to time for maintaining same signal amplitude during measurement. The main objective of this study is to check the observed drift in field measurement is the real field drift or the magnetometer drift due to the mode hoping. Instability of laser locking system due to the poor performance of PBS which is used in DAVLL system is the probable reason behind this mode-hoping. According to Fig \ref{fig:amplitude manual tuning} we can say that during this measurement the amplitude of FID NMOR was pretty stable except small fluctuations over 20000 s . The observed small fluctuation is due to the manual adjustment while keeping the laser frequency tuned to atomic transition over long period of time. Obtaining stable signal amplitude is a indication that laser is not drifting to much. Although laser frequency was not drifting a lot during  the measurement, still there is a  drift in magnetic field (Fig \ref{fig:field manual tuning}). The overall drift is about 20 pT over 20000 s. So it can be conclude that the drift in laser frequency is not the main reason behind this induced field drift. 
    
     
    \end{itemize}
