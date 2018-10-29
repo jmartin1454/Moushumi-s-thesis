@@ -218,7 +218,7 @@ Fig.~\ref{fig:pump-short} shows a more optimized the FID signal for
 0.1~s pump time and 0.2~s probe time.
 
 \begin{figure}%[h]
-  \centering\includegraphics[width=0.9\linewidth]{figures/pump_time}
+  \centering\includegraphics[width=\linewidth]{figures/pump_time}
   \caption{Histograms of measured B-field for different pump times,
     {\bf for a measurement time of 300~s}. {\bf (a) is a pump time of
       0.49~s (b) is a pump time of 0.39~s (c) is a pump time of 0.2~s
@@ -271,35 +271,45 @@ phase has saturated.
 
 \subsection{Field drift compared with current drift}
 
-The idea was to determine the impact of possible current drifts.
-  
-An Agilent B2962A power supply was used to supply DC electrical
-current to the $z$-coil.
-
 \begin{figure}%[h]
 \centering
-\includegraphics[width=0.6\linewidth]{figures/current}
-\caption{Recorded current over 10000~s using Keithley multimeter %Agilent B2962A power source
-{\bf How is this measured?  What is recorded by the power
-    source?}.\label{fig:current} }
+\includegraphics[width=0.7\linewidth]{figures/current}
+\caption{Recorded coil current (by measuring voltage across a 1~$\ohm$
+  resistor in series with the $z$-coil) as a function of time when the
+  current source has been set to 4.50000~mA.\label{fig:current}}
 \end{figure}
 
-Fig.~\ref{fig:current} shows the current {\bf measured how?} supplied
-to the $z$-coil over a {\bf measurement} period of 10000~s.  The
-current was set to 4.5~mA {\bf what is the correct value?  Was it set
-  to 4.49440, or 4.494400, or 4.4944000 mA? 
-  % current was set to 4.494400 mA
-  If not, what is wrong
-  with the power supply?} in order to achieve a magnetic field of
-0.2~$\mu$T.  The maximum current excursion during the measurement
-period was 30~nA.
+The idea was to determine the impact of possible current drifts.  An
+Agilent B2962A power supply was used to supply DC electrical current
+to the $z$-coil.  Fig.~\ref{fig:current} shows the current supplied to
+the $z$-coil over a measurement period of 10000~s.  The current in the
+power supply was set to 4.50000~mA, which was operated in a
+current-controlled mode.  The current has been measured by measuring
+the voltage drop across a Vishay 1~$\ohm$ resistor (Y09261R00000F9L)
+in series with the $z$-coil using a Keithley 2002 8-digit multimeter.
+A photograph of this system is shown in
+Fig.~\ref{fig:Current_study_setup}.  The Vishay resistor is 1\%
+absolute precision, but the values reported in Fig.~\ref{fig:current}
+have been converted to currents using an exact value for the
+resistance of 1.000000~$\ohm$.  The main feature of this resistor is
+that it possesses a low temperature coefficient of 2~ppm/$\degree$C.
+Measurements recorded by this system are expected to be reliable on
+the $\sim\pm 2$~ppm level given the resistor and multimeter being used
+and the typical temperature fluctuations in the room.
+
+{\bf PLC???}
 
 \begin{figure}%[h]
 \centering
 \includegraphics[width=0.6\linewidth]{figures/current_study_setup.png}
-\caption{Arrangement for current stability study..\label{fig:Current_study_setup} }
+\caption{Photograph of equipment arrangement used to control and
+  measure the current in the $z$-coil.\label{fig:Current_study_setup}}
 \end{figure}
 
+The current of 4.5~mA achieves a magnetic field of 0.2~$\mu$T.  From
+Fig.~\ref{fig:current}, the maximum current excursion during the
+measurement period was 30~nA.  Likely these fluctuations are given by
+the stability of the power supply.
 
 \begin{figure}
   \centering
@@ -315,54 +325,61 @@ period was 30~nA.
     \caption{}
     \label{fig:allan_plot}
   \end{subfigure}
-  \caption{(a) Measured and produced magnetic field vs. time. {\bf
-      what is each curve?}  (b) Allan deviation of field. {\bf why are
-      the colors not the same as the above curves?  Why is the legend
-      in the opposite order?}}
+  \caption{(a) (Blue) Measured current in the $z$-coil converted to
+    field, using the normalization constant measured at 0~s.  (Red)
+    Measured magnetometer frequency converted to field using the
+    gyromagnetic ratio of $^{85}$Rb.  (b) Allan deviation of of the
+    time series in (a).}
   \label{fig:current_vs_field_allan_deviation}
 \end{figure} 
 
 Fig.~\ref{fig:field_measure_and_produced} displays the magnetic field
-measured by the magnetometer over the same period.  {\bf list all
-  settings, lock-in time constant, laser power, lock-in frequency,
-  magnetometer measured frequency, etc.}
-%
-produced by z-coil(green line) and measured field (red line) by
-running the magnetometer in FID mode over 8000 s. The field generated
-by z-coil is calculated by converting measured current to field with
-coil constant of z-coil {\bf what value of the coil constant was used?
-  According to my calcuation it is 0.048860236 uT/mA... this is not
-  the same as the 48 nT/mA which you say it is...} (discussed in
-Section~\ref{sec:internal-coil}). 
-%yes you are right in this case I use the coil constant 0.04886025 uT/mA
-At $t=0$ both fields {\bf are
-  forced to?} coincide {\bf are normalized at t=0 by adjusting the
-  coil constant to be XXX?} but over time a linear drift can be seen
-in measured field.  For better understanding of the stability of the
-power supply, providing current to the $z$-coil, the Allan deviation
-of the generated field and measured field has shown in
-Fig.~\ref{fig:allan_plot}.  It can be seen from the figure that
-current stability is better than typical measured field changes.
+measured by the magnetometer over the same period.  The magnetometer
+was operated in FID mode as usual and the magnetometer settings were
+similar to those used in Section~\ref{sec:long-term}.
+%{\bf list all settings, lock-in time constant, laser power, lock-in
+%  frequency, magnetometer measured frequency, etc.}
+%produced by z-coil(green line) and measured field (red line) by
+%running the magnetometer in FID mode over 8000 s.
+The field produced by the $z$-coil is calculated by converting
+measured current to field with the coil constant measured at $t=0$~s.
+At $t=0$ both fields are therefore forced to coincide and over time a
+linear drift can be seen in the field measured by the magnetometer,
+while the current in the $z$-coil would indicate that the field should
+not be changing.  Interestingly, aside from the overall drift, there
+might be some correlation of excursions in the current with excursions
+in the magnetometer reading.
 
-{\bf How is the coil current measured? 
-%Coil current was measured by using a Keithley 2002 multimeter.
-Why was the coil current
-  measured for longer than the field?  Was the coil current averaged
-  over the same time as each frequency measurement? 
-  % yes averaging time is same for current and frequency.
-  Why is the
-  current noisier than the magnetometer for short averaging times in
-  the Allan deviation? 
-  
-  How were the current and field data acquired?
-  How were the data synchronized to one another in time?  How is the
-  measurement time defined for the coil current?  Is it at the start
-  of the FID measurement or the end of the FID measurement, or
-  somewhere in the middle, or asynchronously?  For the FID
-  measurements, which time is graphed?  The start, end, or half-way
-  time, or at the 1/e time of the FID?  Please show the measured coil
-  current in the next section as well for
-  Fig.~\ref{fig:field-change}.}
+For a better understanding of the stability of the power supply the
+Allan deviation of the field produced by the $z$-coil (deduced by its
+current) and the field measured by the magnetometer are shown in
+Fig.~\ref{fig:allan_plot}.  It can be seen from the figure that for
+long times, the current stability is better than typical measured
+field changes.  At short times, the current stability is considerably
+worse than the field stability.  This might be due to additional noise
+in the current measurement system, or a different bandwidth being used
+for the current measurement system.
+
+%{
+%\bf How is the coil current measured? 
+%%Coil current was measured by using a Keithley 2002 multimeter.
+%Why was the coil current
+%  measured for longer than the field?  Was the coil current averaged
+%  over the same time as each frequency measurement? 
+%  % yes averaging time is same for current and frequency.
+%  Why is the
+%  current noisier than the magnetometer for short averaging times in
+%  the Allan deviation? 
+%  
+%  How were the current and field data acquired?
+%  How were the data synchronized to one another in time?  How is the
+%  measurement time defined for the coil current?  Is it at the start
+%  of the FID measurement or the end of the FID measurement, or
+%  somewhere in the middle, or asynchronously?  For the FID
+%  measurements, which time is graphed?  The start, end, or half-way
+%  time, or at the 1/e time of the FID?  Please show the measured coil
+%  current in the next section as well for
+%  Fig.~\ref{fig:field-change}.}
 
 
 
