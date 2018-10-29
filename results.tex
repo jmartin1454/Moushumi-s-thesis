@@ -237,7 +237,7 @@ different pump times.  {\bf Which one is which? What is in the figure?
 From Fig.~\ref{fig:different-pump-time}, the pump time, when varied
 over this limited range, does not strongly affect the precision of the
 individual FID measurements.  {\bf However, it allows us to take
-  measurements faster 857 measurement in 300 s.  How much faster?  You need to say the times
+  measurements faster(It is possible to take 857 measurement in 300 s if cycle time is optimized to 0.35 s instead of 1 s.  How much faster?  You need to say the times
   and/or how many measurements.}
   
 %  However for our Rb magnetometry setup the
@@ -285,16 +285,18 @@ current to the $z$-coil.
 Fig.~\ref{fig:current} shows the current {\bf measured how?} supplied
 to the $z$-coil over a {\bf measurement} period of 10000~s.  The
 current was set to 4.5~mA {\bf what is the correct value?  Was it set
-  to 4.49440, or 4.494400, or 4.4944000 mA?  If not, what is wrong
+  to 4.49440, or 4.494400, or 4.4944000 mA? 
+  % current was set to 4.494400 mA
+  If not, what is wrong
   with the power supply?} in order to achieve a magnetic field of
 0.2~$\mu$T.  The maximum current excursion during the measurement
 period was 30~nA.
 
-%\begin{figure}%[h]
-%\centering
-%\includegraphics[width=0.6\linewidth]{figures/field_current_study.png}
-%\caption{Magnetic field vs. time.\label{fig:field_current} }
-%\end{figure}
+\begin{figure}%[h]
+\centering
+\includegraphics[width=0.6\linewidth]{figures/current_study_setup.png}
+\caption{Arrangement for current stability study..\label{fig:Current_study_setup} }
+\end{figure}
 
 
 \begin{figure}
@@ -322,14 +324,16 @@ Fig.~\ref{fig:field_measure_and_produced} displays the magnetic field
 measured by the magnetometer over the same period.  {\bf list all
   settings, lock-in time constant, laser power, lock-in frequency,
   magnetometer measured frequency, etc.}
-
+%
 produced by z-coil(green line) and measured field (red line) by
 running the magnetometer in FID mode over 8000 s. The field generated
 by z-coil is calculated by converting measured current to field with
 coil constant of z-coil {\bf what value of the coil constant was used?
   According to my calcuation it is 0.048860236 uT/mA... this is not
   the same as the 48 nT/mA which you say it is...} (discussed in
-Section~\ref{sec:internal-coil}).  At $t=0$ both fields {\bf are
+Section~\ref{sec:internal-coil}). 
+%yes you are right in this case I use the coil constant 0.04886025 uT/mA
+At $t=0$ both fields {\bf are
   forced to?} coincide {\bf are normalized at t=0 by adjusting the
   coil constant to be XXX?} but over time a linear drift can be seen
 in measured field.  For better understanding of the stability of the
@@ -338,11 +342,17 @@ of the generated field and measured field has shown in
 Fig.~\ref{fig:allan_plot}.  It can be seen from the figure that
 current stability is better than typical measured field changes.
 
-{\bf How is the coil current measured?  Why was the coil current
+{\bf How is the coil current measured? 
+%Coil current was measured by using a Keithley 2002 multimeter.
+Why was the coil current
   measured for longer than the field?  Was the coil current averaged
-  over the same time as each frequency measurement?  Why is the
+  over the same time as each frequency measurement? 
+  % yes averaging time is same for current and frequency.
+  Why is the
   current noisier than the magnetometer for short averaging times in
-  the Allan deviation?  How were the current and field data acquired?
+  the Allan deviation? 
+  
+  How were the current and field data acquired?
   How were the data synchronized to one another in time?  How is the
   measurement time defined for the coil current?  Is it at the start
   of the FID measurement or the end of the FID measurement, or
@@ -365,7 +375,9 @@ has been observed. The laser frequency was locked to Rb transition
 frequency and all other setting kept unchanged. During this study the
 magnetometer has been operated in FID mode {\bf list all documented
   settings.  What was the lock-in time constant, lock-in frequency?
-  %lock-in frequency was 1929.2 Hz and time constant was 300 micro sec.
+  %lock-in frequency was 1950 Hz and time constant was 300 micro sec. AOM frequency 2049 hz, lock-in time constant 300\mu s.
+  % probe power ~ 22 $\mu$W and Pump power~ 40 $\mu$W
+  
   Were both x and y data simultaneously fitted? %only x data was fitted
   pump time?  probe
   time?%pump and probe time are 0.5 sec and 0.5 sec respectively.
@@ -383,7 +395,7 @@ regions. In region-1 magnetic field has been recorded for 300 s while
 the applied current to the Z coil was 4.5 mA {\bf do you mean
   4.500~mA?%  I mean 4.500~mA
   How many digits of precision are possible in the current
-  supply? }%6-digit. 
+  supply? }%6.5-digit. 
   Then in region-2 the applied current to the z coil has
 been increased by 0.0010 mA {\bf sig figs?} i.e., total current 4.5010
 mA {\bf sig figs?} and measured the magnetic field for another 300
@@ -393,7 +405,7 @@ region-3, the coil current has been reduced to 4.5000 mA {\bf sig figs?}
 and measured field for 300 s. After that the coil current has been
 decreased by 0.0010 mA. As a result the field also decreased by
 50~pT in this region.  Finally in region-5 the coil current has
-been set to 4.5000 mA again and observed the corresponing quick change in
+ been set to 4.5000 mA again and observed the corresponing quick change in
 field.
 
 \section{Study the effect of room temperature in magnetic field} 
@@ -405,7 +417,8 @@ field.
 Room temperature is measured using precision thermometer {\bf where?}
 and laser temperature is measured from the output of the laser
 temperature controller panel. The temperature on the magnetic
-shielding {\bf where?  Why is it different than room temperature?% I think the reason is that the optics table is fully covered by heavy curtains which make this place warmer than rest part of the room. I also discussed it with Dave he also mentioned me the same reason.
+shielding {\bf where?  Why is it different than room temperature?
+% I think the reason is that the optics table is fully covered by heavy curtains which make this place warmer than rest part of the room. I also discussed it with Dave he also mentioned me the same reason.
 } is
 measured by a T-type thermocouple.  Since T- type thermocouple is
 non-magnetic we use this specific type of thermocouple instead of
@@ -422,9 +435,11 @@ temperature vs time.  During the measurement the laser temperature
 controlled laser diode temperature.  It can be seen from the figure
 that room temperature fluctuation is 1\degree while temperature
 outside of the magnetic shielding is about 0.8\degree.
- 
 Fig.\ref{fig:field} shows the magnetic field {\bf state all
-  magnetometer settings} vs.~time while the temperature measurement
+  magnetometer settings}
+  % probe power ~ 22 $\mu$W and Pump power~ 40 $\mu$W
+  % lock-in frequency 1929.5 hz and AOM frequency 2036 hz, lock-in time constant 300\mu s.
+  vs.~time while the temperature measurement
 has taken place. In order to understand the correlation between
 temperature change and field change, the measured field
 vs. temperature has shown in Fig.~\ref{fig:field_vs_temp}. {\bf What
@@ -979,7 +994,13 @@ Another study has been conducted to understand the influence of pump beam power 
 
 
  
-  The FID signal for different reference frequency of lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. 
+  The FID signal for different reference frequency of lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency was always set to 2035 Hz and the pump power(~60 $\mu$w) and probe power (~32 $\mu$w)
+  
+  Fig\ref{fig:freq_1943_single_fit_300_micros} display the example of fitted FID signal(upper left figure), measured magnetic field over time (upper right figure), phase as a function of time (bottom left figure) and magnetic field vs. phase (bottom left figure) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s. A clear indication of correlation between field and phase can be seen here.
+  
+   Fig\ref{fig:freq_1943_simultaneous_fit_300_micro_sec} display the example of simultaneous fitted x and y signal(upper left figure), measured magnetic field over time (upper right figure), magnetic field vs. phase (bottom left figure) and histogram of measured field (bottom left figure) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s. 
+   
+  
   
   In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
    
@@ -994,59 +1015,45 @@ Another study has been conducted to understand the influence of pump beam power 
 \caption{Histogram of the measured magnetic field for different lock-in reference frequency.\label{histogram-of-diff-lock-in freq}}
 \end{figure}
 
-%\begin{figure}[h]
-%\centering\includegraphics[width=0.8\linewidth]{figures/phase_vs_time.png}
-%\caption{Phase for different lock-in reference %frequency.\label{phase_different_lock-in_frequency}}
-%\end{figure} 
-
- %\begin{figure}[h]
-%\centering\includegraphics[width=0.8\linewidth]{figures/phase}
-%\caption{Measured magnetic field as a function of phase for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz and the blue data points indicates field for lock-in reference frequency 1943.9 Hz.}
-%\end{figure} 
-
- \begin{itemize}
-   \item effect of lock-in time constant
-   
   Table \ref{tab:FID_setting} represents all settings for FID NMOR. In this study the systematic effect of changing lock-in amplifier time constant on magnetic field measurement has been discussed.
-   \begin{figure}
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/time_constant}
-        \caption{}
-        \label{fig:time constant long}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/time_constant_300micro_sec}
-        \caption{}
-        \label{fig:time constant short}
-    \end{subfigure}
-    \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier. (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. \label{fig:different time constant} }
-\end{figure}
+  % \begin{figure}
+   % \centering
+   % \begin{subfigure}[b]{0.45\textwidth}
+      %  \centering
+       % \includegraphics[width=\textwidth]{figures/time_constant}
+       % \caption{}
+       % \label{fig:time constant long}
+    %\end{subfigure}
+    %\hfill
+    %\begin{subfigure}[b]{0.45\textwidth}
+       % \centering
+       % \includegraphics[width=\textwidth]{figures/time_constant_300micro_sec}
+       % \caption{}
+        %\label{fig:time constant short}
+    %\end{subfigure}
+   % \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier. (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. %\label{fig:different time constant} }
+%\end{figure}
   
-  Fig \ref{fig:different time constant}  shows the histogram of measured magnetic field for two different time constant of lock-in amplifier while all other settings is same. In the case of Fig \ref{fig:time constant long} the lock-in time constant is 1 ms and Fig \ref{fig:time constant short} shows the histogram of magnetic field for time constant 300 $\mu$s. Here sigma is representing the precession width of field. It can be seen from the figure that the calculated sigma is larger for time constant 1 ms compared to 300 $\mu$s.  This measurements was conducted at 0.2 $\mu$T field. The resonance frequency and lock-in reference frequency are 2035 Hz and 1943 Hz respectively. The same study has also been done for higher lock-in reference frequency while resonance frequency was unchanged (2035 Hz). Fig: \ref{fig:diff time constant_high_frequency} display the histogram of the recorded magnetic field for different settings of time constant.
+  %Fig \ref{fig:different time constant}  shows the histogram of measured magnetic field for two different time constant of lock-in amplifier while all other settings is same. In the case of Fig \ref{fig:time constant long} the lock-in time constant is 1 ms and Fig \ref{fig:time constant short} shows the histogram of magnetic field for time constant 300 $\mu$s. Here sigma is representing the precession width of field. It can be seen from the figure that the calculated sigma is larger for time constant 1 ms compared to 300 $\mu$s.  This measurements was conducted at 0.2 $\mu$T field. The resonance frequency and lock-in reference frequency are 2035 Hz and 1943 Hz respectively. The same study has also been done for higher lock-in reference frequency while resonance frequency was unchanged (2035 Hz). Fig: \ref{fig:diff time constant_high_frequency} display the histogram of the recorded magnetic field for different settings of time constant.
   
-   
-   \end{itemize}
-   \begin{figure}
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
+  
+   %\begin{figure}
+    %\centering
+    %\begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/2015_1ms.png}
-        \caption{}
-        \label{fig:time constant 1ms}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/2015_300micro_sec.png}
-        \caption{}
-        \label{fig:time constant 300microsec}
-    \end{subfigure}
-    \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier while lock-in frequency is set to 2015 Hz (20 Hz far from resonance frequency). (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. % for this measurement both x and y data were fitted simultaneously.
-    \label{fig:diff time constant_high_frequency} }
-\end{figure}
+       % \includegraphics[width=\textwidth]{figures/2015_1ms.png}
+       % \caption{}
+        %\label{fig:time constant 1ms}
+    %\end{subfigure}
+    %\begin{subfigure}[b]{0.4\textwidth}
+        %\centering
+       % \includegraphics[width=\textwidth]{figures/2015_300micro_sec.png}
+      %  \caption{}
+       % \label{fig:time constant 300microsec}
+    %\end{subfigure}
+   % \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier while lock-in frequency is set to 2015 Hz (20 Hz far from resonance frequency). (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. % for this measurement both x and y data were fitted simultaneously.
+  %  \label{fig:diff time constant_high_frequency} }
+%\end{figure}
 
 
 %The magnetometric method based on FID NMOR is a very sensitive
@@ -1076,7 +1083,7 @@ Another study has been conducted to understand the influence of pump beam power 
 \begin{figure}
   \centering
 %trim={<left> <lower> <right> <upper>}
-\includegraphics[width=\textwidth]{figures/tilted_field_scope_trace.png}
+\includegraphics[width=0.8\textwidth]{figures/tilted_field_scope_trace.png}
   \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle. When tilt angle is 0$\degree$ the FID signal contain only one frequency component but the signal contain two frequency component for tilt angle 15$\degree$ and 40$\degree$.  \label{fig:optical-rotation-different-angle}}
     \label{fig:tilted}
 \end{figure}
@@ -1158,7 +1165,7 @@ Fig.~\ref{fig:something-tilted}(b) shows the resonance amplitude at $\Omega_m=2\
 \caption{(a)Raw and filtered FID signal. (b) zoomed version of (a)}
 \end{figure}
 
-Consider a two-level system $F=1\rightarrow F=0$ and the quantization vector is directed along the magnetic field. When the magnetic field is tilted in the yz plane, the light-polarization axis is perpendicular to the magnetic field. In this case the linearly polarized light containing two circularly polarized components can only create the coherence state between magnetic sublevels $m_F=\pm 1$ . Since the transition frequency between these two consecutive Zeeman energy sublevels is $2\Omega_L$  the resonance appears only at this frequency. However, when the magnetic field is tilted  in the xy plane, the light is a linear superposition of polarizations parallel and perpendicular to the magnetic field. In this case, the light can create coherences between sublevels with $m_F=1$ and $m_F=2$, so resonances are observed at both $\Omega_L $ and $2\Omega_L$. 
- 
- 
+Consider a two-level system $F=1\rightarrow F=0$ and the quantization vector is directed along the magnetic field. When the magnetic field is tilted in the yz plane, the light-polarization axis is perpendicular to the magnetic field. In this case the linearly polarized light containing two circularly polarized components can only create the coherence state between magnetic sublevels $m_F=\pm 1$ . Since the transition frequency between these two consecutive Zeeman energy sublevels is $2\Omega_L$  the resonance appears only at this frequency. 
 
+However, when the magnetic field is tilted  in the xy plane, the light is a linear superposition of polarizations parallel and perpendicular to the magnetic field. In this case, the light can create coherences between sublevels with $m_F=1$ and $m_F=2$, so resonances are observed at both $ \Omega_L$ and 2$\Omega_L$. 
+ 
