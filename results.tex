@@ -799,33 +799,84 @@ done carefully.
   {\bf If there is any other data that would substantiate your
     statements, please present it.}
   
-\item manual tuning\\
- During this study frequency of laser light is tuned to atomic transition maximize optical rotation. The laser tuning was adjusted manually time to time for maintaining same signal amplitude during measurement. The main objective of this study is to check the observed drift in field measurement is the real field drift or the magnetometer drift due to the mode hoping. Instability of laser locking system due to the poor performance of PBS which is used in DAVLL system is the probable reason behind this mode-hoping. According to Fig \ref{fig:amplitude manual tuning} we can say that during this measurement the amplitude of FID NMOR was pretty stable except small fluctuations over 20000 s . The observed small fluctuation is due to the manual adjustment while keeping the laser frequency tuned to atomic transition over long period of time. Obtaining stable signal amplitude is a indication that laser is not drifting to much. Although laser frequency was not drifting a lot during  the measurement, still there is a  drift in magnetic field (Fig \ref{fig:field manual tuning}). The overall drift is about 20 pT over 20000 s. So it can be conclude that the drift in laser frequency is not the main reason behind this induced field drift. 
-   
-    
-   \end{itemize}
-   \begin{figure}
+\item manual tuning
+
+During this study frequency of laser light was tuned to atomic
+transition maximize optical rotation. The DAVLL and Digilock system
+was not used to lock the laser.  Rather, periodically, the data
+acquisition was paused, and the laser frequency was adjusted manually
+to maintain the same (largest) different photodiode amplitude. The
+data acquisition would then be restarted.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
     \centering
- 
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/manual_tuning}
-        \caption{}
-        \label{fig:field manual tuning}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/amplitude_manual_tuning}
-        \caption{}
-        \label{fig:amplitude manual tuning}
-    \end{subfigure}
-    \caption{(a) magnetic field vs. time. (b) amplitude of recorded FID NMOR signal over 20000 sec. During this study laser tuning is maintained manually}
-    \label{fig:manual tuning}
+    \includegraphics[width=\textwidth]{figures/manual_tuning}
+    \caption{}
+    \label{fig:field-manual-tuning}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/amplitude_manual_tuning}
+    \caption{}
+    \label{fig:amplitude-manual-tuning}
+  \end{subfigure}
+  \caption{(a) magnetic field vs. time. (b) {\bf The vertical scale
+      appears to be labeled incorrectly (units)} amplitude of recorded
+    FID NMOR signal over 20000~s. During this study laser tuning is
+    maintained manually, as can be seen from the jumps in the
+    amplitude which occur upon retuning.}
+  \label{fig:manual-tuning}
 \end{figure}
-\section{Systematic error check in frequency measurement in FID mode \label{sec:reference-frequency}} 
-   \subsection{Optimization of pump and probe beam power} 
- A study has been performed to determine how optimization of the pump and probe beam power effect on precise field measurement.  During this study, the magnetometer has operated in FID mode.  
+   
+The results of the measurement are shown in
+Fig.~\ref{fig:manual-tuning}.  Fig.~\ref{fig:amplitude-manual-tuning}
+shows the fitted initial amplitude (after the pump beam has been
+switched off) as determined by the fit to the decaying oscillating
+function.  The spikes in Fig.~\ref{fig:amplitude-manual-tuning}
+indicate times when the retuning of the laser was conducted, as
+described above.
+
+Fig.~\ref{fig:field-manual-tuning} shows the result of the frequency
+measurement, when translated into magnetic field.  It can be seen that
+as the amplitude of the fit decreases (presumably due to a drift in
+the laser frequency), the statistical fluctuations in the field
+measurement increase.  This would be expected because a small fit
+amplitude will make the frequency statistically more difficult to
+measure.
+
+Clearly the field measurement in Fig.~\ref{fig:field-manual-tuning}
+does not drift in the same way as the amplitude in
+Fig.~\ref{fig:amplitude-manual-tuning}.  Thus we conclude that the
+field measurement in FID mode is relatively insensitive to the
+frequency tuning of the laser, except that if the tune drifts, the
+frequency measurement becomes statistically less precise.
+
+%we can say that during this measurement the amplitude
+%of FID NMOR was pretty stable except small fluctuations over 20000 s
+%. The observed small fluctuation is due to the manual adjustment while
+%keeping the laser frequency tuned to atomic transition over long
+%period of time. Obtaining stable signal amplitude is a indication that
+%laser is not drifting to much. Although laser frequency was not
+%drifting a lot during the measurement, still there is a drift in
+%magnetic field (Fig.~\ref{fig:manual-tuning}). The overall drift is
+%about 20~pT over 20000~s. So it can be conclude that the drift in
+%laser frequency is not the main reason behind this induced field
+%drift.
+
+\end{itemize}
+
+
+
+
+\section{Improving the precision of individual FIDs, and problems encountered in doing so \label{sec:reference-frequency}}
+
+\subsection{Optimization of pump and probe beam power} 
+A study has been performed to determine how optimization of the pump
+and probe beam power effect on precise field measurement.  During this
+study, the magnetometer has operated in FID mode.
   \begin{figure}
     \centering
     \begin{subfigure}[b]{0.7\textwidth}
