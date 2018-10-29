@@ -299,7 +299,7 @@ period was 30~nA.
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.65\textwidth}
+  \begin{subfigure}[b]{0.67\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/field_coil_current.png}
     \caption{}
@@ -360,14 +360,15 @@ A study has been conducted to determine the field change by changing
 the coil current by a known amount. The main objective of this study
 is to check the Rb magnetometer performance on magnetic field
 measurement. During this measurement coil current has been changed by
-$\pm 0.001$~mA. As a result a field change of $\pm 50~\mu$T {\bf pT?}
+$\pm~ 0.001$~mA. As a result a field change of $\pm$ 50~pT 
 has been observed. The laser frequency was locked to Rb transition
 frequency and all other setting kept unchanged. During this study the
 magnetometer has been operated in FID mode {\bf list all documented
   settings.  What was the lock-in time constant, lock-in frequency?
+  %lock-in frequency was 1929.2 Hz and time constant was 300 micro sec.
   Were both x and y data simultaneously fitted? %only x data was fitted
   pump time?  probe
-  time?%pump and probe time are 0.5~sec and 0.5~sec respectively
+  time?%pump and probe time are 0.5 sec and 0.5 sec respectively.
   }.
 \begin{figure}%[h]
 \centering\includegraphics[width=0.7\linewidth]{figures/field_change_with_current}
@@ -380,18 +381,18 @@ time for different coil current. For better understanding
 Fig.~\ref{fig:field-change} has been divide into five different
 regions. In region-1 magnetic field has been recorded for 300 s while
 the applied current to the Z coil was 4.5 mA {\bf do you mean
-  4.500~mA?%  I mean 4.5000~mA
+  4.500~mA?%  I mean 4.500~mA
   How many digits of precision are possible in the current
   supply? }%6-digit. 
   Then in region-2 the applied current to the z coil has
 been increased by 0.0010 mA {\bf sig figs?} i.e., total current 4.5010
 mA {\bf sig figs?} and measured the magnetic field for another 300
 s. It is clear from the figure that the field has been changed
-instantly by 50 $\mu$T due to the changed coil current. Now in
+instantly by 50 pT due to the changed coil current. Now in
 region-3, the coil current has been reduced to 4.5000 mA {\bf sig figs?}
 and measured field for 300 s. After that the coil current has been
 decreased by 0.0010 mA. As a result the field also decreased by
-50~$\mu$T in this region.  Finally in region-5 the coil current has
+50~pT in this region.  Finally in region-5 the coil current has
 been set to 4.5000 mA again and observed the corresponing quick change in
 field.
 
@@ -428,7 +429,7 @@ has taken place. In order to understand the correlation between
 temperature change and field change, the measured field
 vs. temperature has shown in Fig.~\ref{fig:field_vs_temp}. {\bf What
   was the data acquisition system for each device?  How were the data
-  synchronized?% For room temperature measurement a precision themometer was connected to a Agilent 34410A/11A 6 ½ Digit Multimeter. A python script is used to configures the multimeter for a 2-wire RTD measurement, triggers the meter, and then transfers the reading to the computer via instrument output buffer. .
+  synchronized?% For room temperature measurement a precision thermometer was connected to a Agilent 34410A/11A 6 ½ Digit Multimeter. A python script was used to configures the multimeter for a 2-wire RTD measurement, triggers the meter, and then transfers the reading to the computer via instrument output buffer. And for temperature measurement near shield  the T-type thermocouple was connected with a Arduino Uno. For configuring this device and then transferring the reading to the computer a python script was used. 
   }  It is clear from the graph that there is no obvious
 of field drift dependency on temperature.
   
@@ -455,7 +456,7 @@ of field drift dependency on temperature.
 %the dependency of the resonance width on the sample rate (see
 %discussion on section \ref{sec:Degaussing}).
 
-We used the procedure described in Section~\ref{sec:zerofield}.  To
+We used the procedure described in Section~\ref{sec:near zero field}.  To
 remind the reading, the procedure is:
 \begin{itemize}
 \item Initiate the degaussing sequence in one channel of the function
@@ -612,8 +613,12 @@ field measurement has been conducted for another 2200 s. In this case,
 the field showed a downward drift of about 35~pT.  Thus field ramping
 did seem to change the magnetic environment inside the magnetic
 shielding.  Finally, for Fig.~\ref{fig:degauss}, the innermost
-magnetic shield was degaussed {\bf with what sample rate, etc.?  What
-  procedure was followed?}.  While this changed the direction of the
+magnetic shield was degaussed {\bf with what sample rate, etc.?% the innermost shield was degaussed with degaussing parameters stated in Table \ref{table:degaussing-setting}
+What
+  procedure was followed?}. 
+  % Before starting field measurement via FID mode degaussing was done multiple times (4-5 times) repeatedly. During the measurement no degaussing was done. 
+  
+  While this changed the direction of the
 drift, it did not change the magnitude of the drift which was again
 35~pT over 2200~s.  {\bf Is it true that no amount of degaussing of
   the innermost shield changed this significantly?}
@@ -634,7 +639,7 @@ field drift was about 15 pT over 3000~s (as discussed in
 Sections~\ref{sec:three-degauss} and~\ref{sec:long-term}).
 After doing a transverse field study (applying current to $x$- and
 $y$-coils along with $z$-coil, like that reported in
-Sections~\ref{sec:ch4-transverse} and~\ref{sec:ch5-transverse}) the
+Sections~\ref{sec:ch4_tilted_field} and~\ref{sec:tilted-results}) the
 magnetic field environment became even more unstable.
 
 \begin{figure}
@@ -646,6 +651,12 @@ magnetic field environment became even more unstable.
     \label{fig:without DG}
   \end{subfigure}
   \hfill
+  \begin{subfigure}[b]{0.47\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/innermost_degaussing.png}
+    \caption{}
+    \label{fig:with_DG_innermost}
+  \end{subfigure}
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/after_degaussing}
@@ -654,39 +665,37 @@ magnetic field environment became even more unstable.
   \end{subfigure}
   \caption{Magnetic field recorded over 3 hours. (a) The stability of
     magnetic field without performing any degaussing. A downward field
-    drift of about 45 pT was observed in this case. (b) Magnetic field
+    drift of about 45 pT was observed in this case.(b) Magnetic field as a function of time after degaussing the innermost shield. Still the field drift is about 30 pT.  (c) Magnetic field
     stability after degaussing the 2nd innermost layer of magnetic
-    shielding. Only a couple pT field drift has observed in this
-    case. During this study the signal amplitude was pretty
-    low($\sim$)3V} because of the low pump beam power(I think) or ther
-  poor settings. As a result the precession width becomes wider(10~pT)
+    shielding. Only a couple pT field drift has observed in this case. During this study the signal amplitude was pretty
+    low($\sim$3V) because of the low pump beam power(I think) or other poor settings. As a result the precession width becomes wider(10~pT)
   while the usual is about 5~p
-    \label{fig:effect of DG}
+    \label{fig:effect of DG}}
 \end{figure}
 
-Fig.~\ref{fig:without-DG} shows about 50~pT drift in magnetic field in
+Fig.~\ref{fig:without DG} shows about 50~pT drift in magnetic field in
 4000~s.  In order to cancel background field inside shield degaussing
 innermost layer of mu-metal is done but it doesn't help to solve field
-drift problem {\bf where is this data?}. During this study {\bf which
+drift problem (\ref{fig:with_DG_innermost}){\bf where is this data?}. During those three measurement {\bf which
   study? the one ``without performing any degaussing'' as written in
   the figure caption, or after degaussing the innermost shield?}  the
 lock-in reference frequency is set to 1938.5~Hz and lock-in time
 constant is 300~$\mu$s.  Then degaussing the 2nd innermost layer of
-shield is done which solve the field drift problem {\bf where is this
-  data?  Is this (b)?}.
+shield is done which solve the field drift problem (see Fig \ref{fig:with DG}){\bf where is this
+  data?  Is this (b)?}% yes.
 
 Since the end cap of the innermost shield layer is not in use some
 background field leaked into 2nd layer which was causing the drift in
 field. So by degaussing the 2nd layer of shield canceled background
-field and field becomes so stable (Fig.~\ref{fig:with-DG}). During this
-two measurement all other setting remain unchanged only the degaussing
-of the 2nd innermost shield has performed.
+field and field becomes so stable (Fig.~\ref{fig:with DG}). During this
+three measurement all other setting remain unchanged only the degaussing
+of the 1st and 2nd innermost shield has performed.
    
 %   \end{itemize}
   
 \section{Laser tuning} 
 \begin{itemize}
-\item effect of careful tuning\\
+\item effect of careful tuning
 
 The main purpose of this study is to understand the importance of
 laser tuning on coherence life time of excited atoms. During the study
@@ -755,11 +764,11 @@ done carefully.
     \centering\includegraphics[width=0.6\linewidth]{figures/field_drift}
     \caption{Magnetic field recorded over 12~hours.  In this
       measurement the observed field drift is
-      about~120~pT.\label{digilock-drift}}
+      about~120~pT.\label{fig:digilock-drift}}
   \end{figure}
   For studying long term stability data was taken for about
   12~hours. Laser was locked using the DAVLL system described in
-  Section~\ref{sec:davll}. Fig \ref{fig:digilock-drift} shows 120~pT
+  Section~\ref{sec:DAVLL}. Fig \ref{fig:digilock-drift} shows 120~pT
   observed drift in magnetic field over 12~hours. Although DAVLL was
   in use laser frequency was not locked for 12~hours {\bf it was
     locked.  It's just that the lock-point was changing, we think.
@@ -773,8 +782,8 @@ done carefully.
   possible reason for this mode hoping is the Polarizing beam
   splitting cube of our DAVLL system~\cite{principles}. The
   disadvantage of using this type of PBS is that they show flaky
-  optical behavior over longer times {\bf please provide a citation
-    for this statement}.
+  optical behavior over longer times\cite{bib:Philip2008}.
+  %{\bf please provide a citation for this statement}.
 
   {\bf Again, I do not understand this section.  A bunch of statements
     are made with only one graph showing that the drift in the field
@@ -816,7 +825,7 @@ done carefully.
 \end{figure}
 \section{Systematic error check in frequency measurement in FID mode \label{sec:reference-frequency}} 
    \subsection{Optimization of pump and probe beam power} 
- A study has been performed to determine how optimization of the pump and probe beam power effect on precise field measurement.  During this study, the magnetometer has operated in FID mode.  A  linearly polarized probe beam has been used to analyze the spin response. 
+ A study has been performed to determine how optimization of the pump and probe beam power effect on precise field measurement.  During this study, the magnetometer has operated in FID mode.  
   \begin{figure}
     \centering
     \begin{subfigure}[b]{0.7\textwidth}
@@ -837,8 +846,8 @@ done carefully.
 \end{figure}
 %data colllected 13th August 2018
  
- In Fig \ref{fig:different probe power} the measured magnetic field has been displayed for two different  Probe beam power. Fig \ref{fig:power less} present the measured field over 100 s with 15 $\mu$W probe power while fig \ref{fig:power double} display the measured field over 100 s for probe power 30 $\mu$W. In both cases, the pump beam power has been kept unchanged ($5\%$ duty cycle). Each blue points in this graph represent a single FID scan. As can be seen from Fig \ref{fig:different probe power} the magnetic field is more scattered for high beam power. Precession width is about $7.2$ pT for probe beam power 30 $\mu$W while for low beam power(15 $\mu$W) the precession width is about $3.01$ pT. It can be concluded lower probe beam power is better for precession  magnetometry because the narrower the precession width more sensitive the magnetometer. Although low probe beam power is better for precise field measurement, it's hard to work with because of the dimness of light.
-Table  \ref{table:Coherence time for different probe power} represent the coherence time for different probe power while the pump beam power was unchanged.
+ In Fig \ref{fig:different probe power} the measured magnetic field has been displayed for two different  Probe beam power. Fig \ref{fig:power less} present the measured field over 100 s with 15 $\mu$W probe power while fig \ref{fig:power double} display the measured field over 100 s for probe power 30 $\mu$W. In both cases, the pump beam power has been kept unchanged ($\sim $40 $\mu$W). Each blue points in this graph represent a single FID scan. As can be seen from Fig \ref{fig:different probe power} the magnetic field is more scattered for high probe beam power. Precession width is about $7.2$ pT for probe beam power 30 $\mu$W while for low beam power(15 $\mu$W) the precession width is about $3.01$ pT. It can be concluded lower probe beam power is better for precession  magnetometry because the narrower the precession width more sensitive the magnetometer. Although low probe beam power is better for precise field measurement, it's hard to work with because of the dimness of light.
+Table  \ref{table:Coherence time for different probe power} represent the coherence time for different probe power while the pump beam power was unchanged (120 $\mu$W).
  \begin{table}%[h]
 \centering
 \begin{tabular}{|l  |c|c|}\hline
@@ -868,7 +877,7 @@ Another study has been conducted to understand the influence of pump beam power 
 
 \subsection{How far the reference frequency of lock-in amplifier should set to measure field correctly}
   
-  In FID NMOR the atomic sample is polarized once by optical pumping and then observed the spontaneous decay of excited atom while the pump beam is off. In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2 \mu$T field. 
+  The measurement technique of FID signal has been discussed elaborately in sec \ref{sec:FID}. In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2 \mu$T field. 
    \begin{figure}
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
@@ -890,14 +899,44 @@ Another study has been conducted to understand the influence of pump beam power 
         \caption{}
         \label{fig:close to resonance}
     \end{subfigure}
- \caption{FID signal for different reference frequency of Lock-in amplifier while the resonance frequency was 2035 kHz.(a) reference frequency was set to 100 Hz far from resonance (b) difference between resonance and reference frequency is 40 Hz, (c) reference frequency was set to 2015 Hz while resonance frequency 2035 Hz. \label{fig:different reference signal}}
+ \caption{FID signal for different reference frequency of Lock-in amplifier while the resonance frequency was 2035 kHz.(a) reference frequency was set to 92 Hz far from resonance (b) difference between resonance and reference frequency is 40 Hz, (c) reference frequency was set to 2015 Hz while resonance frequency 2035 Hz. \label{fig:different reference signal}}
 \end{figure}
+
+  \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/freq_1943_single_fit_300microsec.png}
+\caption{Lock-in reference frequency and time constant are 1943 Hz and 300$\mu$s respectively. The resonance frequency is 2035 Hz. In this case only x data was fitted. \label{fig:freq_1943_single_fit_300_micros}}
+\end{figure}
+
+
+  \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/freq_1943_simultaneous_fit_300microsec_.png}
+\caption{Lock-in reference frequency and time constant are 1943 Hz and 300$\mu$s respectively. In this case both x and y data was fitted simultaneously. \label{fig:freq_1943_simultaneous_fit_300_micro_sec}}
+\end{figure}
+
+ \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/freq_2015_simultaneous_fit_300microsec.png}
+\caption{Lock-in reference frequency and time constant are 1950 Hz and 300$\mu$s respectively. In this case both x and y data was fitted simultaneously. \label{fig:freq_2015_simultaneous_fit_300_micros}}
+\end{figure}
+
+  \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/freq_1943_simultaneous_fit_1ms.png}
+\caption{Lock-in reference frequency and time constant are 1943~Hz and 1~ms respectively.  \label{fig:freq_1943_simultaneous_fit_1ms}}
+\end{figure}
+
+  \begin{figure}[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/freq_2015_simultaneous_fit_1ms.png}
+\caption{Lock-in reference frequency and time constant are set to 2015~Hz and 1~ms respectively. \label{fig:freq_2015_1ms}}
+\end{figure}
+
+
+ 
+  The FID signal for different reference frequency of lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. 
   
-  The FID signal for different reference frequency of Lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of Lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of Lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency is 2035 Hz. In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
+  In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
    
 \begin{figure}[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/reference_frequency}
-\caption{Measured magnetic field for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz which is 20 Hz far from resonance frequency. The blue curve shows magnetic field for lock-in reference frequency 1943.9 Hz.\label{fig:field for different lockin ref freq}}
+\caption{Measured magnetic field for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz which is 20 Hz far from resonance frequency. The blue curve shows magnetic field for lock-in reference frequency 1943.9 Hz. In this measurement only x data was fitted. \label{fig:field for different lockin ref freq}}
 \end{figure}
    
 
@@ -906,20 +945,20 @@ Another study has been conducted to understand the influence of pump beam power 
 \caption{Histogram of the measured magnetic field for different lock-in reference frequency.\label{histogram-of-diff-lock-in freq}}
 \end{figure}
 
-\begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/phase_vs_time.png}
-\caption{Phase for different lock-in reference frequency.\label{phase_different_lock-in_frequency}}
-\end{figure} 
+%\begin{figure}[h]
+%\centering\includegraphics[width=0.8\linewidth]{figures/phase_vs_time.png}
+%\caption{Phase for different lock-in reference %frequency.\label{phase_different_lock-in_frequency}}
+%\end{figure} 
 
- \begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/phase}
-\caption{Measured magnetic field as a function of phase for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz and the blue data points indicates field for lock-in reference frequency 1943.9 Hz.}
-\end{figure} 
+ %\begin{figure}[h]
+%\centering\includegraphics[width=0.8\linewidth]{figures/phase}
+%\caption{Measured magnetic field as a function of phase for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz and the blue data points indicates field for lock-in reference frequency 1943.9 Hz.}
+%\end{figure} 
 
  \begin{itemize}
    \item effect of lock-in time constant
    
-  A SRS-830 lock-in amplifier is used to grab FID NMOR signal which was connected to the output of balanced photodiode. Table \ref{tab:FID_setting} represents all settings for FID NMOR. In this study the systematic effect of changing locking amplifier time constant on magnetic field measurement has been discussed.
+  Table \ref{tab:FID_setting} represents all settings for FID NMOR. In this study the systematic effect of changing lock-in amplifier time constant on magnetic field measurement has been discussed.
    \begin{figure}
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
@@ -940,7 +979,7 @@ Another study has been conducted to understand the influence of pump beam power 
   
   Fig \ref{fig:different time constant}  shows the histogram of measured magnetic field for two different time constant of lock-in amplifier while all other settings is same. In the case of Fig \ref{fig:time constant long} the lock-in time constant is 1 ms and Fig \ref{fig:time constant short} shows the histogram of magnetic field for time constant 300 $\mu$s. Here sigma is representing the precession width of field. It can be seen from the figure that the calculated sigma is larger for time constant 1 ms compared to 300 $\mu$s.  This measurements was conducted at 0.2 $\mu$T field. The resonance frequency and lock-in reference frequency are 2035 Hz and 1943 Hz respectively. The same study has also been done for higher lock-in reference frequency while resonance frequency was unchanged (2035 Hz). Fig: \ref{fig:diff time constant_high_frequency} display the histogram of the recorded magnetic field for different settings of time constant.
   
-    \item timing drift in Tektronix oscilloscope clock
+   
    \end{itemize}
    \begin{figure}
     \centering
@@ -956,7 +995,8 @@ Another study has been conducted to understand the influence of pump beam power 
         \caption{}
         \label{fig:time constant 300microsec}
     \end{subfigure}
-    \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier while lock-in frequency is set to 2015 Hz (20 Hz far from resonance frequency). (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. \label{fig:diff time constant_high_frequency} }
+    \caption{Histogram of measured magnetic field for different time constant of lock-in amplifier while lock-in frequency is set to 2015 Hz (20 Hz far from resonance frequency). (a) lock-in time constant was set to 1 ms (b) for lock-in time constant 300 $\mu$s. % for this measurement both x and y data were fitted simultaneously.
+    \label{fig:diff time constant_high_frequency} }
 \end{figure}
 
 
@@ -972,48 +1012,23 @@ Another study has been conducted to understand the influence of pump beam power 
 %magnetic field direction has studied here.
 \section{Study magnetometer performance with tilted field} 
 \label{sec:tilted-results}
- \begin{figure}
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth,trim={0cm 0.5cm 0cm 0cm},clip]{figures/tilt1.png}
-        \caption{}
-        \label{fig:tilt_0_degree}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth,trim={0.7cm 0.5cm 0cm 0cm},clip]{figures/tilt2.png}
-        \caption{}
-        \label{fig:tilt_40_degree}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth,trim={0cm 0.5cm 3.2cm 0cm},clip]{figures/tilt3.png}
-        \caption{}
-        \label{fig:tilt_70_degree}
-    \end{subfigure}
-     \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth,trim={0.5cm 0.5cm 2.9cm 0cm},clip]{figures/tilt4.png}
-        \caption{}
-        \label{fig:tilt_80_degree}
-    \end{subfigure}
-    \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle.\label{fig:optical-rotation-different-angle}}
-\end{figure}
+
+ %\begin{figure}
+    %\centering
+    %\begin{subfigure}[b]{0.45\textwidth}
+       % \centering
+       % %\includegraphics[widt%h=\textwidth,trim={0cm 0.5cm 0cm 0cm},clip]{figures/tilt1.png}
+        %\caption{}
+        %\label{fig:tilt_0_degree}
+    %\end{subfigure}
+   % \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle.\label{fig:optical-rotation-different-angle}}
+%\end{figure}
+
 \begin{figure}
   \centering
 %trim={<left> <lower> <right> <upper>}
-\includegraphics[width=\textwidth,trim={0cm 5.7cm 4.1cm 4.3cm},clip]{figures/tilt3}
- \includegraphics[width=\textwidth,trim={0cm 5cm 0cm 3.5cm},clip]{figures/tilt2}
-  \includegraphics[width=\textwidth,trim={0.4cm 4.5cm 1.7cm 3cm},clip]{figures/tilt1}
-  \includegraphics[width=\textwidth,trim={0.4cm 0cm 0.5cm 10.9cm},clip]{figures/transversefield}
-  
-  \caption{(a) Optical rotation as a function of time at $\Omega_L$ in
-    the yz plane at tilt angle $15\degree$ with light propagation
-    direction. (b) Optical rotation as a function of time at
-    $2\Omega_L$ for same tilt angle.}
+\includegraphics[width=\textwidth]{figures/tilted_field_scope_trace.png}
+  \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle. When tilt angle is 0$\degree$ the FID signal contain only one frequency component but the signal contain two frequency component for tilt angle 15$\degree$ and 40$\degree$.  \label{fig:optical-rotation-different-angle}}
     \label{fig:tilted}
 \end{figure}
 In this Rb NMOR magnetometry setup the rubidium atoms interacted with a $z$-directed laser light beam which is linearly polarized
@@ -1058,7 +1073,7 @@ Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for the magnet
     \caption{ The amplitude of the FID NMOR signals as a function
       of tilt angle recorded at $\Omega_L$ and $2\Omega_L$ vs. the
       tilt angle of the magnetic field in the plane defined by the
-      light-polarization and light propagation vectors(xz-plane). \label{fig:tilted-wrong}}
+      light-polarization and light propagation vectors (xz-plane). \label{fig:tilted-wrong}}
 \end{figure}
 
 \begin{figure}
@@ -1084,10 +1099,17 @@ Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for the magnet
 
 Fig.~\ref{fig:something-tilted}(a) indicates the signal amplitude vs. different tilt angle at $\Omega_m=2\Omega_L$ . The amplitude of resonance signal at $2\Omega_L$  decreases as the angle between magnetic field $B$ and the light propagation direction increases while the amplitude of new resonance  increases with increasing tilt angle at $\Omega_L$.
       
-Fig.~\ref{fig:something-tilted}(b) shows the resonance amplitude at $\Omega_m=2\Omega_L$ keep decreases with increasing tilt angle in $yz$ plane while  the resonance amplitude measured at $\Omega_m=\Omega_L$ keep increase till $30\degree$ and after that amplitude start to decrease and reaches zero when the magnetic field is directed along the y axis. Consider a two-level system $F=1\rightarrow F=0$ and the quantization vector is directed along the magnetic field. When the magnetic field is tilted in the yz plane, the light-polarization axis is perpendicular to the magnetic field. In this case the linearly polarized light containing two circularly polarized components can only create the coherence state between magnetic sublevels $m_F=\pm 1$ . Since the transition frequency between these two consecutive Zeeman energy sublevels is $2\Omega_L$  the resonance appears only at this frequency. However, when the magnetic field is tilted  in the xy plane, the light is a linear superposition of polarizations parallel and perpendicular to the magnetic field. In this case, the light can create coherences between sublevels with $m_F=1$ and $m_F=2$, so resonances are observed at both $\Omega_L $ and $2\Omega_L$. 
- \begin{figure}[h]
-\centering\includegraphics[width=0.9\linewidth]{figures/filtered_data.png}
-\caption{Raw and filtered FID signal.}
+Fig.~\ref{fig:something-tilted}(b) shows the resonance amplitude at $\Omega_m=2\Omega_L$ keep decreases with increasing tilt angle in $yz$ plane while  the resonance amplitude measured at $\Omega_m=\Omega_L$ keep increase till $30\degree$ and after that amplitude start to decrease and reaches zero when the magnetic field is directed along the y axis. For both cases (Fig: \ref{fig:tilted-wrong} and Fig:\ref{fig:something-tilted}) the signal amplitude has been extracted as a fit parameter when data was fitted to the fit function \ref{eq:two_sinewave}
+\begin{figure}[h]
+\centering\includegraphics[width=0.9\linewidth]{figures/fitted_data_tilted_field.png}
+\caption{(a) Fitted FID signal using Eq. \ref{eq:two_sinewave}. (b)  The zoomed version of (a). The  blue line indicates raw data while the red one indicates fitted curve}
 \end{figure}
+\begin{figure}[h]
+\centering\includegraphics[width=0.9\linewidth]{figures/filtered_data.png}
+\caption{(a)Raw and filtered FID signal. (b) zoomed version of (a)}
+\end{figure}
+
+Consider a two-level system $F=1\rightarrow F=0$ and the quantization vector is directed along the magnetic field. When the magnetic field is tilted in the yz plane, the light-polarization axis is perpendicular to the magnetic field. In this case the linearly polarized light containing two circularly polarized components can only create the coherence state between magnetic sublevels $m_F=\pm 1$ . Since the transition frequency between these two consecutive Zeeman energy sublevels is $2\Omega_L$  the resonance appears only at this frequency. However, when the magnetic field is tilted  in the xy plane, the light is a linear superposition of polarizations parallel and perpendicular to the magnetic field. In this case, the light can create coherences between sublevels with $m_F=1$ and $m_F=2$, so resonances are observed at both $\Omega_L $ and $2\Omega_L$. 
+ 
  
 
