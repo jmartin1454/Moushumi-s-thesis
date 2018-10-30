@@ -216,38 +216,41 @@ to saturate well within 0.1~s.  The coherence time, indicated by the
 decay time of the oscillating signal, is about 0.06~s.
 Fig.~\ref{fig:pump-short} shows a more optimized the FID signal for
 0.1~s pump time and 0.2~s probe time.
-
+\begin{figure}%[h]
+  \centering\includegraphics[width=\linewidth]{figures/pump_time_}
+  \caption{Histograms of measured B-field for different pump times, for a measurement time of 100~s.  (a) is a pump time of
+      0.49~s (b) is a pump time of 0.39~s (c) is a pump time of 0.2~s
+      (d) is a pump time of 0.1~s.  The probe time in each case is
+      0.25~s.  The number of measurements taken in each case is
+      therefore (a) 137 (b) 158 (c) 224 (d) 287.  The standard
+      deviation of each set of measurements is indicated in the
+      respective figure.}\label{fig:different-pump-time}
+\end{figure}
 \begin{figure}%[h]
   \centering\includegraphics[width=\linewidth]{figures/pump_time}
   \caption{Histograms of measured B-field for different pump times,
-    {\bf for a measurement time of 300~s}. {\bf (a) is a pump time of
+    {\bf for a measurement time of 200~s}. {\bf (a) is a pump time of
       0.49~s (b) is a pump time of 0.39~s (c) is a pump time of 0.2~s
       (d) is a pump time of 0.1~s.  The probe time in each case is
       0.25~s.  The number of measurements taken in each case is
       therefore (a) 405 (b) 468 (c) 666 (d) 857.  The standard
       deviation of each set of measurements is indicated in the
-      respective figure.}\label{fig:different-pump-time}}
+      respective figure.}\label{fig:differentpump-time}}
 \end{figure}
 
 In Fig.~\ref{fig:different-pump-time} a histogram of measured magnetic
-fields by making subsequent measurements over 300~s is shown for
+fields by making subsequent measurements over 100~s is shown for
 different pump times.  {\bf Which one is which? What is in the figure?
-  The longer pump time is 0.49 s and the shorter one is 0.1 s.  What
+  The longer pump time is 0.49~s (\ref{fig:different-pump-time}(a)) and the shorter one is 0.1~s (\ref{fig:different-pump-time}(d)).  What
   is the probe time.  How many measurements appear in each graph?}
 
 From Fig.~\ref{fig:different-pump-time}, the pump time, when varied
 over this limited range, does not strongly affect the precision of the
 individual FID measurements.  {\bf However, it allows us to take
-  measurements faster(It is possible to take 857 measurement in 300 s
+  measurements faster(It is possible to take 287 measurement in 100 s
   if cycle time is optimized to 0.35 s instead of 1 s.  How much
   faster?  You need to say the times and/or how many measurements.}
   
-%  However for our Rb magnetometry setup the
-%shortest pump time 0.1 s because 0.1 s is the minimum time atoms need
-%to get aligned for making a coherence state after interacting with
-%laser beam. Since the amplitude of FID NMOR signal reach it's maximum
-%while atoms are in coherence state. Thus It is easy to understand
-%coherence state is ready or not by observing the signal amplitude.
 
 It is not surprising that the precision does not change much because
 the amplitude of the differential photodiode signal during the pump
@@ -415,19 +418,19 @@ time for different coil current. For better understanding
 Fig.~\ref{fig:field-change} has been divide into five different
 regions. In region-1 magnetic field has been recorded for 300 s while
 the applied current to the Z coil was 4.5 mA {\bf do you mean
-  4.500~mA?%  I mean 4.500~mA
+  4.500~mA?%  I mean 4.50000~mA
   How many digits of precision are possible in the current
   supply? }%6.5-digit. 
   Then in region-2 the applied current to the z coil has
-been increased by 0.0010 mA {\bf sig figs?} i.e., total current 4.5010
+been increased by 0.00100 mA {\bf sig figs?} i.e., total current 4.50100
 mA {\bf sig figs?} and measured the magnetic field for another 300
 s. It is clear from the figure that the field has been changed
 instantly by 50 pT due to the changed coil current. Now in
-region-3, the coil current has been reduced to 4.5000 mA {\bf sig figs?}
+region-3, the coil current has been reduced to 4.50000 mA {\bf sig figs?}
 and measured field for 300 s. After that the coil current has been
-decreased by 0.0010 mA. As a result the field also decreased by
+decreased by 0.00100 mA. As a result the field also decreased by
 50~pT in this region.  Finally in region-5 the coil current has
- been set to 4.5000 mA again and observed the corresponing quick change in
+ been set to 4.50000 mA again and observed the corresponing quick change in
 field.
 
 \section{Study the effect of room temperature in magnetic field} 
@@ -466,7 +469,7 @@ has taken place. In order to understand the correlation between
 temperature change and field change, the measured field
 vs. temperature has shown in Fig.~\ref{fig:field_vs_temp}. {\bf What
   was the data acquisition system for each device?  How were the data
-  synchronized?% For room temperature measurement a precision thermometer was connected to a Agilent 34410A/11A 6 ½ Digit Multimeter. A python script was used to configures the multimeter for a 2-wire RTD measurement, triggers the meter, and then transfers the reading to the computer via instrument output buffer. And for temperature measurement near shield  the T-type thermocouple was connected with a Arduino Uno. For configuring this device and then transferring the reading to the computer a python script was used. 
+  synchronized?% For room temperature measurement a precision thermometer was connected to a Agilent 34410A/11A 6 ½ Digit Multimeter. A python script was used to configures the multimeter for a 2-wire RTD measurement, triggers the meter, and then transfers the reading to the computer. And for temperature measurement near shield  the T-type thermocouple was connected with a Arduino Uno. For configuring this device and then transferring the reading to the computer a python script was used. 
   }  It is clear from the graph that there is no obvious
 of field drift dependency on temperature.
   
@@ -1016,17 +1019,17 @@ Another study has been conducted to understand the influence of pump beam power 
 
 
  
-  The FID signal for different reference frequency of lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency was always set to 2035 Hz and the pump power(~60 $\mu$w) and probe power (~32 $\mu$w)
+  The FID signal for different reference frequency of lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency was always set to 2035 Hz and the pump power(~60 $\mu$w) and probe power (~30 $\mu$w)
   
-  Fig\ref{fig:freq_1943_single_fit_300_micros} display the example of fitted FID signal(upper left figure), measured magnetic field over time (upper right figure), phase as a function of time (bottom left figure) and magnetic field vs. phase (bottom left figure) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s. A clear indication of correlation between field and phase can be seen here.
+  Fig \ref{fig:freq_1943_single_fit_300_micros} display the example of fitted FID signal(Fig \ref{fig:freq_1943_single_fit_300_micros}a), measured magnetic field over time (Fig \ref{fig:freq_1943_single_fit_300_micros}b), phase as a function of time (Fig \ref{fig:freq_1943_single_fit_300_micros}c) and magnetic field vs. phase (Fig \ref{fig:freq_1943_single_fit_300_micros}d) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s. A clear indication of correlation between field and phase can be seen here.
   
-   Fig\ref{fig:freq_1943_simultaneous_fit_300_micro_sec} display the example of simultaneous fitted x and y signal(upper left figure), measured magnetic field over time (upper right figure), magnetic field vs. phase (bottom left figure) and histogram of measured field (bottom left figure) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s. 
+   Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec} display the example of simultaneous fitted x and y signal( Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec}a), measured magnetic field over time ( Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec}b), magnetic field vs. phase ( Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec}c) and histogram of measured field ( Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec}d) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s. 
    
-    Fig\ref{fig:freq_2015_simultaneous_fit_300_micros} display the example of simultaneous fitted x and y signal(upper left figure), measured magnetic field over time (upper right figure), magnetic field vs. phase (bottom left figure) and histogram of measured field (bottom left figure) for lock-in reference frequency 2015 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s.
+    Fig \ref{fig:freq_2015_simultaneous_fit_300_micros} display the example of simultaneous fitted x and y signal(Fig\ref{fig:freq_2015_simultaneous_fit_300_micros} a), measured magnetic field over time (Fig\ref{fig:freq_2015_simultaneous_fit_300_micros} b), magnetic field vs. phase (Fig\ref{fig:freq_2015_simultaneous_fit_300_micros}c) and histogram of measured field (Fig\ref{fig:freq_2015_simultaneous_fit_300_micros} d) for lock-in reference frequency 2015 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s.
     
-    Fig \ref{fig:freq_1943_simultaneous_fit_1ms} display the example of simultaneous fitted x and y signal(upper left figure), measured magnetic field over time (upper right figure), magnetic field vs. phase (bottom left figure) and histogram of measured field (bottom left figure) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 1~ms. 
+    Fig \ref{fig:freq_1943_simultaneous_fit_1ms} display the example of simultaneous fitted x and y signal(Fig \ref{fig:freq_1943_simultaneous_fit_1ms} a), measured magnetic field over time (Fig \ref{fig:freq_1943_simultaneous_fit_1ms} b), magnetic field vs. phase (Fig \ref{fig:freq_1943_simultaneous_fit_1ms} c) and histogram of measured field (Fig \ref{fig:freq_1943_simultaneous_fit_1ms} d) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 1~ms. 
     
-  Fig \ref{fig:freq_2015_1ms} display the example of simultaneous fitted x and y signal(upper right figure), measured magnetic field over time (upper right figure), magnetic field vs. phase (bottom left figure) and histogram of measured field (bottom left figure) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 1~ms.  
+  Fig \ref{fig:freq_2015_1ms} display the magnetic field as a function of phase while only x data was fitted (Fig \ref{fig:freq_2015_1ms} a) , an example of simultaneous fitted x and y signal(Fig \ref{fig:freq_2015_1ms} b), magnetic field vs. phase (Fig \ref{fig:freq_2015_1ms} c) and histogram of measured field (Fig \ref{fig:freq_2015_1ms} d) for lock-in reference frequency 2015 Hz. During this measurement the lock-in time constant was set to 1~ms.  
   
   In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
    
