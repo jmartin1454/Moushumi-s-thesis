@@ -942,10 +942,9 @@ while the AOM frequency was 2036~Hz.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{figures/pump_beam}
-  \caption{Magnetic field vs. time for different pump beam power. (a)
-    measured magnetic field with duty cycle $5 \%$. Precession width
-    is about $2.3$ pT (b) measured magnetic field with Precession
-    width $4.6$ pT for 16 $\%$ duty cycle.}
+  \caption{Magnetic field histograms for different pump beam duty
+    cycles (a) 5\% (b) 16\%.  Numbers written on the graph report the
+    standard deviation of each distribution.}
     \label{fig:different pump power}
 \end{figure}
 
@@ -964,100 +963,201 @@ concluded that using higher duty cycle is likely statistically more
 robust, revealing new systematic errors in field measurement which led
 to the next studies.
 
-\subsection{Reference frequency of lock-in amplifier}
-  
+\subsection{Reference frequency of lock-in amplifier and precision frequency measurement}
+
 The measurement technique of FID signal was discussed in
 Section~\ref{sec:FID}.  In order to capture the FID signal, the
 reference frequency of lock-in amplifier is normally set to $\sim
-100$~Hz apart from the resonance frequency. In this study we kept all
-other setting fixed only changed the Lock-in reference frequency and
-observed the effect of that on field measurement study. The
-measurement was conducted at $0.2~\mu$T field.
-   \begin{figure}
+100$~Hz apart from the resonance frequency.  Also the lock-in time
+constant was set to 300~$\mu$s.  Technically, this time constant too
+loow.  It admits frequency components beyond the reference frequency
+which is typically 2000~Hz, if the magnetic field being measured is of
+order 0.2~$\mu$T.  Because of the bimodal structure seen in
+Figs.~\ref{fig:different probe power} and~\ref{fig:different pump
+  power}, we began to suspect that some noise was creeping into the
+frequency measurement through the lock-in amplifier.
+
+This led us to increase the lock-in time constant, which in turn led
+us to want to reduce the frequency difference between the lock-in
+reference frequency and the atoms.
+
+%In this study we kept all other setting fixed only changed the Lock-in
+%reference frequency and observed the effect of that on field
+%measurement study. The measurement was conducted at $0.2~\mu$T field.
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
     \centering
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/reference_frequency1}
-        \caption{}
-        \label{fig:far from resonance}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/reference_frequency3}
-        \caption{}
-        \label{fig: middle range}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/reference_frequency2}
-        \caption{}
-        \label{fig:close to resonance}
-    \end{subfigure}
- \caption{FID signal for different reference frequency of Lock-in amplifier while the resonance frequency was 2035 kHz.(a) reference frequency was set to 92 Hz far from resonance (b) difference between resonance and reference frequency is 40 Hz, (c) reference frequency was set to 2015 Hz while resonance frequency 2035 Hz. \label{fig:different reference signal}}
+    \includegraphics[width=\textwidth]{figures/reference_frequency1}
+    \caption{}
+    \label{fig:far from resonance}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/reference_frequency3}
+    \caption{}
+    \label{fig: middle range}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/reference_frequency2}
+    \caption{}
+    \label{fig:close to resonance}
+  \end{subfigure}
+  \caption{FID signal for different reference frequency settings of
+    the lock-in amplifier, while the true magnetometer resonance
+    frequency was roughly 2035~kHz (which was the AOM frequency
+    setting) (a) lock-in reference frequency 1943.9~Hz (b) 1995~Hz,
+    and (c) 2015 Hz.\label{fig:different reference signal}}
 \end{figure}
 
-  \begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/freq_1943_single_fit_300microsec.png}
-\caption{Lock-in reference frequency and time constant are 1943 Hz and 300$\mu$s respectively. The resonance frequency is 2035 Hz. In this case only x data was fitted. \label{fig:freq_1943_single_fit_300_micros}}
+The FID signal for different reference frequency of lock-in amplifier
+is shown in Fig.~\ref{fig:different reference signal}.  The data are
+fitted in order to determine the frequency of oscillation.  In this
+case the pump power was 60~$\mu$W and the probe power was 30~$\mu$W.
+We decided to study these settings in more detail.
+
+\begin{figure}%[h]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/freq_1943_single_fit_300microsec.png}
+\caption{Lock-in reference frequency and time constant are 1943 Hz and
+  300~$\mu$s respectively.  Only X data was fitted.  (a) example of an
+  FID and individual fit (b) frequency measurement translated to
+  magnetic field (c) phase of fit (d) magnetic field
+  vs.~phase.\label{fig:freq_1943_single_fit_300_micros}}
 \end{figure}
 
+Fig.~\ref{fig:freq_1943_single_fit_300_micros} displays study over
+time of the 1943~Hz lock-in amplifier frequency setting.  In the
+example FID in Fig.~\ref{fig:freq_1943_single_fit_300_micros}(a) some
+high frequency periodic noise can be seen.  In
+Fig.~\ref{fig:freq_1943_single_fit_300_micros}(b) some non-statistical
+sinusoidal behavior can be seen.  We eventually realized that this was
+correlated with the phase determined by the fit.  The phase as a
+function of time is shown in
+Fig.~\ref{fig:freq_1943_single_fit_300_micros}(c).  The correlation of
+field with phase is shown in
+Fig~\ref{fig:freq_1943_single_fit_300_micros}(d).  An indication of
+correlation between field and phase can be seen here.
 
-  \begin{figure}[h]
+Clearly it is possible for the frequency to be pulled by the phase of
+the fit, given that the precision of the frequency fit is determined
+in part by the number of zero-crossings in the individual FID signals.
+The phase could certainly affect the number of zero crossings which
+are statistically relevant to the fit.
+
+\begin{figure}%[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/freq_1943_simultaneous_fit_300microsec_.png}
-\caption{Lock-in reference frequency and time constant are 1943 Hz and 300$\mu$s respectively. In this case both x and y data was fitted simultaneously. \label{fig:freq_1943_simultaneous_fit_300_micro_sec}}
+\caption{Lock-in reference frequency and time constant are 1943 Hz and
+  300~$\mu$s respectively.  X and Y data were fitted simultaneously.
+  (a) example of an FID and its fit (b) frequency measurement
+  translated to magnetic field (c) magnetic field vs.~phase determined
+  by fit (d) histogram of field
+  measurements.\label{fig:freq_1943_simultaneous_fit_300_micro_sec}}
 \end{figure}
 
- \begin{figure}[h]
+We decided to try to reduce the dependence on phase by fitting both
+the X and Y signals simultaneously.
+Fig.~\ref{fig:freq_1943_simultaneous_fit_300_micro_sec} shows this
+study.  From
+Fig.~\ref{fig:freq_1943_simultaneous_fit_300_micro_sec}(c), it can be
+seen that the correlation of frequency with phase has been reduced
+significantly, so that the data look statistical when histogrammed, as
+is done in Fig.~\ref{fig:freq_1943_simultaneous_fit_300_micro_sec}(d).
+But Fig.~\ref{fig:freq_1943_simultaneous_fit_300_micro_sec}(b) still
+clearly shows that there is non-statistical behavior in the frequency
+(field) measurements.  We though this might yet be due to the periodic
+high-frequency noise seen if
+Fig.~\ref{fig:freq_1943_simultaneous_fit_300_micro_sec}(a).  Based on
+this we decided to increase the lock-in time constant, and tried
+increasing the lock-in reference frequency to have more flexibility to
+change the time-constant.
+
+\begin{figure}%[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/freq_2015_simultaneous_fit_300microsec.png}
-\caption{Lock-in reference frequency and time constant are 2015 Hz and 300$\mu$s respectively. In this case both x and y data was fitted simultaneously. \label{fig:freq_2015_simultaneous_fit_300_micros}}
+\caption{Lock-in reference frequency and time constant are 2015~Hz and
+  300~$\mu$s respectively.  X and Y data were fitted simultaneously.
+  (a) example of an FID and its fit (b) frequency measurement
+  translated to magnetic field (c) magnetic field vs.~phase determined
+  by fit (d) histogram of field
+  measurements.\label{fig:freq_2015_simultaneous_fit_300_micros}}
 \end{figure}
 
-  \begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/freq_1943_simultaneous_fit_1ms.png}
-\caption{Lock-in reference frequency and time constant are 1943~Hz and 1~ms respectively.  \label{fig:freq_1943_simultaneous_fit_1ms}}
-\end{figure}
+In Fig.~\ref{fig:freq_2015_simultaneous_fit_300_micros}, the lock-in
+reference frequency has been changed to 2015~Hz, without yet changing
+the lock-in time constant.  The interesting feature here is that,
+although the X and Y data are fitted simultaneously, there is a very
+clear phase dependence to the field measurements.  The ``best'' choice
+of phase appears to be about 0.5~radians.  It is not unexpected to
+have such a phase dependence, given that there are so few
+zero-crossings in the FID signal that can be used to constrain the
+frequency.
 
-  \begin{figure}[h]
+\begin{figure}%[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/freq_2015_simultaneous_fit_1ms.png}
-\caption{Lock-in reference frequency and time constant are set to 2015~Hz and 1~ms respectively. \label{fig:freq_2015_1ms}}
+\caption{Lock-in reference frequency and time constant are 2015~Hz and
+  1~ms respectively.  (a) frequency measurement determined by fit of X
+  data only as a function of the phase also determined by that fit (b)
+  example of an FID and its fit, where both X and Y data has been
+  fitted simultaneously (c) magnetic field vs.~phase determined by the
+  simultaneously fitted X and Y data (d) histogram of field
+  measurements arising from the simultaneous fit of the X and Y
+  data.\label{fig:freq_2015_1ms}}
 \end{figure}
 
+In Fig.~\ref{fig:freq_2015_1ms}, the lock-in reference frequency of
+2015~Hz has been retained, but the lock-in time constant has now been
+increased to 1~ms.  The same large phase dependence can be seen.
+Fig.~\ref{fig:freq_2015_1ms}(a) additionally shows the phase
+dependence of the fit to the X data only, which is even larger.  Aside
+from the strong phase dependence, the data do appaear to be
+statistical in nature.
 
- 
-  The FID signal for different reference frequency of lock-in amplifier has shown in Fig \ref{fig:different reference signal}. In the case of Fig \ref{fig:far from resonance} the reference frequency of lock-in was set to 1943.9 Hz (90 Hz far from resonance frequency). On the other hand for Fig \ref{fig:close to resonance} the reference frequency of lock-in was set to 2015 Hz (20 Hz far from resonance frequency). In this study the resonance frequency was always set to 2035 Hz , pump power(~60 $\mu$w) and probe power (~30 $\mu$w) and cycle time is about 0.3~s
-  
-  Fig \ref{fig:freq_1943_single_fit_300_micros} display the example of fitted FID signal(Fig \ref{fig:freq_1943_single_fit_300_micros}a), measured magnetic field over time (Fig \ref{fig:freq_1943_single_fit_300_micros}b), phase as a function of time (Fig \ref{fig:freq_1943_single_fit_300_micros}c) and magnetic field vs. phase (Fig \ref{fig:freq_1943_single_fit_300_micros}d) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s. An  indication of correlation between field and phase can be seen here.
-  
-   Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec} display the example of simultaneous fitted x and y signal( Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec}a), measured magnetic field over time ( Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec}b), magnetic field vs. phase ( Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec}c) and histogram of measured field ( Fig \ref{fig:freq_1943_simultaneous_fit_300_micro_sec}d) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s. 
-   
-    Fig \ref{fig:freq_2015_simultaneous_fit_300_micros} display the example of simultaneous fitted x and y signal(Fig\ref{fig:freq_2015_simultaneous_fit_300_micros} a), measured magnetic field over time (Fig\ref{fig:freq_2015_simultaneous_fit_300_micros} b), magnetic field vs. phase (Fig\ref{fig:freq_2015_simultaneous_fit_300_micros}c) and histogram of measured field (Fig\ref{fig:freq_2015_simultaneous_fit_300_micros} d) for lock-in reference frequency 2015 Hz. During this measurement the lock-in time constant was set to 300$\mu$~s.
-    
-    Fig \ref{fig:freq_1943_simultaneous_fit_1ms} display the example of simultaneous fitted x and y signal(Fig \ref{fig:freq_1943_simultaneous_fit_1ms} a), measured magnetic field over time (Fig \ref{fig:freq_1943_simultaneous_fit_1ms} b), magnetic field vs. phase (Fig \ref{fig:freq_1943_simultaneous_fit_1ms} c) and histogram of measured field (Fig \ref{fig:freq_1943_simultaneous_fit_1ms} d) for lock-in reference frequency 1943 Hz. During this measurement the lock-in time constant was set to 1~ms. 
-    
-  Fig \ref{fig:freq_2015_1ms} display the magnetic field as a function of phase while only x data was fitted (Fig \ref{fig:freq_2015_1ms} a) , an example of simultaneous fitted x and y signal(Fig \ref{fig:freq_2015_1ms} b), magnetic field vs. phase (Fig \ref{fig:freq_2015_1ms} c) and histogram of measured field (Fig \ref{fig:freq_2015_1ms} d) for lock-in reference frequency 2015 Hz. During this measurement the lock-in time constant was set to 1~ms.  
-  
-  In Fig \ref{fig:field for different lockin ref freq} the measured magnetic field over 35 s for different lock-in reference frequency has shown. It is obvious from the plot that if we set reference frequency very close to resonance frequency magnetic field start to oscillate. The exact reason behind this observed field oscillation remains unknown. We are thinking that when lock-in reference frequency is set very close to resonance frequency the fit function might fail to fit data properly due to the less zero crossings. So it seems like a systematic effect on field measurement rather than a real fact.
-   
-\begin{figure}[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/reference_frequency}
-\caption{Measured magnetic field for different lock-in reference frequency. The red curve represents measured magnetic field when reference frequency was set to 2015 Hz which is 20 Hz far from resonance frequency. The blue curve shows magnetic field for lock-in reference frequency 1943.9 Hz. In this measurement only x data was fitted. \label{fig:field for different lockin ref freq}}
+\begin{figure}%[h]
+\centering\includegraphics[width=0.8\linewidth]{figures/freq_1943_simultaneous_fit_1ms.png}
+\caption{Lock-in reference frequency and time constant are 1943~Hz and
+  1~ms respectively (a) example of an FID and its simultaneous fit to
+  the X and Y data (b) frequency measurement translated to magnetic
+  field, in red are shown the results of the simultaneous fit to the X
+  and Y data, in cyan are the results of the fit to the X data only
+  (c) magnetic field vs.~phase determined by the simultaneous fit to
+  the X and Y data (d) histogram of field measurements for the
+  simultaneously fitted X and Y
+  data.\label{fig:freq_1943_simultaneous_fit_1ms}}
 \end{figure}
-   
 
-%\begin{figure}[h]
-%\centering\includegraphics[width=0.8\linewidth]{figures/sigma_diff_lock-in_frequency.png}
-%\caption{Histogram of the measured magnetic field for different lock-in reference frequency.\label{histogram-of-diff-lock-in freq}}
-%\end{figure}
+In Fig.~\ref{fig:freq_1943_simultaneous_fit_1ms} the lock-in reference
+frequency has been set to 1943 Hz and the lock-in time constant to
+1~ms.  Compared with the 300~$\mu$s settings which were shown in
+Figs.~\ref{fig:freq_1943_single_fit_300_micros}
+and~\ref{fig:freq_1943_simultaneous_fit_300_micro_sec}, the phase
+dependence has been accentuated by the longer lock-in time constant.
+Another feature is that the amplitude of the fitted data has been
+reduced, seen particularly in
+Fig.~\ref{fig:freq_1943_simultaneous_fit_1ms}(a).
 
- In this study the systematic effect of changing lock-in amplifier time constant and reference frequency  on magnetic field measurement has been discussed.
- 
-  
-  
-  
+The main conclusion of these studies was that the frequency fitting
+procedure is quite sensitive to the lock-in time constant and
+frequency settings, which may induce errors if not adjusted carefully.
+These could give rise to additional systematic errors.  This would be
+one of the main topics for further study in order to push the
+precision of the magnetometer to its limits.  Generally these effects
+manifest themselves as fairly obvious nonstatistical behaviors in the
+data either as a function of time or when histogramming the field
+measurements.  They also tend to become an issue with frequency
+measurements of precision below 1~Hz are made on each individual FID
+measurement.
+
+It is also worth noting that all the above studies were done for a
+considerable larger probe power than the optimal low value.  As a
+consequence the coherence times are rather short compared to the
+values used for most other studies in this thesis.  The frequency
+measurements of the other studies are less affected by these phase
+effects as a result.
 
 
-\section{Study magnetometer performance with tilted field} 
+\section{Tilted field measurements} 
 \label{sec:tilted-results}
 
  %\begin{figure}
@@ -1071,36 +1171,79 @@ measurement was conducted at $0.2~\mu$T field.
    % \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle.\label{fig:optical-rotation-different-angle}}
 %\end{figure}
 
-\begin{figure}
-  \centering
-%trim={<left> <lower> <right> <upper>}
-\includegraphics[width=0.8\textwidth]{figures/tilted_field_scope_trace.png}
-  \caption{Optical rotation as a function of time at $\Omega_L$ in the yz plane for different tilt angle.   \label{fig:optical-rotation-different-angle}}
-    
-\end{figure}
-In this Rb NMOR magnetometry setup the rubidium atoms interacted with a $z$-directed laser light beam which is linearly polarized
-along the y axis. In the FID NMOR technique, the magnetic field is generally directed along the light propagation direction and the resonance occurs at $2\Omega_L$.  This effect can be explained by considering that the polarization returns to its original state after a $180\degree$ rotation because of the two-fold symmetry of the optically pumped state. As a result, the optical rotation induced by the rotating linear dichroism is periodic at twice the Larmor frequency.
+%\begin{figure}
+%  \centering
+%  %trim={<left> <lower> <right> <upper>}
+%  \includegraphics[width=0.8\textwidth]{figures/tilted_field_scope_trace.png}
+%  \caption{Differential photodiode signal as a function of time zoomed
+%    in on the FID measurement region.  The time base is 2~ms per
+%    division. 
+%
+%at $\Omega_L$ in the
+%    yz plane for different tilt
+%    angle.\label{fig:optical-rotation-different-angle}}
+%\end{figure}
 
-We have observed that Resonances in nonlinear magneto-optical rotation with amplitude modulated light by tilting the magnetic field at angles away from the direction of light propagation while operating the Rb magnetometer in FID mode. When the field is tilted in the plane perpendicular to the light polarization direction an resonance appears at $2\Omega_L$. In this case no additional resonance appears for modulation frequency $\Omega_L$. The amplitude of the FID NMOR signal decreases with increasing tilt angle. 
+%In this Rb NMOR magnetometry setup the rubidium atoms interacted with
+%a $z$-directed laser light beam which is linearly polarized along the
+%y axis. In the FID NMOR technique, the magnetic field is generally
+%directed along the light propagation direction and the resonance
+%occurs at $2\Omega_L$.  This effect can be explained by considering
+%that the polarization returns to its original state after a
+%$180\degree$ rotation because of the two-fold symmetry of the
+%optically pumped state. As a result, the optical rotation induced by
+%the rotating linear dichroism is periodic at twice the Larmor
+%frequency.
 
-However, We also observed that by tilting the field direction toward the light polarization direction a new resonance occurs at $\Omega_L$ along with the main resonance at $2\Omega_L$. The resonance signal recorded at $\Omega_L$ contains two frequency components.
-\begin{figure}[h]
-\centering\includegraphics[width=0.7\linewidth]{figures/fft_amp.png}
-\caption{FFT of FID  signal in the presence of transverse field at modulation frequency $\Omega_L$ while tilted the magnetic field direction toward light polarization direction  .\label{fig:fft-amplitude}}
-\end{figure}
+W%e have observed that Resonances in nonlinear magneto-optical rotation with amplitude modulated light by tilting the magnetic field at angles away from the direction of light propagation while operating the Rb magnetometer in FID mode. When the field is tilted in the plane perpendicular to the light polarization direction an resonance appears at $2\Omega_L$. In this case no additional resonance appears for modulation frequency $\Omega_L$. The amplitude of the FID NMOR signal decreases with increasing tilt angle. 
 
+%However, We also observed that by tilting the field direction toward the light polarization direction a new resonance occurs at $\Omega_L$ along with the main resonance at $2\Omega_L$. The resonance signal recorded at $\Omega_L$ contains two frequency components.
 
-When direction of the magnetic is tilted toward the light polarization axis  the FID signal contain two frequency component at modulation frequency $\Omega_L$. Fig: \ref{fig:optical-rotation-different-angle} shows the FID signal for different tilt angle when pump beam is modulated at $\Omega_L$. In order to extract frequency components we have used two methods. One of them is the FFT of FID signal and the other one is the fit FID signal using equation \ref{eq:two_sinewave}.
+In Section~\ref{sec:ch4_tilted_field} we described magnetometer
+operations for tilted field, where we did not use the lock-in
+amplifier.  We showed an example where the field was tilted in the
+$yz$-plane which is defined by the laser propagation direction ($z$)
+and the linear polarization direction ($y$).
 
+When the pump beam is modulated at $\Omega_m\approx \Omega_L$, the FID
+signal shows two frequency components: one near $2\Omega_L$ and one
+near $\Omega_L$.  The amplitude of these frequency components is
+sensitive to the tilt angle. One of them is the FFT of FID signal and
+the other one is the fit FID signal using
 \begin{equation}
-     X = A_1 e^{-t /\tau_1} \sin(\omega_1 t + \phi_1) + A_2 e^{-t /\tau_2}  \sin (\omega_2 t + \phi_2) + C  
-     \label{eq:two_sinewave}
+  X(t)=A_1e^{-t/\tau_1}\sin(\omega_1t+\phi_1)+A_2e^{-t/\tau_2}\sin(\omega_2t+\phi_2)+C
+\label{eq:two_sinewave}
 \end{equation}
+where X(t) is the differential photodiode signal as a function of
+time, and $A_1$, $A_2$, $\omega_1$, $\omega_2$, $\phi_1$, $\phi_2$,
+$\tau_1$, and $\tau_2$ are fit parameters.  A 10th order Infinite
+Impulse Response (IIR) Butterworth filter was also used to reduce
+background noise from the signal.
 
-Where $A_1$ and $A_2$ are amplitude for two decaying sin wave, $\omega_1$ and $\omega_2$ represents oscillation frequency, $\phi_1$ and $\phi_2$ indicate phase and $\tau_1$ and $\tau_2$ represents coherence time. A 10th order Infinite Impulse Response( IIR) Butterworth filter is also used to reduce background noise from the signal.
-Fig: \ref{fig:fft-amplitude} display the FFT of resonance signal for three different  tilt angle $0\degree$, $25\degree$ and $50\degree$. It can be seen from the plot that at $0\degree$ tilt angle there is only one frequency component while for $25\degree$ tilt angle two peak corresponds to two frequency components.
+\begin{figure}%[h]
+\centering\includegraphics[width=0.7\linewidth]{figures/fft_amp.png}
+\caption{FFT of FID signal in the presence of transverse field after
+  amplitude modulation at frequency $\Omega_m=1019$~Hz.  The topmost
+  figure shows when the field is oriented along the $z$-axis (the axis
+  of the laser beam path).  The middle figure shows when the field has
+  been oriented at a 25\degree angle relative to the $z$-direction in
+  the $yz$-plane.  The bottom figure shows when the field has been
+  oriented at a 50\degree angle relative to the $z$-direction in the
+  $yz$-plane.\label{fig:fft-amplitude}}
+\end{figure}
 
-Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for the magnetic field tilted in the $xz$ plane at various angles to the light propagation direction at modulation frequency $2\Omega_L$ and $\Omega_L$. It can be seen from the figure that the amplitude of the FID signal decreases with increasing tilt angle for both modulation frequency.
+Fig.~\ref{fig:fft-amplitude} display the FFT of resonance signal for
+three different tilt angles of $0\degree$, $25\degree$ and $50\degree$
+in the $yz$-plane. It can be seen from the plot that at $0\degree$
+tilt angle there is only one frequency component while for others two
+peaks correspond to two frequency components.
+
+Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for
+the magnetic field tilted in the $xz$ plane (out of the polarization
+plane) at various angles to the light propagation direction at
+modulation frequency $2\Omega_L$ and $\Omega_L$. It can be seen from
+the figure that the amplitude of the FID signal decreases with
+increasing tilt angle for both modulation frequencies.
 \begin{figure}
     \centering
    \begin{subfigure}[b]{0.45\textwidth}
@@ -1116,10 +1259,11 @@ Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for the magnet
         \caption{}
         \label{fig:three sin x}
     \end{subfigure}
-    \caption{ The amplitude of the FID NMOR signals as a function
-      of tilt angle recorded at $\Omega_L$ and $2\Omega_L$ vs. the
-      tilt angle of the magnetic field in the plane defined by the
-      light-polarization and light propagation vectors (xz-plane). \label{fig:tilted-wrong}}
+    \caption{ The amplitude of the FID NMOR signals as a function of
+      tilt angle recorded at $\Omega_m\approx\Omega_L$ and
+      $\Omega_m\approx 2\Omega_L$ vs. the tilt angle of the magnetic
+      field in the plane defined by the light-polarization and light
+      propagation vectors (xz-plane). \label{fig:tilted-wrong}}
 \end{figure}
 
 \begin{figure}
