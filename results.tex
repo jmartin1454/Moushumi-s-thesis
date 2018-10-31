@@ -554,7 +554,7 @@ To remind the reader, the procedure is:
 \end{figure}
 
 Optical rotation as a function of magnetic field for different sample
-rate has shown in Fig.~\ref{fig:different-sample-rate}.  Recall that
+rate is shown in Fig.~\ref{fig:different-sample-rate}.  Recall that
 the sample rate determines the rapidity with which the $5\times 10^5$
 individual samples of the linear degaussing envelope function are
 stepped through.  A sample rate of 10,000/s therefore represents a
@@ -572,14 +572,13 @@ worse degaussing resulting possibly in worse magnetometer performance.
 Paradoxically, the resonance width $\Delta B$, the difference between
 two peak of the dispersive curve, reduced very slightly as the sample
 rate was increased.  It can be seen from
-Fig~\ref{fig:different-sample-rate} that, the resonance width is about
-0.49~nT for sample rate 10,000/s and the resonance width is 0.38~nT
-for sample rate 80,000/s.  This is likely an indication of a small
-reduction in the transverse fields or generally an improvement the
-homogeneity of the field.  This is consistent with the observation
-that the amplitude grows slightly with amplitude, which is another
-indication of the field quality, all other magnetometer settings being
-equal.
+Fig.~\ref{fig:different-sample-rate} that, the resonance width is
+about 0.49~nT for sample rate 10,000/s and the resonance width is
+0.38~nT for sample rate 80,000/s.  This is likely an indication of a
+small reduction in the transverse fields or generally an improvement
+the homogeneity of the field.  This is consistent with the observation
+that the amplitude grows slightly, which is another indication of the
+improved field quality, all other magnetometer settings being equal.
 
 The remnant field $B_0$ is an indication of the average longitudinal
 field (along the laser beam axis) and is within 20~pT of zero.  It
@@ -588,8 +587,8 @@ positive value.
 
 The conclusion of this study was that additional degaussing, as long
 as it has a reasonable number of cycles, tends not to affect the field
-or to improve slightly the homogeneity of the field.  Generally the
-field is reduced below 20~pT.
+or it might improve slightly the homogeneity of the field.  Generally
+the field is reduced below 20~pT.
 
 %\begin{figure}%[h]
 %\centering\includegraphics[width=0.6\linewidth]{figures/field_vs_sample_rate}
@@ -613,7 +612,8 @@ had little impact if the previous degaussing was done adequately.  To
 address this, we began to do studies where the internal $z$-coil field
 was purposely ramped to a large value, then reset to a low value for
 measurements at non-zero field.  The idea here was to use the $z$-coil
-itself to magnetize the shields.
+itself to magnetize the shields, and to measure drifts at non-zero
+field, which is the chief interest for nEDM experiments.
 
 %A study has conducted by making the magnetic field environment bad
 %inside the shielding intentionally by ramping the field from a lower
@@ -627,20 +627,20 @@ itself to magnetize the shields.
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.425\textwidth}
+  \begin{subfigure}[b]{0.49\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/ramp_1}
     \caption{}
     \label{fig:ramp-up}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.42\textwidth}
+  \begin{subfigure}[b]{0.49\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/ramp_2}
     \caption{}
     \label{fig:ramp-down}
   \end{subfigure}
-  \begin{subfigure}[b]{0.42\textwidth}
+  \begin{subfigure}[b]{0.49\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/ramp3}
     \caption{}
@@ -656,15 +656,17 @@ itself to magnetize the shields.
 
 Fig.~\ref{fig:ramp-updown} shows an example of such a study.  In all
 three cases shown in Fig.~\ref{fig:ramp-updown}, the magnetometer
-settings are similar.  Since the field changed in each measurement,
-the magnetometer was retuned each time, principally the pump frequency
-and the lock-in amplifier internal reference frequency.  {\bf What are
-  the magnetometer settings?}
+settings are similar in each case.  The AOM frequency was adjusted
+slightly to optimize the FID amplitude for each measurement, but the
+lock-in frequency and most other settings were left the same.
+%Since the field changed in each measurement, the magnetometer was
+%retuned each time, principally the pump frequency and the lock-in
+%amplifier internal reference frequency.  {\bf What are the
+%  magnetometer settings?}
  % AOM frequency 2064 Hz and lock-in frequency 1950.2 Hz (fig:5.12(a))
  % AOM frequency 2059 Hz and lock-in frequency 1950.2 Hz (fig:5.12(b))
  % AOM frequency 2078 Hz and lock-in frequency 1950.2 Hz (fig:5.12(c))
   
-
 In the 1st part of this study the magnetometer was operated in FID
 mode at 0.2~$\mu$T field, {\bf at a point in time when the
   magnetometer had been operated in a quiet environment for several
@@ -683,7 +685,7 @@ environment inside the shield.  After this field ramping the long term
 field measurement has been conducted for another 2200 s. In this case,
 the field showed a downward drift of about 35~pT.  Thus field ramping
 did seem to change the magnetic environment inside the magnetic
-shielding. 
+shielding.
 
 Finally, for Fig.~\ref{fig:degauss}, the innermost
 magnetic shield was degaussed  with degaussing parameters stated in Table \ref{table:degaussing-setting}
@@ -703,13 +705,13 @@ end of the innermost shield, whose endcaps have been removed in order
 to accommodate its degaussing coil.
 
 
-\subsection{Effect of degaussing second innermost and two other outer shields}
+\subsection{Effect of degaussing the three outermost shields}
  
 If the system had been kept at low field for several days, the usual
 field drift was about 15 pT over 3000~s (as discussed in
-Sections~\ref{sec:three-degauss} and~\ref{sec:long-term}).
-After doing a transverse field study (applying current to $x$- and
-$y$-coils along with $z$-coil, like that reported in
+Sections~\ref{sec:three-degauss} and~\ref{sec:long-term}).  After
+doing a transverse field study (applying current to $x$- and $y$-coils
+along with $z$-coil, like that reported in
 Sections~\ref{sec:ch4_tilted_field} and~\ref{sec:tilted-results}) the
 magnetic field environment became even more unstable.
 
@@ -758,8 +760,6 @@ $z$-coil may magnetize the second-to-innermost shield.  We expect this
 
 \section{Laser tuning} 
 
-\subsection{General effects of laser tune on FID parameters}
-
 In the course of tuning the laser for maximum FID amplitude, some
 studies were conducted where the laser was purposely mistuned in order
 to check the effect on the measured FID fit parameters.  In general,
@@ -794,26 +794,27 @@ compared to short times.  The question was if this possible drift in
 tune was causing any frequency drift or not.
 
 We suspected the tune might be drifting because we use a polarizing
-beamsplitter cube in our DAVLL system which may possess poor stability over long time periods~\cite{bib:Philip2008}.
+beamsplitter cube in our DAVLL system which may possess poor stability
+over long time periods~\cite{bib:Philip2008}.
 
-In order to test this hypothesis, I did a study where I manually
-adjusted (locked) the frequency of laser light to maximize optical
-rotation.  The DAVLL and Digilock system was not used to lock the
-laser.  Rather, periodically, the data acquisition was paused, and the
-laser frequency was adjusted manually to maintain the same (largest)
-different photodiode amplitude. The data acquisition would then be
-restarted.
+In order to test the hypothesis that the frequency of the laser might
+be drifting, I did a study where I manually adjusted the frequency of
+laser light to maximize optical rotation.  The DAVLL and Digilock
+system were not used to lock the laser during this study.  Rather,
+periodically, the data acquisition was paused, and the laser frequency
+was adjusted manually to maintain the same (largest) differential
+photodiode amplitude. The data acquisition was then restarted.
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/manual_tuning}
     \caption{}
     \label{fig:field-manual-tuning}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/amplitude_manual_tuning}
     \caption{}
@@ -864,66 +865,114 @@ frequency measurement becomes statistically less precise.
 %drift.
 
 
-
-
 \section{Improving the precision of individual FIDs, and problems encountered in doing so\label{sec:reference-frequency}}
 
 \subsection{Optimization of pump and probe beam power} 
 A study has been performed to determine how optimization of the pump
 and probe beam power effect on precise field measurement.  During this
 study, the magnetometer has operated in FID mode.
-  \begin{figure}
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.7\textwidth}
     \centering
-    \begin{subfigure}[b]{0.7\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/beam_power_less}
-        \caption{}
-        \label{fig:power less}
-    \end{subfigure}
-
-    \begin{subfigure}[b]{0.7\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/beam_power_double}
-        \caption{}
-        \label{fig:power double}
-    \end{subfigure}
-    \caption{ Magnetic field as a function of time for different power of probe beam.(a) measured magnetic field with probe beam power 15 $\mu$w. Precession width is about $3.01$ pT (b) measured magnetic field with precession width $7.2$ pT for probe beam power 30 $\mu$w.}
-    \label{fig:different probe power}
+    \includegraphics[width=\textwidth]{figures/beam_power_less}
+    \caption{}
+    \label{fig:power less}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.7\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/beam_power_double}
+    \caption{}
+    \label{fig:power double}
+  \end{subfigure}
+  \caption{ Magnetic field as a function of time for different power
+    of probe beam: (a) 15~$\mu$W, the standard deviation of the data
+    is 3.01~pT (b) 30~$\mu$W, the standard deviation is
+    7.2~pT.\label{fig:different probe power}}
 \end{figure}
 %data colllected 13th August 2018
  
- In Fig \ref{fig:different probe power} the measured magnetic field has been displayed for two different  Probe beam power. Fig \ref{fig:power less} present the measured field over 100 s with 15 $\mu$W probe power while fig \ref{fig:power double} display the measured field over 100 s for probe power 30 $\mu$W. In both cases, the pump beam power has been kept unchanged ($\sim $40 $\mu$W). Each blue points in this graph represent a single FID scan. As can be seen from Fig \ref{fig:different probe power} the magnetic field is more scattered for high probe beam power. Precession width is about $7.2$ pT for probe beam power 30 $\mu$W while for low beam power(15 $\mu$W) the precession width is about $3.01$ pT. It can be concluded lower probe beam power is better for precession  magnetometry because the narrower the precession width more sensitive the magnetometer. Although low probe beam power is better for precise field measurement, it's hard to work with because of the dimness of light.
-Table  \ref{table:Coherence time for different probe power} represent the coherence time for different probe power while the pump beam power was unchanged (120 $\mu$W).
- \begin{table}%[h]
+In Fig.~\ref{fig:different probe power} the measured magnetic field
+has been displayed for two different probe beam
+power. Fig.~\ref{fig:power less} presents the measured field over
+100~s with 15~$\mu$W probe power while Fig.~\ref{fig:power double}
+display the measured field over 100~s for probe power 30~$\mu$W. In
+both cases, the pump beam power the same ($\sim 40~\mu$W). Each blue
+points in this graph represent a single FID scan. As can be seen from
+Fig.~\ref{fig:different probe power} the magnetic field were more
+scattered for high probe beam power.  The standard deviation of the
+data was 7.2~pT for probe beam power 30~$\mu$W while for low beam
+power of 15~$\mu$W the standard deviation was 3.01~pT.
+
+\begin{table}%[h]
 \centering
-\begin{tabular}{|l  |c|c|}\hline
-\textbf{Probe power($\mu$w)}    & \textbf{Coherence time(ms)}  & \textbf{Amplitude(Volts)}\\\hline
-~~~~~~~~2 & 84 & 2.13   \\
-\hline
-~~~~~~~~5    & 82 & 2.11  \\
-\hline
-~~~~~~~~10   &  68 & 4.06 \\
-\hline
-~~~~~~~~15  &   59 & 5.8  \\
-\hline
-~~~~~~~~35  &   32 & 10  \\
-\hline
+\begin{tabular}{|c|c|c|}\hline
+\textbf{Probe power ($\mu$W)}    & \textbf{Coherence time (ms)}  & \textbf{Amplitude (V)}\\\hline
+2 & 84 & 2.13   \\
+5    & 82 & 2.11  \\
+10   &  68 & 4.06 \\
+15  &   59 & 5.8  \\
+35  &   32 & 10  \\\hline
 \end{tabular}
-\caption{Coherence time for different probe power\label{table:Coherence time for different probe power}}
+\caption{Single FID fit parameters as a function of probe beam
+  power.\label{tab:coh}}
 \end{table}
+
+The apparently worse statistical precision for higher probe beam power
+can be traced in part to its effect on the individual FID signals of
+each measurement.  Table~\ref{table:coh} displays the coherence time
+of the FIDs for different probe power while the pump beam power was
+held constand (120~$\mu$W).  For these settings, the coherence time is
+seen to increase for descreasing probe power, which acts to improve
+the statistical precision.  However, it is counteracted by a
+corresponding decrease in the FID amplitude which acts to worsen the
+statistical precision.  The trade off of these two effects must be
+considered when selecting the probe power for a given pump power.  In
+general it is expected that a probe power in the $\mu$W range would be
+optimal.
  
- \begin{figure}
-    \centering  \includegraphics[width=\textwidth]{figures/pump_beam}
-    \caption{ Magnetic field vs. time for different pump beam power. (a) measured magnetic field with duty cycle $5 \%$. Precession width is about $2.3$ pT (b) measured magnetic field with Precession width $4.6$ pT for  16 $\%$ duty cycle.}
+The effect of pump beam power was also studied with the probe beam
+power ($\sim 15~\mu$W) held constant.  The pump beam power was changed
+by changing the duty cycle of the square wave modulation used for the
+AOM.  When duty cycle is set to 5\% the pump beam power is roughly
+40~$\mu$W and for 16\% duty cycle power is roughly 130~$\mu$W. During
+this measurement the lock-in reference frequency was set to 1943.9 Hz
+while the AOM frequency was 2036~Hz.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/pump_beam}
+  \caption{Magnetic field vs. time for different pump beam power. (a)
+    measured magnetic field with duty cycle $5 \%$. Precession width
+    is about $2.3$ pT (b) measured magnetic field with Precession
+    width $4.6$ pT for 16 $\%$ duty cycle.}
     \label{fig:different pump power}
 \end{figure}
 
-Another study has been conducted to understand the influence of pump beam power on precession magnetometry. During this study, the probe beam power ($\sim$ 15 $ \mu$W) has kept unchanged while pump power has changed. In this measurement data has been acquired by running the magnetometer in FID mode. In FID mode amplitude modulation of pump beam has been done by using a AOM.  So the pump beam power can be change by changing the duty cycle of square wave modulation. When duty cycle is set to $5\%$ the pump beam power is 40 $\mu$W and for $16 \%$ duty cycle power is 128 $\mu$W. During this measurement the lock-in reference frequency was set to 1943.9 Hz while the AOM frequency was 2036 Hz. The histogram of measured magnetic field for different pump beam power has been showed in fig \ref{fig:different pump power}. The precession width (sigma) become larger for higher duty cycle while it becomes narrower for small duty cycle. In the case of 5$\%$  duty cycle precession width is about $2.3$ pT  (fig \ref{fig:different pump power}(a)) and for 16 $\%$ duty cycle the spread is about 4.6 pT (fig \ref{fig:different pump power}(b)). It is clear from the plot that, at higher duty cycle data points are not statistically distributed.  When a pump beam with a higher duty cycle is used  in precession magnetometry, the NMOR  signal amplitude increase accordingly. But it has been observed that error in frequency measurement also increases with higher signal amplitude which was not expected. A strong correlation between magnetic field and phase of the NMOR signal also has been observed for higher pump power. So it can be concluded that using higher duty cycle could induce more systematic errors in field measurement which led to the next study.
+The histogram of measured magnetic field for two different pump beam
+powers is shown in Fig.~\ref{fig:different pump power}. The standard
+deviation becomes larger for higher duty cycle while it becomes
+narrower for small duty cycle.  It is clear from the plot that the
+data points are not statistically distributed.  
 
+It was observed very clearly during these studies that when a pump
+beam with a higher duty cycle was used, the FID amplitude increased
+until a saturation point.  The data in Fig.~\ref{fig:different pump
+  power}(b) are close to this saturation point.  But the problem of
+non-statistical behavior is also more apparent.  So it can be
+concluded that using higher duty cycle is likely statistically more
+robust, revealing new systematic errors in field measurement which led
+to the next studies.
 
-\subsection{How far the reference frequency of lock-in amplifier should set to measure field correctly}
+\subsection{Reference frequency of lock-in amplifier}
   
-  The measurement technique of FID signal has been discussed elaborately in sec \ref{sec:FID}. In order to capture the FID signal correctly, the reference frequency of lock-in amplifier is normally set to about 100 Hz apart from the resonance frequency. In this study we kept all other setting fixed only changed the Lock-in reference frequency and observed the effect of that on field measurement study. The measurement was conducted at $0.2 \mu$T field. 
+The measurement technique of FID signal was discussed in
+Section~\ref{sec:FID}.  In order to capture the FID signal, the
+reference frequency of lock-in amplifier is normally set to $\sim
+100$~Hz apart from the resonance frequency. In this study we kept all
+other setting fixed only changed the Lock-in reference frequency and
+observed the effect of that on field measurement study. The
+measurement was conducted at $0.2~\mu$T field.
    \begin{figure}
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
