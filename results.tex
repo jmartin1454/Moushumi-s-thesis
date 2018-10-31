@@ -218,26 +218,27 @@ Fig.~\ref{fig:pump-short} shows a more optimized the FID signal for
 0.1~s pump time and 0.2~s probe time.
 \begin{figure}%[h]
   \centering\includegraphics[width=\linewidth]{figures/pump_time_}
-  \caption{Histograms of measured B-field for different pump times, for a measurement time of 100~s.  (a) is a pump time of
-      0.49~s (b) is a pump time of 0.39~s (c) is a pump time of 0.2~s
-      (d) is a pump time of 0.1~s.  The probe time in each case is
-      0.25~s.  The number of measurements taken in each case is
-      therefore (a) 137 (b) 158 (c) 224 (d) 287.  The standard
-      deviation of each set of measurements is indicated in the
-      respective figure.}\label{fig:different-pump-time}
+  \caption{Histograms of measured B-field for different pump times,
+    for a measurement time of 100~s.  (a) is a pump time of 0.49~s (b)
+    is a pump time of 0.39~s (c) is a pump time of 0.2~s (d) is a pump
+    time of about 0.1~s.  The probe time in each case is about 0.25~s.
+    The number of measurements taken in each case is estimated to be
+    (a) 137 (b) 158 (c) 224 (d) 287.  The standard deviation of each
+    set of measurements is indicated in the respective
+    figure.}\label{fig:different-pump-time}
 \end{figure}
-
 
 In Fig.~\ref{fig:different-pump-time} a histogram of measured magnetic
 fields by making subsequent measurements over 100~s is shown for
-different pump times.  
-  The longer pump time is 0.49~s (\ref{fig:different-pump-time}(a)) and the shorter one is 0.1~s (\ref{fig:different-pump-time}(d)). 
+different pump times.  The longer pump time is 0.49~s
+(\ref{fig:different-pump-time}(a)) and the shorter one is 0.1~s
+(\ref{fig:different-pump-time}(d)).
 
 From Fig.~\ref{fig:different-pump-time}, the pump time, when varied
 over this limited range, does not strongly affect the precision of the
-individual FID measurements.   However, it allows us to take
-  measurements faster because previously the duration for one FID measurement was 1~s while after optimization it only take 0.35~s. 
-  
+individual FID measurements.  However, it allows us to take
+measurements faster because previously the duration for one FID
+measurement was 1~s while after optimization it only take 0.35~s.
 
 It is not surprising that the precision does not change much because
 the amplitude of the differential photodiode signal during the pump
@@ -275,19 +276,18 @@ to the $z$-coil.  Fig.~\ref{fig:current} shows the current supplied to
 the $z$-coil over a measurement period of 10000~s.  The current in the
 power supply was set to 4.50000~mA, which was operated in a
 current-controlled mode.  The current has been measured by measuring
-the voltage drop across a Vishay 1~$\ohm$ resistor (Y09261R00000F9L)
-in series with the $z$-coil using a Keithley 2002 8-digit multimeter.
-A photograph of this system is shown in
-Fig.~\ref{fig:Current_study_setup}.  The Vishay resistor is 1\%
-absolute precision, but the values reported in Fig.~\ref{fig:current}
-have been converted to currents using an exact value for the
-resistance of 1.000000~$\ohm$.  The main feature of this resistor is
-that it possesses a low temperature coefficient of 2~ppm/$\degree$C.
+the voltage drop across a Vishay metal-foild 100~$\ohm$ resistor in
+series with the $z$-coil using a Keithley 2002 8-digit multimeter.  A
+photograph of this system is shown in
+Fig.~\ref{fig:Current_study_setup}, although with an alternate
+resistor which we tried.  The Vishay resistor is 1\% absolute
+precision, but the values reported in Fig.~\ref{fig:current} have been
+converted to currents using an exact value for the resistance of
+100.000~$\ohm$.  The main feature of this resistor is that it
+possesses a low temperature coefficient of 2~ppm/$\degree$C.
 Measurements recorded by this system are expected to be reliable on
 the $\sim\pm 2$~ppm level given the resistor and multimeter being used
 and the typical temperature fluctuations in the room.
-
-{\bf PLC???}
 
 \begin{figure}%[h]
 \centering
@@ -298,60 +298,65 @@ and the typical temperature fluctuations in the room.
 
 The current of 4.5~mA achieves a magnetic field of 0.2~$\mu$T.  From
 Fig.~\ref{fig:current}, the maximum current excursion during the
-measurement period was 30~nA.  Likely these fluctuations are given by
-the stability of the power supply.
+measurement period was 300~nA.  Likely these fluctuations are given by
+the stability of the power supply. Converted to magnetic field, it
+would represent a $\sim 10$~pT fluctuation in field.  Unfortunately,
+during this measurement time, the magnetometer and degaussing system
+could not be operated sufficiently well in concert with the current
+measurement system to determine whether or not the current
+fluctuations were correlated to field changes.
 
-\begin{figure}
-  \centering
-  \begin{subfigure}[b]{0.67\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figures/field_coil_current.png}
-    \caption{}
-    \label{fig:field_measure_and_produced}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.65\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figures/field_current_allan_plot.png}
-    \caption{}
-    \label{fig:allan_plot}
-  \end{subfigure}
-  \caption{(a) (Blue) Measured current in the $z$-coil converted to
-    field, using the normalization constant measured at 0~s.  (Red)
-    Measured magnetometer frequency converted to field using the
-    gyromagnetic ratio of $^{85}$Rb.  (b) Allan deviation of of the
-    time series in (a).}
-  \label{fig:current_vs_field_allan_deviation}
-\end{figure} 
+%\begin{figure}
+%  \centering
+%  \begin{subfigure}[b]{0.67\textwidth}
+%    \centering
+%    \includegraphics[width=\textwidth]{figures/field_coil_current.png}
+%    \caption{}
+%    \label{fig:field_measure_and_produced}
+%  \end{subfigure}
+%  \begin{subfigure}[b]{0.65\textwidth}
+%    \centering
+%    \includegraphics[width=\textwidth]{figures/field_current_allan_plot.png}
+%    \caption{}
+%    \label{fig:allan_plot}
+%  \end{subfigure}
+%  \caption{(a) (Blue) Measured current in the $z$-coil converted to
+%    field, using the normalization constant measured at 0~s.  (Red)
+%    Measured magnetometer frequency converted to field using the
+%    gyromagnetic ratio of $^{85}$Rb.  (b) Allan deviation of of the
+%    time series in (a).}
+%  \label{fig:current_vs_field_allan_deviation}
+%\end{figure} 
 
-Fig.~\ref{fig:field_measure_and_produced} displays the magnetic field
-measured by the magnetometer over the same period.  The magnetometer
-was operated in FID mode as usual and the magnetometer settings were
-similar to those used in Section~\ref{sec:long-term}.
-%{\bf list all settings, lock-in time constant, laser power, lock-in
-%  frequency, magnetometer measured frequency, etc.}
-%produced by z-coil(green line) and measured field (red line) by
-%running the magnetometer in FID mode over 8000 s.
-The field produced by the $z$-coil is calculated by converting
-measured current to field with the coil constant measured at $t=0$~s.
-At $t=0$ both fields are therefore forced to coincide and over time a
-linear drift can be seen in the field measured by the magnetometer,
-while the current in the $z$-coil would indicate that the field should
-not be changing.  Interestingly, aside from the overall drift, there
-might be some correlation of excursions in the current with excursions
-in the magnetometer reading.  The interpretation is somewhat obscured
-by the drift.  Also the exact time synchronization of the current data
-and the field measurement data was not tested precisely, and may have
-some relative time drift.
+%Fig.~\ref{fig:field_measure_and_produced} displays the magnetic field
+%measured by the magnetometer over the same period.  The magnetometer
+%was operated in FID mode as usual and the magnetometer settings were
+%similar to those used in Section~\ref{sec:long-term}.
+%%{\bf list all settings, lock-in time constant, laser power, lock-in
+%%  frequency, magnetometer measured frequency, etc.}
+%%produced by z-coil(green line) and measured field (red line) by
+%%running the magnetometer in FID mode over 8000 s.
+%The field produced by the $z$-coil is calculated by converting
+%measured current to field with the coil constant measured at $t=0$~s.
+%At $t=0$ both fields are therefore forced to coincide and over time a
+%linear drift can be seen in the field measured by the magnetometer,
+%while the current in the $z$-coil would indicate that the field should
+%not be changing.  Interestingly, aside from the overall drift, there
+%might be some correlation of excursions in the current with excursions
+%in the magnetometer reading.  The interpretation is somewhat obscured
+%by the drift.  Also the exact time synchronization of the current data
+%and the field measurement data was not tested precisely, and may have
+%some relative time drift.
 
-For a better understanding of the stability of the power supply the
-Allan deviation of the field produced by the $z$-coil (deduced by its
-current) and the field measured by the magnetometer are shown in
-Fig.~\ref{fig:allan_plot}.  It can be seen from the figure that for
-long times, the current stability is better than typical measured
-field changes.  At short times, the current stability is considerably
-worse than the field stability.  This might be due to additional noise
-in the current measurement system, or a different bandwidth being used
-for the current measurement system.
+%For a better understanding of the stability of the power supply the
+%Allan deviation of the field produced by the $z$-coil (deduced by its
+%current) and the field measured by the magnetometer are shown in
+%Fig.~\ref{fig:allan_plot}.  It can be seen from the figure that for
+%long times, the current stability is better than typical measured
+%field changes.  At short times, the current stability is considerably
+%worse than the field stability.  This might be due to additional noise
+%in the current measurement system, or a different bandwidth being used
+%for the current measurement system.
 
 %{
 %\bf How is the coil current measured? 
@@ -382,18 +387,24 @@ A study has been conducted to determine the field change by changing
 the coil current by a known amount. The main objective of this study
 is to check the Rb magnetometer performance on magnetic field
 measurement. During this measurement coil current has been changed by
-$\pm~ 0.001$~mA. As a result a field change of $\pm$ 50~pT 
-has been observed. The laser frequency was locked to Rb transition
-frequency and all other setting kept unchanged. During this study the
-magnetometer has been operated in FID mode 
-  lock-in frequency was 1950 Hz and time constant was 300 micro sec. AOM frequency 2049 hz, lock-in time constant 300$\mu$ s. The probe power was $\sim$ 22 $\mu$W and pump power~ 40 $\mu$W
+$\pm~ 0.001$~mA. As a result a field change of $\pm$ 50~pT has been
+observed. The laser frequency was locked to Rb transition frequency
+and all other setting kept unchanged. During this study the
+magnetometer has been operated in FID mode lock-in frequency was 1950
+Hz and time constant was 300 micro sec. AOM frequency 2049 hz, lock-in
+time constant 300~$\mu$s. The probe power was $\sim 22~\mu$W and pump
+power 40~$\mu$W
    
- For field measurement the pump and probe time were set to 0.5 sec and 0.5 sec respectively.
+For field measurement the pump and probe time were set to 0.5 sec and
+0.5 sec respectively.
   
 \begin{figure}%[h]
 \centering\includegraphics[width=0.7\linewidth]{figures/field_change_with_current}
   
-\caption{The change in magnetic field  by changing coil current has been studied over 1400 sec. The blue line on different regions of the graph displays the measured magnetic field corresponding to the change in coil current. \label{fig:field-change}}
+\caption{The change in magnetic field by changing coil current has
+  been studied over 1400 sec. The blue line on different regions of
+  the graph displays the measured magnetic field corresponding to the
+  change in coil current. \label{fig:field-change}}
 \end{figure} 
  
 Fig.~\ref{fig:field-change} presents the magnetic field change over
@@ -401,20 +412,18 @@ time for different coil current. For better understanding
 Fig.~\ref{fig:field-change} has been divide into five different
 regions. In region-1 magnetic field has been recorded for 300 s while
 the applied current to the Z coil was 4.5 mA {\bf do you mean
-  4.500~mA?%  I mean 4.50000~mA
-  How many digits of precision are possible in the current
-  supply? }%6.5-digit. 
-  Then in region-2 the applied current to the z coil has
-been increased by 0.00100 mA {\bf sig figs?} i.e., total current 4.50100
-mA {\bf sig figs?} and measured the magnetic field for another 300
-s. It is clear from the figure that the field has been changed
-instantly by 50 pT due to the changed coil current. Now in
-region-3, the coil current has been reduced to 4.50000 mA {\bf sig figs?}
-and measured field for 300 s. After that the coil current has been
-decreased by 0.00100 mA. As a result the field also decreased by
-50~pT in this region.  Finally in region-5 the coil current has
- been set to 4.50000 mA again and observed the corresponing a change in
-field.
+  4.500~mA?% I mean 4.50000~mA How many digits of precision are
+  possible in the current supply? }%6.5-digit.  Then in region-2 the
+applied current to the z coil has been increased by 0.00100 mA {\bf
+  sig figs?} i.e., total current 4.50100 mA {\bf sig figs?} and
+measured the magnetic field for another 300 s. It is clear from the
+figure that the field has been changed instantly by 50 pT due to the
+changed coil current. Now in region-3, the coil current has been
+reduced to 4.50000 mA {\bf sig figs?}  and measured field for 300
+s. After that the coil current has been decreased by 0.00100 mA. As a
+result the field also decreased by 50~pT in this region.  Finally in
+region-5 the coil current has been set to 4.50000 mA again and
+observed the corresponing a change in field.
 
 \section{Study the effect of room temperature in magnetic field} 
 
