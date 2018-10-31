@@ -226,30 +226,17 @@ Fig.~\ref{fig:pump-short} shows a more optimized the FID signal for
       deviation of each set of measurements is indicated in the
       respective figure.}\label{fig:different-pump-time}
 \end{figure}
-\begin{figure}%[h]
-  \centering\includegraphics[width=\linewidth]{figures/pump_time}
-  \caption{Histograms of measured B-field for different pump times,
-    {\bf for a measurement time of 200~s}. {\bf (a) is a pump time of
-      0.49~s (b) is a pump time of 0.39~s (c) is a pump time of 0.2~s
-      (d) is a pump time of 0.1~s.  The probe time in each case is
-      0.25~s.  The number of measurements taken in each case is
-      therefore (a) 405 (b) 468 (c) 666 (d) 857.  The standard
-      deviation of each set of measurements is indicated in the
-      respective figure.}\label{fig:differentpump-time}}
-\end{figure}
+
 
 In Fig.~\ref{fig:different-pump-time} a histogram of measured magnetic
 fields by making subsequent measurements over 100~s is shown for
-different pump times.  {\bf Which one is which? What is in the figure?
-  The longer pump time is 0.49~s (\ref{fig:different-pump-time}(a)) and the shorter one is 0.1~s (\ref{fig:different-pump-time}(d)).  What
-  is the probe time.  How many measurements appear in each graph?}
+different pump times.  
+  The longer pump time is 0.49~s (\ref{fig:different-pump-time}(a)) and the shorter one is 0.1~s (\ref{fig:different-pump-time}(d)). 
 
 From Fig.~\ref{fig:different-pump-time}, the pump time, when varied
 over this limited range, does not strongly affect the precision of the
-individual FID measurements.  {\bf However, it allows us to take
-  measurements faster(It is possible to take 287 measurement in 100 s
-  if cycle time is optimized to 0.35 s instead of 1 s.  How much
-  faster?  You need to say the times and/or how many measurements.}
+individual FID measurements.   However, it allows us to take
+  measurements faster because previously the duration for one FID measurement was 1~s while after optimization it only take 0.35~s. 
   
 
 It is not surprising that the precision does not change much because
@@ -275,10 +262,12 @@ phase has saturated.
 \subsection{Field drift compared with current drift\label{sec:current-drift}}
 
 \begin{figure}%[h]
-\centering \includegraphics[width=0.7\linewidth]{figures/current}
-\caption{Recorded coil current (by measuring voltage across a 1~$\ohm$
-  resistor in series with the $z$-coil) as a function of time when the
-  current source has been set to 4.50000~mA.\label{fig:current}}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/current}
+\caption{Recorded coil current (by measuring voltage across a
+  100~$\ohm$ resistor in series with the $z$-coil) as a function of
+  time when the current source has been set to
+  4.50000~mA.\label{fig:current}}
 \end{figure}
 
 The idea was to determine the impact of possible current drifts.  An
@@ -722,15 +711,9 @@ magnetic field environment became even more unstable.
     \centering
     \includegraphics[width=\textwidth]{figures/before_degaussing}
     \caption{}
-    \label{fig:without DG}
+    \label{fig:with DG_innermost}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.47\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figures/innermost_degaussing.png}
-    \caption{}
-    \label{fig:with_DG_innermost}
-  \end{subfigure}
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/after_degaussing}
@@ -738,8 +721,8 @@ magnetic field environment became even more unstable.
     \label{fig:with DG}
   \end{subfigure}
   \caption{Magnetic field recorded over 3 hours. (a) The stability of
-    magnetic field without performing any degaussing. A downward field
-    drift of about 45 pT was observed in this case.(b) Magnetic field as a function of time after degaussing the innermost shield. Still the field drift is about 30 pT.  (c) Magnetic field
+    magnetic field with performing degaussing the innermost shield. A downward field
+    drift of about 45 pT was observed in this case.  (b) Magnetic field
     stability after degaussing the 2nd innermost layer of magnetic
     shielding. Only a couple pT field drift has observed in this case. During this study the signal amplitude was pretty
     low($\sim$3V) because of the low pump beam power(I think) or other poor settings. As a result the precession width becomes wider(10~pT)
@@ -747,22 +730,19 @@ magnetic field environment became even more unstable.
     \label{fig:effect of DG}}
 \end{figure}
 
-Fig.~\ref{fig:without DG} shows about 50~pT drift in magnetic field in
-4000~s.  In order to cancel background field inside shield degaussing
-innermost layer of mu-metal is done but it doesn't help to solve field
-drift problem (\ref{fig:with_DG_innermost}){\bf where is this data?}. During those three measurement {\bf which
-  study? the one ``without performing any degaussing'' as written in
-  the figure caption, or after degaussing the innermost shield?}  the
+Fig.~\ref{fig:with DG} shows about 50~pT drift in magnetic field in
+4000~s. Although before start taking field measurement degaussing
+innermost layer of mu-metal is done multiple times in order to cancel background field inside the shield  but still the  field
+drift problem can be seen. Then degaussing the 2nd innermost layer of
+shield is done which solve the field drift problem (see Fig \ref{fig:with DG}). During those two measurement the
 lock-in reference frequency is set to 1938.5~Hz and lock-in time
-constant is 300~$\mu$s.  Then degaussing the 2nd innermost layer of
-shield is done which solve the field drift problem (see Fig \ref{fig:with DG}){\bf where is this
-  data?  Is this (b)?}% yes.
+constant is 300~$\mu$s. 
 
 Since the end cap of the innermost shield layer is not in use some
 background field leaked into 2nd layer which was causing the drift in
 field. So by degaussing the 2nd layer of shield canceled background
 field and field becomes so stable (Fig.~\ref{fig:with DG}). During this
-three measurement all other setting remain unchanged only the degaussing
+these two measurement all other setting remain unchanged only the degaussing
 of the 1st and 2nd innermost shield has performed.
    
 %   \end{itemize}
@@ -805,10 +785,13 @@ amplitude reduces due to frequency detuning.
 Fig~ \ref{fig:effect of tuning} shows the effect of laser tuning on
 coherence lifetime. During this measurement the AOM frequency was set
 to 2.068~kHz and Lock-in frequency was 1.950~kHz.  For proper {\bf
-  what does ``proper'' mean?  How proper is proper?}  laser tuning the
+  what does ``proper'' mean?  How proper is proper?} 
+  % proper tuning means I mean laser frequency is set close to the wings of the absorption minima and also adjust to get higher signal amplitude.
+  laser tuning the
 observed coherence time is 68 ms (Fig \ref{fig:good tuning}) whereas
 for bad tuning {\bf what does ``bad'' mean in this case?  How bad is
-  bad?}  coherence time reduces to 59 ms (Fig \ref{fig:bad
+  bad?} % a rough estimate of about couple hundred GHz detuning from the wings of the absorption minima.
+  coherence time reduces to 59 ms (Fig \ref{fig:bad
   tuning}). On a fundamental level, the magnetometer actually measures
 the energy splitting between the Zeeman sublevels of the atomic ground
 state due to the magnetic field. The linewidth of such a spectroscopic
@@ -851,8 +834,7 @@ done carefully.
     error bar is increasing.  Strangely, you do not mention this.}. As
   a result laser tuning moved due to mode hoping which causes the
   drift {\bf I have never seen any evidence of this.  What is the
-    evidence?}. The current laser locking system only works perfectly
-  for maximum 4 hours {\bf Please show the data that proves this}. The
+    evidence?}. The
   possible reason for this mode hoping is the Polarizing beam
   splitting cube of our DAVLL system~\cite{principles}. The
   disadvantage of using this type of PBS is that they show flaky
