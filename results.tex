@@ -1,6 +1,6 @@
 \chapter{Experiments using the magnetometer\label{ch:results}}
 
-In this Chapter I present the main results on measurements of the
+In this Chapter, I present the main results on measurements of the
 properties of the magnetometer, optimization studies, and applications
 of the magnetometer to characterize magnetic fields.  The main studies
 that are presented are:
@@ -272,11 +272,10 @@ phase has saturated.
 
 \section{Magnet field compared with current in the $z$-coil}
 
-\subsection{Field drift compared with current drift}
+\subsection{Field drift compared with current drift\label{sec:current-drift}}
 
 \begin{figure}%[h]
-\centering
-\includegraphics[width=0.7\linewidth]{figures/current}
+\centering \includegraphics[width=0.7\linewidth]{figures/current}
 \caption{Recorded coil current (by measuring voltage across a 1~$\ohm$
   resistor in series with the $z$-coil) as a function of time when the
   current source has been set to 4.50000~mA.\label{fig:current}}
@@ -300,11 +299,11 @@ Measurements recorded by this system are expected to be reliable on
 the $\sim\pm 2$~ppm level given the resistor and multimeter being used
 and the typical temperature fluctuations in the room.
 
-{\bf PLC???}
+%{\bf PLC???}
 
 \begin{figure}%[h]
 \centering
-\includegraphics[width=0.6\linewidth]{figures/current_study_setup.png}
+\includegraphics[width=\linewidth]{figures/current_study_setup.png}
 \caption{Photograph of equipment arrangement used to control and
   measure the current in the $z$-coil.\label{fig:Current_study_setup}}
 \end{figure}
@@ -366,6 +365,9 @@ worse than the field stability.  This might be due to additional noise
 in the current measurement system, or a different bandwidth being used
 for the current measurement system.
 
+As will be shown, improved degaussing procedures so that the field
+could be made more stable might also have improved this correlation.
+
 %{
 %\bf How is the coil current measured? 
 %%Coil current was measured by using a Keithley 2002 multimeter.
@@ -389,94 +391,126 @@ for the current measurement system.
 
 
 
-\subsection{Change in magnetic field driven by change in coil current}
+\subsection{Change in magnetic field driven by larger changes in coil current}
 
-A study has been conducted to determine the field change by changing
-the coil current by a known amount. The main objective of this study
-is to check the Rb magnetometer performance on magnetic field
-measurement. During this measurement coil current has been changed by
-$\pm~ 0.001$~mA. As a result a field change of $\pm$ 50~pT 
-has been observed. The laser frequency was locked to Rb transition
-frequency and all other setting kept unchanged. During this study the
-magnetometer has been operated in FID mode {\bf list all documented
-  settings.  What was the lock-in time constant, lock-in frequency?
-  %lock-in frequency was 1950 Hz and time constant was 300 micro sec. AOM frequency 2049 hz, lock-in time constant 300\mu s.
-  % probe power ~ 22 $\mu$W and Pump power~ 40 $\mu$W
-  
-  Were both x and y data simultaneously fitted? %only x data was fitted
-  pump time?  probe
-  time?%pump and probe time are 0.5 sec and 0.5 sec respectively.
-  }.
+A study was conducted to determine the field change by changing the
+coil current by a known amount. The main objective of this study is to
+confirm the Rb magnetometer performance on magnetic field measurement.
+For this measurement coil current was changed periodically by $\pm
+0.001$~mA steps.  Based on the coil constant, field changes of 48~pT
+were expected to be observed in the magnetometer, corresponding to
+frequency shifts of 0.5~Hz.
+
+The laser frequency was locked to Rb transition frequency and all
+other magnetometer settings were similar to the previous studies in
+Section~\ref{sec:current-drift}.  During this study the magnetometer
+has been operated in FID mode.  The lock-in frequency was 1950 Hz and
+time constant was 300~$\mu$s.  The AOM frequency was tuned initially
+to maximal optical rotation and found to be 2049~Hz.  The probe beam
+power was 20~$\mu$W and pump power $\sim 40~\mu$W.  The pump and probe
+times were both 0.5~s.  Only X data was fitted to determine the
+magnetometer frequency.
+
 \begin{figure}%[h]
-\centering\includegraphics[width=0.7\linewidth]{figures/field_change_with_current}
-  
-\caption{The change in magnetic field  by changing coil current has been studied over 1400 sec. The blue line on different regions of the graph displays the measured magnetic field corresponding to the change in coil current. \label{fig:field-change}}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/field_change_with_current}  
+\caption{Change in magnetic field measured by the magnetometer by step
+  changes in the $z$-coil current.  In Regions 1, 3, and 5, the
+  current was set to 4.50000~mA on the power supply.  In Region 2, the
+  current was changed to 4.50100~mA.  In Region 4, the current was
+  4.44900~mA.\label{fig:field-change}}
 \end{figure} 
  
 Fig.~\ref{fig:field-change} presents the magnetic field change over
 time for different coil current. For better understanding
 Fig.~\ref{fig:field-change} has been divide into five different
-regions. In region-1 magnetic field has been recorded for 300 s while
-the applied current to the Z coil was 4.5 mA {\bf do you mean
-  4.500~mA?%  I mean 4.50000~mA
-  How many digits of precision are possible in the current
-  supply? }%6.5-digit. 
-  Then in region-2 the applied current to the z coil has
-been increased by 0.00100 mA {\bf sig figs?} i.e., total current 4.50100
-mA {\bf sig figs?} and measured the magnetic field for another 300
-s. It is clear from the figure that the field has been changed
-instantly by 50 pT due to the changed coil current. Now in
-region-3, the coil current has been reduced to 4.50000 mA {\bf sig figs?}
-and measured field for 300 s. After that the coil current has been
-decreased by 0.00100 mA. As a result the field also decreased by
-50~pT in this region.  Finally in region-5 the coil current has
- been set to 4.50000 mA again and observed the corresponing quick change in
-field.
+regions where a number of different coil currents were set near
+4.50000~mA in steps of 0.00100~mA.  It is clear from the figure that
+the field has been changed instantly by $\sim 50$~pT on each
+transition.  This measurement proves rather conclusively that changes
+in the magnetic field with large current changes are indeed reproduced
+correctly.
+
 
 \section{Study the effect of room temperature in magnetic field} 
 
+The goal of this study was to search for any correlation between the
+magnetic field measured by the magnetometer and ambient temperature
+flucturations near the magnetometer.
+
 \begin{figure}%[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/temp_.png}
-\caption{Temperature measurement\label{fig:temperature-measurement}}
+\caption{Temperature measurements as a function of time.  The upper
+  graph (blue) shows the temperature measured on the outermost
+  magnetic shield.  The middle graph (red) shows the temperature in
+  the room outside the laser hut, near the power supply and function
+  generator system.  The lower graph (green) shows the well-controlled
+  laser diode temperature.\label{fig:temperature-measurement}}
 \end{figure}
-Room temperature is measured using precision thermometer {\bf where?}
-and laser temperature is measured from the output of the laser
-temperature controller panel. The temperature on the magnetic
-shielding {\bf where?  Why is it different than room temperature?
-% I think the reason is that the optics table is fully covered by heavy curtains which make this place warmer than rest part of the room. I also discussed it with Dave he also mentioned me the same reason.
-} is
-measured by a T-type thermocouple.  Since T- type thermocouple is
-non-magnetic we use this specific type of thermocouple instead of
-K-type.
- 
-  \begin{figure}%[h]
+
+Fig.~\ref{fig:temperature-measurement} displays the measured
+temperature at various locations vs.~time.  It can be seen that room
+temperature fluctuations are 1\degree{C} while temperature measured on
+the outside of the magnetic shielding is about 0.8\degree{C}.  The
+optics table is covered by a clean enclosure, which makes the
+temperature measured on the top of the magnetic shield slightly warmer
+than the rest of the room.  The temperature on top of the shield is
+measured by a T-type thermocouple that was held to the shield using
+tape and thermally connected by thermal grease.  We often use T-type
+thermocouples because they are non-magnetic, as opposed to K-type
+which are magnetic.
+
+For room temperature measurement a precision thermometer was connected
+to a Agilent 34410A 6$\frac{1}{2}$ Digit Multimeter.  A Python script
+configured the multimeter for a 2-wire RTD measurement, triggered the
+meter, and transferred the reading to the computer.  The T-type
+thermocouple on the shield was connected to an Arduino Uno.  For
+configuring this device and then transferring the reading to the
+computer a different part of the same Python script was used.  After
+an acquisition of the two temperatures, the script paused for 1~s, so
+that measurements cam approximately every second.
+
+The laser diode temperature was read by the output of the temperature
+control unit for the Toptica laser using another oscilloscope and
+converted to temperature using a known coefficient.  Since it did not
+vary with time it was not considered further.
+
+\begin{figure}%[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/field_.png}
 \caption{Field measurement\label{fig:field}}
 \end{figure}
 
-Fig.~\ref{fig:temperature-measurement} display the measured
-temperature vs time.  During the measurement the laser temperature
-(green line) remain unchanged which provide an indication about well
-controlled laser diode temperature.  It can be seen from the figure
-that room temperature fluctuation is 1\degree while temperature
-outside of the magnetic shielding is about 0.8\degree.
-Fig.\ref{fig:field} shows the magnetic field {\bf state all
-  magnetometer settings}
-  % probe power ~ 22 $\mu$W and Pump power~ 40 $\mu$W
-  % lock-in frequency 1929.5 hz and AOM frequency 2036 hz, lock-in time constant 300\mu s.
-  vs.~time while the temperature measurement
-has taken place. In order to understand the correlation between
-temperature change and field change, the measured field
-vs. temperature has shown in Fig.~\ref{fig:field_vs_temp}. {\bf What
-  was the data acquisition system for each device?  How were the data
-  synchronized?% For room temperature measurement a precision thermometer was connected to a Agilent 34410A/11A 6 ½ Digit Multimeter. A python script was used to configures the multimeter for a 2-wire RTD measurement, triggers the meter, and then transfers the reading to the computer. And for temperature measurement near shield  the T-type thermocouple was connected with a Arduino Uno. For configuring this device and then transferring the reading to the computer a python script was used. 
-  }  It is clear from the graph that there is no obvious
-of field drift dependency on temperature.
-  
-\begin{figure}%[h]
-\centering\includegraphics[width=0.6\linewidth]{figures/field_vs_temp.png}
-\caption{Field vs. temperature\label{fig:field_vs_temp}}
-\end{figure}
+Fig.~\ref{fig:field} shows the magnetic field measured by the
+magnetometer in FID mode vs.~time while the temperature measurement
+was made.  The magnetometer settings were the same as in the previous
+section, with the caveat that the frequency of the AOM was adjusted
+for best FID amplitude (2036~Hz) and lock-in adjusted to keep the FID
+demodulated frequency near 90~Hz (1929.5~Hz).
+
+The FID measurements were taken using an oscilloscope.  The time base
+of the oscilloscope was set to 20~s/division resulting in a scope
+trace lasting 200~s.  The oscilloscope was triggered by the sync
+output of the function generator, on an initial transition from pump
+beam oscillating to off.  A second separately running Python script
+sets up the oscilloscope in this way, then waits 200~s before
+transferring data.  The transfer takes of order 2~s.
+
+The asynchronous data acqusition systems mean that time was defined
+with percent level accuracy with potential drifts in the clocks at the
+same level.  Nonetheless, a the correlation of the field measurement
+is ruled out at approximately the 5~pT/\degree{C} level.
+
+
+%Temperature change and field change, the measured field
+%vs.~temperature has shown in Fig.~\ref{fig:field_vs_temp}. {\bf What
+%  was the data acquisition system for each device?  How were the data
+%  synchronized?%   }  It is clear from the graph
+%that there is no obvious of field drift dependency on temperature.
+
+%\begin{figure}%[h]
+%\centering\includegraphics[width=0.6\linewidth]{figures/field_vs_temp.png}
+%\caption{Field vs. temperature\label{fig:field_vs_temp}}
+%\end{figure}
  
    
 \section{Degaussing studies\label{sec:degaussing}}
