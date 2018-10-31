@@ -260,7 +260,7 @@ phase has saturated.
 
 \section{Magnet field compared with current in the $z$-coil}
 
-\subsection{Field drift compared with current drift\label{sec:current-drift}}
+\subsection{Current drift\label{sec:current-drift}}
 
 \begin{figure}%[h]
 \centering
@@ -306,7 +306,11 @@ would represent a $\sim 10$~pT fluctuation in field.  Unfortunately,
 during this measurement time, the magnetometer and degaussing system
 could not be operated sufficiently well in concert with the current
 measurement system to determine whether or not the current
-fluctuations were correlated to field changes.
+fluctuations were correlated to field changes.  Principally this was a
+problem of the data acquisition system.  Clearly, field changes as
+large as 10~pT should be observable, given the statistical precision
+of the magnetometer.  Future work would be on improving the data
+acquisition system.
 
 %\begin{figure}
 %  \centering
@@ -360,8 +364,6 @@ fluctuations were correlated to field changes.
 %in the current measurement system, or a different bandwidth being used
 %for the current measurement system.
 
-As will be shown, improved degaussing procedures so that the field
-could be made more stable might also have improved this correlation.
 
 %{
 %\bf How is the coil current measured? 
@@ -396,15 +398,15 @@ For this measurement coil current was changed periodically by $\pm
 were expected to be observed in the magnetometer, corresponding to
 frequency shifts of 0.5~Hz.
 
-The laser frequency was locked to Rb transition frequency and all
-other magnetometer settings were similar to the previous studies in
-Section~\ref{sec:current-drift}.  During this study the magnetometer
-has been operated in FID mode.  The lock-in frequency was 1950 Hz and
-time constant was 300~$\mu$s.  The AOM frequency was tuned initially
-to maximal optical rotation and found to be 2049~Hz.  The probe beam
-power was 20~$\mu$W and pump power $\sim 40~\mu$W.  The pump and probe
-times were both 0.5~s.  Only X data was fitted to determine the
-magnetometer frequency.
+The laser frequency was tuned for maximum FID amplitude, then locked
+using the DAVLL system.  All other magnetometer settings were similar
+to the previous studies in Section~\ref{sec:current-drift}.  During
+this study the magnetometer has been operated in FID mode.  The
+lock-in frequency was 1950 Hz and time constant was 300~$\mu$s.  The
+AOM frequency was tuned initially to maximal optical rotation and
+found to be 2049~Hz.  The probe beam power was 20~$\mu$W and pump
+power $\sim 40~\mu$W.  The pump and probe times were both 0.5~s.  Only
+X data was fitted to determine the magnetometer frequency.
 
 \begin{figure}%[h]
 \centering
@@ -438,10 +440,9 @@ flucturations near the magnetometer.
 \centering\includegraphics[width=0.8\linewidth]{figures/temp_.png}
 \caption{Temperature measurements as a function of time.  The upper
   graph (blue) shows the temperature measured on the outermost
-  magnetic shield.  The middle graph (red) shows the temperature in
-  the room outside the laser hut, near the power supply and function
-  generator system.  The lower graph (green) shows the well-controlled
-  laser diode temperature.\label{fig:temperature-measurement}}
+  magnetic shield.  The lower graph (red) shows the temperature in the
+  room outside the laser hut, near the power supply and function
+  generator system.\label{fig:temperature-measurement}}
 \end{figure}
 
 Fig.~\ref{fig:temperature-measurement} displays the measured
@@ -463,13 +464,13 @@ meter, and transferred the reading to the computer.  The T-type
 thermocouple on the shield was connected to an Arduino Uno.  For
 configuring this device and then transferring the reading to the
 computer a different part of the same Python script was used.  After
-an acquisition of the two temperatures, the script paused for 1~s, so
-that measurements cam approximately every second.
+an acquisition of the two temperatures, the script paused for 10~s, so
+that measurements came approximately every 12.3~s.
 
-The laser diode temperature was read by the output of the temperature
-control unit for the Toptica laser using another oscilloscope and
-converted to temperature using a known coefficient.  Since it did not
-vary with time it was not considered further.
+%The laser diode temperature was read by the output of the temperature
+%control unit for the Toptica laser using another oscilloscope and
+%converted to temperature using a known coefficient.  Since it did not
+%vary with time it was not considered further.
 
 \begin{figure}%[h]
 \centering\includegraphics[width=0.8\linewidth]{figures/field_.png}
@@ -477,24 +478,23 @@ vary with time it was not considered further.
 \end{figure}
 
 Fig.~\ref{fig:field} shows the magnetic field measured by the
-magnetometer in FID mode vs.~time while the temperature measurement
-was made.  The magnetometer settings were the same as in the previous
-section, with the caveat that the frequency of the AOM was adjusted
-for best FID amplitude (2036~Hz) and lock-in adjusted to keep the FID
-demodulated frequency near 90~Hz (1929.5~Hz).
+magnetometer in FID mode vs.~time in similar times as the temperature
+measurement was made.  The magnetometer settings were the same as in
+the previous section, with the caveat that the frequency of the AOM
+was adjusted for best FID amplitude (2036~Hz) and lock-in adjusted to
+keep the FID demodulated frequency near 90~Hz (1929.5~Hz).
 
-The FID measurements were taken using an oscilloscope.  The time base
-of the oscilloscope was set to 20~s/division resulting in a scope
-trace lasting 200~s.  The oscilloscope was triggered by the sync
-output of the function generator, on an initial transition from pump
-beam oscillating to off.  A second separately running Python script
-sets up the oscilloscope in this way, then waits 200~s before
-transferring data.  The transfer takes of order 2~s.
+The FID measurements were taken using an oscilloscope.  The
+oscilloscope would be read occasionally.  No data is shown twice in
+Fig.~\ref{fig:field}, but time jumps in the data did occur at random
+intervals.  Thus any correlation with temperature is qualitative.  The
+meausrements were taken over approximately the same time as the
+temperature measurements.
 
-The asynchronous data acqusition systems mean that time was defined
-with percent level accuracy with potential drifts in the clocks at the
-same level.  Nonetheless, a the correlation of the field measurement
-is ruled out at approximately the 5~pT/\degree{C} level.
+The asynchronous data acquisition systems mean that time was defined
+with factor of 2 level accuracy.  Nonetheless, a the correlation of
+the field measurement is ruled out at approximately the
+5~pT/\degree{C} level.
 
 
 %Temperature change and field change, the measured field
@@ -526,8 +526,8 @@ is ruled out at approximately the 5~pT/\degree{C} level.
 %the dependency of the resonance width on the sample rate (see
 %discussion on section \ref{sec:Degaussing}).
 
-We used the procedure described in Section~\ref{sec:near zero field}.  To
-remind the reading, the procedure is:
+We used the procedure described in Section~\ref{sec:near zero field}.
+To remind the reader, the procedure is:
 \begin{itemize}
 \item Initiate the degaussing sequence in one channel of the function
   generator.
@@ -544,14 +544,13 @@ remind the reading, the procedure is:
 \begin{figure}%[h]
   \centering\includegraphics[width=\linewidth]{figures/sample_rate}
   \caption{ Optical rotation vs. measured B-field for different sample
-    rate.  {\bf What order were the data taken in?% smaller sample rate to higher sample rate
-    }  The numbers
-    written in the red circles indicate the distance in magnetic field
-    from the optical rotation minimum to the optical rotation maximum
-    $\Delta B$, as deduced from the fit parameter $a$.  The fit
-    parameter $B_0$ indicates the remnant field sensed by the
-    horizontal offset of the dispersive shape, reported in
-    nT.\label{fig:different-sample-rate}}
+    rate.  The data were taken in order from smaller sample rate to
+    higher sample rate.  The numbers written in the red circles
+    indicate the distance in magnetic field from the optical rotation
+    minimum to the optical rotation maximum $\Delta B$, as deduced
+    from the fit parameter $a$.  The fit parameter $B_0$ indicates the
+    remnant field sensed by the horizontal offset of the dispersive
+    shape, reported in nT.\label{fig:different-sample-rate}}
 \end{figure}
 
 Optical rotation as a function of magnetic field for different sample
@@ -569,17 +568,18 @@ were conducted which are not shown in
 Fig.~\ref{fig:different-sample-rate}.
 
 We had expected that larger sample rate would manifest itself as a
-worse degaussing resulting possibly in worse magnetometer performance.q
+worse degaussing resulting possibly in worse magnetometer performance.
 Paradoxically, the resonance width $\Delta B$, the difference between
-two peak of the dispersive curve, reduced as the sample rate was
-increased.  It can be seen from Fig~\ref{fig:different-sample-rate}
-that, the resonance width is about 0.49~nT for sample rate 10,000/s
-and the resonance width is 0.38~nT for sample rate 80,000/s.  This is
-likely an indication of a small change in the transverse fields or
-generally an improvement the homogeneity of the field.  This is
-consistent with the observation that the amplitude grows slightly with
-amplitude, which is another indication of the field quality, all other
-magnetometer settings being equal.
+two peak of the dispersive curve, reduced very slightly as the sample
+rate was increased.  It can be seen from
+Fig~\ref{fig:different-sample-rate} that, the resonance width is about
+0.49~nT for sample rate 10,000/s and the resonance width is 0.38~nT
+for sample rate 80,000/s.  This is likely an indication of a small
+reduction in the transverse fields or generally an improvement the
+homogeneity of the field.  This is consistent with the observation
+that the amplitude grows slightly with amplitude, which is another
+indication of the field quality, all other magnetometer settings being
+equal.
 
 The remnant field $B_0$ is an indication of the average longitudinal
 field (along the laser beam axis) and is within 20~pT of zero.  It
@@ -589,7 +589,7 @@ positive value.
 The conclusion of this study was that additional degaussing, as long
 as it has a reasonable number of cycles, tends not to affect the field
 or to improve slightly the homogeneity of the field.  Generally the
-field is always reduced below 20~pT.
+field is reduced below 20~pT.
 
 %\begin{figure}%[h]
 %\centering\includegraphics[width=0.6\linewidth]{figures/field_vs_sample_rate}
@@ -612,7 +612,8 @@ The previous results implied that additional (even poor) degaussing
 had little impact if the previous degaussing was done adequately.  To
 address this, we began to do studies where the internal $z$-coil field
 was purposely ramped to a large value, then reset to a low value for
-measurements at non-zero field.
+measurements at non-zero field.  The idea here was to use the $z$-coil
+itself to magnetize the shields.
 
 %A study has conducted by making the magnetic field environment bad
 %inside the shielding intentionally by ramping the field from a lower
@@ -714,162 +715,95 @@ magnetic field environment became even more unstable.
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/before_degaussing}
     \caption{}
     \label{fig:with DG_innermost}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/after_degaussing}
     \caption{}
     \label{fig:with DG}
   \end{subfigure}
-  \caption{Magnetic field recorded over 3 hours. (a) The stability of
-    magnetic field with performing degaussing the innermost shield. A downward field
-    drift of about 45 pT was observed in this case.  (b) Magnetic field
-    stability after degaussing the 2nd innermost layer of magnetic
-    shielding. Only a couple pT field drift has observed in this case. During this study the signal amplitude was pretty
-    low($\sim$3V) because of the low pump beam power(I think) or other poor settings. As a result the precession width becomes wider(10~pT)
-  while the usual is about 5~p
-    \label{fig:effect of DG}}
+  \caption{Magnetic field vs.~time (a) after degaussing the innermost
+    shield, and (b) after additionally degaussing the remaining layers
+    of magnetic shielding with a single loop of wire wound through all
+    three layers. During this study the signal amplitude was
+    relatively low ($\sim 3$~V) likely due to poor laser alignment
+    through the AOM or other settings. As a result the fluctuations in
+    magnetic field were larger than the usual 1-5~pT~\label{fig:effect
+      of DG}}
 \end{figure}
 
 Fig.~\ref{fig:with DG} shows about 50~pT drift in magnetic field in
 4000~s. Although before start taking field measurement degaussing
-innermost layer of mu-metal is done multiple times in order to cancel background field inside the shield  but still the  field
-drift problem can be seen. Then degaussing the 2nd innermost layer of
-shield is done which solve the field drift problem (see Fig \ref{fig:with DG}). During those two measurement the
-lock-in reference frequency is set to 1938.5~Hz and lock-in time
-constant is 300~$\mu$s. 
+innermost layer of mu-metal is done multiple times in order to cancel
+background field inside the shield but still the field drift problem
+can be seen. Then degaussing the other three shielding layers is done
+with a single loop of wire wound through all three.  The maximum
+current achieved in this coil was equivalent to the maximum current in
+the innermost shield deguassing sequence.  However since a single loop
+is wound through all three outermost shields, it is unlikely that any
+of the three shielding layers are ever saturated.  Nonetheless, this
+seemed to reduce the field drift after degaussing the outer three
+shielding layers, as shown in Fig.~\ref{fig:with DG}). During those
+measurements the lock-in reference frequency was set to 1938.5~Hz and
+lock-in time constant is 300~$\mu$s.
 
-Since the end cap of the innermost shield layer is not in use some
-background field leaked into 2nd layer which was causing the drift in
-field. So by degaussing the 2nd layer of shield canceled background
-field and field becomes so stable (Fig.~\ref{fig:with DG}). During this
-these two measurement all other setting remain unchanged only the degaussing
-of the 1st and 2nd innermost shield has performed.
-   
-%   \end{itemize}
-  
+Since the end cap of the innermost shield layer was removed, the
+$z$-coil may magnetize the second-to-innermost shield.  We expect this 
+
 \section{Laser tuning} 
-\begin{itemize}
-\item effect of careful tuning
 
-The main purpose of this study is to understand the importance of
-laser tuning on coherence life time of excited atoms. During the study
-optical pumping is done to polarize the rubidium atom and hence
-produce coherence state. When the laser light is exactly tuned to
-resonance with the atomic transition, the lifetime of coherence state
-becomes longer and the amplitude of resonance signal reaches its
-maximum. On the other hand coherence state decay quickly when laser
-frequency detunes from atomic transition. In this case, the signal
-amplitude reduces due to frequency detuning.
+\subsection{General effects of laser tune on FID parameters}
 
-\begin{figure}
-  \centering
-  \begin{subfigure}[b]{0.45\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figures/perfect_tuning}
-    \caption{}
-    \label{fig:good tuning}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.45\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figures/bad_tuning}
-    \caption{}
-    \label{fig:bad tuning}
-  \end{subfigure}
-  \caption{(a) Recorded FID signal while laser is perfectly tuned to
-    atomic transition frequency. (b) FID resonance signal when laser
-    is slightly {\bf quantify} detuned from transition frequency.}
-  \label{fig:effect of tuning}
+In the course of tuning the laser for maximum FID amplitude, some
+studies were conducted where the laser was purposely mistuned in order
+to check the effect on the measured FID fit parameters.  In general,
+for the particular magnetometer settings otherwise in use, it was
+found that detuning from the maximum amplitude tended to increase the
+coherence time (1/e decay time of the oscillating FID signal),
+although on occasion shorter coherence times could be observed.  By
+taking measurements in rapid succession, it was also found that the
+FID frequency did not change considerably at the 0.01~Hz (sub-pT)
+level.
+
+We started doing studies like this because there was some (mistaken)
+belief that the laser tune significantly altered the FID measured
+frequency.  This was based on data like that shown in
+Fig.~\ref{fig:digilock-drift}.
+
+\begin{figure}%[h]
+  \centering\includegraphics[width=0.6\linewidth]{figures/field_drift}
+  \caption{Magnetic field recorded over 12~hours.  In this
+    measurement the observed field drift is
+    about~120~pT.\label{fig:digilock-drift}}
 \end{figure}
-	
-Fig~ \ref{fig:effect of tuning} shows the effect of laser tuning on
-coherence lifetime. During this measurement the AOM frequency was set
-to 2.068~kHz and Lock-in frequency was 1.950~kHz.  For proper {\bf
-  what does ``proper'' mean?  How proper is proper?} 
-  % proper tuning means I mean laser frequency is set close to the wings of the absorption minima and also adjust to get higher signal amplitude.
-  laser tuning the
-observed coherence time is 68 ms (Fig \ref{fig:good tuning}) whereas
-for bad tuning {\bf what does ``bad'' mean in this case?  How bad is
-  bad?} % a rough estimate of about couple hundred GHz detuning from the wings of the absorption minima.
-  coherence time reduces to 59 ms (Fig \ref{fig:bad
-  tuning}). On a fundamental level, the magnetometer actually measures
-the energy splitting between the Zeeman sublevels of the atomic ground
-state due to the magnetic field. The linewidth of such a spectroscopic
-measurement is given by the coherence lifetime $T_2$ of the atomic
-spins \cite{bib:Seltzer_thesis}
-\begin{equation}
- \Delta B = \Delta\omega/\gamma  = 1/γ T_2
-\end{equation}
-
-The development of a sensitive magnetometer depends on achieving the
-maximum possible polarization lifetime.  For very short coherence time
-atomic spin depolarize quickly which limits the sensitivity of the
-magnetometer.  Since longer coherence time and larger signal amplitude
-indicate better frequency precession and therefore precise field
-measurement it is very important to make sure the laser tuning has
-done carefully.
-
-{\bf I do not understand the above item at all.  There is no
-  indication of what good or bad means.  There is no indication of
-  even the scale of the detuning.  I have no idea how to learn
-  anything from this section and I don't understand the point of it.}
 
 
-\item problem with drift of tune {\bf this will turn out to be a bad
-  title for this bullet}\\
-  \begin{figure}%[h]
-    \centering\includegraphics[width=0.6\linewidth]{figures/field_drift}
-    \caption{Magnetic field recorded over 12~hours.  In this
-      measurement the observed field drift is
-      about~120~pT.\label{fig:digilock-drift}}
-  \end{figure}
-  For studying long term stability data was taken for about
-  12~hours. Laser was locked using the DAVLL system described in
-  Section~\ref{sec:DAVLL}. Fig \ref{fig:digilock-drift} shows 120~pT
-  observed drift in magnetic field over 12~hours. Although DAVLL was
-  in use laser frequency was not locked for 12~hours {\bf it was
-    locked.  It's just that the lock-point was changing, we think.
-    What you mean is that the frequency was drifting.  The reason we
-    {\it think} or {\it suspect} that it was drifting is because the
-    error bar is increasing.  Strangely, you do not mention this.}. As
-  a result laser tuning moved due to mode hoping which causes the
-  drift {\bf I have never seen any evidence of this.  What is the
-    evidence?}. The
-  possible reason for this mode hoping is the Polarizing beam
-  splitting cube of our DAVLL system~\cite{principles}. The
-  disadvantage of using this type of PBS is that they show flaky
-  optical behavior over longer times\cite{bib:Philip2008}.
-  %{\bf please provide a citation for this statement}.
+Fig.~\ref{fig:digilock-drift} indicates a 120~pT drift in magnetic
+field over 12~hours.  The laser frequency is believed to drift because
+the amplitude of the FID decreased by a factor of 2.5 over the course
+of the measurement, while the resonant frequency only changed by
+1.5~Hz.  The fact that the amplitude has decreased is indicated by the
+relevant fit parameter which is not shown, but can be seen from the
+additional statistical noise on the field measurements at long times
+compared to short times.  The question was if this possible drift in
+tune was causing any frequency drift or not.
 
-  {\bf Again, I do not understand this section.  A bunch of statements
-    are made with only one graph showing that the drift in the field
-    is 120~pT.  Where is all the evidence for the other statements?}
+We suspected the tune might be drifting because we use a polarizing
+beamsplitter cube in our DAVLL system which may possess poor stability over long time periods~\cite{bib:Philip2008}.
 
-  {\bf The only point to made here is that the statistical error in
-    the data gets bigger over time and we think hey, maybe that's due
-    to the laser tune drifting.  Do we know that at this point?  No,
-    because there is absolutely no data that you have shown that
-    demonstrates it.  This is called a ``hypothesis''.  I think in the
-    next section, you are testing that hypothesis.}
-
-  {\bf If there is any other data that would substantiate your
-    statements, please present it.}
-  
-\item manual tuning
-
-During this study frequency of laser light was tuned to atomic
-transition maximize optical rotation. The DAVLL and Digilock system
-was not used to lock the laser.  Rather, periodically, the data
-acquisition was paused, and the laser frequency was adjusted manually
-to maintain the same (largest) different photodiode amplitude. The
-data acquisition would then be restarted.
+In order to test this hypothesis, I did a study where I manually
+adjusted (locked) the frequency of laser light to maximize optical
+rotation.  The DAVLL and Digilock system was not used to lock the
+laser.  Rather, periodically, the data acquisition was paused, and the
+laser frequency was adjusted manually to maintain the same (largest)
+different photodiode amplitude. The data acquisition would then be
+restarted.
 
 \begin{figure}
   \centering
@@ -900,7 +834,8 @@ shows the fitted initial amplitude (after the pump beam has been
 switched off) as determined by the fit to the decaying oscillating
 function.  The spikes in Fig.~\ref{fig:amplitude-manual-tuning}
 indicate times when the retuning of the laser was conducted, as
-described above.
+described above.  A time jump (not shown) of a random by relatively
+short interval also occurs for each retuning, which is not shown.
 
 Fig.~\ref{fig:field-manual-tuning} shows the result of the frequency
 measurement, when translated into magnetic field.  It can be seen that
@@ -911,7 +846,7 @@ amplitude will make the frequency statistically more difficult to
 measure.
 
 Clearly the field measurement in Fig.~\ref{fig:field-manual-tuning}
-does not drift in the same way as the amplitude in
+does not drift in the same way as the FID amplitude in
 Fig.~\ref{fig:amplitude-manual-tuning}.  Thus we conclude that the
 field measurement in FID mode is relatively insensitive to the
 frequency tuning of the laser, except that if the tune drifts, the
@@ -929,7 +864,7 @@ frequency measurement becomes statistically less precise.
 %laser frequency is not the main reason behind this induced field
 %drift.
 
-\end{itemize}
+
 
 
 \section{Improving the precision of individual FIDs, and problems encountered in doing so\label{sec:reference-frequency}}
