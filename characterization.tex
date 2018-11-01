@@ -63,7 +63,7 @@ The experiment was carried out as follows:
   completing the degaussing sequence a switch is opened to
   electrically isolate the degaussing coil.
 \item The magnetic field along the $z$-direction (defined in
-  Section~\ref{sec:Internal coil}) is swept in order to calibrate the
+  Section~\ref{sec:internal-coil}) is swept in order to calibrate the
   differential photodiode signal as a function of applied $B_z$.  In
   this way the initial magnetic field after degaussing may be deduced.
 \end{enumerate}
@@ -73,7 +73,7 @@ time, along with the differential photodiode signal (in Volts), which
 is proportional to optical rotation.  Also shown is a voltage applied
 to the $z$-coil with a 10~k$\Omega$ resistor in series which dominates
 the resistance of the circuit.  Recall that the coil constant of the
-$z$-coil is $\sim 48$~nT/mA (see Section~\ref{sec:Internal coil}).
+$z$-coil is $\sim 48$~nT/mA (see Section~\ref{sec:internal-coil}).
 The sweep range of this trace is therefore
 % (0.8~V)/(10000~Ohm)/*48~nT/mA = 3.84 nT ???  It would be good to
 % write the correct calibration constant in the part of the thesis
@@ -492,9 +492,11 @@ determine the magnetic field via
 B=\frac{f+f_0}{2\gamma}\label{eq:field}
 \end{equation}
 where $f_0$ is lock-in frequency setting and $\gamma$ is the
-gyromagnetic ratio of Rb vapor (see Section~\ref{sec:Rb structure}). The calculated value of magnetic field B for Fig.~\ref{fig:FID_fit} is 0.21810467 $\mu$T 
+gyromagnetic ratio of Rb vapor (see Section~\ref{sec:Rb
+  structure}). The calculated value of the magnetic field for
+Fig.~\ref{fig:FID_fit} is 0.21810467~$\mu$T.
 
-{\bf I think we should state the B value for Fig.~\ref{fig:FID_fit}.}
+%{\bf I think we should state the B value for Fig.~\ref{fig:FID_fit}.}
 
 % This probably belongs more in Chapter 2
  
@@ -599,12 +601,21 @@ $\Omega_m=\Omega_L$, where the growth of the resonance at
 $\Omega_m=\Omega_L$ signifies a tilted field in the plane defined by
 the polarization axis and the beam propagation direction.
 
-We define a coordinate system for these measurements.  The
-$z$-direction is the direction of propagation of the laser light.  The
-$y$-direction is the incident laser polarization direction.  The
-$x$-direction points perpendicular to the plane defined by these
-directions.  A tilted field oriented in the $yz$-plane is the one that
-will have an observable effect.
+
+In our experiments, we know that the polarization axis must be either
+at $\pm 45$\degree relative to the horizontal plane.  We positioned
+our two coilsets (our $x$- and $y$-coils) close to this orientation.
+As shall be described, we saw this growth of the resonance for
+$\Omega_m=\Omega_L$ for one of the coils (the $y$-coil) and therefore
+we assume this must have defined the polarization direction.
+
+Based on this, we defined a coordinate system for these measurements.
+The $z$-direction is the direction of propagation of the laser light.
+The $y$-direction is the incident laser polarization direction (or the
+direction of the $y$-coil).  The $x$-direction points perpendicular to
+the plane defined by these directions (or the direction of the
+$x$-coil).  A tilted field oriented in the $yz$-plane is defined by
+the one has an observable effect.
 
 Our goal was to learn to make tilted field measurements using the
 pump-probe (FID) measurement scheme above.  When making our tilted
@@ -661,9 +672,10 @@ frequency near $\Omega_m=2\Omega_L$.  The component in the FID at
 $\Omega_L$ has disappeared.
 
 While the data are reminiscient of the previous work of
-Ref.~\cite{PhysRevA.74.063420} , to our knowledge they represent the first
-measurement of a tilted field using FID mode.  An interesting aspect
-not discussed in Ref.~\cite{PhysRevA.74.063420}  is the persistence of the
-$2\Omega_L$ component even when the modulation frequency is near
-$\Omega_L$.  We analyze data as a function of tilt angle in both the
-$yz$ and $xz$ planes further in Section~\ref{sec:tilted-results}.
+Ref.~\cite{PhysRevA.74.063420}, to our knowledge they represent the
+first measurement of a tilted field using FID mode.  An interesting
+aspect not discussed in Ref.~\cite{PhysRevA.74.063420} is the
+persistence of the $2\Omega_L$ component even when the modulation
+frequency is near $\Omega_L$.  We analyze data as a function of tilt
+angle in both the $yz$ and $xz$ planes further in
+Section~\ref{sec:tilted-results}.

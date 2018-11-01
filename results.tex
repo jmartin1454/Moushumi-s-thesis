@@ -140,7 +140,7 @@ similar ($\sim 15$~pT) for each day.  The measurement was conducted at
 \end{figure}
 
 The Allan deviation was used to further quantify the long-term
-stability~\cite{doe:website2} (see also Appendix~\ref{cite:appendix}).
+stability~\cite{doe:website2} (see also Appendix~\ref{sec:appendix}).
 Allan deviations characterize changes in the measured quantity when
 the data are averaged on different timescales.  When the data behave
 statistically on short timescales, the Allan deviation is equal to the
@@ -180,14 +180,14 @@ precision of the magnetometer over time would be improved.
 
 \begin{figure}
 \centering
-\begin{subfigure}[b]{0.46\textwidth}
+\begin{subfigure}[b]{0.7\textwidth}
   \centering
   \includegraphics[width=\textwidth]{figures/FID_.png}
   \caption{}
   \label{fig:pump-long}
 \end{subfigure}
 \hfill
-\begin{subfigure}[b]{0.48\textwidth}
+\begin{subfigure}[b]{0.7\textwidth}
   \centering
   \includegraphics[width=\textwidth]{figures/Capture.png}
   \caption{}
@@ -668,15 +668,15 @@ lock-in frequency and most other settings were left the same.
  % AOM frequency 2078 Hz and lock-in frequency 1950.2 Hz (fig:5.12(c))
   
 In the 1st part of this study the magnetometer was operated in FID
-mode at 0.2~$\mu$T field, {\bf at a point in time when the
-  magnetometer had been operated in a quiet environment for several
-  days? yes. The magnetometer had been operated in a quite environment for at least a month. This field ramp up study was done on 31st October 2017. Before this time I never operated magnetometer at any  field higher than 1 $\mu$T. Magnetometer was operated at either 0.2 $\mu$T or 1 $\mu$T  for different studies. Although the baby shield was borrowed by Dr. Bidinosti on last week of July 2017 for couple days to test Junyao's coil.After get it back from him I had to degauss the shield multiple times to remove background field. }. 
+mode at 0.2~$\mu$T field, at a point in time when the magnetometer had
+been operated in a quiet shielded environment for at least a month
+below 1~$\mu$T, over the course of which the shield had been degaussed
+a number of times.
   
-  
-  The recorded magnetic field measurement over a 2200~s period
-in this condition is shown in Fig.~\ref{fig:ramp-up}.  It can be seen
-from Fig.~\ref{fig:ramp-up} that the magnetic field increased linearly
-for first 300~s then showed a decrease in field. The field was pretty
+The recorded magnetic field measurement over a 2200~s period in this
+condition is shown in Fig.~\ref{fig:ramp-up}.  It can be seen from
+Fig.~\ref{fig:ramp-up} that the magnetic field increased linearly for
+first 300~s then showed a decrease in field. The field was pretty
 stable between 600~s and 1800~s and after that the field showed an
 increase. The overall field change is about 15 pT during the
 measurement.  In Fig.~\ref{fig:ramp-down}, data was acquired by
@@ -694,10 +694,16 @@ Finally, for Fig.~\ref{fig:degauss}, the innermost
 magnetic shield was degaussed  with degaussing parameters stated in Table \ref{table:degaussing-setting}
 Before starting field measurement via FID mode degaussing was done multiple times (4-5 times) repeatedly but during the measurement no degaussing was done. 
   
-  While this changed the direction of the
-drift, it did not change the magnitude of the drift which was again
-35~pT over 2200~s.  {\bf Is it true that no amount of degaussing of
-  the innermost shield changed this significantly? It could.  I have tried to degaussing multiple times but I never find the evidence of  solving the field drift problem significantly by degaussing the innermost layer. Usally I saw that after degaussing the error bar goes down}
+While this changed the direction of the drift, it did not change the
+magnitude of the drift which was again 35~pT over 2200~s.
+%  {\bf Is it true that no amount of degaussing of the innermost
+%  shield changed this significantly? It could.  I have tried to
+%  degaussing multiple times but I never find the evidence of solving
+%  the field drift problem significantly by degaussing the innermost
+%  layer. Usally I saw that after degaussing the error bar goes down}
+
+% I cannot tell what was done or observed so I recommend not to make
+% any particularly bold statement like the one I was suggesting.
 
 During this time we began to develop a hypothesis about magnetic
 couplings inside the magnetic shielding.  We realized that the
@@ -739,7 +745,7 @@ magnetic field environment became even more unstable.
     three layers. During this study the signal amplitude was
     relatively low ($\sim 3$~V) likely due to poor laser alignment
     through the AOM or other settings. As a result the fluctuations in
-    magnetic field were larger than the usual 1-5~pT~\label{fig:effect
+    magnetic field were larger than the usual 1-2~pT.\label{fig:effect
       of DG}}
 \end{figure}
 
@@ -758,8 +764,20 @@ shielding layers, as shown in Fig.~\ref{fig:with DG}). During those
 measurements the lock-in reference frequency was set to 1938.5~Hz and
 lock-in time constant is 300~$\mu$s.
 
-Since the end cap of the innermost shield layer was removed, the
-$z$-coil may magnetize the second-to-innermost shield.  We expect this 
+%Since the endcap of the innermost shield layer was removed, the
+%$z$-coil may magnetize the second-to-innermost shield.  We expect this
+
+The conclusion is that degaussing the outer three shields is equally
+as important as the degaussing of the innermost shield.  This is not
+surprising since the endcaps of the innermost shield were removed.
+
+A side note is essentially that the design of magnetic components
+placed inside the magnetic shields needs to be carefully considered.
+It is clear that the degaussing system was designed after the magnetic
+shields and the inner coil systems had been designed.  In itself this
+is an error in the design process of the entire system which arose due
+to a lack of understanding of the importance of degaussing.
+
 
 \section{Laser tuning} 
 
@@ -780,7 +798,7 @@ frequency.  This was based on data like that shown in
 Fig.~\ref{fig:digilock-drift}.
 
 \begin{figure}%[h]
-  \centering\includegraphics[width=0.6\linewidth]{figures/field-drift}
+  \centering\includegraphics[width=0.8\linewidth]{figures/field-drift}
   \caption{Magnetic field recorded over 12~hours.  In this
     measurement the observed field drift is
     about~120~pT.\label{fig:digilock-drift}}
@@ -922,16 +940,15 @@ power of 15~$\mu$W the standard deviation was 3.01~pT.
 
 The apparently worse statistical precision for higher probe beam power
 can be traced in part to its effect on the individual FID signals of
-each measurement.  Table~\ref{table:coh} displays the coherence time
-of the FIDs for different probe power while the pump beam power was
-held constand (120~$\mu$W).  For these settings, the coherence time is
-seen to increase for descreasing probe power, which acts to improve
-the statistical precision.  However, it is counteracted by a
-corresponding decrease in the FID amplitude which acts to worsen the
-statistical precision.  The trade off of these two effects must be
-considered when selecting the probe power for a given pump power.  In
-general it is expected that a probe power in the $\mu$W range would be
-optimal.
+each measurement.  Table~\ref{tab:coh} displays the coherence time of
+the FIDs for different probe power while the pump beam power was held
+constand (120~$\mu$W).  For these settings, the coherence time is seen
+to increase for descreasing probe power, which acts to improve the
+statistical precision.  However, it is counteracted by a corresponding
+decrease in the FID amplitude which acts to worsen the statistical
+precision.  The trade off of these two effects must be considered when
+selecting the probe power for a given pump power.  In general it is
+expected that a probe power in the $\mu$W range would be optimal.
  
 The effect of pump beam power was also studied with the probe beam
 power ($\sim 15~\mu$W) held constant.  The pump beam power was changed
@@ -1022,7 +1039,7 @@ We decided to study these settings in more detail.
 
 \begin{figure}%[h]
 \centering
-\includegraphics[width=0.9\linewidth]{figures/freq_1943_single_fit_300microsec.png}
+\includegraphics[width=\linewidth]{figures/freq_1943_single_fit_300microsec.png}
 \caption{Lock-in reference frequency and time constant are 1943 Hz and
   300~$\mu$s respectively.  Only X data was fitted.  (a) example of an
   FID and individual fit (b) frequency measurement translated to
@@ -1050,7 +1067,7 @@ The phase could certainly affect the number of zero crossings which
 are statistically relevant to the fit.
 
 \begin{figure}%[h]
-\centering\includegraphics[width=0.9\linewidth]{figures/freq_1943_simultaneous_fit_300microsec_.png}
+\centering\includegraphics[width=\linewidth]{figures/freq_1943_simultaneous_fit_300microsec_.png}
 \caption{Lock-in reference frequency and time constant are 1943 Hz and
   300~$\mu$s respectively.  X and Y data were fitted simultaneously.
   (a) example of an FID and its fit (b) frequency measurement
@@ -1077,7 +1094,7 @@ increasing the lock-in reference frequency to have more flexibility to
 change the time-constant.
 
 \begin{figure}%[h]
-\centering\includegraphics[width=0.9\linewidth]{figures/freq_2015_simultaneous_fit_300microsec.png}
+\centering\includegraphics[width=\linewidth]{figures/freq_2015_simultaneous_fit_300microsec.png}
 \caption{Lock-in reference frequency and time constant are 2015~Hz and
   300~$\mu$s respectively.  X and Y data were fitted simultaneously.
   (a) example of an FID and its fit (b) frequency measurement
@@ -1097,7 +1114,7 @@ zero-crossings in the FID signal that can be used to constrain the
 frequency.
 
 \begin{figure}%[h]
-\centering\includegraphics[width=0.9\linewidth]{figures/freq_2015_simultaneous_fit_1ms.png}
+\centering\includegraphics[width=\linewidth]{figures/freq_2015_simultaneous_fit_1ms.png}
 \caption{Lock-in reference frequency and time constant are 2015~Hz and
   1~ms respectively.  (a) frequency measurement determined by fit of X
   data only as a function of the phase also determined by that fit (b)
@@ -1117,7 +1134,7 @@ from the strong phase dependence, the data do appaear to be
 statistical in nature.
 
 \begin{figure}%[h]
-\centering\includegraphics[width=0.9\linewidth]{figures/freq_1943_simultaneous_fit_1ms.png}
+\centering\includegraphics[width=\linewidth]{figures/freq_1943_simultaneous_fit_1ms.png}
 \caption{Lock-in reference frequency and time constant are 1943~Hz and
   1~ms respectively (a) example of an FID and its simultaneous fit to
   the X and Y data (b) frequency measurement translated to magnetic
@@ -1197,7 +1214,7 @@ effects as a result.
 %the rotating linear dichroism is periodic at twice the Larmor
 %frequency.
 
-W%e have observed that Resonances in nonlinear magneto-optical rotation with amplitude modulated light by tilting the magnetic field at angles away from the direction of light propagation while operating the Rb magnetometer in FID mode. When the field is tilted in the plane perpendicular to the light polarization direction an resonance appears at $2\Omega_L$. In this case no additional resonance appears for modulation frequency $\Omega_L$. The amplitude of the FID NMOR signal decreases with increasing tilt angle. 
+%We have observed that Resonances in nonlinear magneto-optical rotation with amplitude modulated light by tilting the magnetic field at angles away from the direction of light propagation while operating the Rb magnetometer in FID mode. When the field is tilted in the plane perpendicular to the light polarization direction an resonance appears at $2\Omega_L$. In this case no additional resonance appears for modulation frequency $\Omega_L$. The amplitude of the FID NMOR signal decreases with increasing tilt angle. 
 
 %However, We also observed that by tilting the field direction toward the light polarization direction a new resonance occurs at $\Omega_L$ along with the main resonance at $2\Omega_L$. The resonance signal recorded at $\Omega_L$ contains two frequency components.
 
@@ -1205,7 +1222,7 @@ In Section~\ref{sec:ch4_tilted_field} we described magnetometer
 operations for tilted field, where we did not use the lock-in
 amplifier.  We showed an example where the field was tilted in the
 $yz$-plane which is defined by the laser propagation direction ($z$)
-and the linear polarization direction ($y$).
+and the $y$-coil direction.
 
 When the pump beam is modulated at $\Omega_m\approx \Omega_L$, the FID
 signal shows two frequency components: one near $2\Omega_L$ and one
@@ -1216,10 +1233,10 @@ the other one is the fit FID signal using
   X(t)=A_1e^{-t/\tau_1}\sin(\omega_1t+\phi_1)+A_2e^{-t/\tau_2}\sin(\omega_2t+\phi_2)+C
 \label{eq:two_sinewave}
 \end{equation}
-where X(t) is the differential photodiode signal as a function of
+where $X(t)$ is the differential photodiode signal as a function of
 time, and $A_1$, $A_2$, $\omega_1$, $\omega_2$, $\phi_1$, $\phi_2$,
 $\tau_1$, and $\tau_2$ are fit parameters.  A 10th order Infinite
-Impulse Response (IIR) Butterworth filter was also used to reduce
+Impulse Response (IIR) Butterworth filter was used at times to reduce
 background noise from the signal.
 
 \begin{figure}%[h]
@@ -1240,67 +1257,107 @@ in the $yz$-plane. It can be seen from the plot that at $0\degree$
 tilt angle there is only one frequency component while for others two
 peaks correspond to two frequency components.
 
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/tilt_x_larmor.png}
+    \caption{}
+    \label{fig:y equals x}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/tilt_x_2larmor.png}
+    \caption{}
+    \label{fig:three sin x}
+  \end{subfigure}
+  \caption{The amplitude of the FID NMOR signals seen near $2\Omega_L$
+    as a function of tilt angle recorded at (a) $\Omega_m\approx
+    2\Omega_L$ and (b) $\Omega_m\approx 2\Omega_L$ vs.~the tilt angle
+    of the magnetic field in the plane defined by the
+    light-polarization and light propagation vectors ($xz$-plane).
+    The amplitude of the FID signal at $\Omega_L$ was
+    small.\label{fig:tilted-wrong}}
+\end{figure}
 Fig.~\ref{fig:tilted-wrong} shows the amplitude of the FID signal for
-the magnetic field tilted in the $xz$ plane (out of the polarization
-plane) at various angles to the light propagation direction at
-modulation frequency $2\Omega_L$ and $\Omega_L$. It can be seen from
-the figure that the amplitude of the FID signal decreases with
-increasing tilt angle for both modulation frequencies.
-\begin{figure}
-    \centering
-   \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/tilt_x_larmor.png}
-        \caption{}
-        \label{fig:y equals x}
-    \end{subfigure}
-    \hfill
-     \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/tilt_x_2larmor.png}
-        \caption{}
-        \label{fig:three sin x}
-    \end{subfigure}
-    \caption{ The amplitude of the FID NMOR signals as a function of
-      tilt angle recorded at $\Omega_m\approx\Omega_L$ and
-      $\Omega_m\approx 2\Omega_L$ vs.~the tilt angle of the magnetic
-      field in the plane defined by the light-polarization and light
-      propagation vectors (xz-plane). \label{fig:tilted-wrong}}
-\end{figure}
+the magnetic field tilted in the $xz$ plane (which we assume means out
+of the polarization plane) at various angles to the light propagation
+direction at modulation frequencies $\Omega_m=2\Omega_L$ and
+$\Omega_L$. It can be seen from the figure that the amplitude of the
+FID signal decreases with increasing tilt angle for both modulation
+frequencies.  It is dominated by a single frequency component near
+$2\Omega_L$.
 
 \begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figures/tilt_y_larmor.png}
+    \caption{}
+    \label{fig:tilt_y}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.49\textwidth}
     \centering
-   \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{figures/tilt_y_larmor.png}
-        \caption{}
-        \label{fig:tilt_y}
-    \end{subfigure}
-    \hfill
-     \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/tilt_y_2larmor.png}
-        \caption{}
-        \label{fig:tilt_x}
-    \end{subfigure}
-    \caption{(a) The amplitude of the FID NMOR signals as a function
-      of tilt angle recorded at $\Omega_L$ and $2\Omega_L$ vs. the
-      tilt angle of the magnetic field in the plane defined by the
-      light-polarization and light propagation vectors(yz-plane). \label{fig:something-tilted}}
+    \includegraphics[width=\textwidth]{figures/tilt_y_2larmor.png}
+    \caption{}
+    \label{fig:tilt_x}
+  \end{subfigure}
+  \caption{The amplitude of the FID NMOR signals as a function of tilt
+    angle for pumping frequencies near (a) $\Omega_m=2\Omega_L$ and
+    (b) $\Omega_L$ vs. the tilt angle of the magnetic field in the
+    plane defined by the light-polarization and light propagation
+    vectors ($yz$-plane). For the data in (a), a single frequency
+    component at $2\Omega_L$ tended to dominate, and the amplitude of
+    this signal is shown.  For the data in (b), two frequency
+    components in the FID signal were seen.  The amplitude of the
+    signal at $2\Omega_L$ is shown in blue and the amplitude of the
+    signal at $\Omega_L$ is shown in
+    green.\label{fig:something-tilted}}
 \end{figure}
 
-Fig.~\ref{fig:something-tilted}(a) indicates the signal amplitude vs. different tilt angle at $\Omega_m=2\Omega_L$ . The amplitude of resonance signal at $2\Omega_L$  decreases as the angle between magnetic field B and the light propagation direction increases while the amplitude of new resonance  increases with increasing tilt angle at $\Omega_L$.
-      
-Fig.~\ref{fig:something-tilted}(b) shows the resonance amplitude at $\Omega_m=2\Omega_L$ keep decreases with increasing tilt angle in $yz$ plane while  the resonance amplitude measured at $\Omega_m=\Omega_L$ keep increase till $30\degree$ and after that amplitude start to decrease and reaches zero when the magnetic field is directed along the y axis. For both cases (Fig: \ref{fig:tilted-wrong} and Fig:\ref{fig:something-tilted}) the signal amplitude has been extracted as a fit parameter when data was fitted to the fit function \ref{eq:two_sinewave}
-\begin{figure}[h]
-\centering\includegraphics[width=0.9\linewidth]{figures/fitted_data_tilted_field.png}
-\caption{ Fitted FID signal using Eq. \ref{eq:two_sinewave}. (b)  The zoomed version of (a). The  blue line indicates raw data while the red one indicates fitted curve}
-\end{figure}
-\begin{figure}[h]
-\centering\includegraphics[width=0.9\linewidth]{figures/filtered_data.png}
-\caption{(a)Raw and filtered FID signal. (b) zoomed version of (a)}
+Fig.~\ref{fig:something-tilted}(a) indicates the signal amplitude
+vs. different tilt angle at $\Omega_m=2\Omega_L$ . The amplitude of
+fitted FID signal at $2\Omega_L$ decreases as the angle between
+magnetic field and the light propagation direction increases.
+
+Fig.~\ref{fig:something-tilted}(b) shows the FID amplitudes for a
+pumping frequency $\Omega_m=\Omega_L$. The FID at $2\Omega_L$
+decreases with increasing tilt angle in $yz$-plane, while the FID
+amplitude at $\Omega_L$ increases till $30\degree$ and after that the
+amplitude starts to decrease, but still dominates over the signal at
+$2\Omega_L$. For both cases (Fig.~\ref{fig:tilted-wrong} and
+Fig.~\ref{fig:something-tilted}) the signal amplitude has been
+extracted as a fit parameter when data was fitted to the fit function
+\ref{eq:two_sinewave}
+
+\begin{figure}%[h]
+\centering\includegraphics[width=\linewidth]{figures/fitted_data_tilted_field.png}
+\caption{Fitted FID signal using Eq. \ref{eq:two_sinewave}. (b) The
+  zoomed version of (a). The blue line indicates raw data while the
+  red one indicates fitted curve.\label{fig:ex1}}
 \end{figure}
 
-Consider a two-level system $F=1\rightarrow F=0$ and the quantization vector is directed along the magnetic field. When the magnetic field is tilted in the yz plane, the light-polarization axis is perpendicular to the magnetic field. In this case the linearly polarized light containing two circularly polarized components can only create the coherence state between magnetic sublevels $m_F=\pm 1$ . Since the transition frequency between these two consecutive Zeeman energy sublevels is $2\Omega_L$  the resonance appears only at this frequency. 
+\begin{figure}%[h]
+\centering\includegraphics[width=\linewidth]{figures/filtered_data.png}
+\caption{(a) Raw and filtered FID signal. (b) zoomed version of
+  (a).\label{fig:ex2}}
+\end{figure}
 
-%However, when the magnetic field is tilted  in the xy plane, the light is a linear superposition of polarizations parallel and perpendicular to the magnetic field. In this case, the light can create coherences between sublevels with $m_F=1$ and $m_F=2$, so resonances are observed at both $ \Omega_L$ and 2$\Omega_L$. 
- 
+Figs.~\ref{fig:ex1} and~\ref{fig:ex2} show examples of the quality of
+fit for unfiltered data, and the quality of the data after filtering
+respectively.
+
+The conclusion is that pumping at $\Omega_m=\Omega_L$ followed by
+detection of the FID at frequencies $2\Omega_L$ and $\Omega_L$ would
+allow detection of the field and its angle in the $yz$-plane
+simultaneously.  While this is consistent with previous work in the
+literature, it represents the first use of FID measurements to make
+the deduction.
+
+In the future, further improvements to the calibration of the
+measurements would be made in order to see whether how small a tilt
+angle could be measured.  In the nEDM experiment, the field magnitude
+is 1~$\mu$T, and if this magnetometer could sense transverse fields at
+the 1~nT level, it would be a new application of such magnetometry
+techniques.
