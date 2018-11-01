@@ -9,16 +9,14 @@ Conclusion: fields drift over time.  Question: how much is due to
 \item The study based on the adjustment of the pump and probe time Allowed us to measure faster.e the field faster.
   
 Conclusion: Allowed us to measure faster.
-\item Magnetometer drift compared with drifts in the coil current and
-  room temperature.  This study aimed at finding sources of drifts.
-  
-Conclusion: neither drift seems
-particularly correlated with field drift over long time periods.
- Temperature stability seems quite good, consistent with Michi's
- thesis.  Side conclusion: when field {\bf only} is changed, the
- magnetometer responds as expected.  Implies that magnetometer works
- well at sensing small changes in field, at least on shorter
- timescales.
+\item drift in coil current Conclusion: should be studied again now
+  that degaussing system seems to have improved.  Fluctuations should
+  be easily observable.  Improvements to data acquisition system are
+  easy and should be pursued.  Larger changes in coil current were
+  easily observable and seemed to agree with expectation based on the
+  measured coil constant.
+\item Magnetometer drift compared with drifts of temperature.
+  Conclusion: drift is $\lesssim 5$~pT/\degree{C}.
 \item Studies of degaussing, which in part tell the story of our
   degaussing development and learning.  This includes studies of:
 %with multiple goals, telling the story of
@@ -26,55 +24,54 @@ particularly correlated with field drift over long time periods.
   \begin{itemize}
     \item the degaussing setup and testing it near zero field
     
-Conclusion:we set up the
-     system, we tested mainly sample rate (related to number of
-     oscillations) stated to be important in Thiel et al.\cite{doi:10.1063/1.2713433}  We found
-     that if the innermost shield was already degaussed that
-     additional poor/rapid degauss did not screw it up as badly as we
-     expected, until degaussing was very rapid.
-    \item initial operations at non-zero field, and
-Ramp field to large values, without
-    degaussing was bad.  After degaussing was better.
-    
-    \item final degaussing procedure, in which degaussing the next to
-      innermost shield was studied.
+Conclusion:we set up the system, we tested mainly sample rate (related
+to number of oscillations) stated to be important in Thiel et
+al.\cite{doi:10.1063/1.2713433} We found that if the innermost shield
+was already degaussed that additional poor/rapid degauss did not mar
+the field quality as badly as we expected.
+    \item initial operations at non-zero field, and Ramp field to
+      large values, without degaussing was bad.  After degaussing was
+      ok but still not great.
+    \item final degaussing procedure, in which degaussing additionally
+      all three outershield shields in an unoptimized system was
+      studied.  The field quality seemed to improve.
   \end{itemize}
 \item Studies of laser locking and tuning, and the requirements on
   tune stability
   \end{itemize}
 again multiple goals:
  \begin{itemize}
-   \item Lock point or laser seems to drift over time.  See ``Drift
-    is about 120 pT'' where statistical error gets worse.  Also
-     would lose lock sometimes.  We think this may be due to PBS.
+   \item Lock point or laser seems to drift over time.  See ``Drift is
+     about 120 pT'' where statistical error gets worse.  Also would
+     lose lock sometimes.  We think this might be due to PBS.
     \item Other concern is whether drift of lock affects measured
-     field.  
-     
-     Conclusion: Studied by ``manual locking'' and found not to be
-     important.  Lock drift does not affect measured field drift very
-    much, but does affect statistical precision of magnetometer.
+      field.  Conclusion: Studied by ``manual locking'' and found not
+      to be important.  Lock drift does not affect measured field
+      drift very much, but does affect statistical precision of
+      magnetometer.
 %  \end{itemize}
-\item Studies pushing below 1~pT in an individual FID measurement.
-  This includes adjustment of the pump and probe powers, and lock-in
-  amplifier settings.  As will be shown, this study revealed problems
-  in the procedures used to determine the precession frequency at such
-  high precision and suggests avenues for further study.
+\item Studies attempting to push below 1~pT in an individual FID
+  measurement by adjusting pump and probe powers and lock-in amplifier
+  settings.  This includes adjustment of the pump and probe powers,
+  and lock-in amplifier settings.  This study revealed problems in the
+  procedures used to determine the precession frequency at high
+  precision and suggests avenues for further study.
 %But when
 %  we improved the statistical precision significantly, we began to run
 %  into systematic errors in frequency measurement.  This led us to
 %  study additional errors related to lock-in amplifier settings.
-%  Future work is to finalize these studies in order to further reduce
-%  the errors
-\item Finally, I show my studies which revealed a way to use FID mode
-  to measure transverse fields.
-%Further work is
-%  required to push to nT-scale transverse fields relevant for
-%  typ.~unmeasurable gradients that enter $\delta_T$ correction in Hg-n
-%  signals in nEDM experiments.
+  Future work is to finalize these studies in order to further reduce
+  the errors
+\item Finally, I showed my studies which revealed a way to use FID
+  mode to measure transverse fields.  Further work is required to push
+  to nT-scale transverse fields relevant for nEDM experiments.
+%for typ.~unmeasurable
+%  gradients that enter $\delta_T$ correction in Hg-n signals in nEDM
+%  experiments.
 \end{itemize}
 \section{Future work}
 \begin{itemize}
-\item	FEMM simulation of z-coil 	Homogeneity of z-coil in this shielding configuration is not  measured with endcaps of innermost shield removed.
+\item	FEMM simulation of z-coil 	Homogeneity of z-coil in this shielding configuration is not  measured with endcaps of innermost shield removed.  Coupling to second to innermost shield is also believed to be a problem and the degree of coupling could be calculated in such a simulation.
 \begin{itemize}
 
 \item
@@ -87,12 +84,15 @@ Study magnetometer performance with self-shielded coil (Junyao's coil) inside sh
 \end{itemize}
  \item Removing the lock-in amplifier from data  acquisition system of field measurement. The idea is to collect signal directly from photodiode and use digital/ analogue filter for further data analysis  instead of demodulating the FID signal through lock-in amplifier 
 
+\item Transverse fields: find out how well they can be measured with
+  this system.
+
 \end{itemize}
 
 \section{Farther Future}
 Build nEDM experiment:
 
-The work presented in this thesis is based on measuring magnetic field stability and homogeneities which is a part of the TUCAN's future nEDM measurement at TRIUMF. Measuring nEDM within the sensitivity level of $10^{-27}$ e.cm is the goal for this experiment. Study magnetic field stability is very crucial because the best previous nEDM measurements showed that 
+The work presented in this thesis is based on measuring magnetic field stability and homogeneities which is a part of the TUCAN's future nEDM measurement at TRIUMF. Measuring nEDM within the sensitivity level of $10^{-27}$ e.cm is the goal for this experiment. Study magnetic field stability is very crucial %because the best previous nEDM measurements showed that 
 
 
 
