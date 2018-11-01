@@ -182,14 +182,14 @@ precision of the magnetometer over time would be improved.
 \centering
 \begin{subfigure}[b]{0.46\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{figures/Capture}
+  \includegraphics[width=\textwidth]{figures/FID_.png}
   \caption{}
   \label{fig:pump-long}
 \end{subfigure}
 \hfill
-\begin{subfigure}[b]{0.45\textwidth}
+\begin{subfigure}[b]{0.48\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{figures/FID_optimized.png}
+  \includegraphics[width=\textwidth]{figures/Capture.png}
   \caption{}
   \label{fig:pump-short}
 \end{subfigure}
@@ -410,7 +410,7 @@ X data was fitted to determine the magnetometer frequency.
 
 \begin{figure}%[h]
 \centering
-\includegraphics[width=0.7\linewidth]{figures/field_change_with_current}  
+\includegraphics[width=0.7\linewidth]{figures/field_change-with-current}  
 \caption{Change in magnetic field measured by the magnetometer by step
   changes in the $z$-coil current.  In Regions 1, 3, and 5, the
   current was set to 4.50000~mA on the power supply.  In Region 2, the
@@ -627,20 +627,20 @@ field, which is the chief interest for nEDM experiments.
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.49\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/ramp_1}
     \caption{}
     \label{fig:ramp-up}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.49\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/ramp_2}
     \caption{}
     \label{fig:ramp-down}
   \end{subfigure}
-  \begin{subfigure}[b]{0.49\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/ramp3}
     \caption{}
@@ -670,7 +670,10 @@ lock-in frequency and most other settings were left the same.
 In the 1st part of this study the magnetometer was operated in FID
 mode at 0.2~$\mu$T field, {\bf at a point in time when the
   magnetometer had been operated in a quiet environment for several
-  days?}. The recorded magnetic field measurement over a 2200~s period
+  days? yes. The magnetometer had been operated in a quite environment for at least a month. This field ramp up study was done on 31st October 2017. Before this time I never operated magnetometer at any  field higher than 1 $\mu$T. Magnetometer was operated at either 0.2 $\mu$T or 1 $\mu$T  for different studies. Although the baby shield was borrowed by Dr. Bidinosti on last week of July 2017 for couple days to test Junyao's coil.After get it back from him I had to degauss the shield multiple times to remove background field. }. 
+  
+  
+  The recorded magnetic field measurement over a 2200~s period
 in this condition is shown in Fig.~\ref{fig:ramp-up}.  It can be seen
 from Fig.~\ref{fig:ramp-up} that the magnetic field increased linearly
 for first 300~s then showed a decrease in field. The field was pretty
@@ -694,7 +697,7 @@ Before starting field measurement via FID mode degaussing was done multiple time
   While this changed the direction of the
 drift, it did not change the magnitude of the drift which was again
 35~pT over 2200~s.  {\bf Is it true that no amount of degaussing of
-  the innermost shield changed this significantly?}
+  the innermost shield changed this significantly? It could.  I have tried to degaussing multiple times but I never find the evidence of  solving the field drift problem significantly by degaussing the innermost layer. Usally I saw that after degaussing the error bar goes down}
 
 During this time we began to develop a hypothesis about magnetic
 couplings inside the magnetic shielding.  We realized that the
@@ -717,7 +720,7 @@ magnetic field environment became even more unstable.
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.5\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/before_degaussing}
     \caption{}
@@ -726,7 +729,7 @@ magnetic field environment became even more unstable.
   \hfill
   \begin{subfigure}[b]{0.48\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{figures/after_degaussing}
+    \includegraphics[width=\textwidth]{figures/after-degaussing.png}
     \caption{}
     \label{fig:with DG}
   \end{subfigure}
@@ -777,7 +780,7 @@ frequency.  This was based on data like that shown in
 Fig.~\ref{fig:digilock-drift}.
 
 \begin{figure}%[h]
-  \centering\includegraphics[width=0.6\linewidth]{figures/field_drift}
+  \centering\includegraphics[width=0.6\linewidth]{figures/field-drift}
   \caption{Magnetic field recorded over 12~hours.  In this
     measurement the observed field drift is
     about~120~pT.\label{fig:digilock-drift}}
@@ -807,21 +810,20 @@ photodiode amplitude. The data acquisition was then restarted.
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.48\textwidth}
+  \begin{subfigure}[b]{0.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/manual_tuning}
     \caption{}
     \label{fig:field-manual-tuning}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.48\textwidth}
+  \begin{subfigure}[b]{0.49\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/amplitude_manual_tuning}
     \caption{}
     \label{fig:amplitude-manual-tuning}
   \end{subfigure}
-  \caption{(a) magnetic field vs. time. (b) {\bf The vertical scale
-      appears to be labeled incorrectly (units)} amplitude of recorded
+  \caption{(a) magnetic field vs. time. (b)  Amplitude of recorded
     FID NMOR signal over 20000~s. During this study laser tuning is
     maintained manually, as can be seen from the jumps in the
     amplitude which occur upon retuning.}
@@ -986,20 +988,20 @@ reference frequency and the atoms.
 %measurement study. The measurement was conducted at $0.2~\mu$T field.
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.47\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/reference_frequency1}
     \caption{}
     \label{fig:far from resonance}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.47\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/reference_frequency3}
     \caption{}
     \label{fig: middle range}
   \end{subfigure}
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.47\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figures/reference_frequency2}
     \caption{}
@@ -1020,7 +1022,7 @@ We decided to study these settings in more detail.
 
 \begin{figure}%[h]
 \centering
-\includegraphics[width=0.8\linewidth]{figures/freq_1943_single_fit_300microsec.png}
+\includegraphics[width=0.9\linewidth]{figures/freq_1943_single_fit_300microsec.png}
 \caption{Lock-in reference frequency and time constant are 1943 Hz and
   300~$\mu$s respectively.  Only X data was fitted.  (a) example of an
   FID and individual fit (b) frequency measurement translated to
@@ -1048,7 +1050,7 @@ The phase could certainly affect the number of zero crossings which
 are statistically relevant to the fit.
 
 \begin{figure}%[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/freq_1943_simultaneous_fit_300microsec_.png}
+\centering\includegraphics[width=0.9\linewidth]{figures/freq_1943_simultaneous_fit_300microsec_.png}
 \caption{Lock-in reference frequency and time constant are 1943 Hz and
   300~$\mu$s respectively.  X and Y data were fitted simultaneously.
   (a) example of an FID and its fit (b) frequency measurement
@@ -1075,7 +1077,7 @@ increasing the lock-in reference frequency to have more flexibility to
 change the time-constant.
 
 \begin{figure}%[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/freq_2015_simultaneous_fit_300microsec.png}
+\centering\includegraphics[width=0.9\linewidth]{figures/freq_2015_simultaneous_fit_300microsec.png}
 \caption{Lock-in reference frequency and time constant are 2015~Hz and
   300~$\mu$s respectively.  X and Y data were fitted simultaneously.
   (a) example of an FID and its fit (b) frequency measurement
@@ -1095,7 +1097,7 @@ zero-crossings in the FID signal that can be used to constrain the
 frequency.
 
 \begin{figure}%[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/freq_2015_simultaneous_fit_1ms.png}
+\centering\includegraphics[width=0.9\linewidth]{figures/freq_2015_simultaneous_fit_1ms.png}
 \caption{Lock-in reference frequency and time constant are 2015~Hz and
   1~ms respectively.  (a) frequency measurement determined by fit of X
   data only as a function of the phase also determined by that fit (b)
@@ -1115,7 +1117,7 @@ from the strong phase dependence, the data do appaear to be
 statistical in nature.
 
 \begin{figure}%[h]
-\centering\includegraphics[width=0.8\linewidth]{figures/freq_1943_simultaneous_fit_1ms.png}
+\centering\includegraphics[width=0.9\linewidth]{figures/freq_1943_simultaneous_fit_1ms.png}
 \caption{Lock-in reference frequency and time constant are 1943~Hz and
   1~ms respectively (a) example of an FID and its simultaneous fit to
   the X and Y data (b) frequency measurement translated to magnetic
