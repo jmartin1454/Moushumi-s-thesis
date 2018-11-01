@@ -171,7 +171,7 @@ shield.  The goal of subsequent work was:
 In terms of the Allan deviation, it means trying to move the Allan
 minimum lower and to the right.
 
-\section{Optimization of cycle time} 
+\section{Optimization of cycle time\label{sec:optimization}} 
 
 The goal of this optimization study was to reduce the cycle time
 without sacrificing too much precision in the single-FID frequency
@@ -430,7 +430,7 @@ should be noted that up to 30~s of data of been omitted near each
 transition.
 
 
-\section{Study the effect of room temperature in magnetic field} 
+\section{Study the effect of room temperature in magnetic field\label{sec:temperature}} 
 
 The goal of this study was to search for any correlation between the
 magnetic field measured by the magnetometer and ambient temperature
@@ -511,7 +511,7 @@ the field measurement is ruled out at approximately the
    
 \section{Degaussing studies\label{sec:degaussing}}
 
-\subsection{Initial tests using the magnetometer near zero field}
+\subsection{Initial tests using the magnetometer near zero field\label{sec:degauss-near-zerofield}}
 
 %different degaussing schemes(changing sample rate)
    
@@ -605,7 +605,7 @@ the field is reduced below 20~pT.
 %resonance width becomes narrower for larger sample rate.
 
 \subsection{Measurements at 0.2~$\mu$T and initial studies of the effect of degaussing on field stability\label{sec:three-degauss}}
-%Ramp field up/down 
+
 
 The previous results implied that additional (even poor) degaussing
 had little impact if the previous degaussing was done adequately.  To
@@ -714,7 +714,7 @@ end of the innermost shield, whose endcaps have been removed in order
 to accommodate its degaussing coil.
 
 
-\subsection{Effect of degaussing the three outermost shields}
+\subsection{Effect of degaussing the three outermost shields\label{sec:outermosts-shield-degauss}}
  
 If the system had been kept at low field for several days, the usual
 field drift was about 15 pT over 3000~s (as discussed in
@@ -779,7 +779,7 @@ is an error in the design process of the entire system which arose due
 to a lack of understanding of the importance of degaussing.
 
 
-\section{Laser tuning} 
+\section{Laser tuning\label{sec:tuning}} 
 
 In the course of tuning the laser for maximum FID amplitude, some
 studies were conducted where the laser was purposely mistuned in order
@@ -1237,7 +1237,7 @@ where $X(t)$ is the differential photodiode signal as a function of
 time, and $A_1$, $A_2$, $\omega_1$, $\omega_2$, $\phi_1$, $\phi_2$,
 $\tau_1$, and $\tau_2$ are fit parameters.  A 10th order Infinite
 Impulse Response (IIR) Butterworth filter was used at times to reduce
-background noise from the signal.
+background noise from the signal \cite{key}.
 
 \begin{figure}%[h]
 \centering\includegraphics[width=0.7\linewidth]{figures/fft_amp.png}
